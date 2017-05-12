@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 SSSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly. It's inspired from Asos app. It's highly customizable. You can even design your own ViewController(XIB,Storyboard or pure by code) and use it as a sharer view.
                        DESC
  
-  s.homepage         = 'https://github.com/yagiz/Bagle'
+  s.homepage         = 'https://github.com/yagiz/Bagel'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Yagiz' => 'yagizgurgul@gmail.com' }
   s.source           = { :git => 'https://github.com/yagiz/Bagel.git', :tag => s.version.to_s }
