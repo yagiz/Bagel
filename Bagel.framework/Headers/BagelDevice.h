@@ -6,9 +6,9 @@
 //  Copyright © 2017 Yagiz Lab. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface BagelDevice : NSObject
+@interface BagelDevice : JSONModel
 
 @property (nonatomic,strong) NSString* deviceName;
 @property (nonatomic,strong) NSString* deviceDescription;

@@ -6,12 +6,12 @@
 //  Copyright © 2017 Kuka Apps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
 @class BagelProject;
 @class BagelDevice;
 
-@interface BagelRequestPacket : NSObject
+@interface BagelRequestPacket : JSONModel
 
 @property (nonatomic,strong) NSString* packetId;
 
@@ -20,7 +20,6 @@
 @property (nonatomic,strong) NSDictionary* requestHeaders;
 @property (nonatomic,strong) NSData* requestBody;
 @property (nonatomic,strong) NSString* requestMethod;
-
 
 @property (nonatomic,strong) NSDictionary* responseHeaders;
 @property (nonatomic,strong) NSData* responseData;
