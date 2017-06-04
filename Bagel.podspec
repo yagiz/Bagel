@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bagel'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'iOS SDK for Bagle native iOS network debugging tool'
  
   s.description      = <<-DESC
@@ -18,12 +18,11 @@ SSSharer is a little Swift 3.0 pod that enables users to share screenshot image 
   
   s.vendored_frameworks = 'Bagel.framework'
   
+  s.framework      = 'Foundation'
+  s.ios.framework  = 'UIKit'
+  s.osx.framework  = 'Cocoa'
+  
   s.dependency 'CocoaAsyncSocket'
-  
-  spec.framework      = 'Foundation'
-  spec.ios.framework  = 'UIKit'
-  spec.osx.framework  = 'Cocoa'
-  
   s.requires_arc = true
   
 end
