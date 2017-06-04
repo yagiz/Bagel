@@ -6,27 +6,27 @@
 //  Copyright © 2017 Yagiz Lab. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 FOUNDATION_EXPORT double BagelVersionNumber;
 FOUNDATION_EXPORT const unsigned char BagelVersionString[];
 
 #import "BagelRequestCarrier.h"
-#import "BagelProject.h"
-#import "BagelDevice.h"
+#import "BagelConfiguration.h"
 
 @interface Bagel : NSObject
 
+@property (nonatomic,strong) BagelConfiguration* configuration;
+
 + (instancetype)shared;
 
-@property (nonatomic,strong) BagelProject* project;
-@property (nonatomic,strong) BagelDevice* device;
+- (void)start;
+- (void)startWithConfiguration:(BagelConfiguration*)configuration;
+
+- (NSString*)version;
 
 - (void)requestDidStart:(BagelRequestCarrier*)request;
 - (void)requestRecieveResponse:(BagelRequestCarrier*)requestCarrier;
 - (void)requestDidFinishWithError:(BagelRequestCarrier*)requestCarrier error:(NSError*)error;
-
-- (void)start;
 
 @end
