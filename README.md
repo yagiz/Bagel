@@ -51,8 +51,9 @@ If you change Netservice parameters in your app, you should also change them on 
 Bagel by default is disabled in release version. You can however enable it by opening your app with a deep link. This way, you can still view the network traffic of your submitted app.
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
 	Bagel.shared().appWillOpenURL(url)
-	//example url:
+	
 }
 ```
 If the host of your URL is ```bagel``` then Bagel is enabled. Here is a typical example URL:
