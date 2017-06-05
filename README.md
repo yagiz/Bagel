@@ -1,11 +1,14 @@
-# Bagel
-Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't have to mess with certificates, proxy settings etc. As long as your devices and your Mac in the same network you can view the network traffic of your apps seperated by the devices. 
+![Bagel](https://github.com/yagiz/Bagel/blob/pre/assets/header.png?raw=true)
+
+Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices. 
+
+Bagel iOS sniffes the ```NSURLSession``` and ```NSURLConnection``` delegate classes and broadcast requests to the Bagel macOS by using Bounjour protocol.
 
 ### Preview
-![](http://yagiz.me/wp-content/uploads/2017/06/Screen-Shot-2017-06-05-at-20.43.17.png)
+![Bagel](https://github.com/yagiz/Bagel/blob/pre/assets/screenshot.png?raw=true)
 If you are here for the macOS client, you can download it from here.
 ### Installation
-To connect your app you need to install Bagel iOS SDK in your projects and download macOS client to view network traffic of it.
+To connect your app you need to install Bagel iOS in your app projects and download macOS client to view network traffic.
 #### CocoaPods
 ```sh
 pod 'Bagel'
@@ -21,8 +24,7 @@ Bagel.shared().start()
 ```
 
 ###  Configuring Bagel
-
-By default, Bagel gets your project name and device information. Desktop client uses these informations to seperate projects and apps. You can configure these if you wish:
+By default, Bagel gets your project name and device information. Desktop client uses these informations to seperate projects and devices. You can configure these if you wish:
 ```swift
 let bagelConfig = BagelConfiguration()
 bagelConfig.project.projectName = "Custom Project Name"
@@ -43,9 +45,18 @@ bagelConfig.netserviceName = ""
 Bagel.shared().startWithConfiguration(bagelConfig)
 ```
 If you change Netservice parameters in your app, you should also change them on desktop client.
-
+###  Releasing
+Bagel by default is disabled in release version. You can however enable it by opening your app with a deep link. This way, you can still view the network traffic of your submitted app.
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+Bagel.shared().appWillOpenURL(url)
+//example url:
+}
+```
+If the host of your URL is ```bagel``` then Bagel is enabled. Here is a typical example URL:
+```swift
+yourproject://bagel
+```
 License
 ----
-MIT
-
-**Free Software, Hell Yeah!**
+Apache
