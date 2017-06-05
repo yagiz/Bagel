@@ -20,12 +20,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "BagelRequestCarrier.h"
+#import "BagelConfiguration.h"
 
 FOUNDATION_EXPORT double BagelVersionNumber;
 FOUNDATION_EXPORT const unsigned char BagelVersionString[];
-
-#import "BagelRequestCarrier.h"
-#import "BagelConfiguration.h"
 
 @interface Bagel : NSObject
 
