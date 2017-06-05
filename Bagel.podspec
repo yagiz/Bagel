@@ -1,15 +1,15 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bagel'
-  s.version          = '0.0.85'
-  s.summary          = 'iOS SDK for Bagle native iOS network debugging tool'
+  s.version          = '0.1.0'
+  s.summary          = 'Bagel is a little native iOS network sniffer.'
  
   s.description      = <<-DESC
-SSSharer is a little Swift 3.0 pod that enables users to share screenshot image quickly. It's inspired from Asos app. It's highly customizable. You can even design your own ViewController(XIB,Storyboard or pure by code) and use it as a sharer view.
+Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices.
                        DESC
  
   s.homepage         = 'https://github.com/yagiz/Bagel'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'APACHE', :file => 'LICENSE' }
   s.author           = { 'Yagiz' => 'yagizgurgul@gmail.com' }
   s.source           = { :git => 'https://github.com/yagiz/Bagel.git', :tag => s.version.to_s }
  
