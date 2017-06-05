@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bagel'
-  s.version          = '0.0.83'
+  s.version          = '0.0.84'
   s.summary          = 'iOS SDK for Bagle native iOS network debugging tool'
  
   s.description      = <<-DESC
