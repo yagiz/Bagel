@@ -39,7 +39,6 @@ FOUNDATION_EXPORT const unsigned char BagelVersionString[];
 
 - (NSString*)version;
 
-- (void)requestDidStart:(BagelRequestCarrier*)request;
 - (void)requestRecieveResponse:(BagelRequestCarrier*)requestCarrier;
 - (void)requestDidFinishWithError:(BagelRequestCarrier*)requestCarrier error:(NSError*)error;
 
