@@ -37,4 +37,7 @@
 @property (nonatomic,strong) NSString* netserviceDomain;
 @property (nonatomic,strong) NSString* netserviceName;
 
+@property (nonatomic,strong) NSString* deepLinkStarterURL;
+@property (nonatomic,strong) NSString* publicKeyName;
+
 @end
