@@ -20,9 +20,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <BagelCore/BagelConstants.h>
+#import <BagelCore/BagelRequestPacket.h>
+
 #import "GCDAsyncSocket.h"
-#import "BagelRequestPacket.h"
-#import "BagelConstants.h"
 #import "BagelConfiguration.h"
 
 typedef enum : NSUInteger {

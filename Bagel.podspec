@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bagel'
-  s.version          = '0.1.0'
+  s.version          = '1.1.0'
   s.summary          = 'Bagel is a little native iOS network sniffer.'
  
   s.description      = <<-DESC
@@ -21,6 +21,7 @@ Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't ha
   s.ios.framework  = 'UIKit'
   s.osx.framework  = 'Cocoa'
   
+  s.dependency 'BagelCore'
   s.dependency 'CocoaAsyncSocket'
   s.requires_arc = true
   
