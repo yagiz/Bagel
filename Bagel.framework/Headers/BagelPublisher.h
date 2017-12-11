@@ -20,11 +20,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <BagelCore/BagelConstants.h>
-#import <BagelCore/BagelRequestPacket.h>
+#import "BagelConstants.h"
+#import "BagelRequestPacket.h"
+#import "BagelConfiguration.h"
 
 #import "GCDAsyncSocket.h"
-#import "BagelConfiguration.h"
 
 typedef enum : NSUInteger {
     BagelPublisherStatusNotConnected,
