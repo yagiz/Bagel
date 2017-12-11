@@ -20,8 +20,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "BagelConstants.h"
-#import "BagelRequestPacket.h"
+#import <BagelCore/BagelConstants.h>
+#import <BagelCore/BagelRequestPacket.h>
 #import "BagelConfiguration.h"
 
 #import "GCDAsyncSocket.h"

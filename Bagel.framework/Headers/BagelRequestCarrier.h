@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "BagelRequestPacket.h"
+#import <BagelCore/BagelRequestPacket.h>
 
 @interface BagelRequestCarrier : NSObject
 

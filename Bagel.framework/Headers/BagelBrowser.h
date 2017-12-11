@@ -20,11 +20,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "BagelConfiguration.h"
+#import <BagelCore/BagelRequestPacket.h>
 
 #import "GCDAsyncSocket.h"
-
-#import "BagelRequestPacket.h"
-#import "BagelConfiguration.h"
 
 @interface BagelBrowser : NSObject <GCDAsyncSocketDelegate,NSNetServiceDelegate,NSNetServiceBrowserDelegate>
 

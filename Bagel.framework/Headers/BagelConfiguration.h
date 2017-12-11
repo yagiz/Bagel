@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "BagelProject.h"
-#import "BagelDevice.h"
-#import "BagelUtility.h"
+#import <BagelCore/BagelProject.h>
+#import <BagelCore/BagelDevice.h>
+#import <BagelCore/BagelUtility.h>
 
 @interface BagelConfiguration : NSObject
 
