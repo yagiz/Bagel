@@ -29,7 +29,7 @@
 
 @property (nonatomic, weak, readonly) BagelConfiguration* configuration;
 
-@property (nonatomic, strong) GCDAsyncSocket *socket;
+//@property (nonatomic, strong) GCDAsyncSocket *socket;
 @property (nonatomic, strong) NSMutableArray *services;
 @property (nonatomic, strong) NSNetServiceBrowser *serviceBrowser;
 
