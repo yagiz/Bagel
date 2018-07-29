@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2017 Bagel (https://github.com/yagiz/BagelCore)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,24 +20,16 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <BagelCore/BagelProject.h>
-#import <BagelCore/BagelDevice.h>
-#import <BagelCore/BagelUtility.h>
+#import <UIKit/UIKit.h>
 
-@interface BagelConfiguration : NSObject
+@interface BagelUtility : NSObject
 
-@property (nonatomic,strong) BagelProject* project;
-@property (nonatomic,strong) BagelDevice* device;
++ (NSString *)UUID;
 
-@property (nonatomic) BOOL isNSURLSessionInjectionEnabled;
-@property (nonatomic) BOOL isNSURLConnectionDelegateInjection;
++ (NSString *)projectName;
 
-@property (nonatomic) uint16_t netservicePort;
-@property (nonatomic,strong) NSString* netserviceType;
-@property (nonatomic,strong) NSString* netserviceDomain;
-@property (nonatomic,strong) NSString* netserviceName;
-
-@property (nonatomic,strong) NSString* deepLinkStarterURL;
-@property (nonatomic,strong) NSString* publicKeyName;
++ (NSString *)deviceId;
++ (NSString *)deviceName;
++ (NSString *)deviceDescription;
 
 @end

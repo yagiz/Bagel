@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2017 Bagel (https://github.com/yagiz/BagelCore)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,26 +20,14 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "BagelRequestCarrier.h"
-#import "BagelConfiguration.h"
 
-FOUNDATION_EXPORT double BagelVersionNumber;
-FOUNDATION_EXPORT const unsigned char BagelVersionString[];
+@protocol BagelBaseModelProtocol <NSObject>
 
-@interface Bagel : NSObject
+- (NSMutableDictionary*)toJSON;
+- (instancetype)initWithJSON:(id)json;
 
-@property (nonatomic,strong) BagelConfiguration* configuration;
+@end
 
-+ (instancetype)shared;
-
-- (void)start;
-- (void)startWithConfiguration:(BagelConfiguration*)configuration;
-
-- (void)appWillOpenUrl:(NSURL*)url;
-
-- (NSString*)version;
-
-- (void)requestRecieveResponse:(BagelRequestCarrier*)requestCarrier;
-- (void)requestDidFinishWithError:(BagelRequestCarrier*)requestCarrier error:(NSError*)error;
+@interface BagelBaseModel : NSObject
 
 @end

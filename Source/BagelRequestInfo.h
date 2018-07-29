@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2017 Bagel (https://github.com/yagiz/BagelCore)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -19,24 +19,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "BagelConfiguration.h"
-#import <BagelCore/BagelRequestPacket.h>
+#import "BagelBaseModel.h"
 
-#import "GCDAsyncSocket.h"
+@interface BagelRequestInfo : NSObject <BagelBaseModelProtocol>
 
-@interface BagelBrowser : NSObject <GCDAsyncSocketDelegate,NSNetServiceDelegate,NSNetServiceBrowserDelegate>
+@property (nonatomic,strong) NSURL* url;
 
-@property (nonatomic, weak, readonly) BagelConfiguration* configuration;
+@property (nonatomic,strong) NSDictionary* requestHeaders;
+@property (nonatomic,strong) NSData* requestBody;
+@property (nonatomic,strong) NSString* requestMethod;
 
-//@property (nonatomic, strong) GCDAsyncSocket *socket;
-@property (nonatomic, strong) NSMutableArray *services;
-@property (nonatomic, strong) NSNetServiceBrowser *serviceBrowser;
 
-- (instancetype)initWithConfiguration:(BagelConfiguration*)configuration;
+@property (nonatomic,strong) NSDictionary* responseHeaders;
+@property (nonatomic,strong) NSData* responseData;
 
-- (void)startBrowsing;
-- (void)sendPacket:(BagelRequestPacket*)packet;
+@property (nonatomic,strong) NSString* statusCode;
+
+@property (nonatomic,strong) NSDate* startDate;
+@property (nonatomic,strong) NSDate* endDate;
 
 @end
-

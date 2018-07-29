@@ -19,7 +19,8 @@ Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't ha
   
   s.framework      = 'Foundation'
   s.ios.framework  = 'UIKit'
-  s.osx.framework  = 'Cocoa'
+
+  s.source_files = 'Source/**/*.{h,m}'
   
   s.dependency 'BagelCore', '1.2.1'
   s.dependency 'CocoaAsyncSocket'

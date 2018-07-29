@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2017 Bagel (https://github.com/yagiz/BagelCore)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -19,27 +19,43 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import <BagelCore/BagelConstants.h>
-#import <BagelCore/BagelRequestPacket.h>
-#import "BagelConfiguration.h"
+#import "BagelUtility.h"
 
-#import "GCDAsyncSocket.h"
+@implementation BagelUtility
 
-typedef enum : NSUInteger {
-    BagelPublisherStatusNotConnected,
-    BagelPublisherStatusConnected,
-} BagelPublisherStatus;
++ (NSString *)UUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
+}
 
-@interface BagelPublisher : NSObject <GCDAsyncSocketDelegate,NSNetServiceDelegate,NSNetServiceBrowserDelegate>
-@property (nonatomic, weak, readonly) BagelConfiguration* configuration;
++ (NSString *)projectName
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
+}
 
-@property (nonatomic) BagelPublisherStatus status;
-@property (nonatomic, strong) NSNetService *service;
 
-- (instancetype)initWithConfiguration:(BagelConfiguration*)configuration;
++ (NSString *)deviceId
+{
+    return [NSString stringWithFormat:@"%@-%@",[self deviceName],[self deviceDescription]];
+}
 
-- (void)startPublishing;
-- (void)sendPacket:(BagelRequestPacket*) packet;
++ (NSString *)deviceName
+{
+    return [UIDevice currentDevice].name;
+}
+
++ (NSString *)deviceDescription
+{
+    NSString* information = @"";
+    
+    information = [UIDevice currentDevice].model;
+    information = [NSString stringWithFormat:@"%@ %@",information,[UIDevice currentDevice].systemName];
+    information = [NSString stringWithFormat:@"%@ %@",information,[UIDevice currentDevice].systemVersion];
+
+    return information;
+}
 
 @end
