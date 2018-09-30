@@ -8,10 +8,7 @@
 
 import Cocoa
 
-class BagelProject: Codable {
+class BagelProjectModel: Codable {
     
     var projectName: String?
-    
-    var devices: [BagelDevice]?
-
 }

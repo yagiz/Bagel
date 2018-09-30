@@ -12,4 +12,10 @@ class BagelPacket: Codable {
 
     var packetId: String?
     
+    var requestInfo: BagelRequestInfo?
+    
+    var project: BagelProjectModel?
+    var device: BagelDeviceModel?
 }
+
+

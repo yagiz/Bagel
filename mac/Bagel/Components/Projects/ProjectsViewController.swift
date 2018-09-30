@@ -24,6 +24,7 @@ class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableVi
             
             self?.refresh()
         }
+        
     }
     
     func refresh() {

@@ -53,7 +53,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPO-QB-zWr">
-                                                                                <rect key="frame" x="0.0" y="11.5" width="42" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="11" width="42" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="200" id="nCW-um-xTy">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
