@@ -7,7 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
+		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
+		BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA742162B976000F6D2F /* DetailViewModel.swift */; };
+		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
 		BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73DFAD215BFB18002E533B /* BagelPublisher.swift */; };
+		BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */; };
+		BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */; };
+		BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */; };
+		BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */; };
+		BC9C77A121635DEC00E8ADE8 /* DetailSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */; };
+		BC9C77A32163668200E8ADE8 /* RequestParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */; };
+		BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A42163803400E8ADE8 /* DataViewController.swift */; };
+		BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A72163805000E8ADE8 /* DataViewModel.swift */; };
+		BC9C77AC216385DC00E8ADE8 /* DataTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77AB216385DC00E8ADE8 /* DataTextViewController.swift */; };
+		BC9C77AF216385E600E8ADE8 /* DataJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */; };
+		BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */; };
+		BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */; };
+		BC9C77BA216393D000E8ADE8 /* json-viewer.css in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B6216393D000E8ADE8 /* json-viewer.css */; };
+		BC9C77BB216393D000E8ADE8 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B7216393D000E8ADE8 /* jquery.js */; };
+		BC9C77BC216393D000E8ADE8 /* json-viewer.js in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B8216393D000E8ADE8 /* json-viewer.js */; };
+		BC9C77BD216393D000E8ADE8 /* jsonviewer.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B9216393D000E8ADE8 /* jsonviewer.html */; };
+		BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */; };
+		BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */; };
+		BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */; };
+		BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */; };
+		BCA60B41216201B900B9DCAD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B40216201B900B9DCAD /* Configuration.swift */; };
+		BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B432162395000B9DCAD /* DevicesViewModel.swift */; };
+		BCA60B4621623A1600B9DCAD /* DeviceTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */; };
+		BCA60B482162403F00B9DCAD /* PacketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */; };
+		BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */; };
+		BCA60B4E2162439E00B9DCAD /* URLPacketTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */; };
+		BCA60B50216256FD00B9DCAD /* BaseTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4F216256FD00B9DCAD /* BaseTableHeaderView.swift */; };
+		BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B512162655000B9DCAD /* FlatTableHeaderCell.swift */; };
+		BCB6FD6921627D5400D6F03C /* TransparentSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6FD6821627D5400D6F03C /* TransparentSplitView.swift */; };
 		BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD86E1215916C9009CBEA7 /* BagelController.swift */; };
 		BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD86E3215916E0009CBEA7 /* BagelProjectController.swift */; };
 		BCBD86E62159172B009CBEA7 /* BagelDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD86E52159172B009CBEA7 /* BagelDeviceController.swift */; };
@@ -17,6 +50,8 @@
 		BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD0E02C210F5E0D00CE5C7B /* Main.storyboard */; };
 		BCD0E03A210F5E0D00CE5C7B /* BagelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0E039210F5E0D00CE5C7B /* BagelTests.swift */; };
 		BCD0E045210F5E0D00CE5C7B /* BagelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0E044210F5E0D00CE5C7B /* BagelUITests.swift */; };
+		BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDF0EC321662CA10030710C /* FlatTableRowView.swift */; };
+		BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
 		BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC852721383150001EC6D7 /* Devices.storyboard */; };
@@ -55,7 +90,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
+		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		BC61DA742162B976000F6D2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		BC73DFAD215BFB18002E533B /* BagelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPublisher.swift; sourceTree = "<group>"; };
+		BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
+		BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueViewModel.swift; sourceTree = "<group>"; };
+		BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableCellView.swift; sourceTree = "<group>"; };
+		BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersViewModel.swift; sourceTree = "<group>"; };
+		BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionButton.swift; sourceTree = "<group>"; };
+		BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParametersViewModel.swift; sourceTree = "<group>"; };
+		BC9C77A42163803400E8ADE8 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		BC9C77A72163805000E8ADE8 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		BC9C77AB216385DC00E8ADE8 /* DataTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTextViewController.swift; sourceTree = "<group>"; };
+		BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewController.swift; sourceTree = "<group>"; };
+		BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTextViewModel.swift; sourceTree = "<group>"; };
+		BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewModel.swift; sourceTree = "<group>"; };
+		BC9C77B6216393D000E8ADE8 /* json-viewer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer.css"; sourceTree = "<group>"; };
+		BC9C77B7216393D000E8ADE8 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		BC9C77B8216393D000E8ADE8 /* json-viewer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-viewer.js"; sourceTree = "<group>"; };
+		BC9C77B9216393D000E8ADE8 /* jsonviewer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsonviewer.html; sourceTree = "<group>"; };
+		BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeaddersViewModel.swift; sourceTree = "<group>"; };
+		BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyViewModel.swift; sourceTree = "<group>"; };
+		BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataViewModel.swift; sourceTree = "<group>"; };
+		BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
+		BCA60B40216201B900B9DCAD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BCA60B432162395000B9DCAD /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
+		BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableCellView.swift; sourceTree = "<group>"; };
+		BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketsViewModel.swift; sourceTree = "<group>"; };
+		BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPacketTableCellView.swift; sourceTree = "<group>"; };
+		BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPacketTableCellView.swift; sourceTree = "<group>"; };
+		BCA60B4F216256FD00B9DCAD /* BaseTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderView.swift; sourceTree = "<group>"; };
+		BCA60B512162655000B9DCAD /* FlatTableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTableHeaderCell.swift; sourceTree = "<group>"; };
+		BCB6FD6821627D5400D6F03C /* TransparentSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentSplitView.swift; sourceTree = "<group>"; };
 		BCBD86E1215916C9009CBEA7 /* BagelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelController.swift; sourceTree = "<group>"; };
 		BCBD86E3215916E0009CBEA7 /* BagelProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelProjectController.swift; sourceTree = "<group>"; };
 		BCBD86E52159172B009CBEA7 /* BagelDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelDeviceController.swift; sourceTree = "<group>"; };
@@ -72,6 +141,8 @@
 		BCD0E040210F5E0D00CE5C7B /* BagelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD0E044210F5E0D00CE5C7B /* BagelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelUITests.swift; sourceTree = "<group>"; };
 		BCD0E046210F5E0D00CE5C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCDF0EC321662CA10030710C /* FlatTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTableRowView.swift; sourceTree = "<group>"; };
+		BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueListViewController.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		BCFC852721383150001EC6D7 /* Devices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Devices.storyboard; sourceTree = "<group>"; };
@@ -90,6 +161,7 @@
 		BCFC854B213848FD001EC6D7 /* BagelProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelProjectModel.swift; sourceTree = "<group>"; };
 		BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelDeviceModel.swift; sourceTree = "<group>"; };
 		BCFC854F21384981001EC6D7 /* BagelPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPacket.swift; sourceTree = "<group>"; };
+		FFBC5A8394CE4783A1C813EA /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +190,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D1CC3F62B7578A133A0B7E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFBC5A8394CE4783A1C813EA /* Pods-Bagel.debug.xcconfig */,
+				4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AAEBF535516887749940800D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC1F5B35216746CA0045C871 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BC1F5B36216746D30045C871 /* FontManager.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BC61DA762162BD52000F6D2F /* DetailSections */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77A62163803700E8ADE8 /* DataViewController */,
+				BC9C779821634D3E00E8ADE8 /* KeyValueListViewController */,
+				BC9C779521634D1F00E8ADE8 /* OverviewViewController */,
+			);
+			path = DetailSections;
+			sourceTree = "<group>";
+		};
+		BC9C779521634D1F00E8ADE8 /* OverviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC61DA772162BD68000F6D2F /* OverviewViewController.swift */,
+				BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */,
+			);
+			path = OverviewViewController;
+			sourceTree = "<group>";
+		};
+		BC9C779821634D3E00E8ADE8 /* KeyValueListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C779D2163527E00E8ADE8 /* Sections */,
+				BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */,
+				BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */,
+				BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */,
+			);
+			path = KeyValueListViewController;
+			sourceTree = "<group>";
+		};
+		BC9C779D2163527E00E8ADE8 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */,
+				BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */,
+				BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		BC9C77A62163803700E8ADE8 /* DataViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77C12163984200E8ADE8 /* Sections */,
+				BC9C77A42163803400E8ADE8 /* DataViewController.swift */,
+				BC9C77A72163805000E8ADE8 /* DataViewModel.swift */,
+				BC9C77AA216385BF00E8ADE8 /* DataTextViewController */,
+				BC9C77A9216385B600E8ADE8 /* DataJSONViewController */,
+			);
+			path = DataViewController;
+			sourceTree = "<group>";
+		};
+		BC9C77A9216385B600E8ADE8 /* DataJSONViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */,
+				BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */,
+			);
+			path = DataJSONViewController;
+			sourceTree = "<group>";
+		};
+		BC9C77AA216385BF00E8ADE8 /* DataTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77AB216385DC00E8ADE8 /* DataTextViewController.swift */,
+				BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */,
+			);
+			path = DataTextViewController;
+			sourceTree = "<group>";
+		};
+		BC9C77B5216393B300E8ADE8 /* jsonViewer */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77B7216393D000E8ADE8 /* jquery.js */,
+				BC9C77B6216393D000E8ADE8 /* json-viewer.css */,
+				BC9C77B8216393D000E8ADE8 /* json-viewer.js */,
+				BC9C77B9216393D000E8ADE8 /* jsonviewer.html */,
+			);
+			path = jsonViewer;
+			sourceTree = "<group>";
+		};
+		BC9C77C12163984200E8ADE8 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */,
+				BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		BCA60B3F216201AF00B9DCAD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BCA60B40216201B900B9DCAD /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BCA60B422162145500B9DCAD /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				BC73DFAD215BFB18002E533B /* BagelPublisher.swift */,
+			);
+			path = Publisher;
+			sourceTree = "<group>";
+		};
 		BCBD86DF21591550009CBEA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +349,8 @@
 				BCD0E038210F5E0D00CE5C7B /* BagelTests */,
 				BCD0E043210F5E0D00CE5C7B /* BagelUITests */,
 				BCD0E024210F5E0D00CE5C7B /* Products */,
+				6D1CC3F62B7578A133A0B7E2 /* Pods */,
+				AAEBF535516887749940800D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +367,9 @@
 		BCD0E025210F5E0D00CE5C7B /* Bagel */ = {
 			isa = PBXGroup;
 			children = (
+				BC1F5B35216746CA0045C871 /* Fonts */,
+				BC9C77B5216393B300E8ADE8 /* jsonViewer */,
+				BCA60B3F216201AF00B9DCAD /* Configuration */,
 				BCFC8549213848DA001EC6D7 /* Core */,
 				BCFC852D21383252001EC6D7 /* Components */,
 				BCFC85412138467C001EC6D7 /* Base */,
@@ -219,6 +428,8 @@
 			children = (
 				BCFC852721383150001EC6D7 /* Devices.storyboard */,
 				BCFC85322138354D001EC6D7 /* DevicesViewController.swift */,
+				BCA60B432162395000B9DCAD /* DevicesViewModel.swift */,
+				BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -228,6 +439,9 @@
 			children = (
 				BCFC852921383171001EC6D7 /* Packets.storyboard */,
 				BCFC853521383650001EC6D7 /* PacketsViewController.swift */,
+				BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */,
+				BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */,
+				BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */,
 			);
 			path = Packets;
 			sourceTree = "<group>";
@@ -237,6 +451,8 @@
 			children = (
 				BCFC852B2138319E001EC6D7 /* Details.storyboard */,
 				BCFC853821383D79001EC6D7 /* DetailViewController.swift */,
+				BC61DA742162B976000F6D2F /* DetailViewModel.swift */,
+				BC61DA762162BD52000F6D2F /* DetailSections */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -246,6 +462,12 @@
 			children = (
 				BCFC853D21384443001EC6D7 /* BaseTableView.swift */,
 				BCFC854621384776001EC6D7 /* BaseViewController.swift */,
+				BCA60B4F216256FD00B9DCAD /* BaseTableHeaderView.swift */,
+				BCA60B512162655000B9DCAD /* FlatTableHeaderCell.swift */,
+				BCB6FD6821627D5400D6F03C /* TransparentSplitView.swift */,
+				BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */,
+				BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */,
+				BCDF0EC321662CA10030710C /* FlatTableRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,7 +503,7 @@
 			children = (
 				BCBD86E0215916A7009CBEA7 /* Controllers */,
 				BCBD86DF21591550009CBEA7 /* Models */,
-				BC73DFAD215BFB18002E533B /* BagelPublisher.swift */,
+				BCA60B422162145500B9DCAD /* Publisher */,
 			);
 			path = BagelController;
 			sourceTree = "<group>";
@@ -293,9 +515,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD0E049210F5E0D00CE5C7B /* Build configuration list for PBXNativeTarget "Bagel" */;
 			buildPhases = (
+				F86A17B8A549E24AD820FB4B /* [CP] Check Pods Manifest.lock */,
 				BCD0E01F210F5E0D00CE5C7B /* Sources */,
 				BCD0E020210F5E0D00CE5C7B /* Frameworks */,
 				BCD0E021210F5E0D00CE5C7B /* Resources */,
+				40DC3F245E49904074910874 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,10 +619,14 @@
 			files = (
 				BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */,
 				BCFC852C2138319E001EC6D7 /* Details.storyboard in Resources */,
+				BC9C77BD216393D000E8ADE8 /* jsonviewer.html in Resources */,
 				BCD0E02B210F5E0D00CE5C7B /* Assets.xcassets in Resources */,
 				BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */,
+				BC9C77BC216393D000E8ADE8 /* json-viewer.js in Resources */,
+				BC9C77BB216393D000E8ADE8 /* jquery.js in Resources */,
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
+				BC9C77BA216393D000E8ADE8 /* json-viewer.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,31 +646,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40DC3F245E49904074910874 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F86A17B8A549E24AD820FB4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bagel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCD0E01F210F5E0D00CE5C7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
+				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
+				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
 				BCFC85332138354D001EC6D7 /* DevicesViewController.swift in Sources */,
+				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
 				BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */,
+				BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */,
+				BC9C77A32163668200E8ADE8 /* RequestParametersViewModel.swift in Sources */,
 				BCFC854321384685001EC6D7 /* BaseViewModel.swift in Sources */,
 				BCFC854C213848FD001EC6D7 /* BagelProjectModel.swift in Sources */,
+				BC9C77AC216385DC00E8ADE8 /* DataTextViewController.swift in Sources */,
+				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
 				BCFC854021384667001EC6D7 /* ProjectsViewModel.swift in Sources */,
+				BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */,
+				BCB6FD6921627D5400D6F03C /* TransparentSplitView.swift in Sources */,
 				BCFC853021383267001EC6D7 /* ProjectsViewController.swift in Sources */,
+				BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */,
+				BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */,
+				BC9C77A121635DEC00E8ADE8 /* DetailSectionButton.swift in Sources */,
 				BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */,
+				BCA60B41216201B900B9DCAD /* Configuration.swift in Sources */,
+				BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */,
+				BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */,
 				BCFC8545213846B0001EC6D7 /* BaseListViewModel.swift in Sources */,
 				BCFC854721384776001EC6D7 /* BaseViewController.swift in Sources */,
 				BCFC854E2138490E001EC6D7 /* BagelDeviceModel.swift in Sources */,
+				BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */,
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
+				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
+				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
+				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
+				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
+				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,
+				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,
+				BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */,
+				BCA60B4E2162439E00B9DCAD /* URLPacketTableCellView.swift in Sources */,
 				BCFC853B21384239001EC6D7 /* ProjectTableCellView.swift in Sources */,
 				BCFC853E21384443001EC6D7 /* BaseTableView.swift in Sources */,
 				BCBD86E62159172B009CBEA7 /* BagelDeviceController.swift in Sources */,
+				BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */,
 				BCFC853921383D79001EC6D7 /* DetailViewController.swift in Sources */,
+				BCA60B50216256FD00B9DCAD /* BaseTableHeaderView.swift in Sources */,
+				BCA60B482162403F00B9DCAD /* PacketsViewModel.swift in Sources */,
 				BCFC853621383650001EC6D7 /* PacketsViewController.swift in Sources */,
 				BCD0E027210F5E0D00CE5C7B /* AppDelegate.swift in Sources */,
+				BC9C77AF216385E600E8ADE8 /* DataJSONViewController.swift in Sources */,
+				BCA60B4621623A1600B9DCAD /* DeviceTableCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +894,7 @@
 		};
 		BCD0E04A210F5E0D00CE5C7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFBC5A8394CE4783A1C813EA /* Pods-Bagel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
@@ -613,6 +911,7 @@
 		};
 		BCD0E04B210F5E0D00CE5C7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
