@@ -1,150 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="13771"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="14313.18"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--DataJSON View Controller-->
         <scene sceneID="Jg4-q8-8s2">
             <objects>
-                <viewController id="8u2-ww-n8g" customClass="DataJSONViewController" sceneMemberID="viewController">
+                <viewController id="8u2-ww-n8g" customClass="DataJSONViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="or8-pk-rj8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzt-Tt-u1z">
-                                <rect key="frame" x="0.0" y="30" width="450" height="270"/>
-                                <clipView key="contentView" id="tSO-9U-bT5">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="270"/>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="985-xa-YbA">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <view key="contentView" id="IZk-5R-el5">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="mk4-BM-kwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="270"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="450" height="270"/>
-                                            <size key="maxSize" width="618" height="10000000"/>
-                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        </textView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="MUn-Sd-bmA">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Yzj-Hm-tHt">
-                                    <rect key="frame" x="434" y="0.0" width="16" height="270"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
-                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="1KQ-pz-LuO">
-                                <rect key="frame" x="0.0" y="30" width="450" height="270"/>
-                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
-                                    <nil key="identifier"/>
-                                </webPreferences>
-                            </webView>
-                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-TQ-tH5">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
-                                <view key="contentView" id="tH8-rD-qu8">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="TF2-SH-jlL">
-                                            <rect key="frame" x="425" y="8" width="15" height="15"/>
+                                        <webView translatesAutoresizingMaskIntoConstraints="NO" id="1KQ-pz-LuO">
+                                            <rect key="frame" x="0.0" y="30" width="450" height="270"/>
+                                            <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                                <nil key="identifier"/>
+                                            </webPreferences>
+                                        </webView>
+                                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzt-Tt-u1z">
+                                            <rect key="frame" x="5" y="35" width="440" height="260"/>
+                                            <clipView key="contentView" drawsBackground="NO" id="tSO-9U-bT5">
+                                                <rect key="frame" x="0.0" y="0.0" width="440" height="260"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="mk4-BM-kwp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="440" height="260"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="minSize" width="440" height="260"/>
+                                                        <size key="maxSize" width="618" height="10000000"/>
+                                                        <attributedString key="textStorage">
+                                                            <fragment content="Test">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="13" name="DroidSansMono"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    </textView>
+                                                </subviews>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="MUn-Sd-bmA">
+                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Yzj-Hm-tHt">
+                                                <rect key="frame" x="424" y="0.0" width="16" height="260"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-TQ-tH5">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+                                            <view key="contentView" id="tH8-rD-qu8">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="TF2-SH-jlL">
+                                                        <rect key="frame" x="425" y="8" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="plh-Li-kg5"/>
+                                                            <constraint firstAttribute="width" constant="15" id="zSR-pK-IaK"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="CopyIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JbI-fp-F9e">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="copyToClipBoardButtonAction:" target="8u2-ww-n8g" id="OYM-kX-dL1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-vg-U71" customClass="ColoredButton" customModule="Bagel" customModuleProvider="target">
+                                                        <rect key="frame" x="385" y="7" width="30" height="16"/>
+                                                        <buttonCell key="cell" type="recessed" title="Raw" bezelStyle="recessed" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="6WD-vz-zyD">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="systemBold" size="12"/>
+                                                        </buttonCell>
+                                                        <color key="contentTintColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                                <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="rawButtonAction:" target="8u2-ww-n8g" id="jhJ-fR-Uk0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="TF2-SH-jlL" firstAttribute="leading" secondItem="pgB-vg-U71" secondAttribute="trailing" constant="10" id="ooT-Jj-XJE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TF2-SH-jlL" secondAttribute="trailing" constant="10" id="zKF-W8-SOG"/>
+                                                </constraints>
+                                            </view>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="plh-Li-kg5"/>
-                                                <constraint firstAttribute="width" constant="15" id="zSR-pK-IaK"/>
+                                                <constraint firstItem="TF2-SH-jlL" firstAttribute="centerY" secondItem="aFQ-TQ-tH5" secondAttribute="centerY" id="GOL-51-MbN"/>
+                                                <constraint firstItem="pgB-vg-U71" firstAttribute="centerY" secondItem="aFQ-TQ-tH5" secondAttribute="centerY" id="Vl8-Zz-7fR"/>
+                                                <constraint firstAttribute="height" constant="30" id="lL1-Ja-rvQ"/>
                                             </constraints>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="CopyIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JbI-fp-F9e">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="copyToClipBoardButtonAction:" target="8u2-ww-n8g" id="OYM-kX-dL1"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mzI-5m-8xW" customClass="SYFlatButton">
-                                            <rect key="frame" x="375" y="0.0" width="40" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="U20-hp-Dbc"/>
-                                            </constraints>
-                                            <buttonCell key="cell" type="square" title="Raw" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="xFt-07-9c2">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </buttonCell>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="rawButtonAction:" target="8u2-ww-n8g" id="TIz-KE-oeO"/>
-                                            </connections>
-                                        </button>
+                                            <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                        </box>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="mzI-5m-8xW" secondAttribute="bottom" id="RvT-aQ-ecO"/>
-                                        <constraint firstItem="TF2-SH-jlL" firstAttribute="leading" secondItem="mzI-5m-8xW" secondAttribute="trailing" constant="10" id="t9d-sh-mz5"/>
-                                        <constraint firstItem="mzI-5m-8xW" firstAttribute="top" secondItem="tH8-rD-qu8" secondAttribute="top" id="yBz-ft-O09"/>
-                                        <constraint firstAttribute="trailing" secondItem="TF2-SH-jlL" secondAttribute="trailing" constant="10" id="zKF-W8-SOG"/>
+                                        <constraint firstItem="Kzt-Tt-u1z" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" constant="5" id="7Gh-Km-9aI"/>
+                                        <constraint firstAttribute="trailing" secondItem="aFQ-TQ-tH5" secondAttribute="trailing" id="D4w-JE-KvI"/>
+                                        <constraint firstItem="Kzt-Tt-u1z" firstAttribute="top" secondItem="IZk-5R-el5" secondAttribute="top" constant="5" id="FnJ-NZ-XH3"/>
+                                        <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="1KQ-pz-LuO" secondAttribute="bottom" id="NC6-1q-sWf"/>
+                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="top" secondItem="IZk-5R-el5" secondAttribute="top" id="VCN-3B-15j"/>
+                                        <constraint firstAttribute="bottom" secondItem="aFQ-TQ-tH5" secondAttribute="bottom" id="XZk-qL-jn6"/>
+                                        <constraint firstAttribute="trailing" secondItem="1KQ-pz-LuO" secondAttribute="trailing" id="XeR-ym-LFH"/>
+                                        <constraint firstAttribute="trailing" secondItem="Kzt-Tt-u1z" secondAttribute="trailing" constant="5" id="ceY-2X-tZr"/>
+                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" id="jyS-XC-0ce"/>
+                                        <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="Kzt-Tt-u1z" secondAttribute="bottom" constant="5" id="oQ5-XH-nr0"/>
+                                        <constraint firstItem="aFQ-TQ-tH5" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" id="oyz-R8-6Ls"/>
                                     </constraints>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="TF2-SH-jlL" firstAttribute="centerY" secondItem="aFQ-TQ-tH5" secondAttribute="centerY" id="GOL-51-MbN"/>
-                                    <constraint firstAttribute="height" constant="30" id="lL1-Ja-rvQ"/>
-                                </constraints>
-                                <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </box>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Kzt-Tt-u1z" firstAttribute="top" secondItem="or8-pk-rj8" secondAttribute="top" id="2qp-tL-Tnl"/>
-                            <constraint firstAttribute="bottom" secondItem="aFQ-TQ-tH5" secondAttribute="bottom" id="6xG-Tl-90d"/>
-                            <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="1KQ-pz-LuO" secondAttribute="bottom" id="8NY-DB-pSL"/>
-                            <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="Kzt-Tt-u1z" secondAttribute="bottom" id="Bai-jm-u4b"/>
-                            <constraint firstAttribute="trailing" secondItem="1KQ-pz-LuO" secondAttribute="trailing" id="Gms-JS-LeQ"/>
-                            <constraint firstItem="aFQ-TQ-tH5" firstAttribute="leading" secondItem="or8-pk-rj8" secondAttribute="leading" id="Jzq-QS-Su6"/>
-                            <constraint firstItem="1KQ-pz-LuO" firstAttribute="top" secondItem="or8-pk-rj8" secondAttribute="top" id="Lsq-hS-0mg"/>
-                            <constraint firstAttribute="trailing" secondItem="Kzt-Tt-u1z" secondAttribute="trailing" id="VbG-IG-x8d"/>
-                            <constraint firstItem="1KQ-pz-LuO" firstAttribute="leading" secondItem="or8-pk-rj8" secondAttribute="leading" id="eaA-C1-x8N"/>
-                            <constraint firstAttribute="trailing" secondItem="aFQ-TQ-tH5" secondAttribute="trailing" id="sTe-Mm-EYq"/>
-                            <constraint firstItem="Kzt-Tt-u1z" firstAttribute="leading" secondItem="or8-pk-rj8" secondAttribute="leading" id="sdd-96-sTs"/>
+                            <constraint firstAttribute="bottom" secondItem="985-xa-YbA" secondAttribute="bottom" id="1R8-Vd-gIA"/>
+                            <constraint firstItem="985-xa-YbA" firstAttribute="top" secondItem="or8-pk-rj8" secondAttribute="top" id="S78-Ll-hGv"/>
+                            <constraint firstAttribute="trailing" secondItem="985-xa-YbA" secondAttribute="trailing" id="SNL-H3-uE3"/>
+                            <constraint firstItem="985-xa-YbA" firstAttribute="leading" secondItem="or8-pk-rj8" secondAttribute="leading" id="dBT-W0-MuT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="jsonViewWebView" destination="1KQ-pz-LuO" id="X5q-Lm-uVz"/>
-                        <outlet property="rawButton" destination="mzI-5m-8xW" id="bap-gH-pJQ"/>
-                        <outlet property="rawTextView" destination="mk4-BM-kwp" id="Cff-PU-fiP"/>
+                        <outlet property="rawButton" destination="pgB-vg-U71" id="sFR-qA-A5x"/>
+                        <outlet property="rawTextView" destination="mk4-BM-kwp" id="OKy-sC-5hZ"/>
                         <outlet property="rawTextViewContainerScrollView" destination="Kzt-Tt-u1z" id="Fhx-Nm-YY2"/>
+                        <outlet property="webView" destination="1KQ-pz-LuO" id="Ky7-EI-Wvj"/>
                     </connections>
                 </viewController>
                 <customObject id="4sz-TD-uE0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="2051"/>
+            <point key="canvasLocation" x="2042" y="1668"/>
         </scene>
         <!--Overview View Controller-->
         <scene sceneID="38z-Bl-ORP">
             <objects>
-                <viewController storyboardIdentifier="OverviewViewController" id="dbv-oR-1ws" customClass="OverviewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OverviewViewController" id="dbv-oR-1ws" customClass="OverviewViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="eqo-pA-Hyv">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,26 +167,27 @@
                                     <subviews>
                                         <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-Gq-f5O">
                                             <rect key="frame" x="5" y="30" width="440" height="265"/>
-                                            <clipView key="contentView" id="hy2-Gh-9IZ">
+                                            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="hy2-Gh-9IZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="yGA-r3-ock">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="440" height="265"/>
                                                         <size key="maxSize" width="618" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="iGK-iA-Fjg">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="iGK-iA-Fjg">
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="S4D-eh-ExL">
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="S4D-eh-ExL">
                                                 <rect key="frame" x="424" y="0.0" width="16" height="265"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -210,7 +221,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="EfZ-Yz-xjK"/>
                                                 <constraint firstItem="U6O-Tm-OuZ" firstAttribute="centerY" secondItem="9HA-bR-u85" secondAttribute="centerY" id="fA5-IG-Q5D"/>
                                             </constraints>
-                                            <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </box>
                                     </subviews>
                                     <constraints>
@@ -223,7 +234,7 @@
                                         <constraint firstAttribute="trailing" secondItem="aPs-Gq-f5O" secondAttribute="trailing" constant="5" id="tNC-7i-qty"/>
                                     </constraints>
                                 </view>
-                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -239,12 +250,12 @@
                 </viewController>
                 <customObject id="Reu-rn-zBc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="2449"/>
+            <point key="canvasLocation" x="1080" y="2286"/>
         </scene>
         <!--Key Value List View Controller-->
         <scene sceneID="WW0-ge-jxG">
             <objects>
-                <viewController storyboardIdentifier="KeyValueListViewController" id="sRS-wo-UU6" customClass="KeyValueListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KeyValueListViewController" id="sRS-wo-UU6" customClass="KeyValueListViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="wZu-xL-k2R">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -257,26 +268,35 @@
                                     <subviews>
                                         <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84w-QZ-QEo">
                                             <rect key="frame" x="5" y="30" width="440" height="265"/>
-                                            <clipView key="contentView" id="EjS-v0-tGB">
+                                            <clipView key="contentView" drawsBackground="NO" id="EjS-v0-tGB">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="lfA-tE-NaM">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <size key="minSize" width="440" height="265"/>
                                                         <size key="maxSize" width="618" height="10000000"/>
+                                                        <attributedString key="textStorage">
+                                                            <fragment content="sad kasd jasj dksad jkasjd jkasdjk asjkd jksadjk asjk djksajk jkdajk jkdsa jkdjk jkas djkkajsa dk">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="13" name="DroidSansMono"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="mqx-LV-uUr">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="mqx-LV-uUr">
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="AKJ-3y-EkI">
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="AKJ-3y-EkI">
                                                 <rect key="frame" x="424" y="0.0" width="16" height="265"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -287,13 +307,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="Gb1-Zu-QKA" viewBased="YES" id="cHQ-kb-Jr0">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="Gb1-Zu-QKA" viewBased="YES" id="cHQ-kb-Jr0" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="242"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
-                                                        <color key="gridColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="gridColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
                                                             <tableColumn identifier="Key" width="134.5" minWidth="40" maxWidth="1000" id="reC-kt-Mj1">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Key">
@@ -308,22 +328,23 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
-                                                                    <tableCellView identifier="KeyCell" id="snR-A5-gxL">
-                                                                        <rect key="frame" x="1" y="1" width="134.5" height="43"/>
+                                                                    <tableCellView identifier="KeyValueTableCellView" id="snR-A5-gxL" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
+                                                                        <rect key="frame" x="1" y="1" width="135" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXM-Wc-NTy">
-                                                                                <rect key="frame" x="0.0" y="11.5" width="134.5" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="12" width="135" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="3SO-nF-Jew">
+                                                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="3SO-nF-Jew">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
-                                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                             </textField>
                                                                         </subviews>
                                                                         <connections>
                                                                             <outlet property="textField" destination="FXM-Wc-NTy" id="7TZ-SK-XxT"/>
+                                                                            <outlet property="titleTextField" destination="FXM-Wc-NTy" id="KYv-ej-2Ov"/>
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
@@ -341,22 +362,23 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
-                                                                    <tableCellView identifier="ValueCell" id="Ze5-kZ-luS">
+                                                                    <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
                                                                         <rect key="frame" x="138.5" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
-                                                                                <rect key="frame" x="0.0" y="11.5" width="299" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="12" width="299" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="GJr-nQ-UMJ">
+                                                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="GJr-nQ-UMJ">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
-                                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                             </textField>
                                                                         </subviews>
                                                                         <connections>
                                                                             <outlet property="textField" destination="ll4-xn-DEL" id="sBA-Go-8Ik"/>
+                                                                            <outlet property="titleTextField" destination="ll4-xn-DEL" id="gUi-J2-1Ws"/>
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
@@ -369,15 +391,15 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="cMS-X1-beS"/>
                                             </constraints>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Q3A-4s-oBF">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Q3A-4s-oBF">
                                                 <rect key="frame" x="0.0" y="249" width="440" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="TGy-a4-dtY">
+                                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="TGy-a4-dtY">
                                                 <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <tableHeaderView key="headerView" id="Gb1-Zu-QKA" customClass="TableHeaderView">
+                                            <tableHeaderView key="headerView" id="Gb1-Zu-QKA" customClass="BaseTableHeaderView" customModule="Bagel" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
@@ -399,55 +421,31 @@
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="copyToClipBoardButtonAction:" target="sRS-wo-UU6" id="gOn-W1-vy2"/>
+                                                            <action selector="copyButtonAction:" target="sRS-wo-UU6" id="Lud-ju-U9X"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LSz-GB-qAX" customClass="SYFlatButton">
-                                                        <rect key="frame" x="375" y="0.0" width="40" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="fQ3-iw-GgL"/>
-                                                        </constraints>
-                                                        <buttonCell key="cell" type="square" title="Raw" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="pwh-95-myt">
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-Mr-ddO">
+                                                        <rect key="frame" x="385" y="7" width="30" height="16"/>
+                                                        <buttonCell key="cell" type="recessed" title="Raw" bezelStyle="recessed" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="RHM-bU-tPJ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" size="13" name="EffraMedium-Regular"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
+                                                            <font key="font" metaFont="systemBold" size="12"/>
                                                         </buttonCell>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                                <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                                <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                                <real key="value" value="0.050000000000000003"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                                <real key="value" value="0.050000000000000003"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="rawButtonAction:" target="sRS-wo-UU6" id="qOu-gX-V33"/>
+                                                            <action selector="rawButtonAction:" target="sRS-wo-UU6" id="fCj-TR-Qr1"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="a6b-uK-yN6" firstAttribute="leading" secondItem="LSz-GB-qAX" secondAttribute="trailing" constant="10" id="TbD-MU-vIc"/>
-                                                    <constraint firstAttribute="bottom" secondItem="LSz-GB-qAX" secondAttribute="bottom" id="akG-FV-sLM"/>
-                                                    <constraint firstItem="LSz-GB-qAX" firstAttribute="top" secondItem="860-hz-JDZ" secondAttribute="top" id="r9f-4Y-By0"/>
+                                                    <constraint firstItem="a6b-uK-yN6" firstAttribute="leading" secondItem="wl3-Mr-ddO" secondAttribute="trailing" constant="10" id="5B2-XY-Uar"/>
                                                     <constraint firstAttribute="trailing" secondItem="a6b-uK-yN6" secondAttribute="trailing" constant="10" id="ypr-am-LRj"/>
                                                 </constraints>
                                             </view>
                                             <constraints>
                                                 <constraint firstItem="a6b-uK-yN6" firstAttribute="centerY" secondItem="9Ae-4N-SCf" secondAttribute="centerY" id="7tC-u6-s3p"/>
                                                 <constraint firstAttribute="height" constant="30" id="Dqf-4Q-Lhl"/>
+                                                <constraint firstItem="wl3-Mr-ddO" firstAttribute="centerY" secondItem="9Ae-4N-SCf" secondAttribute="centerY" id="fV0-K6-5zv"/>
                                             </constraints>
-                                            <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </box>
                                     </subviews>
                                     <constraints>
@@ -464,7 +462,7 @@
                                         <constraint firstItem="84w-QZ-QEo" firstAttribute="top" secondItem="vOB-PX-Q9n" secondAttribute="top" constant="5" id="w1L-eo-dqX"/>
                                     </constraints>
                                 </view>
-                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -475,66 +473,119 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="rawButton" destination="LSz-GB-qAX" id="AHy-G0-qVc"/>
-                        <outlet property="rawTextView" destination="lfA-tE-NaM" id="P5J-ay-QPe"/>
+                        <outlet property="rawButton" destination="wl3-Mr-ddO" id="tZe-pP-saa"/>
+                        <outlet property="rawTextView" destination="lfA-tE-NaM" id="FP8-5O-pgl"/>
                         <outlet property="rawTextViewContainerScrollView" destination="84w-QZ-QEo" id="UOB-x8-Aem"/>
-                        <outlet property="tableView" destination="cHQ-kb-Jr0" id="Uch-1H-crM"/>
+                        <outlet property="tableView" destination="cHQ-kb-Jr0" id="xfF-5D-8UE"/>
                         <outlet property="tableViewContainerScrollView" destination="QpT-7d-UMc" id="as1-cV-dnZ"/>
                     </connections>
                 </viewController>
                 <customObject id="iLc-OS-OC1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="2827"/>
+            <point key="canvasLocation" x="1080" y="2669"/>
         </scene>
         <!--Data Text View Controller-->
         <scene sceneID="zs0-oD-KJz">
             <objects>
-                <viewController id="k13-sG-vUN" customClass="DataTextViewController" sceneMemberID="viewController">
+                <viewController id="k13-sG-vUN" customClass="DataTextViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PNW-rL-5d4">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-AT-l2c">
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-Fu-Iio">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <clipView key="contentView" id="fMe-Re-Oye">
+                                <view key="contentView" id="Ptz-XA-pF2">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="7b5-bc-5EU">
+                                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-AT-l2c">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="450" height="300"/>
-                                            <size key="maxSize" width="618" height="10000000"/>
-                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        </textView>
+                                            <clipView key="contentView" drawsBackground="NO" id="fMe-Re-Oye">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="7b5-bc-5EU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="minSize" width="450" height="300"/>
+                                                        <size key="maxSize" width="618" height="10000000"/>
+                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    </textView>
+                                                </subviews>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SXm-RG-fQK">
+                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="HW1-VW-53m">
+                                                <rect key="frame" x="434" y="0.0" width="16" height="300"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SXm-RG-fQK">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="HW1-VW-53m">
-                                    <rect key="frame" x="434" y="0.0" width="16" height="300"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="b0V-AT-l2c" secondAttribute="trailing" id="9P8-4f-qmf"/>
+                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="top" secondItem="Ptz-XA-pF2" secondAttribute="top" id="Hzg-ly-NBm"/>
+                                        <constraint firstAttribute="bottom" secondItem="b0V-AT-l2c" secondAttribute="bottom" id="fvr-Cm-3Pa"/>
+                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="leading" secondItem="Ptz-XA-pF2" secondAttribute="leading" id="lZd-dB-U7X"/>
+                                    </constraints>
+                                </view>
+                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="b0V-AT-l2c" firstAttribute="leading" secondItem="PNW-rL-5d4" secondAttribute="leading" id="2dz-GG-MbM"/>
-                            <constraint firstAttribute="trailing" secondItem="b0V-AT-l2c" secondAttribute="trailing" id="EOG-1C-p4G"/>
-                            <constraint firstAttribute="bottom" secondItem="b0V-AT-l2c" secondAttribute="bottom" id="Prl-8i-qrf"/>
-                            <constraint firstItem="b0V-AT-l2c" firstAttribute="top" secondItem="PNW-rL-5d4" secondAttribute="top" id="ZhU-Jl-m1Q"/>
+                            <constraint firstAttribute="bottom" secondItem="zUz-Fu-Iio" secondAttribute="bottom" id="8zA-Vs-lJb"/>
+                            <constraint firstItem="zUz-Fu-Iio" firstAttribute="leading" secondItem="PNW-rL-5d4" secondAttribute="leading" id="Mpx-fX-f4A"/>
+                            <constraint firstItem="zUz-Fu-Iio" firstAttribute="top" secondItem="PNW-rL-5d4" secondAttribute="top" id="TWq-Bn-VZf"/>
+                            <constraint firstAttribute="trailing" secondItem="zUz-Fu-Iio" secondAttribute="trailing" id="xN0-P0-gsx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="7b5-bc-5EU" id="eZJ-I0-m39"/>
+                        <outlet property="textView" destination="7b5-bc-5EU" id="3a5-cT-hAD"/>
                     </connections>
                 </viewController>
                 <customObject id="uUy-AA-b5C" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="1675"/>
+            <point key="canvasLocation" x="1511" y="1668"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="btU-un-JHv">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" id="GoS-cV-vcG" customClass="DataViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="wkY-HC-zHb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="64s-rh-m9O">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <connections>
+                                    <segue destination="k13-sG-vUN" kind="embed" identifier="DataTextViewController" id="0HH-C8-PYg"/>
+                                </connections>
+                            </containerView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Omt-RJ-lFd">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <connections>
+                                    <segue destination="8u2-ww-n8g" kind="embed" identifier="DataJSONViewController" id="4Bw-c6-Cqd"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Omt-RJ-lFd" secondAttribute="trailing" id="4LY-zQ-9xN"/>
+                            <constraint firstItem="Omt-RJ-lFd" firstAttribute="leading" secondItem="wkY-HC-zHb" secondAttribute="leading" id="8iS-j3-oUY"/>
+                            <constraint firstAttribute="bottom" secondItem="Omt-RJ-lFd" secondAttribute="bottom" id="KfU-hY-wQz"/>
+                            <constraint firstItem="64s-rh-m9O" firstAttribute="top" secondItem="wkY-HC-zHb" secondAttribute="top" id="MWJ-iK-LWj"/>
+                            <constraint firstItem="64s-rh-m9O" firstAttribute="leading" secondItem="wkY-HC-zHb" secondAttribute="leading" id="cKR-Gd-zWe"/>
+                            <constraint firstItem="Omt-RJ-lFd" firstAttribute="top" secondItem="wkY-HC-zHb" secondAttribute="top" id="fCE-as-Jdm"/>
+                            <constraint firstAttribute="bottom" secondItem="64s-rh-m9O" secondAttribute="bottom" id="kSH-70-hrt"/>
+                            <constraint firstAttribute="trailing" secondItem="64s-rh-m9O" secondAttribute="trailing" id="u4y-fA-RYu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="SNA-4W-Qla" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="1231"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="iZk-xt-2Si">
@@ -564,7 +615,7 @@
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" placeholderString="" id="0y6-ve-dir">
                                                 <font key="font" size="12" name="DroidSansMono"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
                                         </textField>
                                     </subviews>
@@ -572,246 +623,221 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8hX-5K-Ghi"/>
                                 </constraints>
-                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <tabView focusRingType="none" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="139-Xb-KgT">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="243"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="238"/>
                                 <font key="font" metaFont="system"/>
-                                <tabViewItems/>
                             </tabView>
                             <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-tf-gZx">
-                                <rect key="frame" x="0.0" y="253" width="450" height="40"/>
+                                <rect key="frame" x="0.0" y="248" width="450" height="45"/>
                                 <view key="contentView" id="mdX-jW-LeM">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-Wr-ClM" customClass="SYFlatButton">
-                                            <rect key="frame" x="75" y="0.0" width="53" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Headers" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="woK-Rc-VTX">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-Wr-ClM">
+                                            <rect key="frame" x="86" y="4" width="65" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="woK-Rc-VTX">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="vt8-ui-rCq"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-7v-CnV" customClass="SYFlatButton">
-                                            <rect key="frame" x="138" y="0.0" width="70" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Parameters" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="sNd-je-VB0">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-7v-CnV">
+                                            <rect key="frame" x="161" y="4" width="84" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Parameters" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sNd-je-VB0">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="O2s-fn-HAK"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f2V-ql-f7t" customClass="SYFlatButton">
-                                            <rect key="frame" x="218" y="0.0" width="34" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Body" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="4P5-4e-rxi">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f2V-ql-f7t">
+                                            <rect key="frame" x="255" y="4" width="45" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4P5-4e-rxi">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="2yJ-ay-MBP"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-Eh-dut">
-                                            <rect key="frame" x="5" y="24" width="43" height="14"/>
+                                            <rect key="frame" x="8" y="29" width="43" height="14"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="REQUEST" id="RAI-o2-Cnk">
                                                 <font key="font" size="9" name="Effra-Regular"/>
-                                                <color key="textColor" white="0.5" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-gd-hJy">
-                                            <rect key="frame" x="396" y="24" width="49" height="14"/>
+                                            <rect key="frame" x="393" y="29" width="49" height="14"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RESPONSE" id="To7-5v-rDc">
                                                 <font key="font" size="9" name="Effra-Regular"/>
-                                                <color key="textColor" white="0.5" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-zo-gKs" customClass="SYFlatButton">
-                                            <rect key="frame" x="348" y="0.0" width="53" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Headers" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="TuA-5L-bo9">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-zo-gKs">
+                                            <rect key="frame" x="320" y="4" width="65" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TuA-5L-bo9">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="ojJ-Ji-Dst"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="go0-wk-doI" customClass="SYFlatButton">
-                                            <rect key="frame" x="411" y="0.0" width="34" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Body" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="mM7-No-sCb">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="go0-wk-doI">
+                                            <rect key="frame" x="395" y="4" width="45" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mM7-No-sCb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="ASY-bH-Uyy"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-8k-tqk" customClass="SYFlatButton">
-                                            <rect key="frame" x="5" y="0.0" width="60" height="30"/>
-                                            <buttonCell key="cell" type="square" title="Overview" bezelStyle="shadowlessSquare" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="4T8-7y-MIY">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-8k-tqk">
+                                            <rect key="frame" x="5" y="4" width="71" height="19"/>
+                                            <buttonCell key="cell" type="recessed" title="Overview" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4T8-7y-MIY">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" size="13" name="EffraMedium-Regular"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="momentary" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleHighlightColor">
-                                                    <color key="value" red="0.39607843139999999" green="0.1215686275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="titleNormalColor">
-                                                    <color key="value" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="onAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="offAnimateDuration">
-                                                    <real key="value" value="0.050000000000000003"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="hAt-Ck-AFE"/>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="5IC-Cq-R0G"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="gzV-Wr-ClM" secondAttribute="bottom" id="1S7-yi-bR9"/>
+                                        <constraint firstAttribute="bottom" secondItem="gzV-Wr-ClM" secondAttribute="bottom" constant="5" id="1S7-yi-bR9"/>
                                         <constraint firstItem="fMw-7v-CnV" firstAttribute="leading" secondItem="gzV-Wr-ClM" secondAttribute="trailing" constant="10" id="4Y6-3r-2fH"/>
                                         <constraint firstItem="CjX-gd-hJy" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="2" id="5zO-JW-fKB"/>
-                                        <constraint firstAttribute="bottom" secondItem="go0-wk-doI" secondAttribute="bottom" id="9jj-Rf-Mji"/>
+                                        <constraint firstAttribute="bottom" secondItem="go0-wk-doI" secondAttribute="bottom" constant="5" id="9jj-Rf-Mji"/>
                                         <constraint firstItem="f2V-ql-f7t" firstAttribute="leading" secondItem="fMw-7v-CnV" secondAttribute="trailing" constant="10" id="9zY-fb-gnh"/>
-                                        <constraint firstItem="cjS-zo-gKs" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="10" id="Ao8-BN-mNB"/>
-                                        <constraint firstAttribute="bottom" secondItem="cFF-8k-tqk" secondAttribute="bottom" id="Ch1-il-zDT"/>
-                                        <constraint firstAttribute="bottom" secondItem="f2V-ql-f7t" secondAttribute="bottom" id="UkB-Fw-89g"/>
+                                        <constraint firstAttribute="bottom" secondItem="cFF-8k-tqk" secondAttribute="bottom" constant="5" id="Ch1-il-zDT"/>
+                                        <constraint firstAttribute="bottom" secondItem="f2V-ql-f7t" secondAttribute="bottom" constant="5" id="UkB-Fw-89g"/>
                                         <constraint firstItem="cjS-zo-gKs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f2V-ql-f7t" secondAttribute="trailing" constant="20" id="VXD-F4-QHX"/>
-                                        <constraint firstItem="gzV-Wr-ClM" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="10" id="Wmh-XO-sjs"/>
-                                        <constraint firstItem="fMw-7v-CnV" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="10" id="eI8-MH-9V2"/>
-                                        <constraint firstAttribute="bottom" secondItem="cjS-zo-gKs" secondAttribute="bottom" id="ffy-gi-dB9"/>
+                                        <constraint firstAttribute="bottom" secondItem="cjS-zo-gKs" secondAttribute="bottom" constant="5" id="ffy-gi-dB9"/>
                                         <constraint firstItem="cFF-8k-tqk" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="5" id="gQY-eE-Ykc"/>
-                                        <constraint firstItem="f2V-ql-f7t" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="10" id="izo-qJ-kmN"/>
-                                        <constraint firstAttribute="trailing" secondItem="go0-wk-doI" secondAttribute="trailing" constant="5" id="jhq-72-MFd"/>
+                                        <constraint firstAttribute="trailing" secondItem="go0-wk-doI" secondAttribute="trailing" constant="10" id="jhq-72-MFd"/>
                                         <constraint firstItem="gzV-Wr-ClM" firstAttribute="leading" secondItem="cFF-8k-tqk" secondAttribute="trailing" constant="10" id="kmK-jD-wwq"/>
                                         <constraint firstItem="VkR-Eh-dut" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="2" id="mZJ-VP-TjL"/>
                                         <constraint firstItem="go0-wk-doI" firstAttribute="leading" secondItem="cjS-zo-gKs" secondAttribute="trailing" constant="10" id="o1T-lQ-ofX"/>
-                                        <constraint firstItem="VkR-Eh-dut" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="7" id="o3O-wX-HgZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="CjX-gd-hJy" secondAttribute="trailing" constant="7" id="r14-ow-HHw"/>
-                                        <constraint firstAttribute="bottom" secondItem="fMw-7v-CnV" secondAttribute="bottom" id="wwn-gw-cLp"/>
+                                        <constraint firstItem="VkR-Eh-dut" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="10" id="o3O-wX-HgZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="CjX-gd-hJy" secondAttribute="trailing" constant="10" id="r14-ow-HHw"/>
+                                        <constraint firstAttribute="bottom" secondItem="fMw-7v-CnV" secondAttribute="bottom" constant="5" id="wwn-gw-cLp"/>
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="cFF-8k-tqk" firstAttribute="top" secondItem="wfz-tf-gZx" secondAttribute="top" constant="10" id="0dK-1g-IPY"/>
-                                    <constraint firstItem="go0-wk-doI" firstAttribute="top" secondItem="wfz-tf-gZx" secondAttribute="top" constant="10" id="fYW-nP-0NB"/>
-                                    <constraint firstAttribute="height" constant="40" id="l0h-up-h8B"/>
+                                    <constraint firstAttribute="height" constant="45" id="l0h-up-h8B"/>
                                 </constraints>
-                                <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -830,23 +856,35 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailButtonBody" destination="f2V-ql-f7t" id="qEM-cU-tk4"/>
-                        <outlet property="detailButtonHeaders" destination="gzV-Wr-ClM" id="ar5-NP-cxS"/>
-                        <outlet property="detailButtonOverview" destination="cFF-8k-tqk" id="t69-7p-r1P"/>
-                        <outlet property="detailButtonParameters" destination="fMw-7v-CnV" id="klZ-nb-LW5"/>
+                        <outlet property="detailButtonOverview" destination="cFF-8k-tqk" id="uME-Sd-X0V"/>
+                        <outlet property="detailButtonRequestBody" destination="f2V-ql-f7t" id="HYW-1A-rzH"/>
+                        <outlet property="detailButtonRequestHeaders" destination="gzV-Wr-ClM" id="lWu-cz-vBn"/>
+                        <outlet property="detailButtonRequestParameters" destination="fMw-7v-CnV" id="N7y-ig-0P2"/>
                         <outlet property="detailButtonResponseBody" destination="go0-wk-doI" id="w60-Kh-fWP"/>
                         <outlet property="detailButtonResponseHeaders" destination="cjS-zo-gKs" id="OtV-xU-kKv"/>
-                        <outlet property="httpMethodTextField" destination="mm2-yo-sQB" id="XFb-0l-Hxp"/>
-                        <outlet property="tabView" destination="139-Xb-KgT" id="x0Q-5k-JZT"/>
-                        <outlet property="urlTextField" destination="Baz-mg-73Q" id="OJV-Kq-h48"/>
+                        <outlet property="httpMethodTextField" destination="S1x-ff-DRQ" id="1pZ-9M-pRJ"/>
+                        <outlet property="tabView" destination="139-Xb-KgT" id="1n5-Xi-Rbv"/>
+                        <outlet property="urlTextField" destination="Baz-mg-73Q" id="LXe-s2-A21"/>
                     </connections>
                 </viewController>
                 <customObject id="b4q-cl-WtK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="1690"/>
+            <point key="canvasLocation" x="1034" y="1689.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LhI-cr-dpW">
+            <objects>
+                <viewController id="gpN-nP-5iH" sceneMemberID="viewController">
+                    <view key="view" id="MmA-11-tMu">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Oun-cN-o0W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
-        <image name="CopyIcon" width="128" height="128"/>
+        <image name="CopyIcon" width="24" height="24"/>
     </resources>
 </document>

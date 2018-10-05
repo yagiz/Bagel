@@ -11,21 +11,28 @@ import Cocoa
 class BagelProjectController: NSObject {
     
     var projectName: String?
+    
     var deviceControllers: [BagelDeviceController] = []
+    var selectedDeviceController: BagelDeviceController? {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name("DidSelectDevice"), object: nil)
+        }
+    }
     
     func addPacket(newPacket: BagelPacket) {
         
         for deviceController in self.deviceControllers {
             
-            if deviceController.devideId == newPacket.device?.devideId {
+            if deviceController.deviceId == newPacket.device?.deviceId {
                 
                 deviceController.addPacket(newPacket: newPacket)
+                return
             }
         }
         
         let deviceController = BagelDeviceController()
         
-        deviceController.devideId = newPacket.device?.devideId
+        deviceController.deviceId = newPacket.device?.deviceId
         deviceController.deviceName = newPacket.device?.deviceName
         deviceController.deviceDescription = newPacket.device?.deviceDescription
         

@@ -12,7 +12,7 @@ class ProjectTableCellView: NSTableCellView {
 
     @IBOutlet weak var titleTextField: NSTextField!
     
-    var project: String!
+    var project: BagelProjectController!
     {
         didSet
         {
@@ -22,6 +22,6 @@ class ProjectTableCellView: NSTableCellView {
 
     func refresh() {
         
-        self.titleTextField.stringValue = self.project
+        self.titleTextField.stringValue = self.project.projectName ?? ""
     }
 }

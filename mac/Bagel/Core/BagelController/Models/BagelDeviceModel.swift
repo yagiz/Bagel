@@ -10,7 +10,7 @@ import Cocoa
 
 class BagelDeviceModel: Codable {
 
-    var devideId: String?
+    var deviceId: String?
     var deviceName: String?
     var deviceDescription: String?
 }

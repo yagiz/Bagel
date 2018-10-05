@@ -8,13 +8,39 @@
 
 import Cocoa
 
+typealias KeyValue = [String: String]
+
+extension Dictionary where Key == String, Value == String {
+    
+    func toKeyValueArray() -> [KeyValue] {
+        
+        var array = [KeyValue]()
+        
+        for key in self.keys {
+            
+            array.append([key : self[key]!])
+        }
+        
+        return array
+    }
+    
+    var firstKey: String? {
+        return self.keys.first
+    }
+    
+    var firstValue: String? {
+        return self.values.first
+    }
+}
+
 class BagelRequestInfo: Codable {
 
-    var requestHeaders: [String:String]?
+    var url: String?
+    var requestHeaders: KeyValue?
     var requestBody: Data?
     var requestMethod: String?
     
-    var responseHeaders: [String:String]?
+    var responseHeaders: KeyValue?
     var responseData: Data?
     
     var statusCode: String?

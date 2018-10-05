@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -685,9 +685,9 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -725,7 +725,7 @@
                 <controllerPlaceholder storyboardName="Packets" referencedIdentifier="PacketsViewController" id="qMc-Mv-va5" sceneMemberID="viewController"/>
                 <customObject id="uJF-mc-OPk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="1292"/>
+            <point key="canvasLocation" x="84" y="1366"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="y4e-Wc-iFT">
@@ -738,7 +738,7 @@
         <!--View Controller-->
         <scene sceneID="fR5-2q-KVo">
             <objects>
-                <viewController id="J2d-qx-gCt" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="J2d-qx-gCt" customClass="ViewController" customModule="Bagel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="oAB-hK-plE">
                         <rect key="frame" x="0.0" y="0.0" width="827" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -746,41 +746,83 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="pum-eU-Zhk">
                                 <rect key="frame" x="0.0" y="0.0" width="827" height="576"/>
                                 <subviews>
-                                    <containerView translatesAutoresizingMaskIntoConstraints="NO" id="JNW-Zr-M91">
+                                    <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="MdL-Ur-DWv">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
+                                        <view key="contentView" id="7LK-uA-7fl">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="JNW-Zr-M91">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="576"/>
+                                                    <connections>
+                                                        <segue destination="64I-P0-Mwn" kind="embed" identifier="ProjectsViewController" id="mj0-Pg-AEU"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JNW-Zr-M91" firstAttribute="top" secondItem="7LK-uA-7fl" secondAttribute="top" id="BpL-s1-y8R"/>
+                                                <constraint firstAttribute="bottom" secondItem="JNW-Zr-M91" secondAttribute="bottom" id="GoM-7s-Cpn"/>
+                                                <constraint firstItem="JNW-Zr-M91" firstAttribute="leading" secondItem="7LK-uA-7fl" secondAttribute="leading" id="s1A-Jj-Af2"/>
+                                                <constraint firstAttribute="trailing" secondItem="JNW-Zr-M91" secondAttribute="trailing" id="viV-ei-e9W"/>
+                                            </constraints>
+                                        </view>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="rP0-iD-H4n"/>
+                                            <constraint firstAttribute="width" constant="100" id="3LA-7n-ylP"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="64I-P0-Mwn" kind="embed" id="mj0-Pg-AEU"/>
-                                        </connections>
-                                    </containerView>
-                                    <containerView translatesAutoresizingMaskIntoConstraints="NO" id="vcS-ZR-URn">
+                                        <color key="borderColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </box>
+                                    <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="VBx-aB-Jng">
                                         <rect key="frame" x="100" y="0.0" width="150" height="576"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="h5g-mo-9t9"/>
-                                        </constraints>
-                                        <connections>
-                                            <segue destination="QSc-Y4-5Cx" kind="embed" id="GKl-dZ-2r0"/>
-                                        </connections>
-                                    </containerView>
+                                        <view key="contentView" id="0Go-FS-q3v">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="576"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="vcS-ZR-URn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="576"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="h5g-mo-9t9"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <segue destination="QSc-Y4-5Cx" kind="embed" identifier="DevicesViewController" id="GKl-dZ-2r0"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vcS-ZR-URn" firstAttribute="top" secondItem="0Go-FS-q3v" secondAttribute="top" id="7v7-1V-gb5"/>
+                                                <constraint firstAttribute="trailing" secondItem="vcS-ZR-URn" secondAttribute="trailing" id="CGO-Zy-TAs"/>
+                                                <constraint firstItem="vcS-ZR-URn" firstAttribute="leading" secondItem="0Go-FS-q3v" secondAttribute="leading" id="JKd-Yd-s8k"/>
+                                                <constraint firstAttribute="bottom" secondItem="vcS-ZR-URn" secondAttribute="bottom" id="khv-v2-Yoi"/>
+                                            </constraints>
+                                        </view>
+                                        <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </box>
                                     <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">
                                         <rect key="frame" x="250" y="0.0" width="577" height="576"/>
                                         <view key="contentView" id="cvt-Xd-vI3">
                                             <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="SplitVew">
+                                                <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-NS-UAk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
+                                                    <view key="contentView" id="0tW-SS-WiY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="577" height="576"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" white="0.0" alpha="0.040000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </box>
+                                                <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="weG-2z-gyy" customClass="BaseSplitView" customModule="Bagel" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="577" height="546"/>
                                                     <subviews>
                                                         <customView id="N0u-KV-KSZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="577" height="268"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="577" height="273"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="zwD-c6-zHt">
-                                                                    <rect key="frame" x="10" y="10" width="557" height="258"/>
+                                                                    <rect key="frame" x="10" y="10" width="557" height="263"/>
                                                                     <connections>
-                                                                        <segue destination="qMc-Mv-va5" kind="embed" id="gBm-nl-eRp"/>
+                                                                        <segue destination="qMc-Mv-va5" kind="embed" identifier="PacketsViewController" id="gBm-nl-eRp"/>
                                                                     </connections>
                                                                 </containerView>
                                                             </subviews>
@@ -792,13 +834,13 @@
                                                             </constraints>
                                                         </customView>
                                                         <customView id="xC7-k8-PGG">
-                                                            <rect key="frame" x="0.0" y="278" width="577" height="268"/>
+                                                            <rect key="frame" x="0.0" y="274" width="577" height="272"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="6vH-jg-UZJ">
-                                                                    <rect key="frame" x="10" y="10" width="557" height="248"/>
+                                                                    <rect key="frame" x="10" y="10" width="557" height="252"/>
                                                                     <connections>
-                                                                        <segue destination="sEX-Ye-dwa" kind="embed" id="x3Z-RC-o5A"/>
+                                                                        <segue destination="sEX-Ye-dwa" kind="embed" identifier="DetailViewController" id="x3Z-RC-o5A"/>
                                                                     </connections>
                                                                 </containerView>
                                                             </subviews>
@@ -818,25 +860,30 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="weG-2z-gyy" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" constant="30" id="0pE-x8-EVy"/>
+                                                <constraint firstAttribute="bottom" secondItem="fsy-NS-UAk" secondAttribute="bottom" id="6Xd-zi-LrY"/>
                                                 <constraint firstAttribute="bottom" secondItem="weG-2z-gyy" secondAttribute="bottom" id="7Bp-TF-Oq5"/>
+                                                <constraint firstItem="fsy-NS-UAk" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="Jzq-Wo-WMQ"/>
+                                                <constraint firstItem="fsy-NS-UAk" firstAttribute="top" secondItem="cvt-Xd-vI3" secondAttribute="top" id="RpO-jO-fz7"/>
                                                 <constraint firstAttribute="trailing" secondItem="weG-2z-gyy" secondAttribute="trailing" id="UsK-KI-v3a"/>
+                                                <constraint firstAttribute="trailing" secondItem="fsy-NS-UAk" secondAttribute="trailing" id="Vpd-MM-bDd"/>
                                                 <constraint firstItem="weG-2z-gyy" firstAttribute="leading" secondItem="cvt-Xd-vI3" secondAttribute="leading" id="wjf-1p-JLN"/>
                                             </constraints>
                                         </view>
-                                        <color key="fillColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </box>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="vcS-ZR-URn" firstAttribute="leading" secondItem="JNW-Zr-M91" secondAttribute="trailing" id="1of-Xk-dEs"/>
-                                    <constraint firstAttribute="bottom" secondItem="JNW-Zr-M91" secondAttribute="bottom" id="79J-a6-2Hq"/>
-                                    <constraint firstItem="vcS-ZR-URn" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="7Fe-xe-Lut"/>
-                                    <constraint firstItem="JNW-Zr-M91" firstAttribute="leading" secondItem="pum-eU-Zhk" secondAttribute="leading" id="9vI-V2-T6k"/>
+                                    <constraint firstItem="MdL-Ur-DWv" firstAttribute="leading" secondItem="pum-eU-Zhk" secondAttribute="leading" id="68K-hY-N3S"/>
+                                    <constraint firstAttribute="bottom" secondItem="MdL-Ur-DWv" secondAttribute="bottom" id="7ZN-xK-jI5"/>
+                                    <constraint firstItem="MdL-Ur-DWv" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="9xH-GY-p0i"/>
                                     <constraint firstAttribute="bottom" secondItem="buX-0C-nYy" secondAttribute="bottom" id="Bd0-6m-QDG"/>
+                                    <constraint firstAttribute="bottom" secondItem="VBx-aB-Jng" secondAttribute="bottom" id="C9b-iF-KH2"/>
                                     <constraint firstAttribute="trailing" secondItem="buX-0C-nYy" secondAttribute="trailing" id="Hwq-wC-1Sf"/>
-                                    <constraint firstItem="buX-0C-nYy" firstAttribute="leading" secondItem="vcS-ZR-URn" secondAttribute="trailing" id="nlT-I0-41X"/>
-                                    <constraint firstAttribute="bottom" secondItem="vcS-ZR-URn" secondAttribute="bottom" id="r8U-5f-6sT"/>
+                                    <constraint firstItem="VBx-aB-Jng" firstAttribute="leading" secondItem="MdL-Ur-DWv" secondAttribute="trailing" id="MBF-Jc-Pgw"/>
+                                    <constraint firstItem="VBx-aB-Jng" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="QH2-v0-Nxv"/>
+                                    <constraint firstItem="buX-0C-nYy" firstAttribute="leading" secondItem="VBx-aB-Jng" secondAttribute="trailing" id="Y9s-j0-J3U"/>
                                     <constraint firstItem="buX-0C-nYy" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="tPC-xY-5Xi"/>
-                                    <constraint firstItem="JNW-Zr-M91" firstAttribute="top" secondItem="pum-eU-Zhk" secondAttribute="top" id="wOW-hD-5tb"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -850,7 +897,7 @@
                 </viewController>
                 <customObject id="uWW-aP-frM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="866"/>
+            <point key="canvasLocation" x="75.5" y="866"/>
         </scene>
     </scenes>
 </document>

@@ -10,11 +10,16 @@ import Cocoa
 
 class BagelDeviceController: NSObject {
 
-    var devideId: String?
+    var deviceId: String?
     var deviceName: String?
     var deviceDescription: String?
     
     var packets: [BagelPacket] = []
+    var selectedPacket: BagelPacket? {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name("DidSelectPacket"), object: nil)
+        }
+    }
     
     func addPacket(newPacket: BagelPacket) {
         
@@ -23,6 +28,7 @@ class BagelDeviceController: NSObject {
             if packet.packetId == newPacket.packetId {
                 
                 packet.requestInfo = newPacket.requestInfo
+                return
             }
         }
         

@@ -16,6 +16,11 @@ class BaseViewController: NSViewController {
         self.setup()
     }
     
+    static var identifier: NSStoryboard.SceneIdentifier {
+        
+        return NSStoryboard.SceneIdentifier(String(describing: self))
+    }
+    
     func setup() {
         
     }

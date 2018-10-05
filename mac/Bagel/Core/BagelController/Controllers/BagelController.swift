@@ -8,9 +8,32 @@
 
 import Cocoa
 
-class BagelController: NSObject {
+class BagelController: NSObject, BagelPublisherDelegate {
+    
+    static let shared = BagelController()
     
     var projectControllers: [BagelProjectController] = []
+    var selectedProjectController: BagelProjectController? {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name("DidSelectProject"), object: nil)
+        }
+    }
+    
+    var publisher = BagelPublisher()
+    
+    override init() {
+        
+        super.init()
+        self.publisher.delegate = self
+        self.publisher.startPublishing()
+        
+    }
+    
+    func didGetPacket(publisher: BagelPublisher, packet: BagelPacket) {
+        
+        self.addPacket(newPacket: packet)
+        NotificationCenter.default.post(name: NSNotification.Name("DidGetPacket"), object: nil)
+    }
     
     func addPacket(newPacket: BagelPacket) {
         

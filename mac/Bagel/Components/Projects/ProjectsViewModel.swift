@@ -8,7 +8,17 @@
 
 import Cocoa
 
-class ProjectsViewModel: BaseListViewModel<String> {
+class ProjectsViewModel: BaseListViewModel<BagelProjectController> {
 
+    func register() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidSelectProject"), object: nil)
+    }
     
+    @objc func didGetPacket() {
+        
+        self.items = BagelController.shared.projectControllers
+        self.onChange?()
+    }
 }

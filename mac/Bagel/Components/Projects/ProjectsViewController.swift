@@ -11,7 +11,7 @@ import Cocoa
 class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource
 {
     var viewModel: ProjectsViewModel?
-    var onProjectSelect : ((String) -> ())?
+    var onProjectSelect : ((BagelProjectController) -> ())?
     
     @IBOutlet weak var tableView: BaseTableView!
     
@@ -52,6 +52,9 @@ extension ProjectsViewController
         
         let selectedRow = self.tableView.selectedRow
         
-        self.onProjectSelect?("asdas")
+        if selectedRow >= 0, let item = self.viewModel?.item(at: selectedRow) {
+            
+            self.onProjectSelect?(item)
+        }
     }
 }
