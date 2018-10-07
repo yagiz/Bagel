@@ -1,0 +1,6 @@
+framework module macOSThemeKit {
+  umbrella header "macOSThemeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

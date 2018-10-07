@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class DevicesViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource {
 
@@ -19,6 +20,7 @@ class DevicesViewController: BaseViewController, NSTableViewDelegate, NSTableVie
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = ThemeColor.deviceListBackgroundColor
         
         self.viewModel?.onChange = { [weak self] in
             

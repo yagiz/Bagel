@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
+		BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* ThemeColor.swift */; };
 		BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA742162B976000F6D2F /* DetailViewModel.swift */; };
 		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
 		BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73DFAD215BFB18002E533B /* BagelPublisher.swift */; };
+		BC911A422168C00500B755D4 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A412168C00500B755D4 /* NSColor.swift */; };
+		BC911A442168E10F00B755D4 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A432168E10F00B755D4 /* LightTheme.swift */; };
+		BC911A472168EB0A00B755D4 /* ContentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A462168EB0A00B755D4 /* ContentBar.swift */; };
+		BC911A492168F27700B755D4 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A482168F27700B755D4 /* DarkTheme.swift */; };
 		BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */; };
 		BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */; };
 		BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */; };
@@ -93,9 +98,14 @@
 		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		BC5E76C8216A64DB000F658D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		BC61DA742162B976000F6D2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		BC73DFAD215BFB18002E533B /* BagelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPublisher.swift; sourceTree = "<group>"; };
+		BC911A412168C00500B755D4 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		BC911A432168E10F00B755D4 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		BC911A462168EB0A00B755D4 /* ContentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBar.swift; sourceTree = "<group>"; };
+		BC911A482168F27700B755D4 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueViewModel.swift; sourceTree = "<group>"; };
 		BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableCellView.swift; sourceTree = "<group>"; };
@@ -223,6 +233,24 @@
 				BC9C779521634D1F00E8ADE8 /* OverviewViewController */,
 			);
 			path = DetailSections;
+			sourceTree = "<group>";
+		};
+		BC911A3F2168BC7F00B755D4 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E76C8216A64DB000F658D /* ThemeColor.swift */,
+				BC911A432168E10F00B755D4 /* LightTheme.swift */,
+				BC911A482168F27700B755D4 /* DarkTheme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		BC911A402168BFFC00B755D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC911A412168C00500B755D4 /* NSColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BC9C779521634D1F00E8ADE8 /* OverviewViewController */ = {
@@ -367,6 +395,7 @@
 		BCD0E025210F5E0D00CE5C7B /* Bagel */ = {
 			isa = PBXGroup;
 			children = (
+				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
 				BC9C77B5216393B300E8ADE8 /* jsonViewer */,
 				BCA60B3F216201AF00B9DCAD /* Configuration */,
@@ -468,6 +497,7 @@
 				BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */,
 				BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */,
 				BCDF0EC321662CA10030710C /* FlatTableRowView.swift */,
+				BC911A462168EB0A00B755D4 /* ContentBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -475,6 +505,7 @@
 		BCFC85412138467C001EC6D7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BC911A402168BFFC00B755D4 /* Extensions */,
 				BCFC8548213848B5001EC6D7 /* ViewModels */,
 				BCFC853C21384430001EC6D7 /* Views */,
 			);
@@ -655,10 +686,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/macOSThemeKit/macOSThemeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/macOSThemeKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -694,6 +727,7 @@
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
+				BC911A472168EB0A00B755D4 /* ContentBar.swift in Sources */,
 				BCFC85332138354D001EC6D7 /* DevicesViewController.swift in Sources */,
 				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
 				BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */,
@@ -718,13 +752,17 @@
 				BCFC8545213846B0001EC6D7 /* BaseListViewModel.swift in Sources */,
 				BCFC854721384776001EC6D7 /* BaseViewController.swift in Sources */,
 				BCFC854E2138490E001EC6D7 /* BagelDeviceModel.swift in Sources */,
+				BC911A422168C00500B755D4 /* NSColor.swift in Sources */,
 				BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */,
+				BC911A492168F27700B755D4 /* DarkTheme.swift in Sources */,
+				BC911A442168E10F00B755D4 /* LightTheme.swift in Sources */,
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,
+				BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */,
 				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,
 				BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */,

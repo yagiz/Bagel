@@ -7,10 +7,11 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class FlatTableHeaderCell: NSTableHeaderCell {
 
-    static let titleLeftMargin = CGFloat(0.0)
+    static let titleLeftMargin = CGFloat(5.0)
     static let titleTopMargin = CGFloat(0.0)
     
     override init(textCell string: String) {
@@ -31,7 +32,7 @@ class FlatTableHeaderCell: NSTableHeaderCell {
     
     override func drawInterior(withFrame cellFrame: NSRect, in controlView: NSView) {
         
-        NSColor.controlBackgroundColor.setFill()
+        ThemeColor.contentBarColor.setFill()
         cellFrame.fill()
         
         let fullRange = NSRange.init(location: 0, length: self.stringValue.count)
@@ -40,7 +41,10 @@ class FlatTableHeaderCell: NSTableHeaderCell {
         attributedString.addAttribute(.foregroundColor, value: NSColor.labelColor, range: fullRange)
         attributedString.addAttribute(.font, value: FontManager.mainMediumFont(size: 13), range: fullRange)
         
-        attributedString.draw(in: NSRect.init(x: FlatTableHeaderCell.titleLeftMargin + cellFrame.origin.x, y: FlatTableHeaderCell.titleTopMargin, width: cellFrame.size.width, height: cellFrame.size.height))
+        self.attributedStringValue = attributedString
+        super.drawInterior(withFrame: cellFrame, in: controlView)
+//        attributedString.draw(in: NSRect.init(x: FlatTableHeaderCell.titleLeftMargin + cellFrame.origin.x, y: FlatTableHeaderCell.titleTopMargin, width: cellFrame.size.width, height: cellFrame.size.height))
+//
     }
     
     

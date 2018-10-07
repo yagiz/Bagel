@@ -12,13 +12,13 @@ class ProjectsViewModel: BaseListViewModel<BagelProjectController> {
 
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidSelectProject"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidSelectProject"), object: nil)
     }
     
-    @objc func didGetPacket() {
+    @objc func refreshItems() {
         
-        self.items = BagelController.shared.projectControllers
+        self.set(items: BagelController.shared.projectControllers) 
         self.onChange?()
     }
 }

@@ -7,8 +7,9 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
-class KeyValueListViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource {
+class KeyValueListViewController: BaseViewController {
 
     var viewModel: KeyValueViewModel?
     
@@ -16,12 +17,21 @@ class KeyValueListViewController: BaseViewController, NSTableViewDelegate, NSTab
     
     @IBOutlet weak var tableView: BaseTableView!
     @IBOutlet var rawTextView: NSTextView!
+    
+    @IBOutlet weak var rawTextScrollView: NSScrollView!
+    @IBOutlet weak var tableScrollView: NSScrollView!
+    
+    @IBOutlet weak var contentHeaderBar: ContentBar!
+    
     @IBOutlet weak var rawButton: NSButton!
     
     override func setup() {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = ThemeColor.controlBackgroundColor
+        self.tableView.gridColor = ThemeColor.gridColor
+
         self.setupTableViewHeaders()
         
         self.viewModel?.onChange = { [weak self] in
@@ -49,18 +59,16 @@ class KeyValueListViewController: BaseViewController, NSTableViewDelegate, NSTab
         
         if self.isRaw {
             
-            self.rawTextView.isHidden = false
-            self.rawTextView.isSelectable = true
-            
-            self.tableView.isHidden = true
+            self.rawTextScrollView.isHidden = false
+            self.tableScrollView.isHidden = true
+            self.contentHeaderBar.isHidden = true
             self.rawButton.state = .on
             
         }else {
             
-            self.rawTextView.isHidden = true
-            self.rawTextView.isSelectable = false
-            
-            self.tableView.isHidden = false
+            self.rawTextScrollView.isHidden = true
+            self.tableScrollView.isHidden = false
+            self.contentHeaderBar.isHidden = false
             self.rawButton.state = .off
             
         }
@@ -86,7 +94,7 @@ class KeyValueListViewController: BaseViewController, NSTableViewDelegate, NSTab
 }
 
 
-extension KeyValueListViewController
+extension KeyValueListViewController: NSTableViewDelegate, NSTableViewDataSource
 {
     func numberOfRows(in tableView: NSTableView) -> Int {
         

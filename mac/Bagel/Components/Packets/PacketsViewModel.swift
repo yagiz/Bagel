@@ -12,8 +12,9 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
 
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidSelectDevice"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidSelectDevice"), object: nil)
     }
     
     
@@ -34,9 +35,15 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
     }
     
     
-    @objc func didGetPacket() {
+    @objc func refreshItems() {
         
         self.items = BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
         self.onChange?()
+    }
+    
+    func clearPackets() {
+        
+        BagelController.shared.selectedProjectController?.selectedDeviceController?.clear()
+        self.refreshItems()
     }
 }

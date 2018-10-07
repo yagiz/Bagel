@@ -796,7 +796,7 @@
                                             </constraints>
                                         </view>
                                         <color key="borderColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="fillColor" name="underPageBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </box>
                                     <box boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="buX-0C-nYy">
                                         <rect key="frame" x="250" y="0.0" width="577" height="576"/>
@@ -825,10 +825,24 @@
                                                                         <segue destination="qMc-Mv-va5" kind="embed" identifier="PacketsViewController" id="gBm-nl-eRp"/>
                                                                     </connections>
                                                                 </containerView>
+                                                                <box boxType="custom" borderWidth="0.0" cornerRadius="2" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-eG-O30">
+                                                                    <rect key="frame" x="279" y="-2" width="20" height="4"/>
+                                                                    <view key="contentView" id="74A-Sd-x9X">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="4"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="20" id="DLa-4M-5ZF"/>
+                                                                        <constraint firstAttribute="height" constant="4" id="zqP-Qi-1ez"/>
+                                                                    </constraints>
+                                                                    <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </box>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="zwD-c6-zHt" firstAttribute="top" secondItem="N0u-KV-KSZ" secondAttribute="top" id="3jg-XH-TDe"/>
+                                                                <constraint firstItem="r9w-eG-O30" firstAttribute="centerX" secondItem="N0u-KV-KSZ" secondAttribute="centerX" id="9d7-Sz-1gK"/>
                                                                 <constraint firstAttribute="bottom" secondItem="zwD-c6-zHt" secondAttribute="bottom" constant="10" id="G0o-1e-Q0R"/>
+                                                                <constraint firstAttribute="bottom" secondItem="r9w-eG-O30" secondAttribute="bottom" constant="-2" id="bPa-pP-71i"/>
                                                                 <constraint firstItem="zwD-c6-zHt" firstAttribute="leading" secondItem="N0u-KV-KSZ" secondAttribute="leading" constant="10" id="lfx-kj-AHm"/>
                                                                 <constraint firstAttribute="trailing" secondItem="zwD-c6-zHt" secondAttribute="trailing" constant="10" id="qIE-TW-cAd"/>
                                                             </constraints>
@@ -894,6 +908,11 @@
                             <constraint firstAttribute="trailing" secondItem="pum-eU-Zhk" secondAttribute="trailing" id="ZP6-5e-6jt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="devicesBackgroundBox" destination="VBx-aB-Jng" id="Cd2-Nz-3h1"/>
+                        <outlet property="packetsBackgroundBox" destination="buX-0C-nYy" id="5vI-qx-nyB"/>
+                        <outlet property="projectsBackgroundBox" destination="MdL-Ur-DWv" id="edN-fP-mIh"/>
+                    </connections>
                 </viewController>
                 <customObject id="uWW-aP-frM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

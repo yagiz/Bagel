@@ -101,6 +101,7 @@
                                                                 <constraint firstItem="AdA-W2-Hop" firstAttribute="leading" secondItem="C9i-hu-6d7" secondAttribute="leading" constant="10" id="zPH-bI-0JI"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="backgroundBox" destination="AdA-W2-Hop" id="Bec-IP-vVE"/>
                                                                 <outlet property="deviceDescriptionTextField" destination="w1x-VA-YQg" id="Wp9-Ix-COK"/>
                                                                 <outlet property="deviceNameTextField" destination="5He-ss-CRR" id="KK9-3b-J6D"/>
                                                             </connections>

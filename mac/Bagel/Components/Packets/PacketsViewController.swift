@@ -7,18 +7,27 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
-class PacketsViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource {
+class PacketsViewController: BaseViewController {
 
+    static var statusColumnWidth = CGFloat(50.0)
+    
     var viewModel: PacketsViewModel?
-    var onPacketSelect : ((BagelPacket) -> ())?
+    var onPacketSelect : ((BagelPacket?) -> ())?
     
     @IBOutlet weak var tableView: BaseTableView!
+    @IBOutlet weak var filterTextField: NSTextField!
     
     override func setup() {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = ThemeColor.controlBackgroundColor
+        self.tableView.gridColor = ThemeColor.gridColor
+        
+        self.filterTextField.backgroundColor = ThemeColor.controlBackgroundColor
+        self.filterTextField.delegate = self
         
         self.viewModel?.onChange = { [weak self] in
             
@@ -47,19 +56,25 @@ class PacketsViewController: BaseViewController, NSTableViewDelegate, NSTableVie
             if tableColumn.identifier.rawValue == "statusCode" {
                 
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Status")
-                tableColumn.width = 40
+                tableColumn.width = PacketsViewController.statusColumnWidth
                 
             }else if tableColumn.identifier.rawValue == "url" {
                 
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
-                tableColumn.width = self.view.frame.size.width - 40
+                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth
             }
         }
     }
     
+    @IBAction func clearButtonAction(_ sender: Any) {
+        
+        self.viewModel?.clearPackets()
+    }
+    
+    
 }
 
-extension PacketsViewController
+extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
 {
     func numberOfRows(in tableView: NSTableView) -> Int {
         
@@ -67,10 +82,10 @@ extension PacketsViewController
     }
     
     
-//    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
-//        
-//        return FlatTableRowView()
-//    }
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        
+        return FlatTableRowView()
+    }
     
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -103,7 +118,19 @@ extension PacketsViewController
                 
                 self.onPacketSelect?(item)
             }
+        }else {
+            
+            self.onPacketSelect?(nil)
         }
     }
     
+}
+
+
+extension PacketsViewController: NSTextFieldDelegate {
+    
+    override func controlTextDidChange(_ obj: Notification) {
+        
+
+    }
 }

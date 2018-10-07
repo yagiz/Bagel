@@ -17,6 +17,9 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     @IBOutlet weak var webView: WebView!
     @IBOutlet var rawTextView: NSTextView!
+    
+    @IBOutlet weak var rawTextScrollView: NSScrollView!
+    
     @IBOutlet weak var rawButton: NSButton!
     
     override func setup() {
@@ -61,13 +64,13 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
         
         if self.isRaw {
             
-            self.rawTextView.isHidden = false
+            self.rawTextScrollView.isHidden = false
             self.webView.isHidden = true
             self.rawButton.state = .on
             
         }else {
             
-            self.rawTextView.isHidden = true
+            self.rawTextScrollView.isHidden = true
             self.webView.isHidden = false
             self.rawButton.state = .off
             

@@ -34,4 +34,10 @@ class BagelDeviceController: NSObject {
         
         self.packets.append(newPacket)
     }
+    
+    func clear() {
+        
+        self.packets.removeAll()
+        self.selectedPacket = nil
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class StatusPacketTableCellView: NSTableCellView {
 
@@ -30,22 +31,22 @@ class StatusPacketTableCellView: NSTableCellView {
                 
                 if statusCodeInt >= 200 && statusCodeInt < 300 {
                     
-                    titleTextColor = NSColor.green
+                    titleTextColor = ThemeColor.statusGreenColor
                     
                 }else if statusCodeInt >= 300 && statusCodeInt < 400 {
                     
-                    titleTextColor = NSColor.orange
+                    titleTextColor = ThemeColor.statusOrangeColor
                     
                 }else if statusCodeInt >= 400 {
                     
-                    titleTextColor = NSColor.red
+                    titleTextColor = ThemeColor.statusRedColor
                 }
                 
             }
         }
         
         self.titleTextField.textColor = titleTextColor
-        self.titleTextField.stringValue = self.packet.requestInfo?.statusCode ?? "-"
+        self.titleTextField.stringValue = self.packet.requestInfo?.statusCode ?? ""
     }
     
 }

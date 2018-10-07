@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource
 {
@@ -19,6 +20,7 @@ class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableVi
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = ThemeColor.projectListBackgroundColor
         
         self.viewModel?.onChange = { [weak self] in
             

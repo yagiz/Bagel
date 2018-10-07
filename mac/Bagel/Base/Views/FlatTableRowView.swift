@@ -7,6 +7,19 @@
 //
 
 import Cocoa
+import macOSThemeKit
+
+struct RowColors {
+    
+    static let normal = NSColor.clear
+    
+    static var selected: NSColor {
+        
+//        return NSColor(hexString: "#303030")
+        
+        return NSColor(hexString: "#f4f4f4")
+    }
+}
 
 class FlatTableRowView: NSTableRowView {
 
@@ -16,15 +29,14 @@ class FlatTableRowView: NSTableRowView {
 
         if self.isSelected {
             
-            NSColor.init(white: 0.94, alpha: 1).setFill()
+            ThemeColor.rowSelectedColor.setFill() 
             
         }else {
             
-            NSColor.white.setFill()
+            RowColors.normal.setFill()
         }
         
         dirtyRect.fill()
-        
         self.drawSeparator(in: dirtyRect)
     }
     

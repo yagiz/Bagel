@@ -7,9 +7,11 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class DeviceTableCellView: NSTableCellView {
 
+    @IBOutlet weak var backgroundBox: NSBox!
     @IBOutlet weak var deviceNameTextField: NSTextField!
     @IBOutlet weak var deviceDescriptionTextField: NSTextField!
     
@@ -21,11 +23,15 @@ class DeviceTableCellView: NSTableCellView {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundBox.fillColor = ThemeColor.deviceRowSelectedColor
+    }
+    
     func refresh() {
         
         self.deviceNameTextField.stringValue = self.device.deviceName ?? ""
         self.deviceDescriptionTextField.stringValue = self.device.deviceDescription ?? ""
-        
     }
     
 }

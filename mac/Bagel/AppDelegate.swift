@@ -7,14 +7,20 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
-
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        
+        ThemeManager.systemTheme.apply()
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class ViewController: NSViewController {
 
@@ -15,10 +16,19 @@ class ViewController: NSViewController {
     var packetsViewController: PacketsViewController?
     var detailVeiwController: DetailViewController?
     
+    @IBOutlet weak var projectsBackgroundBox: NSBox!
+    @IBOutlet weak var devicesBackgroundBox: NSBox!
+    @IBOutlet weak var packetsBackgroundBox: NSBox!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         BagelController.shared
+        
+        self.projectsBackgroundBox.fillColor = ThemeColor.projectListBackgroundColor
+        self.devicesBackgroundBox.fillColor = ThemeColor.deviceListBackgroundColor
+        self.packetsBackgroundBox.fillColor = ThemeColor.packetListAndDetailBackgroundColor
+        
     }
 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
@@ -58,8 +68,7 @@ class ViewController: NSViewController {
             self.packetsViewController?.viewModel?.register()
             
             self.packetsViewController?.onPacketSelect = { (selectedPacket) in
-                
-                BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket = selectedPacket
+            BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket = selectedPacket
             }
             
         }

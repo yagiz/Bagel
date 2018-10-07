@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <plugIn identifier="com.apple.WebKitIBPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,20 +38,20 @@
                                                     <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="mk4-BM-kwp">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="260"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="440" height="260"/>
                                                         <size key="maxSize" width="618" height="10000000"/>
                                                         <attributedString key="textStorage">
                                                             <fragment content="Test">
                                                                 <attributes>
-                                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="NSColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" size="13" name="DroidSansMono"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
-                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="insertionPointColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
                                             </clipView>
@@ -63,7 +64,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
-                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-TQ-tH5">
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-TQ-tH5" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                             <view key="contentView" id="tH8-rD-qu8">
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
@@ -83,37 +84,28 @@
                                                             <action selector="copyToClipBoardButtonAction:" target="8u2-ww-n8g" id="OYM-kX-dL1"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-vg-U71" customClass="ColoredButton" customModule="Bagel" customModuleProvider="target">
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-GN-IMK">
                                                         <rect key="frame" x="385" y="7" width="30" height="16"/>
-                                                        <buttonCell key="cell" type="recessed" title="Raw" bezelStyle="recessed" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="6WD-vz-zyD">
+                                                        <buttonCell key="cell" type="recessed" title="Raw" bezelStyle="recessed" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bRx-1D-NLK">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="systemBold" size="12"/>
                                                         </buttonCell>
-                                                        <color key="contentTintColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                                <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="rawButtonAction:" target="8u2-ww-n8g" id="jhJ-fR-Uk0"/>
+                                                            <action selector="rawButtonAction:" target="8u2-ww-n8g" id="vcZ-CW-yGn"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="TF2-SH-jlL" firstAttribute="leading" secondItem="pgB-vg-U71" secondAttribute="trailing" constant="10" id="ooT-Jj-XJE"/>
+                                                    <constraint firstItem="yg1-GN-IMK" firstAttribute="centerY" secondItem="tH8-rD-qu8" secondAttribute="centerY" id="cWq-vS-yIg"/>
+                                                    <constraint firstItem="TF2-SH-jlL" firstAttribute="leading" secondItem="yg1-GN-IMK" secondAttribute="trailing" constant="10" id="h7L-Pi-Ue6"/>
                                                     <constraint firstAttribute="trailing" secondItem="TF2-SH-jlL" secondAttribute="trailing" constant="10" id="zKF-W8-SOG"/>
                                                 </constraints>
                                             </view>
                                             <constraints>
                                                 <constraint firstItem="TF2-SH-jlL" firstAttribute="centerY" secondItem="aFQ-TQ-tH5" secondAttribute="centerY" id="GOL-51-MbN"/>
-                                                <constraint firstItem="pgB-vg-U71" firstAttribute="centerY" secondItem="aFQ-TQ-tH5" secondAttribute="centerY" id="Vl8-Zz-7fR"/>
                                                 <constraint firstAttribute="height" constant="30" id="lL1-Ja-rvQ"/>
                                             </constraints>
-                                            <color key="fillColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" name="contentBottomBarColor"/>
                                         </box>
                                     </subviews>
                                     <constraints>
@@ -130,7 +122,7 @@
                                         <constraint firstItem="aFQ-TQ-tH5" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" id="oyz-R8-6Ls"/>
                                     </constraints>
                                 </view>
-                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -141,7 +133,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="rawButton" destination="pgB-vg-U71" id="sFR-qA-A5x"/>
+                        <outlet property="rawButton" destination="yg1-GN-IMK" id="l6P-tZ-Hdr"/>
+                        <outlet property="rawTextScrollView" destination="Kzt-Tt-u1z" id="VUq-Jn-laj"/>
                         <outlet property="rawTextView" destination="mk4-BM-kwp" id="OKy-sC-5hZ"/>
                         <outlet property="rawTextViewContainerScrollView" destination="Kzt-Tt-u1z" id="Fhx-Nm-YY2"/>
                         <outlet property="webView" destination="1KQ-pz-LuO" id="Ky7-EI-Wvj"/>
@@ -192,7 +185,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
-                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-bR-u85">
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-bR-u85" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                             <view key="contentView" id="9zZ-1e-l97">
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
@@ -208,6 +201,7 @@
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
+                                                        <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
                                                             <action selector="copyToClipBoardButtonAction:" target="dbv-oR-1ws" id="Sfd-IG-pUG"/>
                                                         </connections>
@@ -221,7 +215,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="EfZ-Yz-xjK"/>
                                                 <constraint firstItem="U6O-Tm-OuZ" firstAttribute="centerY" secondItem="9HA-bR-u85" secondAttribute="centerY" id="fA5-IG-Q5D"/>
                                             </constraints>
-                                            <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="fillColor" name="contentBottomBarColor"/>
                                         </box>
                                     </subviews>
                                     <constraints>
@@ -266,6 +260,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-as-Tyh" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="270" width="450" height="30"/>
+                                            <view key="contentView" id="x0m-d9-Mcn">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="WPW-lR-yXO"/>
+                                            </constraints>
+                                            <color key="fillColor" name="contentBottomBarColor"/>
+                                        </box>
                                         <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84w-QZ-QEo">
                                             <rect key="frame" x="5" y="30" width="440" height="265"/>
                                             <clipView key="contentView" drawsBackground="NO" id="EjS-v0-tGB">
@@ -275,20 +280,20 @@
                                                     <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="lfA-tE-NaM">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="265"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="440" height="265"/>
                                                         <size key="maxSize" width="618" height="10000000"/>
                                                         <attributedString key="textStorage">
                                                             <fragment content="sad kasd jasj dksad jkasjd jkasdjk asjkd jksadjk asjk djksajk jkdajk jkdsa jkdjk jkas djkkajsa dk">
                                                                 <attributes>
-                                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="NSColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" size="13" name="DroidSansMono"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
-                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="insertionPointColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
                                             </clipView>
@@ -313,7 +318,7 @@
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
-                                                        <color key="gridColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="gridColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
                                                             <tableColumn identifier="Key" width="134.5" minWidth="40" maxWidth="1000" id="reC-kt-Mj1">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Key">
@@ -363,7 +368,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -399,12 +404,12 @@
                                                 <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <tableHeaderView key="headerView" id="Gb1-Zu-QKA" customClass="BaseTableHeaderView" customModule="Bagel" customModuleProvider="target">
+                                            <tableHeaderView key="headerView" wantsLayer="YES" id="Gb1-Zu-QKA" customClass="BaseTableHeaderView" customModule="Bagel" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
-                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9Ae-4N-SCf">
+                                        <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9Ae-4N-SCf" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                             <view key="contentView" id="860-hz-JDZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
@@ -420,6 +425,7 @@
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
+                                                        <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
                                                             <action selector="copyButtonAction:" target="sRS-wo-UU6" id="Lud-ju-U9X"/>
                                                         </connections>
@@ -445,7 +451,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="Dqf-4Q-Lhl"/>
                                                 <constraint firstItem="wl3-Mr-ddO" firstAttribute="centerY" secondItem="9Ae-4N-SCf" secondAttribute="centerY" id="fV0-K6-5zv"/>
                                             </constraints>
-                                            <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="fillColor" name="contentBottomBarColor"/>
                                         </box>
                                     </subviews>
                                     <constraints>
@@ -454,10 +460,13 @@
                                         <constraint firstItem="84w-QZ-QEo" firstAttribute="leading" secondItem="vOB-PX-Q9n" secondAttribute="leading" constant="5" id="3av-b2-pXB"/>
                                         <constraint firstAttribute="trailing" secondItem="84w-QZ-QEo" secondAttribute="trailing" constant="5" id="BhG-1j-HTz"/>
                                         <constraint firstItem="9Ae-4N-SCf" firstAttribute="top" secondItem="QpT-7d-UMc" secondAttribute="bottom" id="Fxg-YA-suK"/>
+                                        <constraint firstItem="sXc-as-Tyh" firstAttribute="leading" secondItem="vOB-PX-Q9n" secondAttribute="leading" id="Iu9-Ua-EGM"/>
+                                        <constraint firstItem="sXc-as-Tyh" firstAttribute="top" secondItem="vOB-PX-Q9n" secondAttribute="top" id="SWh-Xa-1NX"/>
                                         <constraint firstAttribute="trailing" secondItem="QpT-7d-UMc" secondAttribute="trailing" constant="5" id="c6j-NL-Anr"/>
                                         <constraint firstItem="QpT-7d-UMc" firstAttribute="leading" secondItem="vOB-PX-Q9n" secondAttribute="leading" constant="5" id="k6g-hR-4vp"/>
                                         <constraint firstItem="9Ae-4N-SCf" firstAttribute="leading" secondItem="vOB-PX-Q9n" secondAttribute="leading" id="ksF-Qf-XO6"/>
                                         <constraint firstAttribute="trailing" secondItem="9Ae-4N-SCf" secondAttribute="trailing" id="lLB-Kk-nkC"/>
+                                        <constraint firstAttribute="trailing" secondItem="sXc-as-Tyh" secondAttribute="trailing" id="r0u-ZI-9h8"/>
                                         <constraint firstItem="9Ae-4N-SCf" firstAttribute="top" secondItem="84w-QZ-QEo" secondAttribute="bottom" id="ujZ-qj-YW8"/>
                                         <constraint firstItem="84w-QZ-QEo" firstAttribute="top" secondItem="vOB-PX-Q9n" secondAttribute="top" constant="5" id="w1L-eo-dqX"/>
                                     </constraints>
@@ -473,9 +482,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentHeaderBar" destination="sXc-as-Tyh" id="xmQ-tK-hbc"/>
                         <outlet property="rawButton" destination="wl3-Mr-ddO" id="tZe-pP-saa"/>
+                        <outlet property="rawTextScrollView" destination="84w-QZ-QEo" id="ZPQ-qc-faR"/>
                         <outlet property="rawTextView" destination="lfA-tE-NaM" id="FP8-5O-pgl"/>
                         <outlet property="rawTextViewContainerScrollView" destination="84w-QZ-QEo" id="UOB-x8-Aem"/>
+                        <outlet property="tableScrollView" destination="QpT-7d-UMc" id="vF6-G0-D79"/>
                         <outlet property="tableView" destination="cHQ-kb-Jr0" id="xfF-5D-8UE"/>
                         <outlet property="tableViewContainerScrollView" destination="QpT-7d-UMc" id="as1-cV-dnZ"/>
                     </connections>
@@ -596,15 +608,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm2-yo-sQB">
-                                <rect key="frame" x="-2" y="309" width="29" height="19"/>
+                                <rect key="frame" x="-2" y="319" width="29" height="19"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GET" id="S1x-ff-DRQ">
                                     <font key="font" size="13" name="EffraMedium-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-eX-X4k">
-                                <rect key="frame" x="35" y="303" width="415" height="30"/>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-eX-X4k" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
+                                <rect key="frame" x="35" y="313" width="415" height="30"/>
                                 <view key="contentView" id="N8G-6p-Gm5">
                                     <rect key="frame" x="0.0" y="0.0" width="415" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,96 +638,15 @@
                                 <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <tabView focusRingType="none" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="139-Xb-KgT">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="238"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="248"/>
                                 <font key="font" metaFont="system"/>
                             </tabView>
-                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-tf-gZx">
-                                <rect key="frame" x="0.0" y="248" width="450" height="45"/>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-tf-gZx" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="258" width="450" height="45"/>
                                 <view key="contentView" id="mdX-jW-LeM">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-Wr-ClM">
-                                            <rect key="frame" x="86" y="4" width="65" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="woK-Rc-VTX">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="vt8-ui-rCq"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-7v-CnV">
-                                            <rect key="frame" x="161" y="4" width="84" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Parameters" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sNd-je-VB0">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="O2s-fn-HAK"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f2V-ql-f7t">
-                                            <rect key="frame" x="255" y="4" width="45" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4P5-4e-rxi">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="2yJ-ay-MBP"/>
-                                            </connections>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-Eh-dut">
                                             <rect key="frame" x="8" y="29" width="43" height="14"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="REQUEST" id="RAI-o2-Cnk">
@@ -732,112 +663,91 @@
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-zo-gKs">
-                                            <rect key="frame" x="320" y="4" width="65" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TuA-5L-bo9">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-ri-UFe">
+                                            <rect key="frame" x="10" y="5" width="61" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Overview" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="xgV-Ww-yRI">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="ojJ-Ji-Dst"/>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="BEr-5c-tzl"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="go0-wk-doI">
-                                            <rect key="frame" x="395" y="4" width="45" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mM7-No-sCb">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8PC-Xx-Vf2">
+                                            <rect key="frame" x="76" y="5" width="55" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="KXE-eM-j9x">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="ASY-bH-Uyy"/>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="Qpr-6Q-LRW"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cFF-8k-tqk">
-                                            <rect key="frame" x="5" y="4" width="71" height="19"/>
-                                            <buttonCell key="cell" type="recessed" title="Overview" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4T8-7y-MIY">
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n6S-iw-EMD">
+                                            <rect key="frame" x="136" y="5" width="74" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Parameters" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="uXx-df-zfb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </buttonCell>
-                                            <color key="contentTintColor" red="0.23921568627450979" green="0.75686274509803919" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                                    <color key="value" red="0.69652688100000004" green="0.30802128550000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="5IC-Cq-R0G"/>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="rV6-Yj-hfA"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q0l-Zj-81U">
+                                            <rect key="frame" x="215" y="5" width="35" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="OwQ-ev-5Ro">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="EKz-58-os8"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-pb-Yh4">
+                                            <rect key="frame" x="350" y="5" width="55" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Headers" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="0kY-ms-x1Q">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="Wjo-eG-rQ5"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-q5-odR">
+                                            <rect key="frame" x="410" y="5" width="35" height="16"/>
+                                            <buttonCell key="cell" type="recessed" title="Body" bezelStyle="recessed" alignment="center" imageScaling="proportionallyDown" inset="2" id="FEk-i3-1qy">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="systemBold" size="12"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="TGH-uB-Rcx"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="gzV-Wr-ClM" secondAttribute="bottom" constant="5" id="1S7-yi-bR9"/>
-                                        <constraint firstItem="fMw-7v-CnV" firstAttribute="leading" secondItem="gzV-Wr-ClM" secondAttribute="trailing" constant="10" id="4Y6-3r-2fH"/>
+                                        <constraint firstItem="8PC-Xx-Vf2" firstAttribute="leading" secondItem="bAp-ri-UFe" secondAttribute="trailing" constant="5" id="1mc-yz-mgq"/>
+                                        <constraint firstAttribute="bottom" secondItem="q0l-Zj-81U" secondAttribute="bottom" constant="5" id="3k5-tO-FAq"/>
                                         <constraint firstItem="CjX-gd-hJy" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="2" id="5zO-JW-fKB"/>
-                                        <constraint firstAttribute="bottom" secondItem="go0-wk-doI" secondAttribute="bottom" constant="5" id="9jj-Rf-Mji"/>
-                                        <constraint firstItem="f2V-ql-f7t" firstAttribute="leading" secondItem="fMw-7v-CnV" secondAttribute="trailing" constant="10" id="9zY-fb-gnh"/>
-                                        <constraint firstAttribute="bottom" secondItem="cFF-8k-tqk" secondAttribute="bottom" constant="5" id="Ch1-il-zDT"/>
-                                        <constraint firstAttribute="bottom" secondItem="f2V-ql-f7t" secondAttribute="bottom" constant="5" id="UkB-Fw-89g"/>
-                                        <constraint firstItem="cjS-zo-gKs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f2V-ql-f7t" secondAttribute="trailing" constant="20" id="VXD-F4-QHX"/>
-                                        <constraint firstAttribute="bottom" secondItem="cjS-zo-gKs" secondAttribute="bottom" constant="5" id="ffy-gi-dB9"/>
-                                        <constraint firstItem="cFF-8k-tqk" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="5" id="gQY-eE-Ykc"/>
-                                        <constraint firstAttribute="trailing" secondItem="go0-wk-doI" secondAttribute="trailing" constant="10" id="jhq-72-MFd"/>
-                                        <constraint firstItem="gzV-Wr-ClM" firstAttribute="leading" secondItem="cFF-8k-tqk" secondAttribute="trailing" constant="10" id="kmK-jD-wwq"/>
+                                        <constraint firstAttribute="bottom" secondItem="n6S-iw-EMD" secondAttribute="bottom" constant="5" id="F7d-r1-iQi"/>
+                                        <constraint firstAttribute="bottom" secondItem="iHW-q5-odR" secondAttribute="bottom" constant="5" id="Gac-Ke-z7e"/>
+                                        <constraint firstItem="n6S-iw-EMD" firstAttribute="leading" secondItem="8PC-Xx-Vf2" secondAttribute="trailing" constant="5" id="PnM-tu-QVt"/>
+                                        <constraint firstAttribute="bottom" secondItem="bAp-ri-UFe" secondAttribute="bottom" constant="5" id="Qgl-om-xeI"/>
+                                        <constraint firstItem="bAp-ri-UFe" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="10" id="byv-vb-2FQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="8PC-Xx-Vf2" secondAttribute="bottom" constant="5" id="elQ-Cu-eps"/>
+                                        <constraint firstItem="q0l-Zj-81U" firstAttribute="leading" secondItem="n6S-iw-EMD" secondAttribute="trailing" constant="5" id="gVc-ZG-ZpH"/>
                                         <constraint firstItem="VkR-Eh-dut" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="2" id="mZJ-VP-TjL"/>
-                                        <constraint firstItem="go0-wk-doI" firstAttribute="leading" secondItem="cjS-zo-gKs" secondAttribute="trailing" constant="10" id="o1T-lQ-ofX"/>
                                         <constraint firstItem="VkR-Eh-dut" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="10" id="o3O-wX-HgZ"/>
                                         <constraint firstAttribute="trailing" secondItem="CjX-gd-hJy" secondAttribute="trailing" constant="10" id="r14-ow-HHw"/>
-                                        <constraint firstAttribute="bottom" secondItem="fMw-7v-CnV" secondAttribute="bottom" constant="5" id="wwn-gw-cLp"/>
+                                        <constraint firstItem="iHW-q5-odR" firstAttribute="leading" secondItem="c5S-pb-Yh4" secondAttribute="trailing" constant="5" id="rh1-ij-aqe"/>
+                                        <constraint firstItem="iHW-q5-odR" firstAttribute="leading" secondItem="c5S-pb-Yh4" secondAttribute="trailing" constant="5" id="uTv-Ai-tkP"/>
+                                        <constraint firstAttribute="trailing" secondItem="iHW-q5-odR" secondAttribute="trailing" constant="5" id="wBp-gU-t8d"/>
+                                        <constraint firstAttribute="bottom" secondItem="c5S-pb-Yh4" secondAttribute="bottom" constant="5" id="wpP-1K-bnA"/>
                                     </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="l0h-up-h8B"/>
                                 </constraints>
-                                <color key="fillColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -848,7 +758,7 @@
                             <constraint firstAttribute="trailing" secondItem="139-Xb-KgT" secondAttribute="trailing" id="WGu-eZ-IVS"/>
                             <constraint firstItem="139-Xb-KgT" firstAttribute="leading" secondItem="Ehd-es-8c8" secondAttribute="leading" id="e8u-6R-wLx"/>
                             <constraint firstAttribute="trailing" secondItem="dHd-eX-X4k" secondAttribute="trailing" id="eEj-gb-BKg"/>
-                            <constraint firstItem="dHd-eX-X4k" firstAttribute="top" secondItem="Ehd-es-8c8" secondAttribute="top" constant="10" id="jfR-od-lxz"/>
+                            <constraint firstItem="dHd-eX-X4k" firstAttribute="top" secondItem="Ehd-es-8c8" secondAttribute="top" id="jfR-od-lxz"/>
                             <constraint firstItem="dHd-eX-X4k" firstAttribute="leading" secondItem="mm2-yo-sQB" secondAttribute="trailing" constant="10" id="kwr-1y-MTo"/>
                             <constraint firstAttribute="trailing" secondItem="wfz-tf-gZx" secondAttribute="trailing" id="pTY-L3-kMm"/>
                             <constraint firstAttribute="bottom" secondItem="139-Xb-KgT" secondAttribute="bottom" id="vDW-pQ-9Pb"/>
@@ -856,12 +766,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailButtonOverview" destination="cFF-8k-tqk" id="uME-Sd-X0V"/>
-                        <outlet property="detailButtonRequestBody" destination="f2V-ql-f7t" id="HYW-1A-rzH"/>
-                        <outlet property="detailButtonRequestHeaders" destination="gzV-Wr-ClM" id="lWu-cz-vBn"/>
-                        <outlet property="detailButtonRequestParameters" destination="fMw-7v-CnV" id="N7y-ig-0P2"/>
-                        <outlet property="detailButtonResponseBody" destination="go0-wk-doI" id="w60-Kh-fWP"/>
-                        <outlet property="detailButtonResponseHeaders" destination="cjS-zo-gKs" id="OtV-xU-kKv"/>
+                        <outlet property="detailButtonOverview" destination="bAp-ri-UFe" id="ahG-qi-2g0"/>
+                        <outlet property="detailButtonRequestBody" destination="q0l-Zj-81U" id="PvO-Uq-xbA"/>
+                        <outlet property="detailButtonRequestHeaders" destination="8PC-Xx-Vf2" id="LkS-hw-ML0"/>
+                        <outlet property="detailButtonRequestParameters" destination="n6S-iw-EMD" id="YEM-Z5-GtR"/>
+                        <outlet property="detailButtonResponseBody" destination="iHW-q5-odR" id="Cpg-oq-zCs"/>
+                        <outlet property="detailButtonResponseHeaders" destination="c5S-pb-Yh4" id="RNM-LE-SuY"/>
                         <outlet property="httpMethodTextField" destination="S1x-ff-DRQ" id="1pZ-9M-pRJ"/>
                         <outlet property="tabView" destination="139-Xb-KgT" id="1n5-Xi-Rbv"/>
                         <outlet property="urlTextField" destination="Baz-mg-73Q" id="LXe-s2-A21"/>
@@ -871,20 +781,11 @@
             </objects>
             <point key="canvasLocation" x="1034" y="1689.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LhI-cr-dpW">
-            <objects>
-                <viewController id="gpN-nP-5iH" sceneMemberID="viewController">
-                    <view key="view" id="MmA-11-tMu">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="Oun-cN-o0W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="CopyIcon" width="24" height="24"/>
+        <namedColor name="contentBottomBarColor">
+            <color white="0.14000000059604645" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
     </resources>
 </document>
