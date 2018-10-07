@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2018 Bagel (https://github.com/yagiz/Bagel)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -56,7 +56,7 @@ static BagelConfiguration* defaultConfiguration;
         defaultConfiguration.project = project;
         defaultConfiguration.device = device;
 
-        defaultConfiguration.netservicePort = 43434;
+        defaultConfiguration.netservicePort = 43435;
         defaultConfiguration.netserviceDomain = @"";
         defaultConfiguration.netserviceType = @"_Bagel._tcp";
         defaultConfiguration.netserviceName = @"";

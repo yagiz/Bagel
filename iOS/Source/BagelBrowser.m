@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2018 Bagel (https://github.com/yagiz/Bagel)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -109,25 +109,21 @@
 
 - (void)sendPacket:(BagelRequestPacket*)packet
 {
-
-    NSMutableDictionary* packetJson = [packet toJSON];
-
-    if (packetJson) {
-        NSMutableData* packetData = [[NSMutableData alloc] init];
-
-        NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:packetData];
-        [archiver encodeObject:packetJson forKey:@"packet"];
-        [archiver finishEncoding];
-
+    NSError *error;
+    NSData* packetData = [NSJSONSerialization dataWithJSONObject:[packet toJSON] options:0 error:nil];
+    
+    if (packetData) {
+        
         NSMutableData* buffer = [[NSMutableData alloc] init];
-
+        
         uint64_t headerLength = [packetData length];
         [buffer appendBytes:&headerLength length:sizeof(uint64_t)];
         [buffer appendBytes:[packetData bytes] length:[packetData length]];
-
+        
         for (GCDAsyncSocket* socket in sockets) {
             [socket writeData:buffer withTimeout:-1.0 tag:0];
         }
+        
     }
 }
 

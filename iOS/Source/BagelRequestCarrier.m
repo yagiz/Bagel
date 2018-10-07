@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2018 Bagel (https://github.com/yagiz/Bagel)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -74,12 +74,14 @@
     requestInfo.requestBody = self.self.task.originalRequest.HTTPBody;
     requestInfo.requestMethod = self.self.task.originalRequest.HTTPMethod;
 
-    NSHTTPURLResponse* httpURLReqponse = (NSHTTPURLResponse*)self.response;
-    requestInfo.responseHeaders = httpURLReqponse.allHeaderFields;
+    NSHTTPURLResponse* httpURLResponse = (NSHTTPURLResponse*)self.response;
+    requestInfo.responseHeaders = httpURLResponse.allHeaderFields;
 
     requestInfo.responseData = self.data;
 
-    requestInfo.statusCode = [NSString stringWithFormat:@"%ld", (long)httpURLReqponse.statusCode];
+    if (httpURLResponse.statusCode != 0) {
+        requestInfo.statusCode = [NSString stringWithFormat:@"%ld", (long)httpURLResponse.statusCode];
+    }
 
     requestInfo.startDate = self.startDate;
     requestInfo.endDate = self.endDate;

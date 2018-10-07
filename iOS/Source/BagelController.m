@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2018 Bagel (https://github.com/yagiz/Bagel)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -90,8 +90,7 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
         BagelRequestCarrier* carrier = [self carrierWithURLSessionTask:dataTask];
 
         carrier.response = response;
-        [carrier complete];
-
+        
         [self sendCarrier:carrier];
 
     }];
@@ -121,7 +120,6 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
         BagelRequestCarrier* carrier = [self carrierWithURLSessionTask:dataTask];
 
         carrier.error = error;
-        [carrier complete];
 
         [self sendCarrier:carrier];
 
@@ -136,6 +134,8 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
     packet.device = self.configuration.device;
 
     [self.browser sendPacket:packet];
+    
+    NSLog(@"sent packet: %@", packet.packetId);
 }
 
 @end

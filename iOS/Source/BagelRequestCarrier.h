@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Bagel (https://github.com/yagiz/Bagel)
+// Copyright (c) 2018 Bagel (https://github.com/yagiz/Bagel)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,8 @@
 
 @property (nonatomic, strong) NSString* carrierId;
 
-@property (nonatomic, weak) NSURLSessionTask* task;
-@property (nonatomic, weak) NSURLResponse* response;
+@property (nonatomic, strong) NSURLSessionTask* task;
+@property (nonatomic, strong) NSURLResponse* response;
 
 @property (nonatomic, strong) NSDate* startDate;
 @property (nonatomic, strong) NSDate* endDate;
