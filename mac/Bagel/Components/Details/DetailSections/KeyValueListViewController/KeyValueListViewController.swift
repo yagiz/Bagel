@@ -54,7 +54,7 @@ class KeyValueListViewController: BaseViewController {
     
     func refresh() {
         
-        self.rawTextView.string = self.viewModel?.getRaw() ?? ""
+        self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.getRaw() ?? ""))
         self.tableView.reloadData()
         
         if self.isRaw {

@@ -37,12 +37,20 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     func setupJSONViewer() {
         
-        let filePath = Bundle.main.path(forResource: "jsonviewer", ofType: "html")!
+        let filePath = Bundle.main.path(forResource: "jsoneditor", ofType: "html")!
         let fileURL = URL(fileURLWithPath: filePath)
-        let urlRequest = URLRequest(url: fileURL)
         
-        self.webView.mainFrame.load(urlRequest)
-        self.webView.frameLoadDelegate = self
+        if let htmlData = try? Data(contentsOf: fileURL) {
+            
+            let htmlString = String(data: htmlData, encoding: .utf8)
+            
+            let baseUrl = URL(string: Bundle.main.bundlePath + "/Contents/Resources/")!
+            
+            self.webView.mainFrame.loadHTMLString(htmlString, baseURL: baseUrl)
+            self.webView.frameLoadDelegate = self
+            self.webView.drawsBackground = false
+        }
+        
     }
     
     
@@ -58,8 +66,7 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
             let attributedString = NSMutableAttributedString(string: jsonString)
             attributedString.addAttributes([.font : FontManager.codeFont(size: 13)], range: fullRange)
             
-            self.rawTextView.textStorage?.setAttributedString(attributedString)
-            
+            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.currentJSONString ?? ""))
         }
         
         if self.isRaw {

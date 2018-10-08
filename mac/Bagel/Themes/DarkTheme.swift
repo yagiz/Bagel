@@ -17,7 +17,7 @@ extension DarkTheme {
     }
     
     @objc var controlBackgroundColor: NSColor {
-        return NSColor(hexString: "1D1D1D")
+        return NSColor(hexString: "#1D1D1D")
     }
     
     @objc var labelColor: NSColor {
@@ -29,19 +29,19 @@ extension DarkTheme {
     }
     
     @objc var contentBarColor: NSColor {
-        return NSColor(hexString: "#282828")
+        return NSColor(hexString: "#3A3A3A")
     }
     
     @objc var gridColor: NSColor {
-        return NSColor(hexString: "#232323")
+        return NSColor(hexString: "#2A2A2A")
     }
     
     @objc var seperatorColor: NSColor {
-        return NSColor(hexString: "#232323")
+        return NSColor(hexString: "#2A2A2A")
     }
     
     @objc var rowSelectedColor: NSColor {
-        return NSColor(hexString: "#232323")
+        return NSColor(hexString: "#2A2A2A")
     }
     
     @objc var statusGreenColor: NSColor {
@@ -65,10 +65,10 @@ extension DarkTheme {
     }
     
     @objc var deviceRowSelectedColor: NSColor {
-        return NSColor(hexString: "#303030")
+        return NSColor(hexString: "#3A3A3A")
     }
     
     @objc var packetListAndDetailBackgroundColor: NSColor {
-        return NSColor(hexString: "#232323")
+        return NSColor(hexString: "#323232")
     }
 }

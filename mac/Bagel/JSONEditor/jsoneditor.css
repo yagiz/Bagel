@@ -152,7 +152,7 @@ div.jsoneditor-tree button.jsoneditor-button {
   margin: 0;
   border: none;
   cursor: pointer;
-  background: transparent url("img/jsoneditor-icons.svg");
+  background: transparent url("jsoneditor-icons.svg");
 }
 
 div.jsoneditor-mode-view tr.jsoneditor-expandable td.jsoneditor-tree,
@@ -327,7 +327,7 @@ tr.jsoneditor-selected.jsoneditor-first button.jsoneditor-contextmenu {
 }
 
 div.jsoneditor-tree button.jsoneditor-dragarea {
-  background: url("img/jsoneditor-icons.svg") -72px -72px;
+  background: url("jsoneditor-icons.svg") -72px -72px;
   cursor: move;
 }
 
@@ -381,7 +381,7 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error {
   height: 24px;
   padding: 0;
   margin: 0 4px 0 0;
-  background: url("img/jsoneditor-icons.svg")  -168px -48px;
+  background: url("jsoneditor-icons.svg")  -168px -48px;
 }
 
 .jsoneditor-text-errors tr.jump-to-line:hover {
@@ -587,11 +587,11 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error {
 }
 
 .jsoneditor-text-errors tr .jsoneditor-schema-error {
-  background: url("img/jsoneditor-icons.svg")  -168px -48px;
+  background: url("jsoneditor-icons.svg")  -168px -48px;
 }
 
 .jsoneditor-text-errors tr.parse-error .jsoneditor-schema-error {
-  background: url("img/jsoneditor-icons.svg")   -25px 0px;
+  background: url("jsoneditor-icons.svg")   -25px 0px;
 }
 
 .fadein {
@@ -724,7 +724,7 @@ div.jsoneditor-contextmenu div.jsoneditor-icon {
   border: none;
   padding: 0;
   margin: 0;
-  background-image: url("img/jsoneditor-icons.svg");
+  background-image: url("jsoneditor-icons.svg");
 }
 
 div.jsoneditor-contextmenu ul li ul div.jsoneditor-icon {
@@ -748,7 +748,7 @@ div.jsoneditor-contextmenu ul li button div.jsoneditor-expand {
   height: 24px;
   padding: 0;
   margin: 0 4px 0 0;
-  background: url("img/jsoneditor-icons.svg") 0 -72px;
+  background: url("jsoneditor-icons.svg") 0 -72px;
 }
 
 div.jsoneditor-contextmenu div.jsoneditor-separator {
@@ -1136,7 +1136,7 @@ div.jsoneditor-menu > div.jsoneditor-modes > button {
   padding: 0;
   border-radius: 2px;
   border: 1px solid transparent;
-  background: transparent url("img/jsoneditor-icons.svg");
+  background: transparent url("jsoneditor-icons.svg");
   color: white;
   opacity: 0.8;
   font-family: arial, sans-serif;
@@ -1298,7 +1298,7 @@ table.jsoneditor-search button {
   padding: 0;
   margin: 0;
   border: none;
-  background: url("img/jsoneditor-icons.svg");
+  background: url("jsoneditor-icons.svg");
   vertical-align: top;
 }
 
@@ -1418,7 +1418,7 @@ div.jsoneditor-statusbar > .jsoneditor-validation-error-icon {
   height: 24px;
   padding: 0;
   margin-top: 1px;
-  background: url("img/jsoneditor-icons.svg") -168px -48px;
+  background: url("jsoneditor-icons.svg") -168px -48px;
 }
 
 div.jsoneditor-statusbar > .jsoneditor-validation-error-count {
@@ -1432,7 +1432,7 @@ div.jsoneditor-statusbar > .jsoneditor-parse-error-icon {
   height: 24px;
   padding: 0;
   margin: 1px;
-  background: url("img/jsoneditor-icons.svg") -25px 0px;
+  background: url("jsoneditor-icons.svg") -25px 0px;
 }
 div.jsoneditor-navigation-bar {
   width: 100%;

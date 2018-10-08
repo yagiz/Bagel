@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
+		BC55C690216A795E00B7D374 /* jsoneditor.html in Resources */ = {isa = PBXBuildFile; fileRef = BC55C68F216A795E00B7D374 /* jsoneditor.html */; };
+		BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C691216A7AFD00B7D374 /* jsoneditor.css */; };
+		BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */ = {isa = PBXBuildFile; fileRef = BC55C692216A7AFD00B7D374 /* jsoneditor.js */; };
+		BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */; };
+		BC55C699216A7E6000B7D374 /* darktheme.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C698216A7E6000B7D374 /* darktheme.css */; };
+		BC55C69B216A84A900B7D374 /* reset.css in Sources */ = {isa = PBXBuildFile; fileRef = BC55C69A216A84A900B7D374 /* reset.css */; };
 		BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* ThemeColor.swift */; };
 		BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA742162B976000F6D2F /* DetailViewModel.swift */; };
 		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
@@ -29,10 +35,6 @@
 		BC9C77AF216385E600E8ADE8 /* DataJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */; };
 		BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */; };
 		BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */; };
-		BC9C77BA216393D000E8ADE8 /* json-viewer.css in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B6216393D000E8ADE8 /* json-viewer.css */; };
-		BC9C77BB216393D000E8ADE8 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B7216393D000E8ADE8 /* jquery.js */; };
-		BC9C77BC216393D000E8ADE8 /* json-viewer.js in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B8216393D000E8ADE8 /* json-viewer.js */; };
-		BC9C77BD216393D000E8ADE8 /* jsonviewer.html in Resources */ = {isa = PBXBuildFile; fileRef = BC9C77B9216393D000E8ADE8 /* jsonviewer.html */; };
 		BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */; };
 		BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */; };
 		BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */; };
@@ -57,6 +59,7 @@
 		BCD0E045210F5E0D00CE5C7B /* BagelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0E044210F5E0D00CE5C7B /* BagelUITests.swift */; };
 		BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDF0EC321662CA10030710C /* FlatTableRowView.swift */; };
 		BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */; };
+		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
 		BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC852721383150001EC6D7 /* Devices.storyboard */; };
@@ -98,6 +101,12 @@
 		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		BC55C68F216A795E00B7D374 /* jsoneditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsoneditor.html; sourceTree = "<group>"; };
+		BC55C691216A7AFD00B7D374 /* jsoneditor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jsoneditor.css; sourceTree = "<group>"; };
+		BC55C692216A7AFD00B7D374 /* jsoneditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsoneditor.js; sourceTree = "<group>"; };
+		BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "jsoneditor-icons.svg"; sourceTree = "<group>"; };
+		BC55C698216A7E6000B7D374 /* darktheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = darktheme.css; sourceTree = "<group>"; };
+		BC55C69A216A84A900B7D374 /* reset.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = reset.css; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		BC61DA742162B976000F6D2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
@@ -118,10 +127,6 @@
 		BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewController.swift; sourceTree = "<group>"; };
 		BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTextViewModel.swift; sourceTree = "<group>"; };
 		BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewModel.swift; sourceTree = "<group>"; };
-		BC9C77B6216393D000E8ADE8 /* json-viewer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer.css"; sourceTree = "<group>"; };
-		BC9C77B7216393D000E8ADE8 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		BC9C77B8216393D000E8ADE8 /* json-viewer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-viewer.js"; sourceTree = "<group>"; };
-		BC9C77B9216393D000E8ADE8 /* jsonviewer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsonviewer.html; sourceTree = "<group>"; };
 		BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeaddersViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 		BCD0E046210F5E0D00CE5C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCDF0EC321662CA10030710C /* FlatTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTableRowView.swift; sourceTree = "<group>"; };
 		BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueListViewController.swift; sourceTree = "<group>"; };
+		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		BCFC852721383150001EC6D7 /* Devices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Devices.storyboard; sourceTree = "<group>"; };
@@ -225,6 +231,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BC55C68E216A793800B7D374 /* JSONEditor */ = {
+			isa = PBXGroup;
+			children = (
+				BC55C691216A7AFD00B7D374 /* jsoneditor.css */,
+				BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */,
+				BC55C692216A7AFD00B7D374 /* jsoneditor.js */,
+				BC55C698216A7E6000B7D374 /* darktheme.css */,
+				BC55C68F216A795E00B7D374 /* jsoneditor.html */,
+				BC55C69A216A84A900B7D374 /* reset.css */,
+			);
+			path = JSONEditor;
+			sourceTree = "<group>";
+		};
 		BC61DA762162BD52000F6D2F /* DetailSections */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +257,7 @@
 		BC911A3F2168BC7F00B755D4 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				BCF47D03216BA0B400BC144A /* TextStyles.swift */,
 				BC5E76C8216A64DB000F658D /* ThemeColor.swift */,
 				BC911A432168E10F00B755D4 /* LightTheme.swift */,
 				BC911A482168F27700B755D4 /* DarkTheme.swift */,
@@ -313,17 +333,6 @@
 			path = DataTextViewController;
 			sourceTree = "<group>";
 		};
-		BC9C77B5216393B300E8ADE8 /* jsonViewer */ = {
-			isa = PBXGroup;
-			children = (
-				BC9C77B7216393D000E8ADE8 /* jquery.js */,
-				BC9C77B6216393D000E8ADE8 /* json-viewer.css */,
-				BC9C77B8216393D000E8ADE8 /* json-viewer.js */,
-				BC9C77B9216393D000E8ADE8 /* jsonviewer.html */,
-			);
-			path = jsonViewer;
-			sourceTree = "<group>";
-		};
 		BC9C77C12163984200E8ADE8 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,7 +406,7 @@
 			children = (
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
-				BC9C77B5216393B300E8ADE8 /* jsonViewer */,
+				BC55C68E216A793800B7D374 /* JSONEditor */,
 				BCA60B3F216201AF00B9DCAD /* Configuration */,
 				BCFC8549213848DA001EC6D7 /* Core */,
 				BCFC852D21383252001EC6D7 /* Components */,
@@ -650,14 +659,15 @@
 			files = (
 				BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */,
 				BCFC852C2138319E001EC6D7 /* Details.storyboard in Resources */,
-				BC9C77BD216393D000E8ADE8 /* jsonviewer.html in Resources */,
 				BCD0E02B210F5E0D00CE5C7B /* Assets.xcassets in Resources */,
 				BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */,
-				BC9C77BC216393D000E8ADE8 /* json-viewer.js in Resources */,
-				BC9C77BB216393D000E8ADE8 /* jquery.js in Resources */,
+				BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */,
+				BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */,
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
-				BC9C77BA216393D000E8ADE8 /* json-viewer.css in Resources */,
+				BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */,
+				BC55C699216A7E6000B7D374 /* darktheme.css in Resources */,
+				BC55C690216A795E00B7D374 /* jsoneditor.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +737,7 @@
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
+				BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */,
 				BC911A472168EB0A00B755D4 /* ContentBar.swift in Sources */,
 				BCFC85332138354D001EC6D7 /* DevicesViewController.swift in Sources */,
 				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
@@ -759,6 +770,7 @@
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
+				BC55C69B216A84A900B7D374 /* reset.css in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,

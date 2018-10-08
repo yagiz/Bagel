@@ -10,6 +10,12 @@ import Cocoa
 
 class PacketsViewModel: BaseListViewModel<BagelPacket>  {
 
+    var filterTerm = "" {
+        didSet {
+            self.refreshItems()
+        }
+    }
+    
     func register() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
@@ -34,11 +40,25 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
         return nil
     }
     
-    
     @objc func refreshItems() {
         
-        self.items = BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
+        self.filter(items: BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? [])
         self.onChange?()
+    }
+    
+    func filter(items: [BagelPacket]?) {
+        
+        if let items = items, filterTerm.count > 0 {
+            
+            self.items = items.filter({ (packet) -> Bool in
+                
+                return packet.requestInfo?.url?.contains(self.filterTerm) ?? true
+            })
+            
+        }else{
+            
+            self.items = BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
+        }
     }
     
     func clearPackets() {

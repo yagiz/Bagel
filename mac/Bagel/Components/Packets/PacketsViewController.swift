@@ -40,11 +40,18 @@ class PacketsViewController: BaseViewController {
     
     func refresh() {
         
+        let isScrolledToBottom = self.isScrolledToBottom()
+        
         self.tableView.reloadData()
         
         if let selectedItemIndex = self.viewModel?.selectedItemIndex {
             
             self.tableView.selectRowIndexes(IndexSet(integer: selectedItemIndex), byExtendingSelection: false)
+        }
+        
+        if isScrolledToBottom {
+            
+            self.scrollToBottom()
         }
     }
     
@@ -131,6 +138,25 @@ extension PacketsViewController: NSTextFieldDelegate {
     
     override func controlTextDidChange(_ obj: Notification) {
         
+        self.viewModel?.filterTerm = self.filterTextField.stringValue
+    }
+}
 
+
+extension PacketsViewController {
+    
+    func isScrolledToBottom() -> Bool {
+        
+        if self.tableView.enclosingScrollView?.verticalScroller?.floatValue ?? 0 > 0.9 {
+            
+            return true
+        }
+        
+        return false
+    }
+    
+    func scrollToBottom() {
+        
+        self.tableView.scrollToEndOfDocument(nil)
     }
 }

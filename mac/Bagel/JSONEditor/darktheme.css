@@ -1,14 +1,14 @@
 /* dark styling of the editor */
 div.jsoneditor,
 div.jsoneditor-menu {
-  border-color: #4b4b4b;
+  border-color: #1D1D1D;
 }
 div.jsoneditor-menu {
-  background-color: #4b4b4b;
+  background-color: #282828;
 }
 div.jsoneditor-tree,
 div.jsoneditor textarea.jsoneditor-text {
-  background-color: #666666;
+  background-color: #1D1D1D;
   color: #ffffff;
 }
 div.jsoneditor-field,
@@ -16,7 +16,11 @@ div.jsoneditor-value {
   color: #ffffff;
 }
 table.jsoneditor-search div.jsoneditor-frame {
-  background: #808080;
+  background: #1D1D1D;
+}
+
+table.jsoneditor-search input {
+    color: #ffffff;
 }
 
 tr.jsoneditor-highlight,

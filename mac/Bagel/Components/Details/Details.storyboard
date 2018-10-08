@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <webView translatesAutoresizingMaskIntoConstraints="NO" id="1KQ-pz-LuO">
-                                            <rect key="frame" x="0.0" y="30" width="450" height="270"/>
+                                            <rect key="frame" x="5" y="35" width="440" height="260"/>
                                             <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
                                                 <nil key="identifier"/>
                                             </webPreferences>
@@ -112,12 +112,12 @@
                                         <constraint firstItem="Kzt-Tt-u1z" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" constant="5" id="7Gh-Km-9aI"/>
                                         <constraint firstAttribute="trailing" secondItem="aFQ-TQ-tH5" secondAttribute="trailing" id="D4w-JE-KvI"/>
                                         <constraint firstItem="Kzt-Tt-u1z" firstAttribute="top" secondItem="IZk-5R-el5" secondAttribute="top" constant="5" id="FnJ-NZ-XH3"/>
-                                        <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="1KQ-pz-LuO" secondAttribute="bottom" id="NC6-1q-sWf"/>
-                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="top" secondItem="IZk-5R-el5" secondAttribute="top" id="VCN-3B-15j"/>
+                                        <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="1KQ-pz-LuO" secondAttribute="bottom" constant="5" id="NC6-1q-sWf"/>
+                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="top" secondItem="IZk-5R-el5" secondAttribute="top" constant="5" id="VCN-3B-15j"/>
                                         <constraint firstAttribute="bottom" secondItem="aFQ-TQ-tH5" secondAttribute="bottom" id="XZk-qL-jn6"/>
-                                        <constraint firstAttribute="trailing" secondItem="1KQ-pz-LuO" secondAttribute="trailing" id="XeR-ym-LFH"/>
+                                        <constraint firstAttribute="trailing" secondItem="1KQ-pz-LuO" secondAttribute="trailing" constant="5" id="XeR-ym-LFH"/>
                                         <constraint firstAttribute="trailing" secondItem="Kzt-Tt-u1z" secondAttribute="trailing" constant="5" id="ceY-2X-tZr"/>
-                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" id="jyS-XC-0ce"/>
+                                        <constraint firstItem="1KQ-pz-LuO" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" constant="5" id="jyS-XC-0ce"/>
                                         <constraint firstItem="aFQ-TQ-tH5" firstAttribute="top" secondItem="Kzt-Tt-u1z" secondAttribute="bottom" constant="5" id="oQ5-XH-nr0"/>
                                         <constraint firstItem="aFQ-TQ-tH5" firstAttribute="leading" secondItem="IZk-5R-el5" secondAttribute="leading" id="oyz-R8-6Ls"/>
                                     </constraints>
@@ -368,7 +368,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -638,17 +638,17 @@
                                 <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <tabView focusRingType="none" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="139-Xb-KgT">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="248"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="253"/>
                                 <font key="font" metaFont="system"/>
                             </tabView>
                             <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-tf-gZx" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="258" width="450" height="45"/>
+                                <rect key="frame" x="0.0" y="263" width="450" height="40"/>
                                 <view key="contentView" id="mdX-jW-LeM">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-Eh-dut">
-                                            <rect key="frame" x="8" y="29" width="43" height="14"/>
+                                            <rect key="frame" x="8" y="24" width="43" height="14"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="REQUEST" id="RAI-o2-Cnk">
                                                 <font key="font" size="9" name="Effra-Regular"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -656,7 +656,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-gd-hJy">
-                                            <rect key="frame" x="393" y="29" width="49" height="14"/>
+                                            <rect key="frame" x="393" y="24" width="49" height="14"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RESPONSE" id="To7-5v-rDc">
                                                 <font key="font" size="9" name="Effra-Regular"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -745,7 +745,7 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="l0h-up-h8B"/>
+                                    <constraint firstAttribute="height" constant="40" id="l0h-up-h8B"/>
                                 </constraints>
                                 <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>

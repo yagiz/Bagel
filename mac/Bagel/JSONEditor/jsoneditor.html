@@ -1,14 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>JSONEditor | Basic usage</title>
 
-<div id="json-container"></div>
-    
-<script>
+        <link href="reset.css" rel="stylesheet" type="text/css">
+        <link href="jsoneditor.css" rel="stylesheet" type="text/css">
+        <script src="jsoneditor.js"></script>
+            
+        <style type="text/css">
 
-    import JSONFormatter from 'json-formatter-js'
-    
-    const myJSON = {ans: 42};
-    
-    const formatter = new JSONFormatter(myJSON);
-    
-    document.body.appendChild(formatter.render());
+            #jsoneditor {
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                overflow: hidden;
+                position: fixed;
+            }
+        
+        body {
+            background-color: black;
+        }
+        </style>
+        <link href="darktheme.css" rel="stylesheet" type="text/css">
 
-</script>
+    </head>
+    <body>
+        
+        <div id="jsoneditor"></div>
+
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {navigationBar: false, mode: "view"};
+            var editor = new JSONEditor(container, options);
+            
+            function renderJSONString(jsonString) {
+                
+                var jsonObject = JSON.parse(jsonString);
+                editor.set(jsonObject);
+            }
+        
+        </script>
+        
+    </body>
+</html>
