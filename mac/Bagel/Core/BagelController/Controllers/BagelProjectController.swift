@@ -39,5 +39,12 @@ class BagelProjectController: NSObject {
         deviceController.addPacket(newPacket: newPacket)
         
         self.deviceControllers.append(deviceController)
+        
+        
+        
+        if self.deviceControllers.count == 1 {
+            
+            self.selectedDeviceController = self.deviceControllers.first
+        }
     }
 }

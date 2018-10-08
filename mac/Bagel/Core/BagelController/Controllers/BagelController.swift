@@ -53,5 +53,12 @@ class BagelController: NSObject, BagelPublisherDelegate {
         projectController.addPacket(newPacket: newPacket)
         
         self.projectControllers.append(projectController)
+        
+        
+        
+        if self.projectControllers.count == 1 {
+            
+            self.selectedProjectController = self.projectControllers.first
+        }
     }
 }

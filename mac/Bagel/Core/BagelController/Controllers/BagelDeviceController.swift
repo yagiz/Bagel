@@ -33,6 +33,13 @@ class BagelDeviceController: NSObject {
         }
         
         self.packets.append(newPacket)
+        
+        
+        
+        if self.packets.count == 1 {
+            
+            self.selectedPacket = self.packets.first
+        }
     }
     
     func clear() {
