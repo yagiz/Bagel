@@ -570,6 +570,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-Ie-kQm">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <view key="contentView" id="NMI-zu-Gbq">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </box>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="64s-rh-m9O">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <connections>
@@ -586,12 +594,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Omt-RJ-lFd" secondAttribute="trailing" id="4LY-zQ-9xN"/>
                             <constraint firstItem="Omt-RJ-lFd" firstAttribute="leading" secondItem="wkY-HC-zHb" secondAttribute="leading" id="8iS-j3-oUY"/>
+                            <constraint firstAttribute="trailing" secondItem="eAi-Ie-kQm" secondAttribute="trailing" id="BeJ-iC-wQ3"/>
+                            <constraint firstItem="eAi-Ie-kQm" firstAttribute="leading" secondItem="wkY-HC-zHb" secondAttribute="leading" id="G5X-28-Z2W"/>
+                            <constraint firstAttribute="bottom" secondItem="eAi-Ie-kQm" secondAttribute="bottom" id="JdO-Rp-kV9"/>
                             <constraint firstAttribute="bottom" secondItem="Omt-RJ-lFd" secondAttribute="bottom" id="KfU-hY-wQz"/>
                             <constraint firstItem="64s-rh-m9O" firstAttribute="top" secondItem="wkY-HC-zHb" secondAttribute="top" id="MWJ-iK-LWj"/>
                             <constraint firstItem="64s-rh-m9O" firstAttribute="leading" secondItem="wkY-HC-zHb" secondAttribute="leading" id="cKR-Gd-zWe"/>
                             <constraint firstItem="Omt-RJ-lFd" firstAttribute="top" secondItem="wkY-HC-zHb" secondAttribute="top" id="fCE-as-Jdm"/>
                             <constraint firstAttribute="bottom" secondItem="64s-rh-m9O" secondAttribute="bottom" id="kSH-70-hrt"/>
                             <constraint firstAttribute="trailing" secondItem="64s-rh-m9O" secondAttribute="trailing" id="u4y-fA-RYu"/>
+                            <constraint firstItem="eAi-Ie-kQm" firstAttribute="top" secondItem="wkY-HC-zHb" secondAttribute="top" id="xqv-Zg-c1k"/>
                         </constraints>
                     </view>
                 </viewController>

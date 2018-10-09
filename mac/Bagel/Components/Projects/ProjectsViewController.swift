@@ -45,7 +45,11 @@ extension ProjectsViewController
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
         let cell:ProjectTableCellView = self.tableView.makeView(withOwner: nil)!
+        
         cell.project = self.viewModel?.item(at: row)
+        cell.isSelected = self.viewModel?.selectedItemIndex == row
+        
+        cell.refresh()
         
         return cell
     }

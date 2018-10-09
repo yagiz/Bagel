@@ -51,7 +51,11 @@ extension DevicesViewController
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
         let cell: DeviceTableCellView = self.tableView.makeView(withOwner: nil)!
+        
         cell.device = self.viewModel?.item(at: row)
+        cell.isSelected = self.viewModel?.selectedItemIndex == row
+        
+        cell.refresh()
         
         return cell
     }

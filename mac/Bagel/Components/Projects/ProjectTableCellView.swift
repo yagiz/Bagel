@@ -10,18 +10,15 @@ import Cocoa
 
 class ProjectTableCellView: NSTableCellView {
 
+    @IBOutlet weak var backgroundBox: NSBox!
     @IBOutlet weak var titleTextField: NSTextField!
     
     var project: BagelProjectController!
-    {
-        didSet
-        {
-            self.refresh()
-        }
-    }
+    var isSelected = false
 
     func refresh() {
         
         self.titleTextField.stringValue = self.project.projectName ?? ""
+        self.backgroundBox.isHidden = !self.isSelected
     }
 }

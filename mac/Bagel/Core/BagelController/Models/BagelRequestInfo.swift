@@ -10,6 +10,14 @@ import Cocoa
 
 typealias KeyValue = [String: String]
 
+extension String {
+    
+    var base64Data: Data? {
+        
+        return Data(base64Encoded: self, options: .ignoreUnknownCharacters)
+    }
+}
+
 extension Dictionary where Key == String, Value == String {
     
     func toKeyValueArray() -> [KeyValue] {
@@ -37,11 +45,11 @@ class BagelRequestInfo: Codable {
 
     var url: String?
     var requestHeaders: KeyValue?
-    var requestBody: Data?
+    var requestBody: String?
     var requestMethod: String?
     
     var responseHeaders: KeyValue?
-    var responseData: Data?
+    var responseData: String?
     
     var statusCode: String?
     

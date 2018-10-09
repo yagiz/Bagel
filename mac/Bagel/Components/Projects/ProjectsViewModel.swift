@@ -16,6 +16,21 @@ class ProjectsViewModel: BaseListViewModel<BagelProjectController> {
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: NSNotification.Name(rawValue: "DidSelectProject"), object: nil)
     }
     
+    var selectedItem: BagelProjectController? {
+        
+        return BagelController.shared.selectedProjectController
+    }
+    
+    var selectedItemIndex: Int? {
+        
+        if let selectedItem = self.selectedItem {
+            
+            return self.items.firstIndex { $0 === selectedItem }
+        }
+        
+        return nil
+    }
+    
     @objc func refreshItems() {
         
         self.set(items: BagelController.shared.projectControllers) 

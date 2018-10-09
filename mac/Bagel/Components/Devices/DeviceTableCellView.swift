@@ -16,12 +16,7 @@ class DeviceTableCellView: NSTableCellView {
     @IBOutlet weak var deviceDescriptionTextField: NSTextField!
     
     var device: BagelDeviceController!
-    {
-        didSet
-        {
-            self.refresh()
-        }
-    }
+    var isSelected = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +27,7 @@ class DeviceTableCellView: NSTableCellView {
         
         self.deviceNameTextField.stringValue = self.device.deviceName ?? ""
         self.deviceDescriptionTextField.stringValue = self.device.deviceDescription ?? ""
+        self.backgroundBox.isHidden = !self.isSelected
     }
     
 }

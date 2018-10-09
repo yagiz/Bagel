@@ -8,6 +8,7 @@
 
 import Cocoa
 import WebKit
+import macOSThemeKit
 
 class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
 
@@ -25,6 +26,8 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     override func setup() {
         
         self.setupJSONViewer()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changedTheme(_:)), name: .didChangeTheme, object: nil)
         
         self.viewModel?.onChange = { [weak self] in
             
@@ -84,6 +87,23 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
         }
     }
     
+    func refreshJSONEditorTheme() {
+        
+        if ThemeManager.shared.effectiveTheme === ThemeManager.lightTheme {
+            
+            self.webView.windowScriptObject.callWebScriptMethod("changeThemeToLight", withArguments: [])
+            
+        }else if ThemeManager.shared.effectiveTheme === ThemeManager.darkTheme {
+            
+            self.webView.windowScriptObject.callWebScriptMethod("changeThemeToDark", withArguments: [])
+
+        }
+    }
+    
+    @objc private func changedTheme(_ notification: Notification) {
+        
+        self.refreshJSONEditorTheme()
+    }
     
     @IBAction func rawButtonAction(_ sender: Any) {
         

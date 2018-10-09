@@ -55,6 +55,11 @@ class DataViewController: BaseViewController {
             self.dataJSONViewController.view.isHidden = true
             self.dataTextViewController.view.isHidden = false
             
+        }else {
+            
+            self.dataJSONViewController.view.isHidden = true
+            self.dataTextViewController.view.isHidden = true
+            
         }
     }
     

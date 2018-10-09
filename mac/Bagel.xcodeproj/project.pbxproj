@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
+		BC2DA4ED216C88E800A114BA /* lighttheme.css in Sources */ = {isa = PBXBuildFile; fileRef = BC2DA4EC216C88E800A114BA /* lighttheme.css */; };
 		BC55C690216A795E00B7D374 /* jsoneditor.html in Resources */ = {isa = PBXBuildFile; fileRef = BC55C68F216A795E00B7D374 /* jsoneditor.html */; };
 		BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C691216A7AFD00B7D374 /* jsoneditor.css */; };
 		BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */ = {isa = PBXBuildFile; fileRef = BC55C692216A7AFD00B7D374 /* jsoneditor.js */; };
@@ -101,6 +102,7 @@
 		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		BC2DA4EC216C88E800A114BA /* lighttheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lighttheme.css; sourceTree = "<group>"; };
 		BC55C68F216A795E00B7D374 /* jsoneditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsoneditor.html; sourceTree = "<group>"; };
 		BC55C691216A7AFD00B7D374 /* jsoneditor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jsoneditor.css; sourceTree = "<group>"; };
 		BC55C692216A7AFD00B7D374 /* jsoneditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsoneditor.js; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */,
 				BC55C692216A7AFD00B7D374 /* jsoneditor.js */,
 				BC55C698216A7E6000B7D374 /* darktheme.css */,
+				BC2DA4EC216C88E800A114BA /* lighttheme.css */,
 				BC55C68F216A795E00B7D374 /* jsoneditor.html */,
 				BC55C69A216A84A900B7D374 /* reset.css */,
 			);
@@ -771,6 +774,7 @@
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
 				BC55C69B216A84A900B7D374 /* reset.css in Sources */,
+				BC2DA4ED216C88E800A114BA /* lighttheme.css in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,

@@ -14,13 +14,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="110" height="584"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbn-76-5ug">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="50" horizontalPageScroll="10" verticalLineScroll="50" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbn-76-5ug">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="584"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="LNH-Jb-IyL">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="584"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" id="m5V-dH-ozv" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
+                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" id="m5V-dH-ozv" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="554"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -41,20 +41,20 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="ProjectTableCellView" focusRingType="none" id="S3p-Mx-L3L" customClass="ProjectTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="0.0" width="107" height="30"/>
+                                                            <rect key="frame" x="1" y="0.0" width="107" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-R3-Cs4">
-                                                                    <rect key="frame" x="5" y="0.0" width="97" height="30"/>
+                                                                    <rect key="frame" x="5" y="5" width="97" height="40"/>
                                                                     <view key="contentView" id="4wC-gh-GjS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="40"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
                                                                     <color key="borderColor" red="0.53333333333333333" green="0.32941176470588235" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="fillColor" red="0.53333333333333333" green="0.32941176470588235" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </box>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-eS-sg0">
-                                                                    <rect key="frame" x="8" y="6" width="35" height="19"/>
+                                                                    <rect key="frame" x="8" y="16" width="35" height="19"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="Tv4-Qg-efw">
                                                                         <font key="font" size="13" name="EffraMedium-Regular"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,14 +65,14 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="HfR-R3-Cs4" secondAttribute="trailing" constant="5" id="8Hh-0b-7gU"/>
                                                                 <constraint firstItem="HfR-R3-Cs4" firstAttribute="leading" secondItem="S3p-Mx-L3L" secondAttribute="leading" constant="5" id="Cbh-3x-dtT"/>
-                                                                <constraint firstAttribute="bottom" secondItem="HfR-R3-Cs4" secondAttribute="bottom" id="KbG-pc-8fX"/>
+                                                                <constraint firstAttribute="bottom" secondItem="HfR-R3-Cs4" secondAttribute="bottom" constant="5" id="KbG-pc-8fX"/>
                                                                 <constraint firstItem="eTZ-eS-sg0" firstAttribute="leading" secondItem="S3p-Mx-L3L" secondAttribute="leading" constant="10" id="NrO-PW-vRQ"/>
                                                                 <constraint firstItem="eTZ-eS-sg0" firstAttribute="centerY" secondItem="S3p-Mx-L3L" secondAttribute="centerY" id="fwf-n4-cAl"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eTZ-eS-sg0" secondAttribute="trailing" constant="10" id="rkM-zh-jsl"/>
-                                                                <constraint firstItem="HfR-R3-Cs4" firstAttribute="top" secondItem="S3p-Mx-L3L" secondAttribute="top" id="srR-Cu-Sih"/>
+                                                                <constraint firstItem="HfR-R3-Cs4" firstAttribute="top" secondItem="S3p-Mx-L3L" secondAttribute="top" constant="5" id="srR-Cu-Sih"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="backgroundBox" destination="HfR-R3-Cs4" id="cGX-ca-WFY"/>
+                                                                <outlet property="backgroundBox" destination="HfR-R3-Cs4" id="037-Gv-tg3"/>
                                                                 <outlet property="projectNameTextField" destination="eTZ-eS-sg0" id="buy-Tc-1Zc"/>
                                                                 <outlet property="titleTextField" destination="eTZ-eS-sg0" id="Rw9-gC-C3H"/>
                                                             </connections>
