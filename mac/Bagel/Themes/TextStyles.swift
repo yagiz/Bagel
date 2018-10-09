@@ -18,4 +18,10 @@ class TextStyles {
         return NSAttributedString(string: string, attributes: attributes)
         
     }
+
+    static func addCodeAttributesToHTMLAttributedString(htmlAttributedString: NSMutableAttributedString) {
+        
+        htmlAttributedString.addAttributes([.foregroundColor: ThemeColor.labelColor, .font: FontManager.codeFont(size: 13)], range: NSRange.init(location: 0, length: htmlAttributedString.string.count))
+
+    }
 }

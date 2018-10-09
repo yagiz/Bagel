@@ -63,12 +63,6 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
             
             self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
             
-            
-            let fullRange = NSRange.init(location: 0, length: jsonString.count)
-            
-            let attributedString = NSMutableAttributedString(string: jsonString)
-            attributedString.addAttributes([.font : FontManager.codeFont(size: 13)], range: fullRange)
-            
             self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.currentJSONString ?? ""))
         }
         

@@ -58,7 +58,7 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
 - (BagelRequestCarrier*)carrierWithURLSessionTask:(NSURLSessionTask*)task
 {
     for (BagelRequestCarrier* carrier in self.carriers) {
-        if ([carrier.task isEqual:task]) {
+        if (carrier.task == task) {
             return carrier;
         }
     }
