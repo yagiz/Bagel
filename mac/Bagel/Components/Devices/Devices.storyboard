@@ -15,13 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="582"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="50" horizontalPageScroll="10" verticalLineScroll="50" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-sc-7OV">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="60" horizontalPageScroll="10" verticalLineScroll="60" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-sc-7OV">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="582"/>
                                 <clipView key="contentView" drawsBackground="NO" id="cgg-37-JNG">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="582"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="sequential" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" id="712-Zh-6So" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
+                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="sequential" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" rowSizeStyle="automatic" viewBased="YES" id="712-Zh-6So" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="552"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -42,11 +42,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="DeviceTableCellView" focusRingType="none" id="C9i-hu-6d7" customClass="DeviceTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="0.0" width="197" height="50"/>
+                                                            <rect key="frame" x="1" y="0.0" width="197" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="AdA-W2-Hop">
-                                                                    <rect key="frame" x="10" y="0.0" width="177" height="50"/>
+                                                                    <rect key="frame" x="10" y="5" width="177" height="50"/>
                                                                     <view key="contentView" id="RIg-5Q-2X5">
                                                                         <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,13 +54,13 @@
                                                                     <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </box>
                                                                 <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cTJ-1y-D5g">
-                                                                    <rect key="frame" x="10" y="7" width="177" height="36"/>
+                                                                    <rect key="frame" x="15" y="12" width="167" height="36"/>
                                                                     <view key="contentView" id="dIv-Co-U5R">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="36"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5He-ss-CRR">
-                                                                                <rect key="frame" x="3" y="15" width="171" height="21"/>
+                                                                                <rect key="frame" x="3" y="15" width="161" height="21"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Label" id="eDG-YP-TlI">
                                                                                     <font key="font" size="14" name="EffraMedium-Regular"/>
                                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -68,7 +68,7 @@
                                                                                 </textFieldCell>
                                                                             </textField>
                                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-VA-YQg">
-                                                                                <rect key="frame" x="3" y="0.0" width="171" height="15"/>
+                                                                                <rect key="frame" x="3" y="0.0" width="161" height="15"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="dememe" id="4HG-uh-d6T">
                                                                                     <font key="font" size="10" name="Effra-Regular"/>
                                                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -92,12 +92,12 @@
                                                                 </box>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="cTJ-1y-D5g" secondAttribute="trailing" constant="10" id="0GR-rJ-L9j"/>
-                                                                <constraint firstItem="cTJ-1y-D5g" firstAttribute="leading" secondItem="C9i-hu-6d7" secondAttribute="leading" constant="10" id="c9L-bx-UWU"/>
-                                                                <constraint firstItem="AdA-W2-Hop" firstAttribute="top" secondItem="C9i-hu-6d7" secondAttribute="top" id="cOW-Nn-Tdo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cTJ-1y-D5g" secondAttribute="trailing" constant="15" id="0GR-rJ-L9j"/>
+                                                                <constraint firstItem="cTJ-1y-D5g" firstAttribute="leading" secondItem="C9i-hu-6d7" secondAttribute="leading" constant="15" id="c9L-bx-UWU"/>
+                                                                <constraint firstItem="AdA-W2-Hop" firstAttribute="top" secondItem="C9i-hu-6d7" secondAttribute="top" constant="5" id="cOW-Nn-Tdo"/>
                                                                 <constraint firstAttribute="trailing" secondItem="AdA-W2-Hop" secondAttribute="trailing" constant="10" id="l8y-On-VvL"/>
                                                                 <constraint firstItem="cTJ-1y-D5g" firstAttribute="centerY" secondItem="C9i-hu-6d7" secondAttribute="centerY" id="pi3-A7-bRa"/>
-                                                                <constraint firstAttribute="bottom" secondItem="AdA-W2-Hop" secondAttribute="bottom" id="ye3-4r-yeL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="AdA-W2-Hop" secondAttribute="bottom" constant="5" id="ye3-4r-yeL"/>
                                                                 <constraint firstItem="AdA-W2-Hop" firstAttribute="leading" secondItem="C9i-hu-6d7" secondAttribute="leading" constant="10" id="zPH-bI-0JI"/>
                                                             </constraints>
                                                             <connections>

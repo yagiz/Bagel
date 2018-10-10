@@ -10,26 +10,12 @@ import Cocoa
 
 class DataJSONViewModel: BaseViewModel {
     
-    var currentJSONString: String?
-    
-    func parse(data: Data?) -> String? {
+    var dataRepresentation: DataRepresentation? {
         
-        guard let data = data else { return nil }
-
-        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
+        didSet {
             
-            if let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) {
-                
-                if let jsonString = String(data: jsonData, encoding: .utf8) {
-                    
-                    self.currentJSONString = jsonString
-                    self.onChange?()
-                    
-                    return self.currentJSONString
-                }
-            }
+            self.onChange?()
         }
-        
-        return nil
     }
+    
 }

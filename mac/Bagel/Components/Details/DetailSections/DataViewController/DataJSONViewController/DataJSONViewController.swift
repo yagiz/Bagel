@@ -59,11 +59,10 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     func refresh() {
         
-        if let jsonString = self.viewModel?.currentJSONString {
+        if let jsonString = self.viewModel?.dataRepresentation?.rawString {
             
             self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
-            
-            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.currentJSONString ?? ""))
+            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: jsonString ?? ""))
         }
         
         if self.isRaw {

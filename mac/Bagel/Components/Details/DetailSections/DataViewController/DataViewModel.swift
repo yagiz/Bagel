@@ -11,7 +11,7 @@ import Cocoa
 class DataViewModel: BaseViewModel {
 
     var packet: BagelPacket?
-    var data: Data?
+    var dataRepresentation: DataRepresentation?
     
     func register() {
         

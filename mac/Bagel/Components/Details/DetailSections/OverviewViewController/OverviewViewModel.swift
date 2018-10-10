@@ -10,4 +10,19 @@ import Cocoa
 
 class OverviewViewModel: BaseViewModel {
 
+    func register() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: NSNotification.Name(rawValue: "DidSelectPacket"), object: nil)
+    }
+    
+    @objc func didSelectPacket() {
+        
+//        self.packet = BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
+//        
+    }
+    
+    func refresh() {
+        
+        
+    }
 }

@@ -26,7 +26,7 @@ class DataTextViewController: BaseViewController {
     
     func refresh() {
         
-        if let attributedText = self.viewModel?.attributedText {
+        if let attributedText = self.viewModel?.dataRepresentation?.attributedString {
             
             self.textView.textStorage?.setAttributedString(attributedText)
         }

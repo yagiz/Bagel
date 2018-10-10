@@ -25,7 +25,7 @@ extension DarkTheme {
     }
     
     @objc var secondaryLabelColor: NSColor {
-        return NSColor.darkGray
+        return NSColor(hexString: "#9C9C9C")
     }
     
     @objc var contentBarColor: NSColor {

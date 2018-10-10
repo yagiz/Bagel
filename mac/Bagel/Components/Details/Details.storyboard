@@ -239,6 +239,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="overviewTextView" destination="yGA-r3-ock" id="sTN-fX-keW"/>
                         <outlet property="textView" destination="yGA-r3-ock" id="H7e-ev-QjI"/>
                     </connections>
                 </viewController>

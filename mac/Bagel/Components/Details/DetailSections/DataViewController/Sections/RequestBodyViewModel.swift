@@ -13,7 +13,14 @@ class RequestBodyViewModel: DataViewModel {
     override func didSelectPacket() {
         
         super.didSelectPacket()
-        self.data = self.packet?.requestInfo?.requestBody?.base64Data
+        
+        self.dataRepresentation = nil
+        
+        if let data = self.packet?.requestInfo?.requestBody?.base64Data {
+            
+            self.dataRepresentation = DataRepresentationParser.parse(data: data)
+        }
+        
         self.onChange?()
     }
 }

@@ -10,9 +10,22 @@ import Cocoa
 
 class OverviewViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    @IBOutlet var overviewTextView: NSTextView!
+    
+    var viewModel: OverviewViewModel?
+    
+    override func setup() {
+        
+        self.viewModel?.onChange = { [weak self] in
+            
+            self?.refresh()
+        }
+        
+        self.refresh()
     }
     
+    
+    func refresh() {
+        
+    }
 }

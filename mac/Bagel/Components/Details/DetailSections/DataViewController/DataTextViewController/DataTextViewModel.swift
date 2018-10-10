@@ -10,39 +10,12 @@ import Cocoa
 
 class DataTextViewModel: BaseViewModel {
 
-    var attributedText: NSAttributedString?
-    
-    func parse(data: Data?) -> NSAttributedString? {
+    var dataRepresentation: DataRepresentation? {
         
-        guard let data = data else { return nil }
-        
-        if let image = NSImage(data: data) {
+        didSet {
             
-            let textAttachmentCell = NSTextAttachmentCell(imageCell: image)
-            let textAttachment = NSTextAttachment()
-            textAttachment.attachmentCell = textAttachmentCell
-            
-            self.attributedText = NSMutableAttributedString(attachment: textAttachment)
             self.onChange?()
-            
-            return self.attributedText
-            
-        }else if let htmlString = NSMutableAttributedString(html: data, documentAttributes: nil) {
-            
-            TextStyles.addCodeAttributesToHTMLAttributedString(htmlAttributedString: htmlString)
-            self.attributedText = htmlString
-            self.onChange?()
-            
-            return self.attributedText
-            
-        }else if let dataString = String(data: data, encoding: .utf8) {
-            
-            self.attributedText = TextStyles.codeAttributedString(string: dataString)
-            self.onChange?()
-            
-            return self.attributedText
         }
-        
-        return nil
     }
+
 }

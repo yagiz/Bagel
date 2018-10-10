@@ -45,21 +45,27 @@ class DataViewController: BaseViewController {
     
     func refresh() {
         
-        if self.dataJSONViewController.viewModel?.parse(data: self.viewModel?.data) != nil {
+        if let data = self.viewModel?.dataRepresentation {
             
-            self.dataJSONViewController.view.isHidden = false
-            self.dataTextViewController.view.isHidden = true
-            
-        }else if self.dataTextViewController.viewModel?.parse(data: self.viewModel?.data) != nil {
-            
-            self.dataJSONViewController.view.isHidden = true
-            self.dataTextViewController.view.isHidden = false
+            if data.type == .json {
+                
+                self.dataJSONViewController.viewModel?.dataRepresentation = self.viewModel?.dataRepresentation
+                
+                self.dataJSONViewController.view.isHidden = false
+                self.dataTextViewController.view.isHidden = true
+                
+            }else {
+                    
+                self.dataTextViewController.viewModel?.dataRepresentation = self.viewModel?.dataRepresentation
+                
+                self.dataTextViewController.view.isHidden = false
+                self.dataJSONViewController.view.isHidden = true
+            }
             
         }else {
             
             self.dataJSONViewController.view.isHidden = true
             self.dataTextViewController.view.isHidden = true
-            
         }
     }
     
