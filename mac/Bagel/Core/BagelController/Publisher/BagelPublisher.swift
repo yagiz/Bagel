@@ -14,7 +14,7 @@ protocol BagelPublisherDelegate {
     func didGetPacket(publisher: BagelPublisher, packet: BagelPacket)
 }
 
-class BagelPublisher: NSObject, GCDAsyncSocketDelegate, NetServiceDelegate {
+class BagelPublisher: NSObject {
 
     var delegate: BagelPublisherDelegate?
     
@@ -42,6 +42,34 @@ class BagelPublisher: NSObject, GCDAsyncSocketDelegate, NetServiceDelegate {
         }
         
     }
+
+    
+    func lengthOf(data: Data) -> Int {
+        
+        var length = 0
+        memcpy(&length, ([UInt8](data)), MemoryLayout<UInt64>.stride)
+
+        return length
+    }
+    
+    func parseBody(data: Data) {
+        
+        let jsonDecoder = JSONDecoder()
+        
+        do {
+            
+            let bagelPacket = try jsonDecoder.decode(BagelPacket.self, from: data)
+            delegate?.didGetPacket(publisher: self, packet: bagelPacket)
+            
+        } catch {
+            
+            print(error)
+        }
+    }
+}
+
+
+extension BagelPublisher: NetServiceDelegate {
     
     func netServiceDidPublish(_ sender: NetService) {
         
@@ -52,6 +80,11 @@ class BagelPublisher: NSObject, GCDAsyncSocketDelegate, NetServiceDelegate {
         
         print("error", errorDict)
     }
+
+}
+
+
+extension BagelPublisher: GCDAsyncSocketDelegate {
     
     func socket(_ sock: GCDAsyncSocket, didAcceptNewSocket newSocket: GCDAsyncSocket) {
         
@@ -85,31 +118,6 @@ class BagelPublisher: NSObject, GCDAsyncSocketDelegate, NetServiceDelegate {
                 
                 self.startPublishing()
             }
-            
-        }
-
-    }
-    
-    func lengthOf(data: Data) -> Int {
-        
-        var length = 0
-        memcpy(&length, ([UInt8](data)), MemoryLayout<UInt64>.stride)
-
-        return length
-    }
-    
-    func parseBody(data: Data) {
-        
-        let jsonDecoder = JSONDecoder()
-        
-        do {
-            
-            let bagelPacket = try jsonDecoder.decode(BagelPacket.self, from: data)
-            delegate?.didGetPacket(publisher: self, packet: bagelPacket)
-            
-        } catch {
-            
-            print(error)
         }
     }
 }

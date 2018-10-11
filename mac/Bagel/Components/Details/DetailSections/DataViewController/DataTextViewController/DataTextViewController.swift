@@ -28,6 +28,7 @@ class DataTextViewController: BaseViewController {
         
         if let attributedText = self.viewModel?.dataRepresentation?.attributedString {
             
+            self.textView.string = ""
             self.textView.textStorage?.setAttributedString(attributedText)
         }
     }
