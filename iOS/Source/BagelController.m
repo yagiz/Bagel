@@ -32,19 +32,20 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
     self = [super init];
 
     if (self) {
+        
+        _queue = dispatch_queue_create((const char*)[queueId UTF8String], DISPATCH_QUEUE_SERIAL);
+        self.carriers = [NSMutableArray new];
+        
         self.configuration = configuration;
 
         if (!self.configuration) {
             self.configuration = [[BagelConfiguration alloc] init];
         }
 
-        self.injector = [[BagelURLSessionInjector alloc] initWithDelegate:self];
+        self.urlSessionInjector = [[BagelURLSessionInjector alloc] initWithDelegate:self];
+        self.urlConnectionInjector = [[BagelURLConnectionInjector alloc] initWithDelegate:self];
+        
         self.browser = [[BagelBrowser alloc] initWithConfiguration:self.configuration];
-
-        self.carriers = [NSMutableArray new];
-
-        _queue = dispatch_queue_create((const char*)[queueId UTF8String],
-            DISPATCH_QUEUE_SERIAL);
     }
 
     return self;
@@ -55,19 +56,34 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
     dispatch_async(_queue, block);
 }
 
-- (BagelRequestCarrier*)carrierWithURLSessionTask:(NSURLSessionTask*)task
+- (BagelRequestCarrier*)carrierWithURLSessionTask:(NSURLSessionTask*)urlSessionTask
 {
     for (BagelRequestCarrier* carrier in self.carriers) {
-        if (carrier.task == task) {
+        if (carrier.urlSessionTask == urlSessionTask) {
             return carrier;
         }
     }
 
-    BagelRequestCarrier* carrier = [[BagelRequestCarrier alloc] initWithTask:task];
+    BagelRequestCarrier* carrier = [[BagelRequestCarrier alloc] initWithTask:urlSessionTask];
     [self.carriers addObject:carrier];
 
     return carrier;
 }
+
+- (BagelRequestCarrier*)carrierWithURLConnection:(NSURLConnection*)urlConnection
+{
+    for (BagelRequestCarrier* carrier in self.carriers) {
+        if (carrier.urlConnection == urlConnection) {
+            return carrier;
+        }
+    }
+    
+    BagelRequestCarrier* carrier = [[BagelRequestCarrier alloc] initWithURLConnection:urlConnection];
+    [self.carriers addObject:carrier];
+    
+    return carrier;
+}
+
 
 - (void)urlSessionInjector:(BagelURLSessionInjector*)injector
                   didStart:(NSURLSessionDataTask*)dataTask
@@ -120,11 +136,76 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
         BagelRequestCarrier* carrier = [self carrierWithURLSessionTask:dataTask];
 
         carrier.error = error;
-
+        [carrier complete];
+        
         [self sendCarrier:carrier];
-
+        [self.carriers removeObject:carrier];
+        
     }];
 }
+
+
+
+
+
+
+
+- (void)urlConnectionInjector:(BagelURLConnectionInjector *)injector didReceiveResponse:(NSURLConnection *)urlConnection response:(NSURLResponse *)response
+{
+    [self performBlock:^{
+        
+        BagelRequestCarrier* carrier = [self carrierWithURLConnection:urlConnection];
+        
+        carrier.response = response;
+        
+        [self sendCarrier:carrier];
+        
+    }];
+}
+
+- (void)urlConnectionInjector:(BagelURLConnectionInjector *)injector didReceiveData:(NSURLConnection *)urlConnection data:(NSData *)data
+{
+    NSData* copiedData = [data copy];
+    
+    [self performBlock:^{
+        
+        BagelRequestCarrier* carrier = [self carrierWithURLConnection:urlConnection];
+        
+        [carrier appenData:copiedData];
+        
+    }];
+}
+
+- (void)urlConnectionInjector:(BagelURLConnectionInjector *)injector didFailWithError:(NSURLConnection *)urlConnection error:(NSError *)error
+{
+    [self performBlock:^{
+        
+        BagelRequestCarrier* carrier = [self carrierWithURLConnection:urlConnection];
+        
+        carrier.error = error;
+        [carrier complete];
+        
+        [self sendCarrier:carrier];
+        [self.carriers removeObject:carrier];
+        
+    }];
+}
+
+
+- (void)urlConnectionInjector:(BagelURLConnectionInjector *)injector didFinishLoading:(NSURLConnection *)urlConnection
+{
+    [self performBlock:^{
+        
+        BagelRequestCarrier* carrier = [self carrierWithURLConnection:urlConnection];
+        
+        [carrier complete];
+        
+        [self sendCarrier:carrier];
+        [self.carriers removeObject:carrier];
+        
+    }];
+}
+
 
 - (void)sendCarrier:(BagelRequestCarrier*)carrier
 {

@@ -24,16 +24,29 @@
 
 @implementation BagelRequestCarrier
 
-- (instancetype)initWithTask:(NSURLSessionTask*)task
+- (instancetype)initWithTask:(NSURLSessionTask*)urlSessionTask
 {
     self = [super init];
 
     if (self) {
-        self.task = task;
+        self.urlSessionTask = urlSessionTask;
 
         [self setup];
     }
 
+    return self;
+}
+
+- (instancetype)initWithURLConnection:(NSURLConnection*)urlConnection
+{
+    self = [super init];
+    
+    if (self) {
+        self.urlConnection = urlConnection;
+        
+        [self setup];
+    }
+    
     return self;
 }
 
@@ -58,8 +71,8 @@
 
 - (void)complete
 {
-    self.task = nil;
     self.endDate = [NSDate date];
+    self.isCompleted = YES;
 }
 
 - (BagelRequestPacket*)packet
@@ -69,15 +82,29 @@
     packet.packetId = self.carrierId;
 
     BagelRequestInfo* requestInfo = [[BagelRequestInfo alloc] init];
-    requestInfo.url = self.task.originalRequest.URL;
-    requestInfo.requestHeaders = self.self.task.originalRequest.allHTTPHeaderFields;
-    requestInfo.requestBody = self.self.task.originalRequest.HTTPBody;
-    requestInfo.requestMethod = self.self.task.originalRequest.HTTPMethod;
+    
+    if (self.urlSessionTask) {
+        
+        requestInfo.url = self.urlSessionTask.originalRequest.URL;
+        requestInfo.requestHeaders = self.self.urlSessionTask.originalRequest.allHTTPHeaderFields;
+        requestInfo.requestBody = self.self.urlSessionTask.originalRequest.HTTPBody;
+        requestInfo.requestMethod = self.self.urlSessionTask.originalRequest.HTTPMethod;
+        
+    }else if (self.urlConnection) {
+        
+        requestInfo.url = self.urlConnection.originalRequest.URL;
+        requestInfo.requestHeaders = self.self.urlConnection.originalRequest.allHTTPHeaderFields;
+        requestInfo.requestBody = self.self.urlConnection.originalRequest.HTTPBody;
+        requestInfo.requestMethod = self.self.urlConnection.originalRequest.HTTPMethod;
+        
+    }
 
     NSHTTPURLResponse* httpURLResponse = (NSHTTPURLResponse*)self.response;
     requestInfo.responseHeaders = httpURLResponse.allHeaderFields;
 
-    requestInfo.responseData = self.data;
+    if (self.isCompleted) {
+        requestInfo.responseData = self.data;
+    }
 
     if (httpURLResponse.statusCode != 0) {
         requestInfo.statusCode = [NSString stringWithFormat:@"%ld", (long)httpURLResponse.statusCode];

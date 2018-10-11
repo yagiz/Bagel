@@ -27,8 +27,10 @@
 
 @property (nonatomic, strong) NSString* carrierId;
 
-@property (nonatomic, strong) NSURLSessionTask* task;
-@property (nonatomic, strong) NSURLResponse* response;
+@property (nonatomic, weak) NSURLSessionTask* urlSessionTask;
+@property (nonatomic, weak) NSURLConnection* urlConnection;
+
+@property (nonatomic, weak) NSURLResponse* response;
 
 @property (nonatomic, strong) NSDate* startDate;
 @property (nonatomic, strong) NSDate* endDate;
@@ -39,6 +41,7 @@
 @property (nonatomic) BOOL isCompleted;
 
 - (instancetype)initWithTask:(NSURLSessionTask*)task;
+- (instancetype)initWithURLConnection:(NSURLConnection*)urlConnection;
 
 - (BagelRequestPacket*)packet;
 

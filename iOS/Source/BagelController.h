@@ -24,15 +24,20 @@
 #import "BagelBrowser.h"
 #import "BagelURLSessionInjector.h"
 #import "BagelRequestCarrier.h"
+
 #import "BagelURLSessionInjector.h"
+#import "BagelURLConnectionInjector.h"
+
 #import "BagelRequestPacket.h"
 
-@interface BagelController : NSObject <BagelURLSessionInjectorDelegate>
+@interface BagelController : NSObject <BagelURLSessionInjectorDelegate, BagelURLConnectionInjectorDelegate>
 
 @property (nonatomic, strong) BagelConfiguration* configuration;
 
 @property (nonatomic, strong) BagelBrowser* browser;
-@property (nonatomic, strong) BagelURLSessionInjector* injector;
+
+@property (nonatomic, strong) BagelURLSessionInjector* urlSessionInjector;
+@property (nonatomic, strong) BagelURLConnectionInjector* urlConnectionInjector;
 
 @property (nonatomic, strong) NSMutableArray<BagelRequestCarrier*>* carriers;
 
