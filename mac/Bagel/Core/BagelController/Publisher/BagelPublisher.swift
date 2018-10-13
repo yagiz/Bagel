@@ -32,6 +32,8 @@ class BagelPublisher: NSObject {
             
             try self.mainSocket.accept(onPort: UInt16(Configuration.netServicePort))
             
+            self.sockets.append(self.mainSocket)
+            
             self.netService = NetService(domain: Configuration.netServiceDomain, type: Configuration.netServiceType, name: Configuration.netServiceName, port: Configuration.netServicePort)
             self.netService.delegate = self
             self.netService.publish()
@@ -89,6 +91,7 @@ extension BagelPublisher: GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didAcceptNewSocket newSocket: GCDAsyncSocket) {
         
         self.sockets.append(newSocket)
+        newSocket.delegate = self
         newSocket.readData(toLength: UInt(MemoryLayout<UInt64>.stride), withTimeout: -1.0, tag: 0)
     }
     
@@ -97,16 +100,20 @@ extension BagelPublisher: GCDAsyncSocketDelegate {
         if tag == 0 {
             
             let length = self.lengthOf(data: data)
-            sock.readData(toLength: UInt(length), withTimeout: 30.0, tag: 1)
+            sock.readData(toLength: UInt(length), withTimeout: -1.0, tag: 1)
             
         } else if tag == 1 {
             
             self.parseBody(data: data)
-            sock.readData(toLength: UInt(MemoryLayout<UInt64>.stride), withTimeout: 30.0, tag: 0)
+            sock.readData(toLength: UInt(MemoryLayout<UInt64>.stride), withTimeout: -1.0, tag: 0)
         }
     }
     
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
+        
+        if sock == self.mainSocket {
+            return
+        }
         
         if self.sockets.contains(sock) {
             
@@ -116,7 +123,12 @@ extension BagelPublisher: GCDAsyncSocketDelegate {
             
             if self.sockets.count == 0 {
                 
-                self.startPublishing()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    
+                    self.startPublishing()
+                    
+                }
+                
             }
         }
     }
