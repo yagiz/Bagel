@@ -10,7 +10,6 @@ import Cocoa
 import macOSThemeKit
 
 extension LightTheme {
-    
     var contentTextColor: NSColor {
         return NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.3, alpha: 1.0)
     }

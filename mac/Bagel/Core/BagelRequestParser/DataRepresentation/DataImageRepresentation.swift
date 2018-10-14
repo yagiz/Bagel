@@ -1,5 +1,5 @@
 //
-//  TextRepresentation.swift
+//  DataImageRepresentation.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 10.10.2018.
@@ -8,17 +8,17 @@
 
 import Cocoa
 
-class TextRepresentation: DataRepresentation {
-    
+class DataImageRepresentation: DataRepresentation {
+
     var originalData: Data
     
-    var type: DataRepresentationType = .text
+    var type: DataRepresentationType = .image
     
     var rawString: String?
     
     var attributedString: NSAttributedString?
     
-
+    
     init(data: Data) {
         
         self.originalData = data

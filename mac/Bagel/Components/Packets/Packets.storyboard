@@ -33,13 +33,13 @@
                                             </constraints>
                                         </box>
                                         <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrP-mL-3Pf">
-                                            <rect key="frame" x="0.0" y="30" width="693" height="365"/>
+                                            <rect key="frame" x="5" y="30" width="683" height="365"/>
                                             <clipView key="contentView" drawsBackground="NO" id="6bT-JL-IQA">
-                                                <rect key="frame" x="0.0" y="0.0" width="693" height="365"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="683" height="365"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="693" height="340"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="683" height="340"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -128,7 +128,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="P5w-QZ-Fyb">
-                                                <rect key="frame" x="0.0" y="0.0" width="693" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="683" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
@@ -198,9 +198,9 @@
                                     <constraints>
                                         <constraint firstItem="D3h-c1-YUg" firstAttribute="top" secondItem="TrP-mL-3Pf" secondAttribute="bottom" id="0Df-r2-Z5Z"/>
                                         <constraint firstAttribute="trailing" secondItem="D3h-c1-YUg" secondAttribute="trailing" id="5ct-zh-0sZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="TrP-mL-3Pf" secondAttribute="trailing" id="JQc-kN-Ev2"/>
+                                        <constraint firstAttribute="trailing" secondItem="TrP-mL-3Pf" secondAttribute="trailing" constant="5" id="JQc-kN-Ev2"/>
                                         <constraint firstItem="ZW4-OH-5nY" firstAttribute="leading" secondItem="l6n-Cg-gnI" secondAttribute="leading" id="SHd-Lz-cXe"/>
-                                        <constraint firstItem="TrP-mL-3Pf" firstAttribute="leading" secondItem="l6n-Cg-gnI" secondAttribute="leading" id="eCi-7J-bio"/>
+                                        <constraint firstItem="TrP-mL-3Pf" firstAttribute="leading" secondItem="l6n-Cg-gnI" secondAttribute="leading" constant="5" id="eCi-7J-bio"/>
                                         <constraint firstAttribute="bottom" secondItem="D3h-c1-YUg" secondAttribute="bottom" id="kwS-QZ-7XD"/>
                                         <constraint firstItem="TrP-mL-3Pf" firstAttribute="top" secondItem="l6n-Cg-gnI" secondAttribute="top" constant="5" id="n4F-Ww-vK3"/>
                                         <constraint firstItem="D3h-c1-YUg" firstAttribute="leading" secondItem="l6n-Cg-gnI" secondAttribute="leading" id="rIk-he-a1X"/>

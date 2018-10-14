@@ -62,7 +62,7 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
         if let jsonString = self.viewModel?.dataRepresentation?.rawString {
             
             self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
-            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: jsonString ?? ""))
+            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: jsonString ))
         }
         
         if self.isRaw {
@@ -95,7 +95,7 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     @objc private func changedTheme(_ notification: Notification) {
         
-        self.refreshJSONEditorTheme()
+//        self.refreshJSONEditorTheme()
     }
     
     @IBAction func rawButtonAction(_ sender: Any) {

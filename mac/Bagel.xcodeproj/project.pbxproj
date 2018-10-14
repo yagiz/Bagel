@@ -19,9 +19,9 @@
 		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
 		BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73DFAD215BFB18002E533B /* BagelPublisher.swift */; };
 		BC7E67E5216E17F700E1289E /* DataRepresentationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E4216E17F700E1289E /* DataRepresentationParser.swift */; };
-		BC7E67E7216E181400E1289E /* JSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E6216E181400E1289E /* JSONRepresentation.swift */; };
-		BC7E67E9216E192800E1289E /* ImageRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E8216E192800E1289E /* ImageRepresentation.swift */; };
-		BC7E67EB216E193300E1289E /* TextRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67EA216E193300E1289E /* TextRepresentation.swift */; };
+		BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E6216E181400E1289E /* DataJSONRepresentation.swift */; };
+		BC7E67E9216E192800E1289E /* DataImageRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E8216E192800E1289E /* DataImageRepresentation.swift */; };
+		BC7E67EB216E193300E1289E /* DataTextRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67EA216E193300E1289E /* DataTextRepresentation.swift */; };
 		BC911A422168C00500B755D4 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A412168C00500B755D4 /* NSColor.swift */; };
 		BC911A442168E10F00B755D4 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A432168E10F00B755D4 /* LightTheme.swift */; };
 		BC911A472168EB0A00B755D4 /* ContentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC911A462168EB0A00B755D4 /* ContentBar.swift */; };
@@ -116,9 +116,9 @@
 		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		BC73DFAD215BFB18002E533B /* BagelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPublisher.swift; sourceTree = "<group>"; };
 		BC7E67E4216E17F700E1289E /* DataRepresentationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentationParser.swift; sourceTree = "<group>"; };
-		BC7E67E6216E181400E1289E /* JSONRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepresentation.swift; sourceTree = "<group>"; };
-		BC7E67E8216E192800E1289E /* ImageRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepresentation.swift; sourceTree = "<group>"; };
-		BC7E67EA216E193300E1289E /* TextRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRepresentation.swift; sourceTree = "<group>"; };
+		BC7E67E6216E181400E1289E /* DataJSONRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONRepresentation.swift; sourceTree = "<group>"; };
+		BC7E67E8216E192800E1289E /* DataImageRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImageRepresentation.swift; sourceTree = "<group>"; };
+		BC7E67EA216E193300E1289E /* DataTextRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTextRepresentation.swift; sourceTree = "<group>"; };
 		BC911A412168C00500B755D4 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		BC911A432168E10F00B755D4 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		BC911A462168EB0A00B755D4 /* ContentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBar.swift; sourceTree = "<group>"; };
@@ -265,13 +265,21 @@
 			path = DetailSections;
 			sourceTree = "<group>";
 		};
-		BC7E67E3216E17DA00E1289E /* BagelRequestParser */ = {
+		BC75A8082173636A00A2A5B3 /* DataRepresentation */ = {
 			isa = PBXGroup;
 			children = (
 				BC7E67E4216E17F700E1289E /* DataRepresentationParser.swift */,
-				BC7E67E6216E181400E1289E /* JSONRepresentation.swift */,
-				BC7E67E8216E192800E1289E /* ImageRepresentation.swift */,
-				BC7E67EA216E193300E1289E /* TextRepresentation.swift */,
+				BC7E67E6216E181400E1289E /* DataJSONRepresentation.swift */,
+				BC7E67E8216E192800E1289E /* DataImageRepresentation.swift */,
+				BC7E67EA216E193300E1289E /* DataTextRepresentation.swift */,
+			);
+			path = DataRepresentation;
+			sourceTree = "<group>";
+		};
+		BC7E67E3216E17DA00E1289E /* BagelRequestParser */ = {
+			isa = PBXGroup;
+			children = (
+				BC75A8082173636A00A2A5B3 /* DataRepresentation */,
 			);
 			path = BagelRequestParser;
 			sourceTree = "<group>";
@@ -749,7 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC7E67EB216E193300E1289E /* TextRepresentation.swift in Sources */,
+				BC7E67EB216E193300E1289E /* DataTextRepresentation.swift in Sources */,
 				BC7E67E5216E17F700E1289E /* DataRepresentationParser.swift in Sources */,
 				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
@@ -765,7 +773,7 @@
 				BCFC854321384685001EC6D7 /* BaseViewModel.swift in Sources */,
 				BCFC854C213848FD001EC6D7 /* BagelProjectModel.swift in Sources */,
 				BC9C77AC216385DC00E8ADE8 /* DataTextViewController.swift in Sources */,
-				BC7E67E7216E181400E1289E /* JSONRepresentation.swift in Sources */,
+				BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */,
 				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
 				BCFC854021384667001EC6D7 /* ProjectsViewModel.swift in Sources */,
@@ -792,7 +800,7 @@
 				BC55C69B216A84A900B7D374 /* reset.css in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
-				BC7E67E9216E192800E1289E /* ImageRepresentation.swift in Sources */,
+				BC7E67E9216E192800E1289E /* DataImageRepresentation.swift in Sources */,
 				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,
 				BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */,
 				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,

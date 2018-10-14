@@ -40,8 +40,6 @@ class BagelProjectController: NSObject {
         
         self.deviceControllers.append(deviceController)
         
-        
-        
         if self.deviceControllers.count == 1 {
             
             self.selectedDeviceController = self.deviceControllers.first

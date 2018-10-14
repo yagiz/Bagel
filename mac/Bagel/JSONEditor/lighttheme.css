@@ -1,31 +1,31 @@
-/* dark styling of the editor */
+/* light styling of the editor */
 div.jsoneditor,
 div.jsoneditor-menu {
-    border-color: #1D1D1D;
+    border-color: #f4f4f4;
 }
 div.jsoneditor-menu {
-    background-color: #282828;
+    background-color: #f4f4f4;
 }
 div.jsoneditor-tree,
 div.jsoneditor textarea.jsoneditor-text {
-    background-color: #1D1D1D;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
 }
 div.jsoneditor-field,
 div.jsoneditor-value {
-    color: #ffffff;
+    color: #000000;
 }
 table.jsoneditor-search div.jsoneditor-frame {
-    background: #1D1D1D;
+    background: #ffffff;
 }
 
 table.jsoneditor-search input {
-    color: #ffffff;
+    color: #000000;
 }
 
 tr.jsoneditor-highlight,
 tr.jsoneditor-selected {
-    background-color: #808080;
+    background-color: #ff0000;
 }
 
 div.jsoneditor-field[contenteditable=true]:focus,
@@ -34,8 +34,8 @@ div.jsoneditor-value[contenteditable=true]:focus,
 div.jsoneditor-value[contenteditable=true]:hover,
 div.jsoneditor-field.jsoneditor-highlight,
 div.jsoneditor-value.jsoneditor-highlight {
-    background-color: #808080;
-    border-color: #808080;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
 div.jsoneditor-field.highlight-active,
@@ -49,32 +49,43 @@ div.jsoneditor-value.highlight-active:hover {
 }
 
 div.jsoneditor-tree button:focus {
-    background-color: #868686;
+    background-color: #ffffff;
 }
 
 /* coloring of JSON in tree mode */
 div.jsoneditor-readonly {
-    color: #acacac;
+    color: #000000;
 }
 div.jsoneditor td.jsoneditor-separator {
-    color: #acacac;
+    color: #808080;
 }
 div.jsoneditor-value.jsoneditor-string {
-    color: #00ff88;
+    color: #008000;
 }
 div.jsoneditor-value.jsoneditor-object,
 div.jsoneditor-value.jsoneditor-array {
-    color: #bababa;
+    color: #808080;
 }
 div.jsoneditor-value.jsoneditor-number {
-    color: #ff4040;
+    color: #ee422e;
 }
 div.jsoneditor-value.jsoneditor-boolean {
-    color: #ff8048;
+    color: #ff8c00;
 }
 div.jsoneditor-value.jsoneditor-null {
-    color: #49a7fc;
+    color: #004ED0;
 }
 div.jsoneditor-value.jsoneditor-invalid {
-    color: white;
+    color: #000000;
+}
+
+
+div.jsoneditor-tree button.jsoneditor-collapsed {
+    background-position: 0 -48px;
+    fill: red;
+}
+
+div.jsoneditor-tree button.jsoneditor-expanded {
+    background-position: 0 -72px;
+    fill: red;
 }

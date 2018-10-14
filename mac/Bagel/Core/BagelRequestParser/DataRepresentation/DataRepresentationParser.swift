@@ -34,7 +34,7 @@ class DataRepresentationParser {
                 
                 if let jsonString = String(data: jsonData, encoding: .utf8) {
                     
-                    let jsonData = JSONRepresentation(data: data)
+                    let jsonData = DataJSONRepresentation(data: data)
                     jsonData.rawString = jsonString
                     return jsonData
                 }
@@ -48,7 +48,7 @@ class DataRepresentationParser {
             
             let attributedString = NSMutableAttributedString(attachment: textAttachment)
             
-            let imageData = ImageRepresentation(data: data)
+            let imageData = DataImageRepresentation(data: data)
             imageData.attributedString = attributedString
             return imageData
             
@@ -56,14 +56,14 @@ class DataRepresentationParser {
             
             TextStyles.addCodeAttributesToHTMLAttributedString(htmlAttributedString: htmlString)
             
-            let textData = TextRepresentation(data: data)
+            let textData = DataTextRepresentation(data: data)
             textData.rawString = htmlString.string
             textData.attributedString = htmlString
             return textData
             
         }else if let dataString = String(data: data, encoding: .utf8) {
             
-            let textData = TextRepresentation(data: data)
+            let textData = DataTextRepresentation(data: data)
             textData.rawString = dataString
             return textData
         }

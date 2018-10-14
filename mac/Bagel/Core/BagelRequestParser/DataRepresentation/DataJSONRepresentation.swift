@@ -1,5 +1,5 @@
 //
-//  JSONRepresentation.swift
+//  DataJSONRepresentation.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 10.10.2018.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class JSONRepresentation: DataRepresentation  {
+class DataJSONRepresentation: DataRepresentation  {
     
     var originalData: Data
     

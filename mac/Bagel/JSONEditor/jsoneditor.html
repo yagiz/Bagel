@@ -11,18 +11,12 @@
         <style type="text/css">
 
             #jsoneditor {
-                height: 100%;
+                height: 300px;
                 width: 100%;
-                left: 0;
-                top: 0;
-                overflow: hidden;
+                overflow: auto;
                 position: fixed;
             }
-        
-            body {
-                background-color: black;
-            }
-        
+
         </style>
         
         <link href="lighttheme.css" rel="stylesheet" type="text/css">
@@ -36,7 +30,7 @@
             
             
             var container = document.getElementById('jsoneditor');
-            var options = {navigationBar: false, mode: "view"};
+            var options = {navigationBar: false, mode: "view", navigationBar: false};
             var editor = new JSONEditor(container, options);
             
             function renderJSONString(jsonString) {

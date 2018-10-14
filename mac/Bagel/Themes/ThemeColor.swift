@@ -11,23 +11,23 @@ import macOSThemeKit
 
 extension ThemeColor {
     
-    override open class var labelColor: ThemeColor {
+    open override class var labelColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
-    override open class var controlBackgroundColor: ThemeColor {
+    open override class var controlBackgroundColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
-    override open class var gridColor: ThemeColor {
+    open override class var gridColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
-    override open class var separatorColor: ThemeColor {
+    open override class var separatorColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
-    override open class var secondaryLabelColor: ThemeColor {
+    open override class var secondaryLabelColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
