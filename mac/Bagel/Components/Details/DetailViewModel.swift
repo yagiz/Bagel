@@ -14,8 +14,8 @@ class DetailViewModel: BaseViewModel {
     
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidGetPacket"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: NSNotification.Name(rawValue: "DidSelectPacket"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: BagelNotifications.didGetPacket, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: BagelNotifications.didSelectPacket, object: nil)
     }
     
     @objc func didGetPacket() {

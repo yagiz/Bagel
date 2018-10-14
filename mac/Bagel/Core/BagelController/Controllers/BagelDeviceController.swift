@@ -17,7 +17,7 @@ class BagelDeviceController: NSObject {
     var packets: [BagelPacket] = []
     var selectedPacket: BagelPacket? {
         didSet {
-            NotificationCenter.default.post(name: NSNotification.Name("DidSelectPacket"), object: nil)
+            NotificationCenter.default.post(name: BagelNotifications.didSelectPacket, object: nil)
         }
     }
     

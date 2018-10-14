@@ -9,8 +9,8 @@
 import Cocoa
 import macOSThemeKit
 
-class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource
-{
+class ProjectsViewController: BaseViewController {
+    
     var viewModel: ProjectsViewModel?
     var onProjectSelect : ((BagelProjectController) -> ())?
     
@@ -35,8 +35,8 @@ class ProjectsViewController: BaseViewController, NSTableViewDelegate, NSTableVi
     }
 }
 
-extension ProjectsViewController
-{
+extension ProjectsViewController: NSTableViewDelegate, NSTableViewDataSource {
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         
         return self.viewModel?.itemCount() ?? 0

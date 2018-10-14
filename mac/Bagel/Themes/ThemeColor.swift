@@ -51,7 +51,6 @@ extension ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
-    
     static var projectListBackgroundColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }

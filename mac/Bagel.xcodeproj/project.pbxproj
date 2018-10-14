@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
-		BC2DA4ED216C88E800A114BA /* lighttheme.css in Sources */ = {isa = PBXBuildFile; fileRef = BC2DA4EC216C88E800A114BA /* lighttheme.css */; };
-		BC55C690216A795E00B7D374 /* jsoneditor.html in Resources */ = {isa = PBXBuildFile; fileRef = BC55C68F216A795E00B7D374 /* jsoneditor.html */; };
 		BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C691216A7AFD00B7D374 /* jsoneditor.css */; };
 		BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */ = {isa = PBXBuildFile; fileRef = BC55C692216A7AFD00B7D374 /* jsoneditor.js */; };
 		BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */; };
@@ -44,7 +42,7 @@
 		BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */; };
 		BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */; };
 		BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */; };
-		BCA60B41216201B900B9DCAD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B40216201B900B9DCAD /* Configuration.swift */; };
+		BCA60B41216201B900B9DCAD /* BagelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B40216201B900B9DCAD /* BagelConfiguration.swift */; };
 		BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B432162395000B9DCAD /* DevicesViewModel.swift */; };
 		BCA60B4621623A1600B9DCAD /* DeviceTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */; };
 		BCA60B482162403F00B9DCAD /* PacketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */; };
@@ -64,6 +62,8 @@
 		BCD0E045210F5E0D00CE5C7B /* BagelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0E044210F5E0D00CE5C7B /* BagelUITests.swift */; };
 		BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDF0EC321662CA10030710C /* FlatTableRowView.swift */; };
 		BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */; };
+		BCEC4ACB217338C5004D8CF2 /* jsoneditor.html in Resources */ = {isa = PBXBuildFile; fileRef = BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */; };
+		BCEC4ACD217338D3004D8CF2 /* lighttheme.css in Resources */ = {isa = PBXBuildFile; fileRef = BCEC4ACC217338D3004D8CF2 /* lighttheme.css */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
@@ -106,8 +106,6 @@
 		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
-		BC2DA4EC216C88E800A114BA /* lighttheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lighttheme.css; sourceTree = "<group>"; };
-		BC55C68F216A795E00B7D374 /* jsoneditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsoneditor.html; sourceTree = "<group>"; };
 		BC55C691216A7AFD00B7D374 /* jsoneditor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jsoneditor.css; sourceTree = "<group>"; };
 		BC55C692216A7AFD00B7D374 /* jsoneditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsoneditor.js; sourceTree = "<group>"; };
 		BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "jsoneditor-icons.svg"; sourceTree = "<group>"; };
@@ -141,7 +139,7 @@
 		BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataViewModel.swift; sourceTree = "<group>"; };
 		BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
-		BCA60B40216201B900B9DCAD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BCA60B40216201B900B9DCAD /* BagelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelConfiguration.swift; sourceTree = "<group>"; };
 		BCA60B432162395000B9DCAD /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableCellView.swift; sourceTree = "<group>"; };
 		BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketsViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +166,8 @@
 		BCD0E046210F5E0D00CE5C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCDF0EC321662CA10030710C /* FlatTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTableRowView.swift; sourceTree = "<group>"; };
 		BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueListViewController.swift; sourceTree = "<group>"; };
+		BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsoneditor.html; sourceTree = "<group>"; };
+		BCEC4ACC217338D3004D8CF2 /* lighttheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lighttheme.css; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -248,8 +248,8 @@
 				BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */,
 				BC55C692216A7AFD00B7D374 /* jsoneditor.js */,
 				BC55C698216A7E6000B7D374 /* darktheme.css */,
-				BC2DA4EC216C88E800A114BA /* lighttheme.css */,
-				BC55C68F216A795E00B7D374 /* jsoneditor.html */,
+				BCEC4ACC217338D3004D8CF2 /* lighttheme.css */,
+				BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */,
 				BC55C69A216A84A900B7D374 /* reset.css */,
 			);
 			path = JSONEditor;
@@ -364,18 +364,11 @@
 			path = Sections;
 			sourceTree = "<group>";
 		};
-		BCA60B3F216201AF00B9DCAD /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				BCA60B40216201B900B9DCAD /* Configuration.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		BCA60B422162145500B9DCAD /* Publisher */ = {
 			isa = PBXGroup;
 			children = (
 				BC73DFAD215BFB18002E533B /* BagelPublisher.swift */,
+				BCA60B40216201B900B9DCAD /* BagelConfiguration.swift */,
 			);
 			path = Publisher;
 			sourceTree = "<group>";
@@ -429,7 +422,6 @@
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
 				BC55C68E216A793800B7D374 /* JSONEditor */,
-				BCA60B3F216201AF00B9DCAD /* Configuration */,
 				BCFC8549213848DA001EC6D7 /* Core */,
 				BCFC852D21383252001EC6D7 /* Components */,
 				BCFC85412138467C001EC6D7 /* Base */,
@@ -680,6 +672,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEC4ACD217338D3004D8CF2 /* lighttheme.css in Resources */,
 				BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */,
 				BCFC852C2138319E001EC6D7 /* Details.storyboard in Resources */,
 				BCD0E02B210F5E0D00CE5C7B /* Assets.xcassets in Resources */,
@@ -688,9 +681,9 @@
 				BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */,
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
+				BCEC4ACB217338C5004D8CF2 /* jsoneditor.html in Resources */,
 				BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */,
 				BC55C699216A7E6000B7D374 /* darktheme.css in Resources */,
-				BC55C690216A795E00B7D374 /* jsoneditor.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,7 +776,7 @@
 				BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */,
 				BC9C77A121635DEC00E8ADE8 /* DetailSectionButton.swift in Sources */,
 				BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */,
-				BCA60B41216201B900B9DCAD /* Configuration.swift in Sources */,
+				BCA60B41216201B900B9DCAD /* BagelConfiguration.swift in Sources */,
 				BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */,
 				BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */,
 				BCFC8545213846B0001EC6D7 /* BaseListViewModel.swift in Sources */,
@@ -797,7 +790,6 @@
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
 				BC55C69B216A84A900B7D374 /* reset.css in Sources */,
-				BC2DA4ED216C88E800A114BA /* lighttheme.css in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC7E67E9216E192800E1289E /* ImageRepresentation.swift in Sources */,

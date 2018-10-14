@@ -11,7 +11,6 @@ import macOSThemeKit
 
 extension DarkTheme {
     
-    /// Text foreground color
     var contentTextColor: NSColor {
         return NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.3, alpha: 1.0)
     }

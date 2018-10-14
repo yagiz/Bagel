@@ -8,6 +8,14 @@
 
 import Cocoa
 
+struct BagelNotifications {
+    
+    static let didGetPacket = NSNotification.Name("DidGetPacket")
+    static let didSelectProject = NSNotification.Name("DidSelectProject")
+    static let didSelectDevice = NSNotification.Name("DidSelectDevice")
+    static let didSelectPacket = NSNotification.Name("DidSelectPacket")
+}
+
 class BagelController: NSObject, BagelPublisherDelegate {
     
     static let shared = BagelController()
@@ -15,7 +23,7 @@ class BagelController: NSObject, BagelPublisherDelegate {
     var projectControllers: [BagelProjectController] = []
     var selectedProjectController: BagelProjectController? {
         didSet {
-            NotificationCenter.default.post(name: NSNotification.Name("DidSelectProject"), object: nil)
+            NotificationCenter.default.post(name: BagelNotifications.didSelectProject, object: nil)
         }
     }
     
@@ -32,7 +40,7 @@ class BagelController: NSObject, BagelPublisherDelegate {
     func didGetPacket(publisher: BagelPublisher, packet: BagelPacket) {
         
         self.addPacket(newPacket: packet)
-        NotificationCenter.default.post(name: NSNotification.Name("DidGetPacket"), object: nil)
+        NotificationCenter.default.post(name: BagelNotifications.didGetPacket, object: nil)
     }
     
     func addPacket(newPacket: BagelPacket) {

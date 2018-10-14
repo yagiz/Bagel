@@ -1,5 +1,5 @@
 //
-//  BagelDataParser.swift
+//  DataRepresentationParser.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 10.10.2018.
@@ -14,7 +14,6 @@ enum DataRepresentationType {
     case image
     case text
 }
-
 
 protocol DataRepresentation {
     

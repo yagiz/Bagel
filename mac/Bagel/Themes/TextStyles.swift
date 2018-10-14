@@ -1,5 +1,5 @@
 //
-//  CodeAttributedString.swift
+//  TextStyles.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 8.10.2018.
@@ -11,17 +11,17 @@ import macOSThemeKit
 
 class TextStyles {
 
+    static let codeAttributes = [NSAttributedStringKey.foregroundColor: ThemeColor.labelColor, NSAttributedStringKey.font: FontManager.codeFont(size: 13)]
+    
+    
     static func codeAttributedString(string: String) -> NSAttributedString {
 
-        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: ThemeColor.labelColor, .font: FontManager.codeFont(size: 13)]
-        
-        return NSAttributedString(string: string, attributes: attributes)
-        
+        return NSAttributedString(string: string, attributes: codeAttributes)
     }
 
+    
     static func addCodeAttributesToHTMLAttributedString(htmlAttributedString: NSMutableAttributedString) {
         
-        htmlAttributedString.addAttributes([.foregroundColor: ThemeColor.labelColor, .font: FontManager.codeFont(size: 13)], range: NSRange.init(location: 0, length: htmlAttributedString.string.count))
-
+        htmlAttributedString.addAttributes(codeAttributes, range: NSRange.init(location: 0, length: htmlAttributedString.string.count))
     }
 }

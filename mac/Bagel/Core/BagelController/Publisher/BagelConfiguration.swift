@@ -1,5 +1,5 @@
 //
-//  Configuration.swift
+//  BagelConfiguration.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 1.10.2018.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Configuration: NSObject {
+class BagelConfiguration: NSObject {
 
     static let netServiceDomain: String = ""
     static let netServiceType: String = "_Bagel._tcp"

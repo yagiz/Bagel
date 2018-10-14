@@ -1,5 +1,5 @@
 //
-//  ProjectCell.swift
+//  ProjectTableCellView.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 30/08/2018.

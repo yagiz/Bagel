@@ -12,7 +12,7 @@ class OverviewViewModel: BaseViewModel {
 
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: NSNotification.Name(rawValue: "DidSelectPacket"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: BagelNotifications.didSelectPacket, object: nil)
     }
     
     @objc func didSelectPacket() {

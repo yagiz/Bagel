@@ -1,5 +1,5 @@
 //
-//  BagelDataString.swift
+//  TextRepresentation.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 10.10.2018.

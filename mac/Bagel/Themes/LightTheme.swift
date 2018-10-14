@@ -9,10 +9,8 @@
 import Cocoa
 import macOSThemeKit
 
-
 extension LightTheme {
     
-    /// Text foreground color
     var contentTextColor: NSColor {
         return NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.3, alpha: 1.0)
     }
@@ -56,7 +54,6 @@ extension LightTheme {
     @objc var statusRedColor: NSColor {
         return NSColor(hexString: "#E74C3C")
     }
-    
     
     @objc var projectListBackgroundColor: NSColor {
         return NSColor(hexString: "#232323")

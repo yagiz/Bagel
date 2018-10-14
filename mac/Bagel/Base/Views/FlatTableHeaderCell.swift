@@ -25,7 +25,6 @@ class FlatTableHeaderCell: NSTableHeaderCell {
     }
     
     override func draw(withFrame cellFrame: NSRect, in controlView: NSView) {
-        
         self.drawInterior(withFrame: cellFrame, in: controlView)
     }
     

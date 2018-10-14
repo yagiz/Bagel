@@ -30,11 +30,11 @@ class BagelPublisher: NSObject {
 
         do {
             
-            try self.mainSocket.accept(onPort: UInt16(Configuration.netServicePort))
+            try self.mainSocket.accept(onPort: UInt16(BagelConfiguration.netServicePort))
             
             self.sockets.append(self.mainSocket)
             
-            self.netService = NetService(domain: Configuration.netServiceDomain, type: Configuration.netServiceType, name: Configuration.netServiceName, port: Configuration.netServicePort)
+            self.netService = NetService(domain: BagelConfiguration.netServiceDomain, type: BagelConfiguration.netServiceType, name: BagelConfiguration.netServiceName, port: BagelConfiguration.netServicePort)
             self.netService.delegate = self
             self.netService.publish()
             
@@ -110,10 +110,6 @@ extension BagelPublisher: GCDAsyncSocketDelegate {
     }
     
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
-        
-        if sock == self.mainSocket {
-            return
-        }
         
         if self.sockets.contains(sock) {
             

@@ -15,7 +15,7 @@ class BagelProjectController: NSObject {
     var deviceControllers: [BagelDeviceController] = []
     var selectedDeviceController: BagelDeviceController? {
         didSet {
-            NotificationCenter.default.post(name: NSNotification.Name("DidSelectDevice"), object: nil)
+            NotificationCenter.default.post(name: BagelNotifications.didSelectDevice, object: nil)
         }
     }
     

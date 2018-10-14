@@ -9,7 +9,7 @@
 import Cocoa
 import macOSThemeKit
 
-class DevicesViewController: BaseViewController, NSTableViewDelegate, NSTableViewDataSource {
+class DevicesViewController: BaseViewController {
 
     var viewModel: DevicesViewModel?
     var onDeviceSelect : ((BagelDeviceController) -> ())?
@@ -41,8 +41,8 @@ class DevicesViewController: BaseViewController, NSTableViewDelegate, NSTableVie
     
 }
 
-extension DevicesViewController
-{
+extension DevicesViewController: NSTableViewDelegate, NSTableViewDataSource{
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         
         return self.viewModel?.itemCount() ?? 0
