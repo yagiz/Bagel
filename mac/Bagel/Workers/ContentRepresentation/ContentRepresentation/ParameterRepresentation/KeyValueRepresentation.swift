@@ -11,12 +11,11 @@ import Cocoa
 class KeyValueRepresentation: ContentRepresentation  {
     
     var keyValues: [KeyValue]?
-    
-    var rawString: String?
-    
-    var attributedString: NSAttributedString?
-    
+
     init(keyValues: [KeyValue]?) {
+        
+        super.init()
+        
         self.keyValues = keyValues
         
         self.rawString = ""

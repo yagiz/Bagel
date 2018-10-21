@@ -16,6 +16,8 @@ class DataTextViewController: BaseViewController {
     
     override func setup() {
         
+//        self.copyToClipboardButton.image = ThemeImage.clearIcon
+        
         self.viewModel?.onChange = { [weak self] in
             
             self?.refresh()
@@ -28,8 +30,15 @@ class DataTextViewController: BaseViewController {
         
         if let attributedText = self.viewModel?.dataRepresentation?.attributedString {
             
+            TextStyles.addCodeAttributesToHTMLAttributedString(htmlAttributedString: attributedText)
+            
             self.textView.string = ""
             self.textView.textStorage?.setAttributedString(attributedText)
         }
+    }
+    
+    @IBAction func copyButtonAction(_ sender: Any) {
+        
+        self.viewModel?.copyToClipboard()
     }
 }

@@ -81,7 +81,7 @@
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="copyToClipBoardButtonAction:" target="8u2-ww-n8g" id="OYM-kX-dL1"/>
+                                                            <action selector="copyButtonAction:" target="8u2-ww-n8g" id="3kL-eK-0JK"/>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-GN-IMK">
@@ -133,6 +133,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="copyToClipboardButton" destination="TF2-SH-jlL" id="3TU-hc-eWY"/>
                         <outlet property="rawButton" destination="yg1-GN-IMK" id="l6P-tZ-Hdr"/>
                         <outlet property="rawTextScrollView" destination="Kzt-Tt-u1z" id="VUq-Jn-laj"/>
                         <outlet property="rawTextView" destination="mk4-BM-kwp" id="OKy-sC-5hZ"/>
@@ -203,7 +204,7 @@
                                                         </buttonCell>
                                                         <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
-                                                            <action selector="copyToClipBoardButtonAction:" target="dbv-oR-1ws" id="Sfd-IG-pUG"/>
+                                                            <action selector="copyButtonAction:" target="dbv-oR-1ws" id="ZeH-wK-TFV"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -239,6 +240,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="copyToClipboardButton" destination="U6O-Tm-OuZ" id="Bis-TZ-SjP"/>
                         <outlet property="overviewTextView" destination="yGA-r3-ock" id="sTN-fX-keW"/>
                     </connections>
                 </viewController>
@@ -427,7 +429,7 @@
                                                         </buttonCell>
                                                         <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
-                                                            <action selector="copyButtonAction:" target="sRS-wo-UU6" id="Lud-ju-U9X"/>
+                                                            <action selector="copyButtonAction:" target="sRS-wo-UU6" id="pQa-sV-Bsj"/>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-Mr-ddO">
@@ -483,6 +485,7 @@
                     </view>
                     <connections>
                         <outlet property="contentHeaderBar" destination="sXc-as-Tyh" id="xmQ-tK-hbc"/>
+                        <outlet property="copyToClipboardButton" destination="a6b-uK-yN6" id="zBa-hb-ZPN"/>
                         <outlet property="rawButton" destination="wl3-Mr-ddO" id="tZe-pP-saa"/>
                         <outlet property="rawTextScrollView" destination="84w-QZ-QEo" id="ZPQ-qc-faR"/>
                         <outlet property="rawTextView" destination="lfA-tE-NaM" id="FP8-5O-pgl"/>

@@ -10,7 +10,7 @@
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
 		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
-		BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* ThemeColor.swift */; };
+		BC5E76C9216A64DB000F658D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* Theme.swift */; };
 		BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA742162B976000F6D2F /* DetailViewModel.swift */; };
 		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
 		BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73DFAD215BFB18002E533B /* BagelPublisher.swift */; };
@@ -39,7 +39,7 @@
 		BC9C77AF216385E600E8ADE8 /* DataJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */; };
 		BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */; };
 		BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */; };
-		BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */; };
+		BC9C77C02163981F00E8ADE8 /* ResponseHeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77BF2163981F00E8ADE8 /* ResponseHeadersViewModel.swift */; };
 		BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */; };
 		BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */; };
 		BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */; };
@@ -66,6 +66,7 @@
 		BCEB9AA0217C94B1008BBF3C /* KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9A9F217C94B1008BBF3C /* KeyValue.swift */; };
 		BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */; };
 		BCEB9AA6217C9532008BBF3C /* ContentRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */; };
+		BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA7217CAA23008BBF3C /* OverviewRepresentation.swift */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
@@ -109,7 +110,7 @@
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
-		BC5E76C8216A64DB000F658D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		BC5E76C8216A64DB000F658D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BC61DA742162B976000F6D2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		BC73DFAD215BFB18002E533B /* BagelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPublisher.swift; sourceTree = "<group>"; };
@@ -138,7 +139,7 @@
 		BC9C77AD216385E600E8ADE8 /* DataJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewController.swift; sourceTree = "<group>"; };
 		BC9C77B12163897600E8ADE8 /* DataTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTextViewModel.swift; sourceTree = "<group>"; };
 		BC9C77B32163897F00E8ADE8 /* DataJSONViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONViewModel.swift; sourceTree = "<group>"; };
-		BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeaddersViewModel.swift; sourceTree = "<group>"; };
+		BC9C77BF2163981F00E8ADE8 /* ResponseHeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeadersViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataViewModel.swift; sourceTree = "<group>"; };
 		BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		BCEB9A9F217C94B1008BBF3C /* KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValue.swift; sourceTree = "<group>"; };
 		BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelExtensions.swift; sourceTree = "<group>"; };
 		BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepresentation.swift; sourceTree = "<group>"; };
+		BCEB9AA7217CAA23008BBF3C /* OverviewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRepresentation.swift; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -286,19 +288,11 @@
 			path = jsonViewer;
 			sourceTree = "<group>";
 		};
-		BC7E67E3216E17DA00E1289E /* BagelRequestParser */ = {
-			isa = PBXGroup;
-			children = (
-				BCEB9AA4217C951C008BBF3C /* ContentRepresentation */,
-			);
-			path = BagelRequestParser;
-			sourceTree = "<group>";
-		};
 		BC911A3F2168BC7F00B755D4 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
 				BCF47D03216BA0B400BC144A /* TextStyles.swift */,
-				BC5E76C8216A64DB000F658D /* ThemeColor.swift */,
+				BC5E76C8216A64DB000F658D /* Theme.swift */,
 				BC911A432168E10F00B755D4 /* LightTheme.swift */,
 				BC911A482168F27700B755D4 /* DarkTheme.swift */,
 			);
@@ -338,7 +332,7 @@
 			children = (
 				BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */,
 				BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */,
-				BC9C77BF2163981F00E8ADE8 /* ResponseHeaddersViewModel.swift */,
+				BC9C77BF2163981F00E8ADE8 /* ResponseHeadersViewModel.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -484,10 +478,20 @@
 			isa = PBXGroup;
 			children = (
 				BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */,
+				BCEB9AA9217CB0BB008BBF3C /* OverviewRepresentation */,
 				BC32643421738AB5006452FE /* ParameterRepresentation */,
 				BC75A8082173636A00A2A5B3 /* DataRepresentation */,
 			);
-			path = ContentRepresentation;
+			name = ContentRepresentation;
+			path = ContentRepresentation/ContentRepresentation;
+			sourceTree = "<group>";
+		};
+		BCEB9AA9217CB0BB008BBF3C /* OverviewRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				BCEB9AA7217CAA23008BBF3C /* OverviewRepresentation.swift */,
+			);
+			path = OverviewRepresentation;
 			sourceTree = "<group>";
 		};
 		BCFC852D21383252001EC6D7 /* Components */ = {
@@ -584,7 +588,7 @@
 		BCFC8549213848DA001EC6D7 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				BC7E67E3216E17DA00E1289E /* BagelRequestParser */,
+				BCEB9AA4217C951C008BBF3C /* ContentRepresentation */,
 				BCFC854A213848F2001EC6D7 /* BagelController */,
 			);
 			path = Workers;
@@ -792,6 +796,7 @@
 				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
 				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
+				BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
 				BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */,
@@ -800,7 +805,7 @@
 				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
 				BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */,
 				BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */,
-				BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */,
+				BC9C77C02163981F00E8ADE8 /* ResponseHeadersViewModel.swift in Sources */,
 				BC9C77A32163668200E8ADE8 /* RequestParametersViewModel.swift in Sources */,
 				BCFC854321384685001EC6D7 /* BaseViewModel.swift in Sources */,
 				BCFC854C213848FD001EC6D7 /* BagelProjectModel.swift in Sources */,
@@ -834,7 +839,7 @@
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC7E67E9216E192800E1289E /* DataImageRepresentation.swift in Sources */,
 				BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */,
-				BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */,
+				BC5E76C9216A64DB000F658D /* Theme.swift in Sources */,
 				BC9C779721634D3400E8ADE8 /* OverviewViewModel.swift in Sources */,
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,
 				BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */,

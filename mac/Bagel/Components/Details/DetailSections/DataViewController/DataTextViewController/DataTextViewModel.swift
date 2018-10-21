@@ -18,4 +18,7 @@ class DataTextViewModel: BaseViewModel {
         }
     }
 
+    func copyToClipboard() {
+        self.dataRepresentation?.copyToClipboard()
+    }
 }

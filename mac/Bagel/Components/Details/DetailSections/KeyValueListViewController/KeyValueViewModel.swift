@@ -21,7 +21,10 @@ class KeyValueViewModel: BaseListViewModel<KeyValue> {
     @objc func didSelectPacket() {
         
         self.packet = BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
-        
+    }
+    
+    func copyToClipboard() {
+        self.keyValueRepresentation?.copyToClipboard()
     }
 }
 

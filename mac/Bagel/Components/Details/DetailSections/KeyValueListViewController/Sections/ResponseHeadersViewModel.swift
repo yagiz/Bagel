@@ -1,5 +1,5 @@
 //
-//  RequestHeadersViewModel.swift
+//  ResponseHadersViewModel.swift
 //  Bagel
 //
 //  Created by Yagiz Gurgul on 2.10.2018.
@@ -8,8 +8,8 @@
 
 import Cocoa
 
-class RequestHeadersViewModel: KeyValueViewModel {
-    
+class ResponseHeadersViewModel: KeyValueViewModel {
+
     override func didSelectPacket() {
         
         super.didSelectPacket()
@@ -17,7 +17,7 @@ class RequestHeadersViewModel: KeyValueViewModel {
         self.keyValueRepresentation = nil
         self.items = []
         
-        if let requestHeaders = self.packet?.requestInfo?.requestHeaders {
+        if let requestHeaders = self.packet?.requestInfo?.responseHeaders {
             
             self.keyValueRepresentation = ContentRepresentationParser.keyValueRepresentation(dictionary: requestHeaders)
             self.items = self.keyValueRepresentation?.keyValues ?? []

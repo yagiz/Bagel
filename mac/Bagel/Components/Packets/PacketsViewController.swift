@@ -16,10 +16,13 @@ class PacketsViewController: BaseViewController {
     var viewModel: PacketsViewModel?
     var onPacketSelect : ((BagelPacket?) -> ())?
     
+    @IBOutlet weak var clearButton: NSButton!
     @IBOutlet weak var tableView: BaseTableView!
     @IBOutlet weak var filterTextField: NSTextField!
     
     override func setup() {
+        
+        self.clearButton.image = ThemeImage.clearIcon
         
         self.tableView.delegate = self
         self.tableView.dataSource = self

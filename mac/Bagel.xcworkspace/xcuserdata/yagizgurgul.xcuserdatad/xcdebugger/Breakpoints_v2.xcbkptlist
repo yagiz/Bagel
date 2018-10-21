@@ -54,16 +54,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bagel/Components/Details/DetailSections/OverviewViewController/OverviewViewModel.swift"
-            timestampString = "561816817.3929"
+            timestampString = "561821882.275224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "didSelectPacket()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "copyToClipboard()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

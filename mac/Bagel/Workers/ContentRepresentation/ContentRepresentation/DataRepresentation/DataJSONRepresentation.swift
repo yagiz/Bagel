@@ -10,17 +10,9 @@ import Cocoa
 
 class DataJSONRepresentation: DataRepresentation  {
     
-    var originalData: Data
-    
-    var type: DataRepresentationType = .json
-    
-    var rawString: String?
-    
-    var attributedString: NSAttributedString?
-    
-    
-    init(data: Data) {
+    override init(data: Data) {
         
-        self.originalData = data
+        super.init(data: data)        
+        self.type = .json
     }
 }

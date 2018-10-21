@@ -71,3 +71,15 @@ extension DarkTheme {
         return NSColor(hexString: "#323232")
     }
 }
+
+extension DarkTheme {
+    
+    
+    @objc var clearIcon: NSImage {
+        return NSImage(named: NSImage.Name("TrashIconDark"))!
+    }
+    
+    @objc var copyToClipboardIcon: NSImage {
+        return NSImage(named: NSImage.Name("TrashIconDark"))!
+    }
+}

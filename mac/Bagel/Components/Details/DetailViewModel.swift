@@ -14,11 +14,11 @@ class DetailViewModel: BaseViewModel {
     
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: BagelNotifications.didGetPacket, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didGetPacket), name: BagelNotifications.didSelectPacket, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPacket), name: BagelNotifications.didGetPacket, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPacket), name: BagelNotifications.didSelectPacket, object: nil)
     }
     
-    @objc func didGetPacket() {
+    @objc func refreshPacket() {
         
         self.packet = BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
         self.onChange?()

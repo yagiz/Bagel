@@ -24,8 +24,11 @@ class KeyValueListViewController: BaseViewController {
     @IBOutlet weak var contentHeaderBar: ContentBar!
     
     @IBOutlet weak var rawButton: NSButton!
+    @IBOutlet weak var copyToClipboardButton: NSButton!
     
     override func setup() {
+        
+        self.copyToClipboardButton.image = ThemeImage.copyToClipboardIcon
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -90,7 +93,7 @@ class KeyValueListViewController: BaseViewController {
     
     @IBAction func copyButtonAction(_ sender: Any) {
         
-        self.copyToClipboard()
+        self.viewModel?.copyToClipboard()
     }
 }
 

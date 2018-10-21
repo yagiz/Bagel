@@ -9,6 +9,17 @@
 import Cocoa
 import macOSThemeKit
 
+extension ThemeImage {
+    
+    open class var clearIcon: ThemeImage {
+        return ThemeImage.image(with: #function)
+    }
+    
+    open class var copyToClipboardIcon: ThemeImage {
+        return ThemeImage.image(with: #function)
+    }
+}
+
 extension ThemeColor {
     
     open override class var labelColor: ThemeColor {

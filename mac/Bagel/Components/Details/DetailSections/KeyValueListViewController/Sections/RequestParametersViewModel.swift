@@ -19,7 +19,7 @@ class RequestParametersViewModel: KeyValueViewModel {
         
         if let requestURLString = self.packet?.requestInfo?.url, let requestURL = URL(string: requestURLString) {
             
-            self.keyValueRepresentation = ContentRepresentationParser.parseURL(url: requestURL)
+            self.keyValueRepresentation = ContentRepresentationParser.keyValueRepresentation(url: requestURL)
             self.items = self.keyValueRepresentation?.keyValues ?? []
             
         }

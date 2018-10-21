@@ -18,4 +18,7 @@ class DataJSONViewModel: BaseViewModel {
         }
     }
     
+    func copyToClipboard() {
+        self.dataRepresentation?.copyToClipboard()
+    }
 }

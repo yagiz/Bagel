@@ -22,8 +22,11 @@ class DataJSONViewController: BaseViewController {
     @IBOutlet weak var rawTextScrollView: NSScrollView!
     
     @IBOutlet weak var rawButton: NSButton!
+    @IBOutlet weak var copyToClipboardButton: NSButton!
     
     override func setup() {
+        
+        self.copyToClipboardButton.image = ThemeImage.copyToClipboardIcon
         
         self.setupJSONViewer()
         
@@ -108,6 +111,7 @@ class DataJSONViewController: BaseViewController {
     
     @IBAction func copyButtonAction(_ sender: Any) {
         
+        self.viewModel?.copyToClipboard()
     }
     
 }

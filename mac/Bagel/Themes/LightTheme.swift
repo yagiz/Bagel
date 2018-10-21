@@ -70,3 +70,15 @@ extension LightTheme {
         return NSColor(hexString: "#F0F0F0")
     }
 }
+
+extension LightTheme {
+    
+    
+    @objc var clearIcon: NSImage {
+        return NSImage(named: NSImage.Name("TrashIcon"))!
+    }
+    
+    @objc var copyToClipboardIcon: NSImage {
+        return NSImage(named: NSImage.Name("TrashIcon"))!
+    }
+}

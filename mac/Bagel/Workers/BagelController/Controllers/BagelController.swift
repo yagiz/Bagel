@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 struct BagelNotifications {
     
     static let didGetPacket = NSNotification.Name("DidGetPacket")

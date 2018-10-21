@@ -15,13 +15,14 @@ enum DataRepresentationType {
     case text
 }
 
-protocol DataRepresentation: ContentRepresentation {
+class DataRepresentation: ContentRepresentation {
     
-    var originalData: Data {get}
-    var type: DataRepresentationType {get}
+    var originalData: Data?
+    var type: DataRepresentationType!
     
-    var rawString: String? {get}
-    var attributedString: NSAttributedString? {get}
+    init(data: Data) {
+        self.originalData = data
+    }
 }
 
 class DataRepresentationParser {
@@ -53,8 +54,7 @@ class DataRepresentationParser {
             return imageData
             
         }else if let htmlString = NSMutableAttributedString(html: data, documentAttributes: nil) {
-            
-            TextStyles.addCodeAttributesToHTMLAttributedString(htmlAttributedString: htmlString)
+
             
             let textData = DataTextRepresentation(data: data)
             textData.rawString = htmlString.string

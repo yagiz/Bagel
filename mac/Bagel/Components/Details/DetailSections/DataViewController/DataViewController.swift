@@ -68,11 +68,5 @@ class DataViewController: BaseViewController {
             self.dataTextViewController.view.isHidden = true
         }
     }
-    
-    
-    func copyToClipboard() {
-        
-//        NSPasteboard.general.clearContents()
-//        NSPasteboard.general.setString(self.rawTextView!.string, forType: .string)
-    }
+
 }
