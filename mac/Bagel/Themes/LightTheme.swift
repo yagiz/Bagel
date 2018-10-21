@@ -79,6 +79,6 @@ extension LightTheme {
     }
     
     @objc var copyToClipboardIcon: NSImage {
-        return NSImage(named: NSImage.Name("TrashIcon"))!
+        return NSImage(named: NSImage.Name("CopyIcon"))!
     }
 }

@@ -80,6 +80,6 @@ extension DarkTheme {
     }
     
     @objc var copyToClipboardIcon: NSImage {
-        return NSImage(named: NSImage.Name("TrashIconDark"))!
+        return NSImage(named: NSImage.Name("CopyIconDark"))!
     }
 }

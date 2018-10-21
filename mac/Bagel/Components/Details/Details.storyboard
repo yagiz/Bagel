@@ -438,6 +438,7 @@
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="systemBold" size="12"/>
                                                         </buttonCell>
+                                                        <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <action selector="rawButtonAction:" target="sRS-wo-UU6" id="fCj-TR-Qr1"/>
                                                         </connections>
@@ -684,6 +685,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="BEr-5c-tzl"/>
                                             </connections>
@@ -694,6 +696,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="Qpr-6Q-LRW"/>
                                             </connections>
@@ -704,6 +707,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="rV6-Yj-hfA"/>
                                             </connections>
@@ -714,6 +718,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="EKz-58-os8"/>
                                             </connections>
@@ -724,6 +729,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="Wjo-eG-rQ5"/>
                                             </connections>
@@ -734,6 +740,7 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemBold" size="12"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="selectDetailButtonAction:" target="cE2-Va-iqI" id="TGH-uB-Rcx"/>
                                             </connections>
