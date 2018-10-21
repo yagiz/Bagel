@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		40BE2297F5B6FBD8B77F7360 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
-		BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C691216A7AFD00B7D374 /* jsoneditor.css */; };
-		BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */ = {isa = PBXBuildFile; fileRef = BC55C692216A7AFD00B7D374 /* jsoneditor.js */; };
-		BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */; };
-		BC55C699216A7E6000B7D374 /* darktheme.css in Resources */ = {isa = PBXBuildFile; fileRef = BC55C698216A7E6000B7D374 /* darktheme.css */; };
-		BC55C69B216A84A900B7D374 /* reset.css in Sources */ = {isa = PBXBuildFile; fileRef = BC55C69A216A84A900B7D374 /* reset.css */; };
+		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
 		BC5E76C9216A64DB000F658D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* ThemeColor.swift */; };
 		BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA742162B976000F6D2F /* DetailViewModel.swift */; };
 		BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DA772162BD68000F6D2F /* OverviewViewController.swift */; };
 		BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73DFAD215BFB18002E533B /* BagelPublisher.swift */; };
+		BC75A80E21737A7300A2A5B3 /* json-viewer.js in Resources */ = {isa = PBXBuildFile; fileRef = BC75A80A21737A7300A2A5B3 /* json-viewer.js */; };
+		BC75A80F21737A7300A2A5B3 /* json-viewer-dark-theme.css in Resources */ = {isa = PBXBuildFile; fileRef = BC75A80B21737A7300A2A5B3 /* json-viewer-dark-theme.css */; };
+		BC75A81021737A7300A2A5B3 /* jsonviewer.html in Resources */ = {isa = PBXBuildFile; fileRef = BC75A80C21737A7300A2A5B3 /* jsonviewer.html */; };
+		BC75A81121737A7300A2A5B3 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = BC75A80D21737A7300A2A5B3 /* jquery.js */; };
+		BC75A81321737AEB00A2A5B3 /* json-viewer-light-theme.css in Resources */ = {isa = PBXBuildFile; fileRef = BC75A81221737AEB00A2A5B3 /* json-viewer-light-theme.css */; };
 		BC7E67E5216E17F700E1289E /* DataRepresentationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E4216E17F700E1289E /* DataRepresentationParser.swift */; };
 		BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E6216E181400E1289E /* DataJSONRepresentation.swift */; };
 		BC7E67E9216E192800E1289E /* DataImageRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E67E8216E192800E1289E /* DataImageRepresentation.swift */; };
@@ -62,8 +63,9 @@
 		BCD0E045210F5E0D00CE5C7B /* BagelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0E044210F5E0D00CE5C7B /* BagelUITests.swift */; };
 		BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDF0EC321662CA10030710C /* FlatTableRowView.swift */; };
 		BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */; };
-		BCEC4ACB217338C5004D8CF2 /* jsoneditor.html in Resources */ = {isa = PBXBuildFile; fileRef = BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */; };
-		BCEC4ACD217338D3004D8CF2 /* lighttheme.css in Resources */ = {isa = PBXBuildFile; fileRef = BCEC4ACC217338D3004D8CF2 /* lighttheme.css */; };
+		BCEB9AA0217C94B1008BBF3C /* KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9A9F217C94B1008BBF3C /* KeyValue.swift */; };
+		BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */; };
+		BCEB9AA6217C9532008BBF3C /* ContentRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
@@ -106,15 +108,16 @@
 		4D0CCBDAA22CCA428A4D8247 /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 		4EA8D46010E92F46F324B25D /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
-		BC55C691216A7AFD00B7D374 /* jsoneditor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = jsoneditor.css; sourceTree = "<group>"; };
-		BC55C692216A7AFD00B7D374 /* jsoneditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsoneditor.js; sourceTree = "<group>"; };
-		BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "jsoneditor-icons.svg"; sourceTree = "<group>"; };
-		BC55C698216A7E6000B7D374 /* darktheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = darktheme.css; sourceTree = "<group>"; };
-		BC55C69A216A84A900B7D374 /* reset.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = reset.css; sourceTree = "<group>"; };
+		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		BC61DA742162B976000F6D2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC61DA772162BD68000F6D2F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		BC73DFAD215BFB18002E533B /* BagelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelPublisher.swift; sourceTree = "<group>"; };
+		BC75A80A21737A7300A2A5B3 /* json-viewer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-viewer.js"; sourceTree = "<group>"; };
+		BC75A80B21737A7300A2A5B3 /* json-viewer-dark-theme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer-dark-theme.css"; sourceTree = "<group>"; };
+		BC75A80C21737A7300A2A5B3 /* jsonviewer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsonviewer.html; sourceTree = "<group>"; };
+		BC75A80D21737A7300A2A5B3 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		BC75A81221737AEB00A2A5B3 /* json-viewer-light-theme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer-light-theme.css"; sourceTree = "<group>"; };
 		BC7E67E4216E17F700E1289E /* DataRepresentationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentationParser.swift; sourceTree = "<group>"; };
 		BC7E67E6216E181400E1289E /* DataJSONRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataJSONRepresentation.swift; sourceTree = "<group>"; };
 		BC7E67E8216E192800E1289E /* DataImageRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImageRepresentation.swift; sourceTree = "<group>"; };
@@ -122,7 +125,7 @@
 		BC911A412168C00500B755D4 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		BC911A432168E10F00B755D4 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		BC911A462168EB0A00B755D4 /* ContentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBar.swift; sourceTree = "<group>"; };
-		BC911A482168F27700B755D4 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		BC911A482168F27700B755D4 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		BC9C779621634D3400E8ADE8 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueViewModel.swift; sourceTree = "<group>"; };
 		BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableCellView.swift; sourceTree = "<group>"; };
@@ -166,8 +169,9 @@
 		BCD0E046210F5E0D00CE5C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCDF0EC321662CA10030710C /* FlatTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTableRowView.swift; sourceTree = "<group>"; };
 		BCE21E3D2162C15900A65B29 /* KeyValueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueListViewController.swift; sourceTree = "<group>"; };
-		BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsoneditor.html; sourceTree = "<group>"; };
-		BCEC4ACC217338D3004D8CF2 /* lighttheme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lighttheme.css; sourceTree = "<group>"; };
+		BCEB9A9F217C94B1008BBF3C /* KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValue.swift; sourceTree = "<group>"; };
+		BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelExtensions.swift; sourceTree = "<group>"; };
+		BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepresentation.swift; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -241,18 +245,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		BC55C68E216A793800B7D374 /* JSONEditor */ = {
+		BC32643421738AB5006452FE /* ParameterRepresentation */ = {
 			isa = PBXGroup;
 			children = (
-				BC55C691216A7AFD00B7D374 /* jsoneditor.css */,
-				BC55C696216A7C0000B7D374 /* jsoneditor-icons.svg */,
-				BC55C692216A7AFD00B7D374 /* jsoneditor.js */,
-				BC55C698216A7E6000B7D374 /* darktheme.css */,
-				BCEC4ACC217338D3004D8CF2 /* lighttheme.css */,
-				BCEC4ACA217338C5004D8CF2 /* jsoneditor.html */,
-				BC55C69A216A84A900B7D374 /* reset.css */,
+				BC32643521738AF0006452FE /* KeyValueRepresentation.swift */,
 			);
-			path = JSONEditor;
+			path = ParameterRepresentation;
 			sourceTree = "<group>";
 		};
 		BC61DA762162BD52000F6D2F /* DetailSections */ = {
@@ -276,10 +274,22 @@
 			path = DataRepresentation;
 			sourceTree = "<group>";
 		};
+		BC75A80921737A7300A2A5B3 /* jsonViewer */ = {
+			isa = PBXGroup;
+			children = (
+				BC75A80A21737A7300A2A5B3 /* json-viewer.js */,
+				BC75A81221737AEB00A2A5B3 /* json-viewer-light-theme.css */,
+				BC75A80B21737A7300A2A5B3 /* json-viewer-dark-theme.css */,
+				BC75A80C21737A7300A2A5B3 /* jsonviewer.html */,
+				BC75A80D21737A7300A2A5B3 /* jquery.js */,
+			);
+			path = jsonViewer;
+			sourceTree = "<group>";
+		};
 		BC7E67E3216E17DA00E1289E /* BagelRequestParser */ = {
 			isa = PBXGroup;
 			children = (
-				BC75A8082173636A00A2A5B3 /* DataRepresentation */,
+				BCEB9AA4217C951C008BBF3C /* ContentRepresentation */,
 			);
 			path = BagelRequestParser;
 			sourceTree = "<group>";
@@ -388,6 +398,7 @@
 				BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */,
 				BCFC854D2138490E001EC6D7 /* BagelDeviceModel.swift */,
 				BCFC854B213848FD001EC6D7 /* BagelProjectModel.swift */,
+				BCEB9A9F217C94B1008BBF3C /* KeyValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,8 +440,8 @@
 			children = (
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
-				BC55C68E216A793800B7D374 /* JSONEditor */,
-				BCFC8549213848DA001EC6D7 /* Core */,
+				BC75A80921737A7300A2A5B3 /* jsonViewer */,
+				BCFC8549213848DA001EC6D7 /* Workers */,
 				BCFC852D21383252001EC6D7 /* Components */,
 				BCFC85412138467C001EC6D7 /* Base */,
 				BCD0E026210F5E0D00CE5C7B /* AppDelegate.swift */,
@@ -459,6 +470,24 @@
 				BCD0E046210F5E0D00CE5C7B /* Info.plist */,
 			);
 			path = BagelUITests;
+			sourceTree = "<group>";
+		};
+		BCEB9AA3217C94C9008BBF3C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BCEB9AA4217C951C008BBF3C /* ContentRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */,
+				BC32643421738AB5006452FE /* ParameterRepresentation */,
+				BC75A8082173636A00A2A5B3 /* DataRepresentation */,
+			);
+			path = ContentRepresentation;
 			sourceTree = "<group>";
 		};
 		BCFC852D21383252001EC6D7 /* Components */ = {
@@ -552,18 +581,19 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		BCFC8549213848DA001EC6D7 /* Core */ = {
+		BCFC8549213848DA001EC6D7 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 				BC7E67E3216E17DA00E1289E /* BagelRequestParser */,
 				BCFC854A213848F2001EC6D7 /* BagelController */,
 			);
-			path = Core;
+			path = Workers;
 			sourceTree = "<group>";
 		};
 		BCFC854A213848F2001EC6D7 /* BagelController */ = {
 			isa = PBXGroup;
 			children = (
+				BCEB9AA3217C94C9008BBF3C /* Common */,
 				BCBD86E0215916A7009CBEA7 /* Controllers */,
 				BCBD86DF21591550009CBEA7 /* Models */,
 				BCA60B422162145500B9DCAD /* Publisher */,
@@ -680,18 +710,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEC4ACD217338D3004D8CF2 /* lighttheme.css in Resources */,
+				BC75A81121737A7300A2A5B3 /* jquery.js in Resources */,
 				BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */,
+				BC75A81321737AEB00A2A5B3 /* json-viewer-light-theme.css in Resources */,
 				BCFC852C2138319E001EC6D7 /* Details.storyboard in Resources */,
 				BCD0E02B210F5E0D00CE5C7B /* Assets.xcassets in Resources */,
+				BC75A80E21737A7300A2A5B3 /* json-viewer.js in Resources */,
 				BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */,
-				BC55C693216A7AFD00B7D374 /* jsoneditor.css in Resources */,
-				BC55C694216A7AFD00B7D374 /* jsoneditor.js in Resources */,
+				BC75A81021737A7300A2A5B3 /* jsonviewer.html in Resources */,
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
-				BCEC4ACB217338C5004D8CF2 /* jsoneditor.html in Resources */,
-				BC55C697216A7C0000B7D374 /* jsoneditor-icons.svg in Resources */,
-				BC55C699216A7E6000B7D374 /* darktheme.css in Resources */,
+				BC75A80F21737A7300A2A5B3 /* json-viewer-dark-theme.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,8 +787,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7E67EB216E193300E1289E /* DataTextRepresentation.swift in Sources */,
+				BCEB9AA0217C94B1008BBF3C /* KeyValue.swift in Sources */,
 				BC7E67E5216E17F700E1289E /* DataRepresentationParser.swift in Sources */,
 				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
+				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
@@ -768,6 +799,7 @@
 				BCFC85332138354D001EC6D7 /* DevicesViewController.swift in Sources */,
 				BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */,
 				BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */,
+				BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */,
 				BC9C77C02163981F00E8ADE8 /* ResponseHeaddersViewModel.swift in Sources */,
 				BC9C77A32163668200E8ADE8 /* RequestParametersViewModel.swift in Sources */,
 				BCFC854321384685001EC6D7 /* BaseViewModel.swift in Sources */,
@@ -790,6 +822,7 @@
 				BCFC8545213846B0001EC6D7 /* BaseListViewModel.swift in Sources */,
 				BCFC854721384776001EC6D7 /* BaseViewController.swift in Sources */,
 				BCFC854E2138490E001EC6D7 /* BagelDeviceModel.swift in Sources */,
+				BCEB9AA6217C9532008BBF3C /* ContentRepresentation.swift in Sources */,
 				BC911A422168C00500B755D4 /* NSColor.swift in Sources */,
 				BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */,
 				BC911A492168F27700B755D4 /* DarkTheme.swift in Sources */,
@@ -797,7 +830,6 @@
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
-				BC55C69B216A84A900B7D374 /* reset.css in Sources */,
 				BC61DA782162BD68000F6D2F /* OverviewViewController.swift in Sources */,
 				BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */,
 				BC7E67E9216E192800E1289E /* DataImageRepresentation.swift in Sources */,

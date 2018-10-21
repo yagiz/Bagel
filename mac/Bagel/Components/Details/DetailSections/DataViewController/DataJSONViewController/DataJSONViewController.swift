@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 import macOSThemeKit
 
-class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
+class DataJSONViewController: BaseViewController {
 
     var viewModel: DataJSONViewModel?
     
@@ -40,7 +40,7 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     func setupJSONViewer() {
         
-        let filePath = Bundle.main.path(forResource: "jsoneditor", ofType: "html")!
+        let filePath = Bundle.main.path(forResource: "jsonviewer", ofType: "html")!
         let fileURL = URL(fileURLWithPath: filePath)
         
         if let htmlData = try? Data(contentsOf: fileURL) {
@@ -52,6 +52,8 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
             self.webView.mainFrame.loadHTMLString(htmlString, baseURL: baseUrl)
             self.webView.frameLoadDelegate = self
             self.webView.drawsBackground = false
+            
+            self.refreshJSONEditorTheme()
         }
         
     }
@@ -95,7 +97,7 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
     
     @objc private func changedTheme(_ notification: Notification) {
         
-//        self.refreshJSONEditorTheme()
+        self.refreshJSONEditorTheme()
     }
     
     @IBAction func rawButtonAction(_ sender: Any) {
@@ -108,4 +110,12 @@ class DataJSONViewController: BaseViewController, WebFrameLoadDelegate {
         
     }
     
+}
+
+extension DataJSONViewController: WebFrameLoadDelegate {
+    
+    func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
+        
+        self.refreshJSONEditorTheme()
+    }
 }

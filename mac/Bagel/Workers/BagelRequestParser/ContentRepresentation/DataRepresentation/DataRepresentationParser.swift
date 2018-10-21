@@ -15,7 +15,7 @@ enum DataRepresentationType {
     case text
 }
 
-protocol DataRepresentation {
+protocol DataRepresentation: ContentRepresentation {
     
     var originalData: Data {get}
     var type: DataRepresentationType {get}

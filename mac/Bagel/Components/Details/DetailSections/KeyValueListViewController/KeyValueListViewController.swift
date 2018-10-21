@@ -54,7 +54,8 @@ class KeyValueListViewController: BaseViewController {
     
     func refresh() {
         
-        self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.getRaw() ?? ""))
+        self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.keyValueRepresentation?.rawString ?? ""))
+        
         self.tableView.reloadData()
         
         if self.isRaw {
@@ -107,13 +108,13 @@ extension KeyValueListViewController: NSTableViewDelegate, NSTableViewDataSource
         if (tableColumn?.identifier)!.rawValue == "Key" {
             
             let cell: KeyValueTableCellView = self.tableView.makeView(withOwner: nil)!
-            cell.titleTextField.stringValue = self.viewModel?.getKey(at: row) ?? ""
+            cell.titleTextField.stringValue = self.viewModel?.item(at: row)?.key ?? ""
             return cell
             
         }else if (tableColumn?.identifier)!.rawValue == "Value" {
             
             let cell: KeyValueTableCellView = self.tableView.makeView(withOwner: nil)!
-            cell.titleTextField.stringValue = self.viewModel?.getValue(at: row) ?? ""
+            cell.titleTextField.stringValue = self.viewModel?.item(at: row)?.value ?? ""
             return cell
         }
         

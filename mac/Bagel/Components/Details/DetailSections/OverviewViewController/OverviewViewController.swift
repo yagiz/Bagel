@@ -27,5 +27,6 @@ class OverviewViewController: BaseViewController {
     
     func refresh() {
         
+        self.overviewTextView.string = self.viewModel?.overviewText ?? ""
     }
 }

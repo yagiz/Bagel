@@ -60,6 +60,8 @@ class DetailViewController: BaseViewController {
         
         
         let overview = self.storyboard?.instantiateController(withIdentifier: OverviewViewController.identifier) as! OverviewViewController
+        overview.viewModel = OverviewViewModel()
+        overview.viewModel?.register()
         let overviewTabItem = NSTabViewItem(viewController: overview)
         
         

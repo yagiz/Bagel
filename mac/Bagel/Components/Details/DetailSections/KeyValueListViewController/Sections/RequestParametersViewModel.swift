@@ -14,29 +14,16 @@ class RequestParametersViewModel: KeyValueViewModel {
         
         super.didSelectPacket()
         
-        self.items = [KeyValue]()
-        self.items.append(contentsOf: self.getURLParameters())
-            
-        self.onChange?()
-    }
-    
-    func getURLParameters() -> [KeyValue] {
+        self.keyValueRepresentation = nil
+        self.items = []
         
-        var parameters = [KeyValue]()
-        
-        if let url = URL(string: self.packet?.requestInfo?.url ?? "") {
+        if let requestURLString = self.packet?.requestInfo?.url, let requestURL = URL(string: requestURLString) {
             
-            if let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
-                
-                for queryItem in queryItems {
-                    
-                    parameters.append([queryItem.name : queryItem.value ?? ""])
-                    
-                }
-            }
+            self.keyValueRepresentation = ContentRepresentationParser.parseURL(url: requestURL)
+            self.items = self.keyValueRepresentation?.keyValues ?? []
+            
         }
         
-        return parameters
+        self.onChange?()
     }
-
 }

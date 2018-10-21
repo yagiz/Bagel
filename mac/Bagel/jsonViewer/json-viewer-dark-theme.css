@@ -1,0 +1,86 @@
+.json-container {
+    color: #adadad;
+    font-size: 13px;
+    line-height: 1.2;
+    font-family: monospace;
+    padding-left: 0;
+    margin-left: 20px;
+}
+.json-container,
+.json-container ul{
+    list-style: none !important;
+}
+.json-container ul{
+    padding: 0px !important;
+    padding-left: 20px !important;
+    margin: 0px !important;
+}
+
+.json-container li {
+    position: relative;
+}
+
+.json-container > li  > .key,
+.json-container .array .key{
+    display: none;
+}
+
+.json-container .array .object .key{
+    display: inline;
+}
+
+.json-container li:after {
+    content: ",";
+}
+
+.json-container li:last-child:after {
+    content: "";
+}
+
+.json-container .null{
+    color: #49a7fc;
+}
+.json-container .string{
+    color: #00ff88;
+}
+.json-container .number{
+    color: #ff4040;
+}
+.json-container .boolean{
+    color: #ff8048;
+}
+.json-container .key{
+    color: #bababa;
+}
+.json-container .expanded{
+    cursor: pointer;
+}
+
+.json-container .expanded:before{
+    content: "-";
+    font-size: 16px;
+    width: 13px;
+    text-align: center;
+    line-height: 13px;
+    font-family: sans-serif;
+    color: #bababa;
+    position: absolute;
+    left: -15px;
+    top: 3px;
+}
+
+.json-container .collapsed:before{
+    content: "+";
+    font-size: 14px;
+    color: #bababa;
+    top: 1px;
+}
+
+.json-container li .collapsed ~ .close:before {
+    content: "... ";
+    color: #bababa;
+}
+
+.json-container .hidden ~ ul {
+  display: none;
+}

@@ -13,7 +13,17 @@ class RequestHeadersViewModel: KeyValueViewModel {
     override func didSelectPacket() {
         
         super.didSelectPacket()
-        self.items = self.packet?.requestInfo?.requestHeaders?.toKeyValueArray() ?? []
+        
+        self.keyValueRepresentation = nil
+        self.items = []
+        
+        if let requestHeaders = self.packet?.requestInfo?.requestHeaders {
+            
+            self.keyValueRepresentation = ContentRepresentationParser.parseDictionary(dictionary: requestHeaders)
+            self.items = self.keyValueRepresentation?.keyValues ?? []
+            
+        }
+        
         self.onChange?()
     }
 }

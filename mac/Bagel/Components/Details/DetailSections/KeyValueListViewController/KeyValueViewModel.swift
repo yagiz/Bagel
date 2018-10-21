@@ -11,39 +11,13 @@ import Cocoa
 class KeyValueViewModel: BaseListViewModel<KeyValue> {
 
     var packet: BagelPacket?
+    var keyValueRepresentation: KeyValueRepresentation?
 
     func register() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: BagelNotifications.didSelectPacket, object: nil)
     }
-    
-    
-    func getKey(at: Int) -> String? {
-        
-        return self.items[at].firstKey
-    }
-    
-    func getValue(at: Int) -> String? {
-        
-        return self.items[at].firstValue
-    }
-    
-    func getRaw() -> String {
-        
-        var rawText = ""
-        
-        for item in self.items {
-            
-            if let key = item.firstKey, let value = item.firstValue {
-                
-                rawText += key + ": " + value + "\n"
-                
-            }
-        }
-        
-        return rawText
-    }
-    
+
     @objc func didSelectPacket() {
         
         self.packet = BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket

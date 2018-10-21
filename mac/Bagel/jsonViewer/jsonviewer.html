@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="json-viewer-light-theme.css">
+
+<script src="jquery.js"></script>
+<script src="json-viewer.js"></script>
+    
+<div id="json-container"></div>
+    
+<script>
+
+    function renderJSONString(jsonString)
+    {
+        $('#json-container').jsonview(jsonString);
+    }
+
+    function changeThemeToLight() {
+        changeCSS("json-viewer-light-theme.css",0);
+    }
+
+    function changeThemeToDark() {
+        changeCSS("json-viewer-dark-theme.css",0);
+    }
+
+    function changeCSS(cssFile, cssLinkIndex) {
+        
+        var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+        
+        var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", cssFile);
+        
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    }
+
+</script>
