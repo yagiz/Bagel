@@ -48,6 +48,7 @@ bagelConfig.netserviceName = ""
 Bagel.start(configuration: bagelConfig)
 ```
 If you change Netservice parameters in your app, you should also change them on desktop client.
+
 License
 ----
 Apache
