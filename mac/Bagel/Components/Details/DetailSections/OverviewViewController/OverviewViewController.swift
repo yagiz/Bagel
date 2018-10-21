@@ -32,12 +32,7 @@ class OverviewViewController: BaseViewController {
     
     func refresh() {
         
-        if let overviewText = self.viewModel?.overviewRepresentation?.rawString {
-           
-            let attributedOverviewText = TextStyles.codeAttributedString(string: overviewText)
-            
-            self.overviewTextView.textStorage?.setAttributedString(attributedOverviewText)
-        }
+        self.overviewTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.overviewRepresentation?.rawString ?? ""))
     }
     
     @IBAction func copyButtonAction(_ sender: Any) {

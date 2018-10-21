@@ -137,7 +137,6 @@
                         <outlet property="rawButton" destination="yg1-GN-IMK" id="l6P-tZ-Hdr"/>
                         <outlet property="rawTextScrollView" destination="Kzt-Tt-u1z" id="VUq-Jn-laj"/>
                         <outlet property="rawTextView" destination="mk4-BM-kwp" id="OKy-sC-5hZ"/>
-                        <outlet property="rawTextViewContainerScrollView" destination="Kzt-Tt-u1z" id="Fhx-Nm-YY2"/>
                         <outlet property="webView" destination="1KQ-pz-LuO" id="Ky7-EI-Wvj"/>
                     </connections>
                 </viewController>
@@ -370,7 +369,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -490,10 +489,8 @@
                         <outlet property="rawButton" destination="wl3-Mr-ddO" id="tZe-pP-saa"/>
                         <outlet property="rawTextScrollView" destination="84w-QZ-QEo" id="ZPQ-qc-faR"/>
                         <outlet property="rawTextView" destination="lfA-tE-NaM" id="FP8-5O-pgl"/>
-                        <outlet property="rawTextViewContainerScrollView" destination="84w-QZ-QEo" id="UOB-x8-Aem"/>
                         <outlet property="tableScrollView" destination="QpT-7d-UMc" id="vF6-G0-D79"/>
                         <outlet property="tableView" destination="cHQ-kb-Jr0" id="xfF-5D-8UE"/>
-                        <outlet property="tableViewContainerScrollView" destination="QpT-7d-UMc" id="as1-cV-dnZ"/>
                     </connections>
                 </viewController>
                 <customObject id="iLc-OS-OC1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

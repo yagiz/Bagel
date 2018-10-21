@@ -26,7 +26,6 @@ class ProjectsViewController: BaseViewController {
             
             self?.refresh()
         }
-        
     }
     
     func refresh() {

@@ -221,7 +221,6 @@
                     <connections>
                         <outlet property="clearButton" destination="9pa-LD-9G6" id="IyR-HG-dqR"/>
                         <outlet property="filterTextField" destination="Nh8-PV-Qe4" id="lwy-vX-lgx"/>
-                        <outlet property="searchTextField" destination="Nh8-PV-Qe4" id="OGN-LY-8rj"/>
                         <outlet property="tableView" destination="CKi-fU-sLr" id="v7l-Ps-Ash"/>
                     </connections>
                 </viewController>
