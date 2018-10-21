@@ -1,12 +1,12 @@
 # Bagel
-![Bagel](https://github.com/yagiz/Bagel/blob/pre/assets/header.png?raw=true)
+![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/header.png?raw=true)
 
 Bagel is a little native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices. 
 
 Bagel iOS sniffes the ```NSURLSession``` and ```NSURLConnection``` delegate classes and broadcast requests to the Bagel macOS by using Bounjour protocol.
 
 ### Preview
-![Bagel](https://github.com/yagiz/Bagel/blob/pre/assets/screenshot.png?raw=true)
+![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/screenshot.png?raw=true)
 If you are here for the macOS client, you can download it from here.
 ### Installation
 To connect your app you need to install Bagel iOS in your app projects and download macOS client to view network traffic.
