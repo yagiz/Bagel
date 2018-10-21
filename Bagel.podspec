@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bagel'
-  s.version          = '1.2.2'
+  s.version          = '1.3.0'
   s.summary          = 'Bagel is a little native iOS network sniffer.'
  
   s.description      = <<-DESC
