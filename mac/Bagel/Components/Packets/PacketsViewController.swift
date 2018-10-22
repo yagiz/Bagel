@@ -12,6 +12,7 @@ import macOSThemeKit
 class PacketsViewController: BaseViewController {
 
     static var statusColumnWidth = CGFloat(50.0)
+    static var dateColumnWidth = CGFloat(150.0)
     
     var viewModel: PacketsViewModel?
     var onPacketSelect : ((BagelPacket?) -> ())?
@@ -71,7 +72,12 @@ class PacketsViewController: BaseViewController {
             }else if tableColumn.identifier.rawValue == "url" {
                 
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
-                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth
+                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth
+                
+            }else if tableColumn.identifier.rawValue == "date" {
+                
+                tableColumn.headerCell = FlatTableHeaderCell(textCell: "Date")
+                tableColumn.width = PacketsViewController.dateColumnWidth
             }
         }
     }
@@ -110,6 +116,13 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
         }else if (tableColumn?.identifier)!.rawValue == "url" {
             
             let cell: URLPacketTableCellView = self.tableView.makeView(withOwner: nil)!
+            cell.packet = self.viewModel?.item(at: row)
+            cell.backgroundStyle = .normal
+            return cell
+            
+        }else if (tableColumn?.identifier)!.rawValue == "date" {
+            
+            let cell: DatePacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell

@@ -73,6 +73,8 @@
 		BCEB9AB3217CD264008BBF3C /* Effra_Std_Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAA217CD25F008BBF3C /* Effra_Std_Md.ttf */; };
 		BCEB9AB4217CD264008BBF3C /* Effra_Std_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAB217CD25F008BBF3C /* Effra_Std_Rg.ttf */; };
 		BCEB9AB5217CD269008BBF3C /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAC217CD25F008BBF3C /* DroidSansMono.ttf */; };
+		BCEB9AB7217DD546008BBF3C /* DatePacketTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */; };
+		BCEB9AB9217DD653008BBF3C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AB8217DD653008BBF3C /* Date.swift */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
@@ -186,6 +188,8 @@
 		BCEB9AAD217CD25F008BBF3C /* Effra_Std_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_BdIt.ttf; sourceTree = "<group>"; };
 		BCEB9AAE217CD260008BBF3C /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = "<group>"; };
 		BCEB9AAF217CD260008BBF3C /* Effra_Std_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Bd.ttf; sourceTree = "<group>"; };
+		BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePacketTableCellView.swift; sourceTree = "<group>"; };
+		BCEB9AB8217DD653008BBF3C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				BC911A412168C00500B755D4 /* NSColor.swift */,
+				BCEB9AB8217DD653008BBF3C /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */,
 				BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */,
 				BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */,
+				BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */,
 			);
 			path = Packets;
 			sourceTree = "<group>";
@@ -821,6 +827,7 @@
 				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
 				BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */,
+				BCEB9AB9217DD653008BBF3C /* Date.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
 				BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */,
@@ -837,6 +844,7 @@
 				BC7E67E7216E181400E1289E /* DataJSONRepresentation.swift in Sources */,
 				BC9C77B42163897F00E8ADE8 /* DataJSONViewModel.swift in Sources */,
 				BCBD86E4215916E0009CBEA7 /* BagelProjectController.swift in Sources */,
+				BCEB9AB7217DD546008BBF3C /* DatePacketTableCellView.swift in Sources */,
 				BCFC854021384667001EC6D7 /* ProjectsViewModel.swift in Sources */,
 				BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */,
 				BCB6FD6921627D5400D6F03C /* TransparentSplitView.swift in Sources */,

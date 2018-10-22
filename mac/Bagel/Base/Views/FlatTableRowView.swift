@@ -15,8 +15,6 @@ struct RowColors {
     
     static var selected: NSColor {
         
-//        return NSColor(hexString: "#303030")
-        
         return NSColor(hexString: "#f4f4f4")
     }
 }

@@ -38,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="693" height="365"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="693" height="340"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -107,6 +107,39 @@
                                                                         </subviews>
                                                                         <connections>
                                                                             <outlet property="titleTextField" destination="Ipb-Zo-mzM" id="799-wV-bdT"/>
+                                                                        </connections>
+                                                                    </tableCellView>
+                                                                </prototypeCellViews>
+                                                            </tableColumn>
+                                                            <tableColumn identifier="date" width="319" minWidth="40" maxWidth="1000" id="d1q-Y2-VXv">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="gbb-jY-Pxo">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                                <prototypeCellViews>
+                                                                    <tableCellView identifier="DatePacketTableCellView" focusRingType="none" id="0Hf-Bc-1kK" customClass="DatePacketTableCellView" customModule="Bagel" customModuleProvider="target">
+                                                                        <rect key="frame" x="366" y="1" width="319" height="20"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-CZ-vWv">
+                                                                                <rect key="frame" x="0.0" y="2" width="319" height="18"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="j9t-nF-LfF">
+                                                                                    <font key="font" size="12" name="DroidSansMono"/>
+                                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                </textFieldCell>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                        <connections>
+                                                                            <outlet property="titleTextField" destination="lqc-CZ-vWv" id="1uF-Ck-sP4"/>
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
