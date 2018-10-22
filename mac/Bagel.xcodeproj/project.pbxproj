@@ -67,6 +67,12 @@
 		BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */; };
 		BCEB9AA6217C9532008BBF3C /* ContentRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */; };
 		BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AA7217CAA23008BBF3C /* OverviewRepresentation.swift */; };
+		BCEB9AB0217CD264008BBF3C /* Effra_Std_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAF217CD260008BBF3C /* Effra_Std_Bd.ttf */; };
+		BCEB9AB1217CD264008BBF3C /* Effra_Std_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAD217CD25F008BBF3C /* Effra_Std_BdIt.ttf */; };
+		BCEB9AB2217CD264008BBF3C /* Effra_Std_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAE217CD260008BBF3C /* Effra_Std_Lt.ttf */; };
+		BCEB9AB3217CD264008BBF3C /* Effra_Std_Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAA217CD25F008BBF3C /* Effra_Std_Md.ttf */; };
+		BCEB9AB4217CD264008BBF3C /* Effra_Std_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAB217CD25F008BBF3C /* Effra_Std_Rg.ttf */; };
+		BCEB9AB5217CD269008BBF3C /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCEB9AAC217CD25F008BBF3C /* DroidSansMono.ttf */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
@@ -174,6 +180,12 @@
 		BCEB9AA1217C94C1008BBF3C /* BagelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelExtensions.swift; sourceTree = "<group>"; };
 		BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepresentation.swift; sourceTree = "<group>"; };
 		BCEB9AA7217CAA23008BBF3C /* OverviewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRepresentation.swift; sourceTree = "<group>"; };
+		BCEB9AAA217CD25F008BBF3C /* Effra_Std_Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Md.ttf; sourceTree = "<group>"; };
+		BCEB9AAB217CD25F008BBF3C /* Effra_Std_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Rg.ttf; sourceTree = "<group>"; };
+		BCEB9AAC217CD25F008BBF3C /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
+		BCEB9AAD217CD25F008BBF3C /* Effra_Std_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_BdIt.ttf; sourceTree = "<group>"; };
+		BCEB9AAE217CD260008BBF3C /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = "<group>"; };
+		BCEB9AAF217CD260008BBF3C /* Effra_Std_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Bd.ttf; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -243,6 +255,12 @@
 			isa = PBXGroup;
 			children = (
 				BC1F5B36216746D30045C871 /* FontManager.swift */,
+				BCEB9AAC217CD25F008BBF3C /* DroidSansMono.ttf */,
+				BCEB9AAF217CD260008BBF3C /* Effra_Std_Bd.ttf */,
+				BCEB9AAD217CD25F008BBF3C /* Effra_Std_BdIt.ttf */,
+				BCEB9AAE217CD260008BBF3C /* Effra_Std_Lt.ttf */,
+				BCEB9AAA217CD25F008BBF3C /* Effra_Std_Md.ttf */,
+				BCEB9AAB217CD25F008BBF3C /* Effra_Std_Rg.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -714,17 +732,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEB9AB3217CD264008BBF3C /* Effra_Std_Md.ttf in Resources */,
 				BC75A81121737A7300A2A5B3 /* jquery.js in Resources */,
+				BCEB9AB4217CD264008BBF3C /* Effra_Std_Rg.ttf in Resources */,
 				BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */,
 				BC75A81321737AEB00A2A5B3 /* json-viewer-light-theme.css in Resources */,
+				BCEB9AB0217CD264008BBF3C /* Effra_Std_Bd.ttf in Resources */,
 				BCFC852C2138319E001EC6D7 /* Details.storyboard in Resources */,
 				BCD0E02B210F5E0D00CE5C7B /* Assets.xcassets in Resources */,
 				BC75A80E21737A7300A2A5B3 /* json-viewer.js in Resources */,
 				BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */,
 				BC75A81021737A7300A2A5B3 /* jsonviewer.html in Resources */,
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
+				BCEB9AB1217CD264008BBF3C /* Effra_Std_BdIt.ttf in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
+				BCEB9AB5217CD269008BBF3C /* DroidSansMono.ttf in Resources */,
 				BC75A80F21737A7300A2A5B3 /* json-viewer-dark-theme.css in Resources */,
+				BCEB9AB2217CD264008BBF3C /* Effra_Std_Lt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

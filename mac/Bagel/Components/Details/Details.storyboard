@@ -369,7 +369,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -512,17 +512,17 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-AT-l2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                            <rect key="frame" x="5" y="5" width="440" height="290"/>
                                             <clipView key="contentView" drawsBackground="NO" id="fMe-Re-Oye">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="7b5-bc-5EU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="450" height="300"/>
+                                                        <size key="minSize" width="440" height="290"/>
                                                         <size key="maxSize" width="618" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
@@ -533,19 +533,19 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="HW1-VW-53m">
-                                                <rect key="frame" x="434" y="0.0" width="16" height="300"/>
+                                                <rect key="frame" x="424" y="0.0" width="16" height="290"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="b0V-AT-l2c" secondAttribute="trailing" id="9P8-4f-qmf"/>
-                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="top" secondItem="Ptz-XA-pF2" secondAttribute="top" id="Hzg-ly-NBm"/>
-                                        <constraint firstAttribute="bottom" secondItem="b0V-AT-l2c" secondAttribute="bottom" id="fvr-Cm-3Pa"/>
-                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="leading" secondItem="Ptz-XA-pF2" secondAttribute="leading" id="lZd-dB-U7X"/>
+                                        <constraint firstAttribute="trailing" secondItem="b0V-AT-l2c" secondAttribute="trailing" constant="5" id="9P8-4f-qmf"/>
+                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="top" secondItem="Ptz-XA-pF2" secondAttribute="top" constant="5" id="Hzg-ly-NBm"/>
+                                        <constraint firstAttribute="bottom" secondItem="b0V-AT-l2c" secondAttribute="bottom" constant="5" id="fvr-Cm-3Pa"/>
+                                        <constraint firstItem="b0V-AT-l2c" firstAttribute="leading" secondItem="Ptz-XA-pF2" secondAttribute="leading" constant="5" id="lZd-dB-U7X"/>
                                     </constraints>
                                 </view>
-                                <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                         <constraints>
