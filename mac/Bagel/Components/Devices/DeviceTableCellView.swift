@@ -28,6 +28,16 @@ class DeviceTableCellView: NSTableCellView {
         self.deviceNameTextField.stringValue = self.device.deviceName ?? ""
         self.deviceDescriptionTextField.stringValue = self.device.deviceDescription ?? ""
         self.backgroundBox.isHidden = !self.isSelected
+        
+        if self.isSelected {
+            
+            self.deviceNameTextField.font = FontManager.mainMediumFont(size: 14)
+            self.deviceNameTextField.textColor = ThemeColor.textColor
+        }else {
+            
+            self.deviceNameTextField.font = FontManager.mainFont(size: 14)
+            self.deviceNameTextField.textColor = ThemeColor.secondaryLabelColor
+        }
     }
     
 }

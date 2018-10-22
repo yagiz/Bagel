@@ -23,7 +23,7 @@ class DatePacketTableCellView: NSTableCellView {
     
     func refresh() {
         
-        self.titleTextField.textColor = ThemeColor.labelColor
+        self.titleTextField.textColor = ThemeColor.secondaryLabelColor
         self.titleTextField.stringValue = self.packet.requestInfo?.startDate?.readble ?? ""
     }
     
