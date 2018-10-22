@@ -21,7 +21,7 @@ Just download or clone the repo and move ```Bagel.framework``` into your project
 Most basic usage is to start Bagel iOS before any operation that sends requests. 
 ```swift
 //import Bagel
-Bagel.shared().start()
+Bagel.start()
 ```
 
 ###  Configuring Bagel
@@ -33,7 +33,7 @@ bagelConfig.project.projectName = "Custom Project Name"
 bagelConfig.device.deviceName = "Custom Device Name"
 bagelConfig.device.deviceDescription = "Custom Device Description"
 
-Bagel.shared().startWithConfiguration(bagelConfig)
+Bagel.start(configuration: bagelConfig)
 ```
 Bagel framework communicates with the desktop client by using Bounjour protocol. You can also configure these Netservice parameters. Default values are:
 
@@ -45,22 +45,10 @@ bagelConfig.netserviceDomain = "_Bagel._tcp"
 bagelConfig.netserviceType = ""
 bagelConfig.netserviceName = ""
 
-Bagel.shared().startWithConfiguration(bagelConfig)
+Bagel.start(configuration: bagelConfig)
 ```
 If you change Netservice parameters in your app, you should also change them on desktop client.
-###  Releasing
-Bagel by default is disabled in release version. You can however enable it by opening your app with a deep link. This way, you can still view the network traffic of your submitted app.
-```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
 
-	Bagel.shared().appWillOpenURL(url)
-	
-}
-```
-If the host of your URL is ```bagel``` then Bagel is enabled. Here is a typical example URL:
-```swift
-yourproject://bagel
-```
 License
 ----
 Apache
