@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class ProjectTableCellView: NSTableCellView {
 
@@ -20,5 +21,15 @@ class ProjectTableCellView: NSTableCellView {
         
         self.titleTextField.stringValue = self.project.projectName ?? ""
         self.backgroundBox.isHidden = !self.isSelected
+        
+        if self.isSelected {
+            
+            self.titleTextField.font = FontManager.mainMediumFont(size: 14)
+            self.titleTextField.textColor = ThemeColor.textColor
+        }else {
+            
+            self.titleTextField.font = FontManager.mainFont(size: 14)
+            self.titleTextField.textColor = ThemeColor.secondaryLabelColor
+        }
     }
 }
