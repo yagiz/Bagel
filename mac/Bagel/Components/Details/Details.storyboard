@@ -369,7 +369,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">

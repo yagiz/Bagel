@@ -45,20 +45,12 @@ class DataJSONViewController: BaseViewController {
         
         let filePath = Bundle.main.path(forResource: "jsonviewer", ofType: "html")!
         let fileURL = URL(fileURLWithPath: filePath)
+        let htmlRequest = URLRequest(url: fileURL)
         
-        if let htmlData = try? Data(contentsOf: fileURL) {
-            
-            let htmlString = String(data: htmlData, encoding: .utf8)
-            
-            let baseUrl = URL(string: Bundle.main.bundlePath + "/Contents/Resources/")!
-            
-            self.webView.mainFrame.loadHTMLString(htmlString, baseURL: baseUrl)
-            self.webView.frameLoadDelegate = self
-            self.webView.drawsBackground = false
-            
-            self.refreshJSONEditorTheme()
-        }
-        
+        self.webView.frameLoadDelegate = self
+        self.webView.drawsBackground = false
+        self.webView.mainFrame.load(htmlRequest)
+        self.refreshJSONEditorTheme()
     }
     
     

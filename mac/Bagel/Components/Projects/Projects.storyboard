@@ -73,7 +73,6 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="backgroundBox" destination="HfR-R3-Cs4" id="037-Gv-tg3"/>
-                                                                <outlet property="projectNameTextField" destination="eTZ-eS-sg0" id="buy-Tc-1Zc"/>
                                                                 <outlet property="titleTextField" destination="eTZ-eS-sg0" id="Rw9-gC-C3H"/>
                                                             </connections>
                                                         </tableCellView>
