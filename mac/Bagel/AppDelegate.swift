@@ -27,6 +27,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        
+        for window in sender.windows {
+            
+            window.orderFront(self)
+        }
+        
+        return true
+    }
 }
 
