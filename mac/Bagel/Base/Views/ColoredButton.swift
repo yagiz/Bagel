@@ -36,12 +36,12 @@ class ColoredButton: NSButton {
         
         if self.state == .on {
             
-            let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: self.selectedTextColor, .paragraphStyle: titleParagraphStyle]
+            let attributes: [NSAttributedString.Key : Any] = [.foregroundColor: self.selectedTextColor, .paragraphStyle: titleParagraphStyle]
             self.attributedTitle = NSMutableAttributedString(string: self.title, attributes: attributes)
             
         }else {
             
-            let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: self.textColor, .paragraphStyle: titleParagraphStyle]
+            let attributes: [NSAttributedString.Key : Any] = [.foregroundColor: self.textColor, .paragraphStyle: titleParagraphStyle]
             self.attributedTitle = NSMutableAttributedString(string: self.title, attributes: attributes)
             
         }
