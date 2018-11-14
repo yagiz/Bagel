@@ -11,7 +11,7 @@ import macOSThemeKit
 
 class TextStyles {
     
-    static let codeAttributes = [NSAttributedStringKey.foregroundColor: ThemeColor.labelColor, NSAttributedStringKey.font: FontManager.codeFont(size: 13)]
+    static let codeAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.labelColor, NSAttributedString.Key.font: FontManager.codeFont(size: 13)]
 
     static func codeAttributedString(string: String) -> NSAttributedString {
         return NSAttributedString(string: string, attributes: codeAttributes)

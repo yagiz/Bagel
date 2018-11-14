@@ -152,10 +152,11 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
 
 extension PacketsViewController: NSTextFieldDelegate {
     
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         
         self.viewModel?.filterTerm = self.filterTextField.stringValue
     }
+    
 }
 
 
