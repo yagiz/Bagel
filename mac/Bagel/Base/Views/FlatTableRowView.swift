@@ -9,16 +9,6 @@
 import Cocoa
 import macOSThemeKit
 
-struct RowColors {
-    
-    static let normal = NSColor.clear
-    
-    static var selected: NSColor {
-        
-        return NSColor(hexString: "#f4f4f4")
-    }
-}
-
 class FlatTableRowView: NSTableRowView {
 
     override func draw(_ dirtyRect: NSRect) {
@@ -31,7 +21,7 @@ class FlatTableRowView: NSTableRowView {
             
         }else {
             
-            RowColors.normal.setFill()
+            NSColor.clear.setFill()
         }
         
         dirtyRect.fill()

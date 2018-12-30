@@ -245,7 +245,7 @@
                 </viewController>
                 <customObject id="Reu-rn-zBc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="2286"/>
+            <point key="canvasLocation" x="1034" y="2085"/>
         </scene>
         <!--Key Value List View Controller-->
         <scene sceneID="WW0-ge-jxG">
@@ -369,7 +369,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -610,7 +610,7 @@
                 </viewController>
                 <customObject id="SNA-4W-Qla" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="1231"/>
+            <point key="canvasLocation" x="1774" y="1232"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="iZk-xt-2Si">

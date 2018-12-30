@@ -13,7 +13,6 @@ class BaseTableHeaderView: NSTableHeaderView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-        self.layer?.borderColor = NSColor.white.cgColor
         self.layer?.borderWidth = 0
     }
     

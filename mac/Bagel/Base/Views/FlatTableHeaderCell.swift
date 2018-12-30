@@ -11,8 +11,8 @@ import macOSThemeKit
 
 class FlatTableHeaderCell: NSTableHeaderCell {
 
-    static let titleLeftMargin = CGFloat(5.0)
-    static let titleTopMargin = CGFloat(0.0)
+    var titleLeftMargin = CGFloat(5.0)
+    var titleTopMargin = CGFloat(0.0)
     
     override init(textCell string: String) {
         
@@ -27,8 +27,7 @@ class FlatTableHeaderCell: NSTableHeaderCell {
     override func draw(withFrame cellFrame: NSRect, in controlView: NSView) {
         self.drawInterior(withFrame: cellFrame, in: controlView)
     }
-    
-    
+
     override func drawInterior(withFrame cellFrame: NSRect, in controlView: NSView) {
         
         ThemeColor.contentBarColor.setFill()
@@ -41,9 +40,7 @@ class FlatTableHeaderCell: NSTableHeaderCell {
         attributedString.addAttribute(.font, value: FontManager.mainMediumFont(size: 13), range: fullRange)
         
         self.attributedStringValue = attributedString
-        super.drawInterior(withFrame: cellFrame, in: controlView)
-//        attributedString.draw(in: NSRect.init(x: FlatTableHeaderCell.titleLeftMargin + cellFrame.origin.x, y: FlatTableHeaderCell.titleTopMargin, width: cellFrame.size.width, height: cellFrame.size.height))
-//
+        super.drawInterior(withFrame: NSRect.init(x: self.titleLeftMargin + cellFrame.origin.x, y: self.titleTopMargin, width: cellFrame.size.width, height: cellFrame.size.height), in: controlView)
     }
     
     

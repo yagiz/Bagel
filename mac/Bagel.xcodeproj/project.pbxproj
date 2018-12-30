@@ -31,7 +31,6 @@
 		BC9C779A21634D4F00E8ADE8 /* KeyValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */; };
 		BC9C779C21634E7900E8ADE8 /* KeyValueTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */; };
 		BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */; };
-		BC9C77A121635DEC00E8ADE8 /* DetailSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */; };
 		BC9C77A32163668200E8ADE8 /* RequestParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */; };
 		BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A42163803400E8ADE8 /* DataViewController.swift */; };
 		BC9C77A82163805000E8ADE8 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77A72163805000E8ADE8 /* DataViewModel.swift */; };
@@ -42,7 +41,6 @@
 		BC9C77C02163981F00E8ADE8 /* ResponseHeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77BF2163981F00E8ADE8 /* ResponseHeadersViewModel.swift */; };
 		BC9C77C3216398A900E8ADE8 /* RequestBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */; };
 		BC9C77C5216398CC00E8ADE8 /* ResponseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */; };
-		BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */; };
 		BCA60B41216201B900B9DCAD /* BagelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B40216201B900B9DCAD /* BagelConfiguration.swift */; };
 		BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B432162395000B9DCAD /* DevicesViewModel.swift */; };
 		BCA60B4621623A1600B9DCAD /* DeviceTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */; };
@@ -139,7 +137,6 @@
 		BC9C779921634D4F00E8ADE8 /* KeyValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueViewModel.swift; sourceTree = "<group>"; };
 		BC9C779B21634E7900E8ADE8 /* KeyValueTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableCellView.swift; sourceTree = "<group>"; };
 		BC9C779E2163528E00E8ADE8 /* RequestHeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersViewModel.swift; sourceTree = "<group>"; };
-		BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionButton.swift; sourceTree = "<group>"; };
 		BC9C77A22163668200E8ADE8 /* RequestParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParametersViewModel.swift; sourceTree = "<group>"; };
 		BC9C77A42163803400E8ADE8 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		BC9C77A72163805000E8ADE8 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
@@ -150,7 +147,6 @@
 		BC9C77BF2163981F00E8ADE8 /* ResponseHeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeadersViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C2216398A900E8ADE8 /* RequestBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyViewModel.swift; sourceTree = "<group>"; };
 		BC9C77C4216398CC00E8ADE8 /* ResponseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataViewModel.swift; sourceTree = "<group>"; };
-		BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		BCA60B40216201B900B9DCAD /* BagelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelConfiguration.swift; sourceTree = "<group>"; };
 		BCA60B432162395000B9DCAD /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		BCA60B4521623A1600B9DCAD /* DeviceTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableCellView.swift; sourceTree = "<group>"; };
@@ -582,8 +578,6 @@
 				BCA60B4F216256FD00B9DCAD /* BaseTableHeaderView.swift */,
 				BCA60B512162655000B9DCAD /* FlatTableHeaderCell.swift */,
 				BCB6FD6821627D5400D6F03C /* TransparentSplitView.swift */,
-				BC9C77A021635DEC00E8ADE8 /* DetailSectionButton.swift */,
-				BC9C77CB2165085100E8ADE8 /* ColoredButton.swift */,
 				BCDF0EC321662CA10030710C /* FlatTableRowView.swift */,
 				BC911A462168EB0A00B755D4 /* ContentBar.swift */,
 			);
@@ -850,8 +844,6 @@
 				BCB6FD6921627D5400D6F03C /* TransparentSplitView.swift in Sources */,
 				BCFC853021383267001EC6D7 /* ProjectsViewController.swift in Sources */,
 				BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */,
-				BC9C77CC2165085100E8ADE8 /* ColoredButton.swift in Sources */,
-				BC9C77A121635DEC00E8ADE8 /* DetailSectionButton.swift in Sources */,
 				BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */,
 				BCA60B41216201B900B9DCAD /* BagelConfiguration.swift in Sources */,
 				BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */,

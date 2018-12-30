@@ -63,7 +63,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPO-QB-zWr">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                                                <rect key="frame" x="5" y="0.0" width="34" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="200" id="nCW-um-xTy">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
@@ -96,7 +96,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipb-Zo-mzM">
-                                                                                <rect key="frame" x="0.0" y="2" width="319" height="18"/>
+                                                                                <rect key="frame" x="5" y="2" width="313" height="18"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="ADt-eY-pVa">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
@@ -129,7 +129,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-CZ-vWv">
-                                                                                <rect key="frame" x="0.0" y="2" width="319" height="18"/>
+                                                                                <rect key="frame" x="5" y="2" width="313" height="18"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="j9t-nF-LfF">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>

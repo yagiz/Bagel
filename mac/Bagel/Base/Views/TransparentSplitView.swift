@@ -10,12 +10,6 @@ import Cocoa
 
 class BaseSplitView: NSSplitView {
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-    }
-    
     override var dividerThickness: CGFloat {
         
         return 0

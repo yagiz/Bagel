@@ -40,7 +40,7 @@ class BagelPublisher: NSObject {
             
         } catch {
             
-            self.startPublishing()
+            self.tryPublishAgain()
         }
         
     }
@@ -119,13 +119,19 @@ extension BagelPublisher: GCDAsyncSocketDelegate {
             
             if self.sockets.count == 0 {
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    
-                    self.startPublishing()
-                    
-                }
+                self.tryPublishAgain()
                 
             }
         }
+    }
+    
+    func tryPublishAgain() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            
+            self.startPublishing()
+            
+        }
+        
     }
 }
