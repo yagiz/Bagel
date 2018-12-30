@@ -27,17 +27,17 @@ class DataViewController: BaseViewController {
     
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier?.rawValue == "DataTextViewController" {
-            
-            self.dataTextViewController = segue.destinationController as? DataTextViewController
+
+        if let destinationVC = segue.destinationController as? DataTextViewController {
+
+            self.dataTextViewController = destinationVC
             self.dataTextViewController?.viewModel = DataTextViewModel()
         }
         
         
-        if segue.identifier?.rawValue == "DataJSONViewController" {
+        if let destinationVC = segue.destinationController as? DataJSONViewController{
             
-            self.dataJSONViewController = segue.destinationController as? DataJSONViewController
+            self.dataJSONViewController = destinationVC
             self.dataJSONViewController?.viewModel = DataJSONViewModel()
         }
     }
@@ -54,7 +54,7 @@ class DataViewController: BaseViewController {
                 self.dataJSONViewController.view.isHidden = false
                 self.dataTextViewController.view.isHidden = true
                 
-            }else {
+            } else {
                     
                 self.dataTextViewController.viewModel?.dataRepresentation = self.viewModel?.dataRepresentation
                 
@@ -62,7 +62,7 @@ class DataViewController: BaseViewController {
                 self.dataJSONViewController.view.isHidden = true
             }
             
-        }else {
+        } else {
             
             self.dataJSONViewController.view.isHidden = true
             self.dataTextViewController.view.isHidden = true

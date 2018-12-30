@@ -7,7 +7,7 @@ Bagel iOS sniffes the ```NSURLSession``` and ```NSURLConnection``` delegate clas
 
 ### Preview
 ![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/screenshot.png?raw=true)
-If you are here for the macOS client, you can download it from here.
+If you are here for the macOS client, you can clone the repo and archive macOS project.
 ### Installation
 To connect your app you need to install Bagel iOS in your app projects and download macOS client to view network traffic.
 #### CocoaPods

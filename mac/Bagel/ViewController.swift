@@ -23,7 +23,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        BagelController.shared
+        _ = BagelController.shared
         
         self.projectsBackgroundBox.fillColor = ThemeColor.projectListBackgroundColor
         self.devicesBackgroundBox.fillColor = ThemeColor.deviceListBackgroundColor
@@ -32,10 +32,10 @@ class ViewController: NSViewController {
     }
 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier?.rawValue == "ProjectsViewController" {
+
+        if let destinationVC = segue.destinationController as? ProjectsViewController {
             
-            self.projectsViewController = segue.destinationController as? ProjectsViewController
+            self.projectsViewController = destinationVC
             self.projectsViewController?.viewModel = ProjectsViewModel()
             self.projectsViewController?.viewModel?.register()
             
@@ -46,10 +46,10 @@ class ViewController: NSViewController {
             
         }
         
-        
-        if segue.identifier?.rawValue == "DevicesViewController" {
+
+        if let destinationVC = segue.destinationController as? DevicesViewController {
             
-            self.devicesViewController = segue.destinationController as? DevicesViewController
+            self.devicesViewController = destinationVC
             self.devicesViewController?.viewModel = DevicesViewModel()
             self.devicesViewController?.viewModel?.register()
             
@@ -60,10 +60,10 @@ class ViewController: NSViewController {
             
         }
         
-        
-        if segue.identifier?.rawValue == "PacketsViewController" {
+
+        if let destinationVC = segue.destinationController as? PacketsViewController {
             
-            self.packetsViewController = segue.destinationController as? PacketsViewController
+            self.packetsViewController = destinationVC
             self.packetsViewController?.viewModel = PacketsViewModel()
             self.packetsViewController?.viewModel?.register()
             
@@ -73,10 +73,10 @@ class ViewController: NSViewController {
             
         }
         
-        
-        if segue.identifier?.rawValue == "DetailViewController" {
+
+        if let destinationVC = segue.destinationController as? DetailViewController {
             
-            self.detailVeiwController = segue.destinationController as? DetailViewController
+            self.detailVeiwController = destinationVC
             self.detailVeiwController?.viewModel = DetailViewModel()
             self.detailVeiwController?.viewModel?.register()
             
