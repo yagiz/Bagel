@@ -63,7 +63,7 @@ class OverviewRepresentation: ContentRepresentation  {
                 }
             }
             
-            if let responseBodyData = requestInfo.requestBody?.base64Data {
+            if let responseBodyData = requestInfo.responseData?.base64Data {
                 
                 let contentRawString = ContentRepresentationParser.dataRepresentation(data: responseBodyData)?.rawString ?? ""
                 
