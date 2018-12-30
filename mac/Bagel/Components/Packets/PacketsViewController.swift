@@ -12,6 +12,7 @@ import macOSThemeKit
 class PacketsViewController: BaseViewController {
 
     static var statusColumnWidth = CGFloat(50.0)
+    static var methodColumnWidth = CGFloat(55.0)
     static var dateColumnWidth = CGFloat(150.0)
     
     var viewModel: PacketsViewModel?
@@ -69,6 +70,11 @@ class PacketsViewController: BaseViewController {
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Status")
                 tableColumn.width = PacketsViewController.statusColumnWidth
                 
+            }else if tableColumn.identifier.rawValue == "method" {
+                
+                tableColumn.headerCell = FlatTableHeaderCell(textCell: "Method")
+                tableColumn.width = PacketsViewController.methodColumnWidth
+                
             }else if tableColumn.identifier.rawValue == "url" {
                 
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
@@ -109,6 +115,13 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
         if (tableColumn?.identifier)!.rawValue == "statusCode" {
             
             let cell: StatusPacketTableCellView = self.tableView.makeView(withOwner: nil)!
+            cell.packet = self.viewModel?.item(at: row)
+            cell.backgroundStyle = .normal
+            return cell
+            
+        }else if (tableColumn?.identifier)!.rawValue == "method" {
+            
+            let cell: MethodPacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell
