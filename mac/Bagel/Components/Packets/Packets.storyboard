@@ -39,7 +39,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="P5w-QZ-Fyb" viewBased="YES" id="CKi-fU-sLr" customClass="BaseTableView" customModule="Bagel" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="742" height="340"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="693" height="340"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -110,7 +110,7 @@
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
                                                             </tableColumn>
-                                                            <tableColumn identifier="url" width="319" minWidth="40" maxWidth="1000" id="CBP-23-K9t">
+                                                            <tableColumn identifier="url" width="142" minWidth="40" maxWidth="1000" id="CBP-23-K9t">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="URL">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -124,11 +124,11 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="URLPacketTableCellView" focusRingType="none" id="gqm-6g-9Tm" customClass="URLPacketTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="99" y="1" width="319" height="20"/>
+                                                                        <rect key="frame" x="99" y="1" width="142" height="20"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipb-Zo-mzM">
-                                                                                <rect key="frame" x="5" y="2" width="313" height="18"/>
+                                                                                <rect key="frame" x="5" y="2" width="136" height="18"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="ADt-eY-pVa">
                                                                                     <font key="font" size="12" name="DroidSansMono"/>
@@ -157,7 +157,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="DatePacketTableCellView" focusRingType="none" id="0Hf-Bc-1kK" customClass="DatePacketTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="421" y="1" width="319" height="20"/>
+                                                                        <rect key="frame" x="244" y="1" width="319" height="20"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-CZ-vWv">
@@ -184,7 +184,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="eiS-oa-gD4"/>
                                             </constraints>
-                                            <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="O0A-T5-Sgs">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="O0A-T5-Sgs">
                                                 <rect key="frame" x="0.0" y="349" width="693" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -193,7 +193,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="P5w-QZ-Fyb">
-                                                <rect key="frame" x="0.0" y="0.0" width="742" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="693" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>

@@ -78,7 +78,7 @@ class PacketsViewController: BaseViewController {
             }else if tableColumn.identifier.rawValue == "url" {
                 
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
-                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth
+                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth - PacketsViewController.methodColumnWidth 
                 
             }else if tableColumn.identifier.rawValue == "date" {
                 

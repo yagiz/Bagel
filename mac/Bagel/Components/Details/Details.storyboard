@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="14460.31"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,6 +90,7 @@
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="systemBold" size="12"/>
                                                         </buttonCell>
+                                                        <color key="contentTintColor" red="0.70980392156862748" green="0.49803921568627452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="rawButtonAction:" target="8u2-ww-n8g" id="vcZ-CW-yGn"/>
                                                         </connections>
@@ -369,7 +370,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
@@ -749,6 +750,7 @@
                                         <constraint firstItem="CjX-gd-hJy" firstAttribute="top" secondItem="mdX-jW-LeM" secondAttribute="top" constant="2" id="5zO-JW-fKB"/>
                                         <constraint firstAttribute="bottom" secondItem="n6S-iw-EMD" secondAttribute="bottom" constant="5" id="F7d-r1-iQi"/>
                                         <constraint firstAttribute="bottom" secondItem="iHW-q5-odR" secondAttribute="bottom" constant="5" id="Gac-Ke-z7e"/>
+                                        <constraint firstItem="c5S-pb-Yh4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q0l-Zj-81U" secondAttribute="trailing" constant="10" id="MQY-bY-Jpb"/>
                                         <constraint firstItem="n6S-iw-EMD" firstAttribute="leading" secondItem="8PC-Xx-Vf2" secondAttribute="trailing" constant="5" id="PnM-tu-QVt"/>
                                         <constraint firstAttribute="bottom" secondItem="bAp-ri-UFe" secondAttribute="bottom" constant="5" id="Qgl-om-xeI"/>
                                         <constraint firstItem="bAp-ri-UFe" firstAttribute="leading" secondItem="mdX-jW-LeM" secondAttribute="leading" constant="10" id="byv-vb-2FQ"/>
