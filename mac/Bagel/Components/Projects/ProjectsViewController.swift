@@ -22,6 +22,8 @@ class ProjectsViewController: BaseViewController {
         self.tableView.dataSource = self
         self.tableView.backgroundColor = ThemeColor.projectListBackgroundColor
         
+        
+        
         self.viewModel?.onChange = { [weak self] in
             
             self?.refresh()

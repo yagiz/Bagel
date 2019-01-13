@@ -24,11 +24,13 @@ class DataJSONViewController: BaseViewController {
     @IBOutlet weak var rawButton: NSButton!
     @IBOutlet weak var copyToClipboardButton: NSButton!
     
+    private var isWebViewLoaded: Bool = false
+    var onWebViewDidFinishLoading : (()->())?
+    var onWebViewInitialLoading : (()->())?
+    
     override func setup() {
         
         self.copyToClipboardButton.image = ThemeImage.copyToClipboardIcon
-        
-        self.setupJSONViewer()
         
         NotificationCenter.default.addObserver(self, selector: #selector(changedTheme(_:)), name: .didChangeTheme, object: nil)
         
@@ -41,7 +43,9 @@ class DataJSONViewController: BaseViewController {
     }
     
     
-    func setupJSONViewer() {
+    func setupJSONViewer(didFinishLoad: (()->())? = nil ) {
+        
+        self.onWebViewDidFinishLoading = didFinishLoad
         
         let filePath = Bundle.main.path(forResource: "jsonviewer", ofType: "html")!
         let fileURL = URL(fileURLWithPath: filePath)
@@ -52,16 +56,9 @@ class DataJSONViewController: BaseViewController {
         self.webView.mainFrame.load(htmlRequest)
         self.refreshJSONEditorTheme()
     }
-    
-    
+
     func refresh() {
-        
-        if let jsonString = self.viewModel?.dataRepresentation?.rawString {
-            
-            self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
-            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: jsonString ))
-        }
-        
+
         if self.isRaw {
             
             self.rawTextScrollView.isHidden = false
@@ -74,6 +71,19 @@ class DataJSONViewController: BaseViewController {
             self.webView.isHidden = false
             self.rawButton.state = .off
             
+        }
+        
+        if let jsonString = self.viewModel?.dataRepresentation?.rawString {
+            
+            if self.isWebViewLoaded {
+                self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
+            }else{
+                self.setupJSONViewer {
+                    self.webView.windowScriptObject.callWebScriptMethod("renderJSONString", withArguments: [jsonString])
+                }
+            }
+            
+            self.rawTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: jsonString ))
         }
     }
     
@@ -111,7 +121,8 @@ class DataJSONViewController: BaseViewController {
 extension DataJSONViewController: WebFrameLoadDelegate {
     
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
-        
+        self.isWebViewLoaded = true
+        self.onWebViewDidFinishLoading?()
         self.refreshJSONEditorTheme()
     }
 }
