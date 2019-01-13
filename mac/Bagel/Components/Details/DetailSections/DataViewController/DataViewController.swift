@@ -42,7 +42,6 @@ class DataViewController: BaseViewController {
         }
     }
     
-    
     func refresh() {
         
         if let data = self.viewModel?.dataRepresentation {

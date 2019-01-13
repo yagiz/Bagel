@@ -82,3 +82,27 @@ extension LightTheme {
         return NSImage(named: NSImage.Name("CopyIcon"))!
     }
 }
+
+
+extension LightTheme {
+    
+    @objc var httpMethodGetColor: NSColor {
+        return NSColor(hexString: "#00cec9")
+    }
+    
+    @objc var httpMethodPostColor: NSColor {
+        return NSColor(hexString: "#fdcb6e")
+    }
+    
+    @objc var httpMethodDeleteColor: NSColor {
+        return NSColor(hexString: "#e17055")
+    }
+    
+    @objc var httpMethodPutColor: NSColor {
+        return NSColor(hexString: "#0984e3")
+    }
+    
+    @objc var httpMethodDefaultColor: NSColor {
+        return self.secondaryLabelColor
+    }
+}

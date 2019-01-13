@@ -215,8 +215,6 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
     packet.device = self.configuration.device;
 
     [self.browser sendPacket:packet];
-    
-    NSLog(@"sent packet: %@", packet.packetId);
 }
 
 @end

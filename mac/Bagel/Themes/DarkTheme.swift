@@ -83,3 +83,26 @@ extension DarkTheme {
         return NSImage(named: NSImage.Name("CopyIconDark"))!
     }
 }
+
+extension DarkTheme {
+    
+    @objc var httpMethodGetColor: NSColor {
+        return NSColor(hexString: "#00b894")
+    }
+    
+    @objc var httpMethodPostColor: NSColor {
+        return NSColor(hexString: "#fdcb6e")
+    }
+    
+    @objc var httpMethodDeleteColor: NSColor {
+        return NSColor(hexString: "#e17055")
+    }
+    
+    @objc var httpMethodPutColor: NSColor {
+        return NSColor(hexString: "#0984e3")
+    }
+    
+    @objc var httpMethodDefaultColor: NSColor {
+        return self.secondaryLabelColor
+    }
+}

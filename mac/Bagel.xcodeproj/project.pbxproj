@@ -74,6 +74,7 @@
 		BCEB9AB7217DD546008BBF3C /* DatePacketTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */; };
 		BCEB9AB9217DD653008BBF3C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9AB8217DD653008BBF3C /* Date.swift */; };
 		BCF47D04216BA0B400BC144A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47D03216BA0B400BC144A /* TextStyles.swift */; };
+		BCFB675721D977C2000199ED /* MethodPacketTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB675621D977C2000199ED /* MethodPacketTableCellView.swift */; };
 		BCFC5CBA213C7435004E5995 /* BagelRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */; };
 		BCFC85262138312D001EC6D7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC85252138312D001EC6D7 /* Projects.storyboard */; };
 		BCFC852821383150001EC6D7 /* Devices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC852721383150001EC6D7 /* Devices.storyboard */; };
@@ -186,6 +187,7 @@
 		BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePacketTableCellView.swift; sourceTree = "<group>"; };
 		BCEB9AB8217DD653008BBF3C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BCF47D03216BA0B400BC144A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		BCFB675621D977C2000199ED /* MethodPacketTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodPacketTableCellView.swift; sourceTree = "<group>"; };
 		BCFC5CB9213C7435004E5995 /* BagelRequestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagelRequestInfo.swift; sourceTree = "<group>"; };
 		BCFC85252138312D001EC6D7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		BCFC852721383150001EC6D7 /* Devices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Devices.storyboard; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 				BCFC853521383650001EC6D7 /* PacketsViewController.swift */,
 				BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */,
 				BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */,
+				BCFB675621D977C2000199ED /* MethodPacketTableCellView.swift */,
 				BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */,
 				BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */,
 			);
@@ -824,6 +827,7 @@
 			files = (
 				BC7E67EB216E193300E1289E /* DataTextRepresentation.swift in Sources */,
 				BCEB9AA0217C94B1008BBF3C /* KeyValue.swift in Sources */,
+				BCFB675721D977C2000199ED /* MethodPacketTableCellView.swift in Sources */,
 				BC7E67E5216E17F700E1289E /* DataRepresentationParser.swift in Sources */,
 				BCDF0EC421662CA10030710C /* FlatTableRowView.swift in Sources */,
 				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,

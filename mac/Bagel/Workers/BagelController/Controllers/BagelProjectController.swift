@@ -19,14 +19,14 @@ class BagelProjectController: NSObject {
         }
     }
     
-    func addPacket(newPacket: BagelPacket) {
+    @discardableResult
+    func addPacket(newPacket: BagelPacket) -> Bool {
         
         for deviceController in self.deviceControllers {
             
             if deviceController.deviceId == newPacket.device?.deviceId {
                 
-                deviceController.addPacket(newPacket: newPacket)
-                return
+                return deviceController.addPacket(newPacket: newPacket)
             }
         }
         
@@ -44,5 +44,7 @@ class BagelProjectController: NSObject {
             
             self.selectedDeviceController = self.deviceControllers.first
         }
+        
+        return true
     }
 }

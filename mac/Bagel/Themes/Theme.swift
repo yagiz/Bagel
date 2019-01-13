@@ -78,3 +78,26 @@ extension ThemeColor {
         return ThemeColor.color(with: #function)
     }
 }
+
+extension ThemeColor {
+    
+    static var httpMethodGetColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
+    static var httpMethodPostColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
+    static var httpMethodDeleteColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
+    static var httpMethodPutColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
+    static var httpMethodDefaultColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+}

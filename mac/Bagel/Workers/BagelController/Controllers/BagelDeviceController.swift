@@ -15,20 +15,26 @@ class BagelDeviceController: NSObject {
     var deviceDescription: String?
     
     var packets: [BagelPacket] = []
-    var selectedPacket: BagelPacket? {
-        didSet {
-            NotificationCenter.default.post(name: BagelNotifications.didSelectPacket, object: nil)
-        }
+    private(set) var selectedPacket: BagelPacket?
+    
+    func select(packet: BagelPacket?) {
+        self.selectedPacket = packet
+        self.notifyPacketSelection()
     }
     
-    func addPacket(newPacket: BagelPacket) {
+    func notifyPacketSelection() {
+        NotificationCenter.default.post(name: BagelNotifications.didSelectPacket, object: nil)
+    }
+    
+    @discardableResult
+    func addPacket(newPacket: BagelPacket) -> Bool {
         
         for packet in self.packets {
             
             if packet.packetId == newPacket.packetId {
                 
                 packet.requestInfo = newPacket.requestInfo
-                return
+                return false
             }
         }
         
@@ -40,11 +46,13 @@ class BagelDeviceController: NSObject {
             
             self.selectedPacket = self.packets.first
         }
+        
+        return true
     }
     
     func clear() {
         
         self.packets.removeAll()
-        self.selectedPacket = nil
+        self.select(packet: nil)
     }
 }

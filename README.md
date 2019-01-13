@@ -1,31 +1,30 @@
 # Bagel
 ![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/header.png?raw=true)
 
-Bagel is a little native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices. 
+Bagel is a little native iOS network debugger. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices. 
 
-Bagel iOS sniffes the ```NSURLSession``` and ```NSURLConnection``` delegate classes and broadcast requests to the Bagel macOS by using Bounjour protocol.
-
-### Preview
-![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/screenshot.png?raw=true)
-If you are here for the macOS client, you can clone the repo and archive macOS project.
-### Installation
-To connect your app you need to install Bagel iOS in your app projects and download macOS client to view network traffic.
-#### CocoaPods
+## Preview
+![Bagel](https://github.com/yagiz/Bagel/blob/develop/assets/screenshot.png?raw=true)
+## Installation
+#### Install Mac App
+- Clone the repo.
+- Build and archive the project.
+#### Install iOS Client
+##### CocoaPods
+Currently best way to install Bagel is to use Cocoapods.
 ```sh
 pod 'Bagel'
 ```
-#### Manually
-Just download or clone the repo and move ```Bagel.framework``` into your project.
 
 ### Usage
-Most basic usage is to start Bagel iOS before any operation that sends requests. 
+Most basic usage is to start Bagel iOS before any network operation. 
 ```swift
 //import Bagel
 Bagel.start()
 ```
 
 ###  Configuring Bagel
-By default, Bagel gets your project name and device information. Desktop client uses these informations to seperate projects and devices. You can configure these if you wish:
+By default, Bagel gets your project name and device information. Desktop client uses these informations to separate projects and devices. You can configure these if you wish:
 ```swift
 let bagelConfig = BagelConfiguration()
 

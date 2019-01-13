@@ -68,7 +68,7 @@ class ViewController: NSViewController {
             self.packetsViewController?.viewModel?.register()
             
             self.packetsViewController?.onPacketSelect = { (selectedPacket) in
-            BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket = selectedPacket
+            BagelController.shared.selectedProjectController?.selectedDeviceController?.select(packet: selectedPacket)
             }
             
         }
