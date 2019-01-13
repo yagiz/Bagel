@@ -43,6 +43,7 @@ class BagelController: NSObject, BagelPublisherDelegate {
         
         if self.addPacket(newPacket: packet) {
             NotificationCenter.default.post(name: BagelNotifications.didGetPacket, object: nil, userInfo: ["packet": packet])
+            self.checkInitialSelection()
         }else{
             NotificationCenter.default.post(name: BagelNotifications.didUpdatePacket, object: nil, userInfo: ["packet": packet])
         }
@@ -75,5 +76,12 @@ class BagelController: NSObject, BagelPublisherDelegate {
         }
         
         return true
+    }
+    
+    
+    func checkInitialSelection() {
+        if self.selectedProjectController?.selectedDeviceController?.packets.count == 1 {
+            self.selectedProjectController?.selectedDeviceController?.notifyPacketSelection()
+        }
     }
 }

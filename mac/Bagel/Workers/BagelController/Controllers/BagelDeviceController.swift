@@ -15,10 +15,15 @@ class BagelDeviceController: NSObject {
     var deviceDescription: String?
     
     var packets: [BagelPacket] = []
-    var selectedPacket: BagelPacket? {
-        didSet {
-            NotificationCenter.default.post(name: BagelNotifications.didSelectPacket, object: nil)
-        }
+    private(set) var selectedPacket: BagelPacket?
+    
+    func select(packet: BagelPacket?) {
+        self.selectedPacket = packet
+        self.notifyPacketSelection()
+    }
+    
+    func notifyPacketSelection() {
+        NotificationCenter.default.post(name: BagelNotifications.didSelectPacket, object: nil)
     }
     
     @discardableResult
@@ -48,6 +53,6 @@ class BagelDeviceController: NSObject {
     func clear() {
         
         self.packets.removeAll()
-        self.selectedPacket = nil
+        self.select(packet: nil)
     }
 }
