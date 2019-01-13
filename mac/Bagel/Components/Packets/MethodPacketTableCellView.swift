@@ -23,7 +23,19 @@ class MethodPacketTableCellView: NSTableCellView {
     
     func refresh() {
         
-        self.titleTextField.textColor = ThemeColor.labelColor
+        var methodColor = ThemeColor.httpMethodDefaultColor
+        
+        if self.packet.requestInfo?.requestMethod == "GET" {
+            methodColor = ThemeColor.httpMethodGetColor
+        }else if self.packet.requestInfo?.requestMethod == "POST" {
+            methodColor = ThemeColor.httpMethodPostColor
+        }else if self.packet.requestInfo?.requestMethod == "PUT" {
+            methodColor = ThemeColor.httpMethodPutColor
+        }else if self.packet.requestInfo?.requestMethod == "DELETE" {
+            methodColor = ThemeColor.httpMethodDeleteColor
+        }
+        
+        self.titleTextField.textColor = methodColor
         self.titleTextField.stringValue = self.packet.requestInfo?.requestMethod ?? ""
     }
     

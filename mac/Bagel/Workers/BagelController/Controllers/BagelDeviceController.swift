@@ -21,14 +21,15 @@ class BagelDeviceController: NSObject {
         }
     }
     
-    func addPacket(newPacket: BagelPacket) {
+    @discardableResult
+    func addPacket(newPacket: BagelPacket) -> Bool {
         
         for packet in self.packets {
             
             if packet.packetId == newPacket.packetId {
                 
                 packet.requestInfo = newPacket.requestInfo
-                return
+                return false
             }
         }
         
@@ -40,6 +41,8 @@ class BagelDeviceController: NSObject {
             
             self.selectedPacket = self.packets.first
         }
+        
+        return true
     }
     
     func clear() {

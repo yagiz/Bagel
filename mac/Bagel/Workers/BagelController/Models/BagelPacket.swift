@@ -16,6 +16,7 @@ class BagelPacket: Codable {
     
     var project: BagelProjectModel?
     var device: BagelDeviceModel?
+    
 }
 
 

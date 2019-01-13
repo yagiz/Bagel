@@ -26,7 +26,7 @@ class BagelPublisher: NSObject {
         
         self.sockets = []
         
-        self.mainSocket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
+        self.mainSocket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.global(qos: .background))
 
         do {
             
@@ -62,7 +62,10 @@ class BagelPublisher: NSObject {
         do {
             
             let bagelPacket = try jsonDecoder.decode(BagelPacket.self, from: data)
-            delegate?.didGetPacket(publisher: self, packet: bagelPacket)
+            
+            DispatchQueue.main.async {
+                self.delegate?.didGetPacket(publisher: self, packet: bagelPacket)
+            }
             
         } catch {
             
