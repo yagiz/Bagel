@@ -90,7 +90,7 @@
                   moduleName = "Bagel"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yagizgurgul/Documents/Kuka/Projects/Baggle/iOS/BagelPublic/mac/Bagel/Components/Details/DetailSections/DataViewController/DataViewController.swift"
-                  timestampString = "569071500.9825799"
+                  timestampString = "569073489.486751"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -105,59 +105,11 @@
                   moduleName = "Bagel"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yagizgurgul/Documents/Kuka/Projects/Baggle/iOS/BagelPublic/mac/Bagel/Components/Details/DetailSections/DataViewController/DataViewController.swift"
-                  timestampString = "569071500.9847521"
+                  timestampString = "569073489.489041"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bagel/Components/Details/DetailSections/DataViewController/DataJSONViewController/DataJSONViewController.swift"
-            timestampString = "569071438.091983"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "setup()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bagel.DataJSONViewController.setup() -&gt; ()"
-                  moduleName = "Bagel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yagizgurgul/Documents/Kuka/Projects/Baggle/iOS/BagelPublic/mac/Bagel/Components/Details/DetailSections/DataViewController/DataJSONViewController/DataJSONViewController.swift"
-                  timestampString = "569071500.990683"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "743">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Bagel.DataJSONViewController.setup() -&gt; ()"
-                  moduleName = "Bagel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yagizgurgul/Documents/Kuka/Projects/Baggle/iOS/BagelPublic/mac/Bagel/Components/Details/DetailSections/DataViewController/DataJSONViewController/DataJSONViewController.swift"
-                  timestampString = "569071500.993139"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
                   offsetFromSymbolStart = "33">
                </Location>
             </Locations>

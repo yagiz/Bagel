@@ -11,7 +11,7 @@ import WebKit
 import macOSThemeKit
 
 class DataJSONViewController: BaseViewController {
-
+    
     var viewModel: DataJSONViewModel?
     
     var isRaw: Bool = false
@@ -56,9 +56,9 @@ class DataJSONViewController: BaseViewController {
         self.webView.mainFrame.load(htmlRequest)
         self.refreshJSONEditorTheme()
     }
-
+    
     func refresh() {
-
+        
         if self.isRaw {
             
             self.rawTextScrollView.isHidden = false
@@ -96,7 +96,7 @@ class DataJSONViewController: BaseViewController {
         }else if ThemeManager.shared.effectiveTheme === ThemeManager.darkTheme {
             
             self.webView.windowScriptObject.callWebScriptMethod("changeThemeToDark", withArguments: [])
-
+            
         }
     }
     
@@ -121,8 +121,10 @@ class DataJSONViewController: BaseViewController {
 extension DataJSONViewController: WebFrameLoadDelegate {
     
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
-        self.isWebViewLoaded = true
-        self.onWebViewDidFinishLoading?()
+        if self.isWebViewLoaded == false {
+            self.isWebViewLoaded = true
+            self.onWebViewDidFinishLoading?()
+        }
         self.refreshJSONEditorTheme()
     }
 }
