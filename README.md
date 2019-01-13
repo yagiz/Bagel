@@ -9,8 +9,9 @@ Bagel is a little native iOS network debugger. It's not a proxy debugger so you 
 #### Install Mac App
 - Clone the repo.
 - Build and archive the project.
-### Install iOS Client
-#### CocoaPods
+#### Install iOS Client
+##### CocoaPods
+Currently best way to install Bagel is by using Cocoapods.
 ```sh
 pod 'Bagel'
 ```
