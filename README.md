@@ -41,8 +41,8 @@ Bagel framework communicates with the desktop client by using Bounjour protocol.
 let bagelConfig = BagelConfiguration()
 
 bagelConfig.netservicePort = 43434
-bagelConfig.netserviceDomain = "_Bagel._tcp"
-bagelConfig.netserviceType = ""
+bagelConfig.netserviceDomain = ""
+bagelConfig.netserviceType = "_Bagel._tcp"
 bagelConfig.netserviceName = ""
 
 Bagel.start(configuration: bagelConfig)
