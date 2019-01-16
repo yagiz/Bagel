@@ -35,7 +35,7 @@ bagelConfig.device.deviceDescription = "Custom Device Description"
 
 Bagel.start(configuration: bagelConfig)
 ```
-Bagel framework communicates with the desktop client by using Bounjour protocol. You can also configure these Netservice parameters. Default values are:
+Bagel framework communicates with the desktop client by using Bonjour protocol. You can also configure these Netservice parameters. Default values are:
 
 ```swift
 let bagelConfig = BagelConfiguration()
