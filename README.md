@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 # Bagel
 ![Bagel](https://github.com/yagiz/Bagel/blob/master/assets/header.png?raw=true)
 
@@ -33,7 +35,7 @@ bagelConfig.project.projectName = "Custom Project Name"
 bagelConfig.device.deviceName = "Custom Device Name"
 bagelConfig.device.deviceDescription = "Custom Device Description"
 
-Bagel.start(configuration: bagelConfig)
+Bagel.start(bagelConfig)
 ```
 Bagel framework communicates with the desktop client by using Bonjour protocol. You can also configure these Netservice parameters. Default values are:
 
@@ -45,7 +47,7 @@ bagelConfig.netserviceDomain = ""
 bagelConfig.netserviceType = "_Bagel._tcp"
 bagelConfig.netserviceName = ""
 
-Bagel.start(configuration: bagelConfig)
+Bagel.start(bagelConfig)
 ```
 If you change Netservice parameters in your app, you should also change them on desktop client.
 
