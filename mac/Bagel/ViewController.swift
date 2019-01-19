@@ -20,6 +20,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var devicesBackgroundBox: NSBox!
     @IBOutlet weak var packetsBackgroundBox: NSBox!
     
+    @IBOutlet weak var rightSideBox: BaseSplitView!
+    var clickCount:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -88,7 +91,26 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    override func mouseUp(with event: NSEvent) {
+       
+        // We just want to click on the top. That's why we're calculating that part.
+        let topBarHeight = view.frame.height - rightSideBox.frame.height
+   
+        if event.locationInWindow.y > view.frame.height - topBarHeight {
+            // For double click
+            if self.clickCount == 1 {
+                view.window?.zoom(self)
+                
+                // reset again
+                self.clickCount = 0
+            }
+            
+            self.clickCount += 1
+        }
+    }
 
-
+    
+    
 }
 
