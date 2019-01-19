@@ -110,8 +110,13 @@
 - (void)sendPacket:(BagelRequestPacket*)packet
 {
     NSError *error;
-    NSData* packetData = [NSJSONSerialization dataWithJSONObject:[packet toJSON] options:0 error:nil];
-    
+    NSData* packetData = [NSJSONSerialization dataWithJSONObject:[packet toJSON] options:0 error:&error];
+
+    if (error) {
+        NSLog(@"Bagel -> Error: %@", error.localizedDescription);
+        return;
+    }
+
     if (packetData) {
         
         NSMutableData* buffer = [[NSMutableData alloc] init];
