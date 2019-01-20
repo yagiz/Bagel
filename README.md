@@ -21,11 +21,11 @@ Bagel is a little native iOS network debugger. It's not a proxy debugger so you 
 #### Install iOS Client
 #### CocoaPods
 ```sh
-pod 'Bagel', '~>  1.3.1'
+pod 'Bagel', '~>  1.3.2'
 ```
 ##### Carthage
 ```sh
-github "yagiz/Bagel" "1.3.1"
+github "yagiz/Bagel" "1.3.2"
 ```
 
 ### Usage
