@@ -5,7 +5,9 @@
         <img src="https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat" /></a>
     <a href="https://github.com/Carthage/Carthage" alt="Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-    <a href="https://img.shields.io/github/release/yagiz/Bagel.svg" alt="Version">
+    <a href="https://github.com/Carthage/Carthage" alt="Carthage">
+        <img src="https://img.shields.io/github/release/yagiz/Bagel.svg" /></a>
+    <a href="https://github.com/yagiz/Bagel/releases" alt="Version">
         <img src="" /></a>
 </p>
 
