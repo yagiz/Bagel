@@ -5,8 +5,8 @@
         <img src="https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat" /></a>
     <a href="https://github.com/Carthage/Carthage" alt="Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-    <a href="https://github.com/yagiz/Bagel/releases/tag/1.3.1" alt="Version">
-        <img src="https://img.shields.io/badge/version-1.3.1-blue.svg?style=flat" /></a>
+    <a href="https://img.shields.io/github/release/yagiz/Bagel.svg" alt="Version">
+        <img src="" /></a>
 </p>
 
 Bagel is a little native iOS network debugger. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices or simulators.
@@ -20,7 +20,7 @@ Bagel is a little native iOS network debugger. It's not a proxy debugger so you 
 - Build and archive the project.
 #### Install iOS Client
 #### CocoaPods
-```sh
+```shhttps://img.shields.io/badge/version-1.3.1-blue.svg?style=flat
 pod 'Bagel', '~>  1.3.2'
 ```
 ##### Carthage
