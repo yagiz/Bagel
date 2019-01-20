@@ -5,10 +5,8 @@
         <img src="https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat" /></a>
     <a href="https://github.com/Carthage/Carthage" alt="Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-    <a href="https://github.com/Carthage/Carthage" alt="Carthage">
-        <img src="https://img.shields.io/github/release/yagiz/Bagel.svg" /></a>
     <a href="https://github.com/yagiz/Bagel/releases" alt="Version">
-        <img src="" /></a>
+        <img src="https://img.shields.io/github/release/yagiz/Bagel.svg" /></a>
 </p>
 
 Bagel is a little native iOS network debugger. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices or simulators.
