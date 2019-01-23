@@ -207,8 +207,21 @@
                                                             <action selector="copyButtonAction:" target="dbv-oR-1ws" id="ZeH-wK-TFV"/>
                                                         </connections>
                                                     </button>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ze8-fq-lWt">
+                                                        <rect key="frame" x="379" y="7" width="36" height="16"/>
+                                                        <buttonCell key="cell" type="recessed" title="cURL" bezelStyle="recessed" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="MSt-7f-JHj">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="systemBold" size="12"/>
+                                                        </buttonCell>
+                                                        <color key="contentTintColor" red="0.70980392160000005" green="0.49803921569999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="curlButtonAction:" target="dbv-oR-1ws" id="H2c-aD-nWX"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="ze8-fq-lWt" firstAttribute="centerY" secondItem="9zZ-1e-l97" secondAttribute="centerY" id="9Mr-Ib-eBx"/>
+                                                    <constraint firstItem="U6O-Tm-OuZ" firstAttribute="leading" secondItem="ze8-fq-lWt" secondAttribute="trailing" constant="10" id="pzJ-6j-Rbh"/>
                                                     <constraint firstAttribute="trailing" secondItem="U6O-Tm-OuZ" secondAttribute="trailing" constant="10" id="tkO-3l-Gzv"/>
                                                 </constraints>
                                             </view>
@@ -241,6 +254,7 @@
                     </view>
                     <connections>
                         <outlet property="copyToClipboardButton" destination="U6O-Tm-OuZ" id="Bis-TZ-SjP"/>
+                        <outlet property="curlButton" destination="ze8-fq-lWt" id="FCG-bS-aGL"/>
                         <outlet property="overviewTextView" destination="yGA-r3-ock" id="sTN-fX-keW"/>
                     </connections>
                 </viewController>

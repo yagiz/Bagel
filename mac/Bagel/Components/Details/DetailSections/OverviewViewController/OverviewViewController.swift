@@ -13,9 +13,11 @@ class OverviewViewController: BaseViewController {
 
     @IBOutlet var overviewTextView: NSTextView!
     
+    @IBOutlet weak var curlButton: NSButton!
     @IBOutlet weak var copyToClipboardButton: NSButton!
     
     var viewModel: OverviewViewModel?
+    private var isCurl: Bool = false
     
     override func setup() {
         
@@ -32,11 +34,27 @@ class OverviewViewController: BaseViewController {
     
     func refresh() {
         
-        self.overviewTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.overviewRepresentation?.rawString ?? ""))
+        if isCurl {
+
+            self.overviewTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.curlRepresentation?.rawString ?? ""))
+            curlButton.state = .on
+        } else {
+
+            self.overviewTextView.textStorage?.setAttributedString(TextStyles.codeAttributedString(string: self.viewModel?.overviewRepresentation?.rawString ?? ""))
+            curlButton.state = .off
+        }
     }
     
+    @IBAction func curlButtonAction(_ sender: Any) {
+        self.isCurl.toggle()
+        self.refresh()
+    }
+
     @IBAction func copyButtonAction(_ sender: Any) {
-        
-        self.viewModel?.copyToClipboard()
+        if isCurl {
+            self.viewModel?.copyCURLToClipboard()
+        } else {
+            self.viewModel?.copyTextToClipboard()
+        }
     }
 }

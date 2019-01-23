@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1191142A21F8B9CB00BFCA48 /* CURLRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */; };
 		9AAA3A9C54B46F8D2C8DD674 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
 		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
@@ -114,6 +115,7 @@
 
 /* Begin PBXFileReference section */
 		00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLRepresentation.swift; sourceTree = "<group>"; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1191142821F8B9AB00BFCA48 /* CURLRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */,
+			);
+			path = CURLRepresentation;
+			sourceTree = "<group>";
+		};
 		659EF5768D424A8F8EEB1541 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +499,7 @@
 		BCEB9AA4217C951C008BBF3C /* ContentRepresentation */ = {
 			isa = PBXGroup;
 			children = (
+				1191142821F8B9AB00BFCA48 /* CURLRepresentation */,
 				BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */,
 				BCEB9AA9217CB0BB008BBF3C /* OverviewRepresentation */,
 				BC32643421738AB5006452FE /* ParameterRepresentation */,
@@ -857,6 +868,7 @@
 				BCFC853021383267001EC6D7 /* ProjectsViewController.swift in Sources */,
 				BCA60B442162395000B9DCAD /* DevicesViewModel.swift in Sources */,
 				BC73DFAE215BFB18002E533B /* BagelPublisher.swift in Sources */,
+				1191142A21F8B9CB00BFCA48 /* CURLRepresentation.swift in Sources */,
 				BCA60B41216201B900B9DCAD /* BagelConfiguration.swift in Sources */,
 				BC61DA752162B976000F6D2F /* DetailViewModel.swift in Sources */,
 				BC9C77B22163897600E8ADE8 /* DataTextViewModel.swift in Sources */,
