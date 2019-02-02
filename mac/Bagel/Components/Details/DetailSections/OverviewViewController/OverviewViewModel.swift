@@ -12,6 +12,7 @@ class OverviewViewModel: BaseViewModel {
 
     var packet: BagelPacket?
     var overviewRepresentation: OverviewRepresentation?
+    var curlRepresentation: CURLRepresentation?
     
     func register() {
         
@@ -26,12 +27,17 @@ class OverviewViewModel: BaseViewModel {
         if let requestInfo = self.packet?.requestInfo {
             
             self.overviewRepresentation = OverviewRepresentation(requestInfo: requestInfo)
+            self.curlRepresentation = CURLRepresentation(requestInfo: requestInfo)
         }
         
         self.onChange?()
     }
     
-    func copyToClipboard() {
+    func copyTextToClipboard() {
         self.overviewRepresentation?.copyToClipboard()
+    }
+
+    func copyCURLToClipboard() {
+        self.curlRepresentation?.copyToClipboard()
     }
 }
