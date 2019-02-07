@@ -18,7 +18,7 @@ class OverviewRepresentation: ContentRepresentation  {
             
             var overviewString = ""
             
-            overviewString = overviewString + (requestInfo.requestMethod ?? "")
+            overviewString = overviewString + (requestInfo.requestMethod?.rawValue ?? "")
             overviewString = overviewString + " "
             overviewString = overviewString + (requestInfo.url ?? "")
             

@@ -27,13 +27,13 @@ extension BagelRequestInfo {
         guard let url = url else { return "" }
         var baseCommand = "curl \(url)"
 
-        if requestMethod == "HEAD" {
+        if requestMethod == .head {
             baseCommand += " --head"
         }
 
         var command = [baseCommand]
 
-        if let method = self.requestMethod, method != "GET" && method != "HEAD" {
+        if let method = self.requestMethod, method != .get && method != .head {
             command.append("-X \(method)")
         }
 

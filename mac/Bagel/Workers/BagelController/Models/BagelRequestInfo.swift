@@ -8,12 +8,20 @@
 
 import Cocoa
 
+enum RequestMethod: String, Codable {
+  case get = "GET"
+  case post = "POST"
+  case put = "PUT"
+  case delete = "DELETE"
+  case head = "HEAD"
+}
+
 class BagelRequestInfo: Codable {
 
     var url: String?
     var requestHeaders: [String: String]?
     var requestBody: String?
-    var requestMethod: String?
+    var requestMethod: RequestMethod?
     
     var responseHeaders: [String: String]?
     var responseData: String?

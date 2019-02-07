@@ -11,20 +11,18 @@ import macOSThemeKit
 
 class DatePacketTableCellView: NSTableCellView {
     
-    @IBOutlet weak var titleTextField: NSTextField!
+    @IBOutlet private weak var titleTextField: NSTextField!
     
-    var packet: BagelPacket!
-    {
-        didSet
-        {
-            self.refresh()
+    var packet: BagelPacket? {
+        didSet{
+          guard let packet = packet else { return }
+            refresh(with: packet)
         }
     }
     
-    func refresh() {
-        
-        self.titleTextField.textColor = ThemeColor.secondaryLabelColor
-        self.titleTextField.stringValue = self.packet.requestInfo?.startDate?.readble ?? ""
+    func refresh(with packet: BagelPacket) {
+        titleTextField.textColor = ThemeColor.secondaryLabelColor
+        titleTextField.stringValue = packet.requestInfo?.startDate?.readable ?? ""
     }
     
 }
