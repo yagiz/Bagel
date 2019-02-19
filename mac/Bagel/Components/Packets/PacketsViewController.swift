@@ -35,7 +35,6 @@ class PacketsViewController: BaseViewController {
         self.filterTextField.delegate = self
         
         self.viewModel?.onChange = { [weak self] in
-            
             self?.refresh()
         }
         
@@ -44,55 +43,43 @@ class PacketsViewController: BaseViewController {
     
     
     func refresh() {
-        
-        let isScrolledToBottom = self.isScrolledToBottom()
-        
         self.tableView.reloadData()
         
         if let selectedItemIndex = self.viewModel?.selectedItemIndex {
-            
             self.tableView.selectRowIndexes(IndexSet(integer: selectedItemIndex), byExtendingSelection: false)
         }
         
-        if isScrolledToBottom {
-            
+        if isScrolledToBottom() {
             self.scrollToBottom()
         }
     }
-    
     
     func setupTableViewHeaders() {
         
         for tableColumn in self.tableView.tableColumns {
             
-            if tableColumn.identifier.rawValue == "statusCode" {
-                
+            switch tableColumn.identifier.rawValue {
+            case "statusCode":
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Status")
                 tableColumn.width = PacketsViewController.statusColumnWidth
-                
-            }else if tableColumn.identifier.rawValue == "method" {
-                
+            case "method":
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Method")
                 tableColumn.width = PacketsViewController.methodColumnWidth
-                
-            }else if tableColumn.identifier.rawValue == "url" {
-                
+            case "url":
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
-                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth - PacketsViewController.methodColumnWidth 
-                
-            }else if tableColumn.identifier.rawValue == "date" {
-                
+                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth - PacketsViewController.methodColumnWidth
+            case "date":
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Date")
                 tableColumn.width = PacketsViewController.dateColumnWidth
+            default:
+                break
             }
         }
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {
-        
         self.viewModel?.clearPackets()
     }
-    
     
 }
 
@@ -166,8 +153,7 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
 extension PacketsViewController: NSTextFieldDelegate {
     
     func controlTextDidChange(_ obj: Notification) {
-        
-        self.viewModel?.filterTerm = self.filterTextField.stringValue
+        viewModel?.filterTerm = filterTextField.stringValue
     }
     
 }
@@ -176,17 +162,11 @@ extension PacketsViewController: NSTextFieldDelegate {
 extension PacketsViewController {
     
     func isScrolledToBottom() -> Bool {
-        
-        if self.tableView.enclosingScrollView?.verticalScroller?.floatValue ?? 0 > 0.9 {
-            
-            return true
-        }
-        
-        return false
+        return tableView.enclosingScrollView?.verticalScroller?.floatValue ?? 0 > 0.9
     }
     
     func scrollToBottom() {
-        
-        self.tableView.scrollToEndOfDocument(nil)
+        tableView.scrollToEndOfDocument(nil)
     }
+    
 }

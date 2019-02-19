@@ -9,7 +9,6 @@
 import Cocoa
 
 class BagelPacket: Codable {
-
     var packetId: String?
     
     var requestInfo: BagelRequestInfo?

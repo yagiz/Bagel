@@ -9,7 +9,7 @@
 import Cocoa
 
 class PacketsViewModel: BaseListViewModel<BagelPacket>  {
-
+    
     var filterTerm = "" {
         didSet {
             self.refreshItems()
@@ -17,7 +17,6 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
     }
     
     func register() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: BagelNotifications.didGetPacket, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: BagelNotifications.didUpdatePacket, object: nil)
@@ -27,46 +26,32 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: BagelNotifications.didSelectDevice, object: nil)
     }
     
-    
     var selectedItem: BagelPacket? {
-        
         return BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
     }
     
-    
     var selectedItemIndex: Int? {
+        guard let selectedItem = self.selectedItem else { return nil }
         
-        if let selectedItem = self.selectedItem {
-            
-            return self.items.firstIndex { $0 === selectedItem }
-        }
-        
-        return nil
+        return self.items.firstIndex { $0 === selectedItem }
     }
     
     @objc func refreshItems() {
-        
-        self.filter(items: BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? [])
-        self.onChange?()
+        items = filter(items: BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? [])
+        onChange?()
     }
     
-    func filter(items: [BagelPacket]?) {
-        
-        if let items = items, filterTerm.count > 0 {
-            
-            self.items = items.filter({ (packet) -> Bool in
-                
-                return packet.requestInfo?.url?.contains(self.filterTerm) ?? true
-            })
-            
-        }else{
-            
-            self.items = BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
+    func filter(items: [BagelPacket]?) -> [BagelPacket] {
+        guard let items = items, filterTerm.count > 0 else {
+            return BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
         }
+        
+        return items.filter({ (packet) -> Bool in
+            return packet.requestInfo?.url?.contains(self.filterTerm) ?? true
+        })
     }
     
     func clearPackets() {
-        
         BagelController.shared.selectedProjectController?.selectedDeviceController?.clear()
         self.refreshItems()
     }
