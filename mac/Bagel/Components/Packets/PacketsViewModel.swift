@@ -10,11 +10,28 @@ import Cocoa
 
 class PacketsViewModel: BaseListViewModel<BagelPacket>  {
     
-    var filterTerm = "" {
+    var addressFilterTerm = "" {
         didSet {
             self.refreshItems()
         }
     }
+    
+    var methodFilterTerm = "" {
+        didSet {
+            self.refreshItems()
+        }
+    }
+    
+    var statusFilterTerm = "" {
+        didSet {
+            self.refreshItems()
+        }
+    }
+    
+    private var allPackets: [BagelPacket] {
+        return BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
+    }
+    
     
     func register() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshItems), name: BagelNotifications.didGetPacket, object: nil)
@@ -37,18 +54,47 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
     }
     
     @objc func refreshItems() {
-        items = filter(items: BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? [])
+        items = filter(items: allPackets)
         onChange?()
     }
     
-    func filter(items: [BagelPacket]?) -> [BagelPacket] {
-        guard let items = items, filterTerm.count > 0 else {
-            return BagelController.shared.selectedProjectController?.selectedDeviceController?.packets ?? []
+    func filter(items: [BagelPacket]) -> [BagelPacket] {
+        var filteredItems = performAddressFiltration(items)
+        filteredItems = performMethodFiltration(filteredItems)
+        return performStatusFiltration(filteredItems)
+    }
+    
+    func performAddressFiltration(_ items: [BagelPacket])  -> [BagelPacket] {
+        guard addressFilterTerm.count > 0 else {
+            return items
         }
         
-        return items.filter({ (packet) -> Bool in
-            return packet.requestInfo?.url?.contains(self.filterTerm) ?? true
-        })
+        return items.filter {
+            $0.requestInfo?.url?.contains(self.addressFilterTerm) ?? true }
+    }
+    
+    func performMethodFiltration(_ items: [BagelPacket])  -> [BagelPacket] {
+        guard methodFilterTerm.count > 0 else {
+            return items
+        }
+        
+        return items.filter
+            { $0.requestInfo?.requestMethod?.lowercased()
+                .contains(self.methodFilterTerm.lowercased()) ?? true }
+    }
+    
+    func performStatusFiltration(_ items: [BagelPacket])  -> [BagelPacket] {
+        guard statusFilterTerm.count > 0 else {
+            return items
+        }
+        
+        guard !statusFilterTerm.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return items.filter { $0.requestInfo?.statusCode?.trimmingCharacters(in: .whitespaces).isEmpty ?? true}
+        }
+        
+        return items.filter
+            { $0.requestInfo?.statusCode?.contains(self.statusFilterTerm) ?? false
+        }
     }
     
     func clearPackets() {
