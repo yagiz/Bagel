@@ -86,14 +86,14 @@
     if (self.urlSessionTask) {
         
         requestInfo.url = self.urlSessionTask.originalRequest.URL;
-        requestInfo.requestHeaders = self.self.urlSessionTask.originalRequest.allHTTPHeaderFields;
+        requestInfo.requestHeaders = self.self.urlSessionTask.currentRequest.allHTTPHeaderFields;
         requestInfo.requestBody = self.self.urlSessionTask.originalRequest.HTTPBody;
         requestInfo.requestMethod = self.self.urlSessionTask.originalRequest.HTTPMethod;
         
     }else if (self.urlConnection) {
         
         requestInfo.url = self.urlConnection.originalRequest.URL;
-        requestInfo.requestHeaders = self.self.urlConnection.originalRequest.allHTTPHeaderFields;
+        requestInfo.requestHeaders = self.self.urlConnection.currentRequest.allHTTPHeaderFields;
         requestInfo.requestBody = self.self.urlConnection.originalRequest.HTTPBody;
         requestInfo.requestMethod = self.self.urlConnection.originalRequest.HTTPMethod;
         
