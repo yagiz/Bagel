@@ -62,7 +62,7 @@
         }
 
         if (value === null) {
-            return '<li><span class="key">"' + encode(key) + '": </span><span class="null">"' + encode(value) + '"</span></li>';
+            return '<li><span class="key">"' + encode(key) + '": </span><span class="null">null</span></li>';
         }
 
         switch(type){
