@@ -79,7 +79,7 @@ class PacketsViewModel: BaseListViewModel<BagelPacket>  {
         }
         
         return items.filter
-            { $0.requestInfo?.requestMethod?.lowercased()
+            { $0.requestInfo?.requestMethod?.rawValue.lowercased()
                 .contains(self.methodFilterTerm.lowercased()) ?? true }
     }
     
