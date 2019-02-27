@@ -214,6 +214,15 @@ static NSString* queueId = @"com.yagiz.bagel.injectController";
     packet.project = self.configuration.project;
     packet.device = self.configuration.device;
 
+    id<BagelCarrierDelegate> carrierDelegate = self.configuration.carrierDelegate;
+    if ([carrierDelegate respondsToSelector:@selector(bagelCarrierWillSendRequest:)]) {
+        packet = [carrierDelegate bagelCarrierWillSendRequest:packet];
+        
+        if (packet == nil) {
+            return;
+        }
+    }
+    
     [self.browser sendPacket:packet];
 }
 

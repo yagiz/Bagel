@@ -46,7 +46,7 @@
                                                             <fragment content="Test">
                                                                 <attributes>
                                                                     <color key="NSColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                    <font key="NSFont" size="13" name="DroidSansMono"/>
+                                                                    <font key="NSFont" metaFont="system"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -304,7 +304,7 @@
                                                             <fragment content="sad kasd jasj dksad jkasjd jkasdjk asjkd jksadjk asjk djksajk jkdajk jkdsa jkdjk jkas djkkajsa dk">
                                                                 <attributes>
                                                                     <color key="NSColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                    <font key="NSFont" size="13" name="DroidSansMono"/>
+                                                                    <font key="NSFont" metaFont="system"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -357,7 +357,7 @@
                                                                                 <rect key="frame" x="0.0" y="12" width="135" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="3SO-nF-Jew">
-                                                                                    <font key="font" size="12" name="DroidSansMono"/>
+                                                                                    <font key="font" metaFont="cellTitle"/>
                                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
@@ -384,14 +384,14 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="KeyValueTableCellView" id="Ze5-kZ-luS" customClass="KeyValueTableCellView" customModule="Bagel" customModuleProvider="target">
-                                                                        <rect key="frame" x="138.5" y="1" width="299" height="43"/>
+                                                                        <rect key="frame" x="139" y="1" width="299" height="43"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll4-xn-DEL">
                                                                                 <rect key="frame" x="0.0" y="12" width="299" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="GJr-nQ-UMJ">
-                                                                                    <font key="font" size="12" name="DroidSansMono"/>
+                                                                                    <font key="font" metaFont="cellTitle"/>
                                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
@@ -636,24 +636,24 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm2-yo-sQB">
-                                <rect key="frame" x="-2" y="319" width="29" height="19"/>
+                                <rect key="frame" x="-2" y="320" width="30" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GET" id="S1x-ff-DRQ">
-                                    <font key="font" size="13" name="EffraMedium-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <box boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-eX-X4k" customClass="ContentBar" customModule="Bagel" customModuleProvider="target">
-                                <rect key="frame" x="35" y="313" width="415" height="30"/>
+                                <rect key="frame" x="36" y="313" width="414" height="30"/>
                                 <view key="contentView" id="N8G-6p-Gm5">
-                                    <rect key="frame" x="0.0" y="0.0" width="415" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Baz-mg-73Q">
-                                            <rect key="frame" x="3" y="6" width="409" height="18"/>
+                                            <rect key="frame" x="3" y="6" width="408" height="18"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" placeholderString="" id="0y6-ve-dir">
-                                                <font key="font" size="12" name="DroidSansMono"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
@@ -676,17 +676,17 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-Eh-dut">
-                                            <rect key="frame" x="8" y="24" width="43" height="14"/>
+                                            <rect key="frame" x="8" y="27" width="47" height="11"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="REQUEST" id="RAI-o2-Cnk">
-                                                <font key="font" size="9" name="Effra-Regular"/>
+                                                <font key="font" metaFont="miniSystem"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-gd-hJy">
-                                            <rect key="frame" x="393" y="24" width="49" height="14"/>
+                                            <rect key="frame" x="389" y="27" width="53" height="11"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RESPONSE" id="To7-5v-rDc">
-                                                <font key="font" size="9" name="Effra-Regular"/>
+                                                <font key="font" metaFont="miniSystem"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </textFieldCell>

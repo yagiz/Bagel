@@ -10,7 +10,18 @@ import Cocoa
 import macOSThemeKit
 
 class PacketsViewController: BaseViewController {
-
+    
+    struct TableIdentifiers {
+        static let statusCode = "statusCode"
+        static let method = "method"
+        static let url = "url"
+        static let date = "date"
+    }
+    
+    enum FilterTags: Int {
+        case address, status, method
+    }
+    
     static var statusColumnWidth = CGFloat(50.0)
     static var methodColumnWidth = CGFloat(55.0)
     static var dateColumnWidth = CGFloat(150.0)
@@ -20,7 +31,10 @@ class PacketsViewController: BaseViewController {
     
     @IBOutlet weak var clearButton: NSButton!
     @IBOutlet weak var tableView: BaseTableView!
-    @IBOutlet weak var filterTextField: NSTextField!
+    
+    @IBOutlet weak var addressFilterTextField: NSTextField!
+    @IBOutlet weak var statusFilterTextField: NSTextField!
+    @IBOutlet weak var methodFilterTextField: NSTextField!
     
     override func setup() {
         
@@ -31,133 +45,120 @@ class PacketsViewController: BaseViewController {
         self.tableView.backgroundColor = ThemeColor.controlBackgroundColor
         self.tableView.gridColor = ThemeColor.gridColor
         
-        self.filterTextField.backgroundColor = ThemeColor.controlBackgroundColor
-        self.filterTextField.delegate = self
+        setupFilterTextFields()
         
         self.viewModel?.onChange = { [weak self] in
-            
             self?.refresh()
         }
         
         self.setupTableViewHeaders()
     }
     
+    private func setupFilterTextFields() {
+        self.addressFilterTextField.backgroundColor = ThemeColor.controlBackgroundColor
+        self.addressFilterTextField.tag = FilterTags.address.rawValue
+        self.addressFilterTextField.delegate = self
+        
+        self.statusFilterTextField.backgroundColor = ThemeColor.controlBackgroundColor
+        self.statusFilterTextField.tag = FilterTags.status.rawValue
+        self.statusFilterTextField.delegate = self
+        
+        self.methodFilterTextField.backgroundColor = ThemeColor.controlBackgroundColor
+        self.methodFilterTextField.tag = FilterTags.method.rawValue
+        self.methodFilterTextField.delegate = self
+    }
     
     func refresh() {
-        
-        let isScrolledToBottom = self.isScrolledToBottom()
-        
         self.tableView.reloadData()
         
         if let selectedItemIndex = self.viewModel?.selectedItemIndex {
-            
             self.tableView.selectRowIndexes(IndexSet(integer: selectedItemIndex), byExtendingSelection: false)
         }
         
-        if isScrolledToBottom {
-            
+        if isScrolledToBottom() {
             self.scrollToBottom()
         }
     }
     
-    
     func setupTableViewHeaders() {
         
         for tableColumn in self.tableView.tableColumns {
-            
-            if tableColumn.identifier.rawValue == "statusCode" {
-                
+            switch tableColumn.identifier.rawValue {
+            case TableIdentifiers.statusCode:
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Status")
                 tableColumn.width = PacketsViewController.statusColumnWidth
-                
-            }else if tableColumn.identifier.rawValue == "method" {
-                
+            case TableIdentifiers.method:
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Method")
                 tableColumn.width = PacketsViewController.methodColumnWidth
-                
-            }else if tableColumn.identifier.rawValue == "url" {
-                
+            case TableIdentifiers.url:
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "URL")
-                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth - PacketsViewController.methodColumnWidth 
-                
-            }else if tableColumn.identifier.rawValue == "date" {
-                
+                tableColumn.width = self.view.frame.size.width - PacketsViewController.statusColumnWidth - PacketsViewController.dateColumnWidth - PacketsViewController.methodColumnWidth
+            case TableIdentifiers.date:
                 tableColumn.headerCell = FlatTableHeaderCell(textCell: "Date")
                 tableColumn.width = PacketsViewController.dateColumnWidth
+            default:
+                break
             }
         }
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {
-        
         self.viewModel?.clearPackets()
     }
     
-    
 }
 
-extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
-{
+extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        
         return self.viewModel?.itemCount() ?? 0
     }
     
     
     func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
-        
         return FlatTableRowView()
     }
     
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let identifier = tableColumn?.identifier.rawValue else { return nil }
         
-        if (tableColumn?.identifier)!.rawValue == "statusCode" {
-            
+        switch identifier  {
+        case TableIdentifiers.statusCode:
             let cell: StatusPacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell
-            
-        }else if (tableColumn?.identifier)!.rawValue == "method" {
-            
+        case TableIdentifiers.method:
             let cell: MethodPacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell
-            
-        }else if (tableColumn?.identifier)!.rawValue == "url" {
-            
+        case TableIdentifiers.url:
             let cell: URLPacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell
-            
-        }else if (tableColumn?.identifier)!.rawValue == "date" {
-            
+        case TableIdentifiers.date:
             let cell: DatePacketTableCellView = self.tableView.makeView(withOwner: nil)!
             cell.packet = self.viewModel?.item(at: row)
             cell.backgroundStyle = .normal
             return cell
+        default:
+            return nil
         }
         
-        return nil
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        
         let selectedRow = self.tableView.selectedRow
         
-        if selectedRow >= 0 , let item = self.viewModel?.item(at: selectedRow) {
-            
-            if item !== self.viewModel?.selectedItem {
-                
-                self.onPacketSelect?(item)
-            }
-        }else {
-            
+        guard selectedRow >= 0, let item = self.viewModel?.item(at: selectedRow) else {
             self.onPacketSelect?(nil)
+            return
         }
+        
+        guard item !== self.viewModel?.selectedItem else { return }
+        self.onPacketSelect?(item)
     }
     
 }
@@ -166,8 +167,18 @@ extension PacketsViewController: NSTableViewDelegate, NSTableViewDataSource
 extension PacketsViewController: NSTextFieldDelegate {
     
     func controlTextDidChange(_ obj: Notification) {
+        guard let tag = (obj.object as? NSTextField)?.tag else { return }
+        guard let filterTag = FilterTags(rawValue: tag) else { return }
         
-        self.viewModel?.filterTerm = self.filterTextField.stringValue
+        switch filterTag {
+        case .address:
+            viewModel?.addressFilterTerm = addressFilterTextField.stringValue
+        case .method:
+            viewModel?.methodFilterTerm = methodFilterTextField.stringValue
+        case .status:
+            viewModel?.statusFilterTerm = statusFilterTextField.stringValue
+        }
+
     }
     
 }
@@ -176,17 +187,11 @@ extension PacketsViewController: NSTextFieldDelegate {
 extension PacketsViewController {
     
     func isScrolledToBottom() -> Bool {
-        
-        if self.tableView.enclosingScrollView?.verticalScroller?.floatValue ?? 0 > 0.9 {
-            
-            return true
-        }
-        
-        return false
+        return tableView.enclosingScrollView?.verticalScroller?.floatValue ?? 0 > 0.9
     }
     
     func scrollToBottom() {
-        
-        self.tableView.scrollToEndOfDocument(nil)
+        tableView.scrollToEndOfDocument(nil)
     }
+    
 }
