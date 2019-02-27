@@ -11,32 +11,36 @@ import macOSThemeKit
 
 class MethodPacketTableCellView: NSTableCellView {
     
-    @IBOutlet weak var titleTextField: NSTextField!
+    @IBOutlet private weak var titleTextField: NSTextField!
     
-    var packet: BagelPacket!
-    {
-        didSet
-        {
-            self.refresh()
+    var packet: BagelPacket?{
+        didSet{
+            guard let packet = packet else { return }
+            refresh(with: packet)
         }
     }
-    
-    func refresh() {
+
+    func refresh(with packet: BagelPacket) {
         
         var methodColor = ThemeColor.httpMethodDefaultColor
-        
-        if self.packet.requestInfo?.requestMethod == "GET" {
-            methodColor = ThemeColor.httpMethodGetColor
-        }else if self.packet.requestInfo?.requestMethod == "POST" {
-            methodColor = ThemeColor.httpMethodPostColor
-        }else if self.packet.requestInfo?.requestMethod == "PUT" {
-            methodColor = ThemeColor.httpMethodPutColor
-        }else if self.packet.requestInfo?.requestMethod == "DELETE" {
-            methodColor = ThemeColor.httpMethodDeleteColor
+
+        if let requestMethod = packet.requestInfo?.requestMethod {
+            switch requestMethod {
+            case .get:
+                methodColor = ThemeColor.httpMethodGetColor
+            case .put:
+                methodColor = ThemeColor.httpMethodPutColor
+            case .post:
+                methodColor = ThemeColor.httpMethodPostColor
+            case .delete:
+                methodColor = ThemeColor.httpMethodDeleteColor
+            case .head:
+                break
+            }
         }
         
         self.titleTextField.textColor = methodColor
-        self.titleTextField.stringValue = self.packet.requestInfo?.requestMethod ?? ""
+        self.titleTextField.stringValue = packet.requestInfo?.requestMethod?.rawValue ?? ""
     }
     
 }

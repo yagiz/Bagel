@@ -117,7 +117,7 @@ class DetailViewController: BaseViewController {
         
         self.tabView.selectTabViewItem(at: self.currentDetailType.rawValue)
         self.urlTextField.stringValue = self.viewModel?.packet?.requestInfo?.url ?? ""
-        self.httpMethodTextField.stringValue = self.viewModel?.packet?.requestInfo?.requestMethod ?? ""
+        self.httpMethodTextField.stringValue = self.viewModel?.packet?.requestInfo?.requestMethod?.rawValue ?? ""
     }
     
     func refreshTypeButtons() {

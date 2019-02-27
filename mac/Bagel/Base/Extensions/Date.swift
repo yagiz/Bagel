@@ -11,7 +11,7 @@ import Cocoa
 extension Date {
 
     private static let readableFormat = "dd/MM/yyyy HH:mm:ss"
-    var readble: String {
+    var readable: String {
         return self.format(dateFormat: Date.readableFormat)
     }
     

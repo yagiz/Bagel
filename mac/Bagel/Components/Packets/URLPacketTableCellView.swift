@@ -11,20 +11,18 @@ import macOSThemeKit
 
 class URLPacketTableCellView: NSTableCellView {
 
-    @IBOutlet weak var titleTextField: NSTextField!
+    @IBOutlet private weak var titleTextField: NSTextField!
     
-    var packet: BagelPacket!
-    {
-        didSet
-        {
-            self.refresh()
+    var packet: BagelPacket? {
+        didSet{
+            guard let packet = packet else { return }
+            refresh(with: packet)
         }
     }
     
-    func refresh() {
-        
-        self.titleTextField.textColor = ThemeColor.labelColor
-        self.titleTextField.stringValue = self.packet.requestInfo?.url ?? ""
+    func refresh(with packet: BagelPacket) {
+        titleTextField.textColor = ThemeColor.labelColor
+        titleTextField.stringValue = packet.requestInfo?.url ?? ""
     }
     
 }
