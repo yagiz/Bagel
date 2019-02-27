@@ -34,6 +34,7 @@
 		3760A47321F1383F004D1E07 /* BagelURLConnectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3760A45921F1383F004D1E07 /* BagelURLConnectionInjector.m */; };
 		3760A47421F1383F004D1E07 /* BagelBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3760A45A21F1383F004D1E07 /* BagelBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3760A47B21F13A47004D1E07 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3760A47A21F13A47004D1E07 /* CocoaAsyncSocket.framework */; };
+		51102CE2220B87290067EB63 /* BagelCarrierDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 51102CE1220B857E0067EB63 /* BagelCarrierDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		3760A45A21F1383F004D1E07 /* BagelBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagelBaseModel.h; sourceTree = "<group>"; };
 		3760A47521F13872004D1E07 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		3760A47A21F13A47004D1E07 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = SOURCE_ROOT; };
+		51102CE1220B857E0067EB63 /* BagelCarrierDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BagelCarrierDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				3760A44A21F1383F004D1E07 /* BagelBaseModel.m */,
 				3760A45821F1383F004D1E07 /* BagelBrowser.h */,
 				3760A44C21F1383F004D1E07 /* BagelBrowser.m */,
+				51102CE1220B857E0067EB63 /* BagelCarrierDelegate.h */,
 				3760A44621F1383F004D1E07 /* BagelConfiguration.h */,
 				3760A45621F1383F004D1E07 /* BagelConfiguration.m */,
 				3760A44321F1383F004D1E07 /* BagelController.h */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3760A46F21F1383F004D1E07 /* Bagel.h in Headers */,
+				51102CE2220B87290067EB63 /* BagelCarrierDelegate.h in Headers */,
 				3760A45D21F1383F004D1E07 /* BagelController.h in Headers */,
 				3760A47221F1383F004D1E07 /* BagelBrowser.h in Headers */,
 				3760A46021F1383F004D1E07 /* BagelConfiguration.h in Headers */,

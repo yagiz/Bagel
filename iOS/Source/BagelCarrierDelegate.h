@@ -19,27 +19,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "BagelCarrierDelegate.h"
-#import "BagelProjectModel.h"
-#import "BagelDeviceModel.h"
-#import "BagelUtility.h"
+#import "BagelRequestPacket.h"
 
-@interface BagelConfiguration : NSObject
+@protocol BagelCarrierDelegate <NSObject>
 
-@property (nonatomic, strong) BagelProjectModel* project;
-@property (nonatomic, strong) BagelDeviceModel* device;
+@optional
 
-@property (nonatomic, weak) id<BagelCarrierDelegate> carrierDelegate;
-
-@property (nonatomic) uint16_t netservicePort;
-@property (nonatomic, strong) NSString* netserviceType;
-@property (nonatomic, strong) NSString* netserviceDomain;
-@property (nonatomic, strong) NSString* netserviceName;
-
-@property (nonatomic, strong) NSString* deepLinkStarterURL;
-@property (nonatomic, strong) NSString* publicKeyName;
-
-+ (instancetype)defaultConfiguration;
+/**
+ Called right before Bagel sends a request packet to the Mac app.
+ Allows your delegate to modify the packet on the fly, or abort the operation.
+ 
+ Return a modified request packet, or nil if you want to filter it out.
+ */
+- (nullable BagelRequestPacket*)bagelCarrierWillSendRequest:(nonnull BagelRequestPacket*)request;
 
 @end
