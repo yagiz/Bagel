@@ -28,7 +28,13 @@ FOUNDATION_EXPORT double BagelVersionNumber;
 FOUNDATION_EXPORT const unsigned char BagelVersionString[];
 
 #import <Foundation/Foundation.h>
-#import "BagelConfiguration.h"
+
+#import <Bagel/BagelBaseModel.h>
+#import <Bagel/BagelCarrierDelegate.h>
+#import <Bagel/BagelConfiguration.h>
+#import <Bagel/BagelDeviceModel.h>
+#import <Bagel/BagelProjectModel.h>
+#import <Bagel/BagelUtility.h>
 
 @interface Bagel : NSObject
 
