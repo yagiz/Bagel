@@ -34,6 +34,8 @@ class MethodPacketTableCellView: NSTableCellView {
                 methodColor = ThemeColor.httpMethodPostColor
             case .delete:
                 methodColor = ThemeColor.httpMethodDeleteColor
+            case .patch:
+                methodColor = ThemeColor.httpMethodPatchColor
             case .head:
                 break
             }
