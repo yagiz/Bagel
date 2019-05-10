@@ -97,6 +97,10 @@ extension ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
+    static var httpMethodPatchColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
     static var httpMethodDefaultColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }
