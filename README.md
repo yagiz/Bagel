@@ -5,6 +5,8 @@
         <img src="https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat" /></a>
     <a href="https://github.com/Carthage/Carthage" alt="Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
+    <a href="https://github.com/JamitLabs/Accio" alt="Accio">
+        <img src="https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat" /></a>
     <a href="https://github.com/yagiz/Bagel/releases" alt="Version">
         <img src="https://img.shields.io/github/release/yagiz/Bagel.svg" /></a>
 </p>
@@ -26,6 +28,10 @@ pod 'Bagel', '~>  1.3.2'
 ##### Carthage
 ```sh
 github "yagiz/Bagel" "1.3.2"
+```
+##### Accio
+```swift
+.package(url: "https://github.com/yagiz/Bagel.git", .upToNextMajor(from: "1.3.2")),
 ```
 
 ### Usage
