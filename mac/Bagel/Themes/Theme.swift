@@ -66,6 +66,10 @@ extension ThemeColor {
         return ThemeColor.color(with: #function)
     }
     
+    static var projectTextColor: ThemeColor {
+        return ThemeColor.color(with: #function)
+    }
+    
     static var deviceListBackgroundColor: ThemeColor {
         return ThemeColor.color(with: #function)
     }

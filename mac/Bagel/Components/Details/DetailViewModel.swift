@@ -14,7 +14,7 @@ class DetailViewModel: BaseViewModel {
     
     func register() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPacket), name: BagelNotifications.didUpdatePacket, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didUpdatePacket), name: BagelNotifications.didUpdatePacket, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPacket), name: BagelNotifications.didSelectPacket, object: nil)
     }
     

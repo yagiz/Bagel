@@ -1,20 +1,24 @@
 PODS:
   - CocoaAsyncSocket (7.6.3)
+  - Highlightr (2.1.0)
   - macOSThemeKit (1.2.3)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
+  - Highlightr
   - macOSThemeKit (~> 1.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CocoaAsyncSocket
+    - Highlightr
     - macOSThemeKit
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  Highlightr: 595f3e100737c8de41113385da8bd0b5b65212c6
   macOSThemeKit: 651af12838675beac5547687226a270c294f8f84
 
-PODFILE CHECKSUM: ebe70cf0430bb9673b9d2acef3c2a16142460de8
+PODFILE CHECKSUM: 6e39cacd4a77b09b958e2e6f8b405bbc2340dfc2
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

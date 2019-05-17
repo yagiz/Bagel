@@ -9,7 +9,7 @@
 import Cocoa
 import macOSThemeKit
 
-class KeyValueListViewController: BaseViewController {
+class KeyValueListViewController: BaseViewController, DetailSectionProtocol {
 
     var viewModel: KeyValueViewModel?
     
@@ -45,6 +45,9 @@ class KeyValueListViewController: BaseViewController {
         self.refresh()
     }
     
+    func refreshViewModel() {
+        self.viewModel?.didSelectPacket()
+    }
     
     func setupTableViewHeaders() {
         

@@ -58,6 +58,10 @@ extension LightTheme {
         return NSColor(hexString: "#232323")
     }
     
+    @objc var projectTextColor: NSColor {
+        return NSColor(hexString: "#ffffff")
+    }
+    
     @objc var deviceListBackgroundColor: NSColor {
         return NSColor(hexString: "#F6F6F6")
     }

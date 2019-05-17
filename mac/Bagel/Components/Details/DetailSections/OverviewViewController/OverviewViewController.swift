@@ -9,7 +9,8 @@
 import Cocoa
 import macOSThemeKit
 
-class OverviewViewController: BaseViewController {
+class OverviewViewController: BaseViewController, DetailSectionProtocol {
+    
 
     @IBOutlet var overviewTextView: NSTextView!
     
@@ -17,6 +18,7 @@ class OverviewViewController: BaseViewController {
     @IBOutlet weak var copyToClipboardButton: NSButton!
     
     var viewModel: OverviewViewModel?
+    
     private var isCurl: Bool = false
     
     override func setup() {
@@ -31,6 +33,9 @@ class OverviewViewController: BaseViewController {
         self.refresh()
     }
     
+    func refreshViewModel() {
+        self.viewModel?.didSelectPacket()
+    }
     
     func refresh() {
         

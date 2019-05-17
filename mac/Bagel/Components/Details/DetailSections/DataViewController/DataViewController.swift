@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DataViewController: BaseViewController {
+class DataViewController: BaseViewController, DetailSectionProtocol {
 
     var viewModel: DataViewModel?
     
@@ -18,13 +18,15 @@ class DataViewController: BaseViewController {
     override func setup() {
         
         self.viewModel?.onChange = { [weak self] in
-            
             self?.refresh()
         }
         
         self.refresh()
     }
     
+    func refreshViewModel() {
+        self.viewModel?.didSelectPacket()
+    }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1191142A21F8B9CB00BFCA48 /* CURLRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */; };
+		8A814D05228ECCED0049A64E /* DetailSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */; };
 		9AAA3A9C54B46F8D2C8DD674 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
 		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
@@ -116,6 +117,7 @@
 /* Begin PBXFileReference section */
 		00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLRepresentation.swift; sourceTree = "<group>"; };
+		8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionProtocol.swift; sourceTree = "<group>"; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -254,6 +256,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A814D03228EC5DB0049A64E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */,
+				BCFB675621D977C2000199ED /* MethodPacketTableCellView.swift */,
+				BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */,
+				BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BC1F5B35216746CA0045C871 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +292,7 @@
 		BC61DA762162BD52000F6D2F /* DetailSections */ = {
 			isa = PBXGroup;
 			children = (
+				8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */,
 				BC9C77A62163803700E8ADE8 /* DataViewController */,
 				BC9C779821634D3E00E8ADE8 /* KeyValueListViewController */,
 				BC9C779521634D1F00E8ADE8 /* OverviewViewController */,
@@ -362,9 +376,9 @@
 		BC9C77A62163803700E8ADE8 /* DataViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BC9C77C12163984200E8ADE8 /* Sections */,
 				BC9C77A42163803400E8ADE8 /* DataViewController.swift */,
 				BC9C77A72163805000E8ADE8 /* DataViewModel.swift */,
+				BC9C77C12163984200E8ADE8 /* Sections */,
 				BC9C77AA216385BF00E8ADE8 /* DataTextViewController */,
 				BC9C77A9216385B600E8ADE8 /* DataJSONViewController */,
 			);
@@ -499,11 +513,11 @@
 		BCEB9AA4217C951C008BBF3C /* ContentRepresentation */ = {
 			isa = PBXGroup;
 			children = (
-				1191142821F8B9AB00BFCA48 /* CURLRepresentation */,
 				BCEB9AA5217C9532008BBF3C /* ContentRepresentation.swift */,
 				BCEB9AA9217CB0BB008BBF3C /* OverviewRepresentation */,
 				BC32643421738AB5006452FE /* ParameterRepresentation */,
 				BC75A8082173636A00A2A5B3 /* DataRepresentation */,
+				1191142821F8B9AB00BFCA48 /* CURLRepresentation */,
 			);
 			name = ContentRepresentation;
 			path = ContentRepresentation/ContentRepresentation;
@@ -556,10 +570,7 @@
 				BCFC852921383171001EC6D7 /* Packets.storyboard */,
 				BCFC853521383650001EC6D7 /* PacketsViewController.swift */,
 				BCA60B472162403F00B9DCAD /* PacketsViewModel.swift */,
-				BCA60B4B2162439200B9DCAD /* StatusPacketTableCellView.swift */,
-				BCFB675621D977C2000199ED /* MethodPacketTableCellView.swift */,
-				BCA60B4D2162439E00B9DCAD /* URLPacketTableCellView.swift */,
-				BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */,
+				8A814D03228EC5DB0049A64E /* Cells */,
 			);
 			path = Packets;
 			sourceTree = "<group>";
@@ -707,7 +718,7 @@
 				TargetAttributes = {
 					BCD0E022210F5E0D00CE5C7B = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					BCD0E034210F5E0D00CE5C7B = {
 						CreatedOnToolsVersion = 9.2;
@@ -815,6 +826,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
 				"${BUILT_PRODUCTS_DIR}/macOSThemeKit/macOSThemeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -822,6 +834,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/macOSThemeKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,6 +857,7 @@
 				BCEB9AA2217C94C1008BBF3C /* BagelExtensions.swift in Sources */,
 				BCBD86E2215916C9009CBEA7 /* BagelController.swift in Sources */,
 				BCEB9AA8217CAA23008BBF3C /* OverviewRepresentation.swift in Sources */,
+				8A814D05228ECCED0049A64E /* DetailSectionProtocol.swift in Sources */,
 				BCEB9AB9217DD653008BBF3C /* Date.swift in Sources */,
 				BC9C77A52163803400E8ADE8 /* DataViewController.swift in Sources */,
 				BCA60B4C2162439200B9DCAD /* StatusPacketTableCellView.swift in Sources */,
@@ -1065,13 +1079,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = WJ26RLBF55;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yagiz.Bagel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -1082,13 +1098,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = WJ26RLBF55;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yagiz.Bagel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

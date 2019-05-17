@@ -14,14 +14,11 @@ class DataViewModel: BaseViewModel {
     var dataRepresentation: DataRepresentation?
     
     func register() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: BagelNotifications.didSelectPacket, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didSelectPacket), name: BagelNotifications.didUpdatePacket, object: nil)
+//
     }
     
     
     @objc func didSelectPacket() {
-        
         self.packet = BagelController.shared.selectedProjectController?.selectedDeviceController?.selectedPacket
     }
 }

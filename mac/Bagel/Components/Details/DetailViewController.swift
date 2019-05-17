@@ -9,7 +9,6 @@
 import Cocoa
 
 enum DetailType: Int {
-    
     case overview = 0
     case requestHeaders = 1
     case requestParameters = 2
@@ -32,6 +31,14 @@ class DetailViewController: BaseViewController {
     @IBOutlet weak var detailButtonResponseHeaders: NSButton!
     @IBOutlet weak var detailButtonResponseBody: NSButton!
     
+    var overview: OverviewViewController?
+    var requestHeaders: KeyValueListViewController?
+    var requestParameters: KeyValueListViewController?
+    var requestBody: DataViewController?
+    var responseHeaders: KeyValueListViewController?
+    var responseData: DataViewController?
+    
+    var sections = [DetailSectionProtocol?]()
     var typeButtons = [NSButton]()
     
     @IBOutlet weak var tabView: NSTabView!
@@ -58,51 +65,48 @@ class DetailViewController: BaseViewController {
     
     func setupDetailTypeViews() {
         
-        
         let overview = self.storyboard?.instantiateController(withIdentifier: OverviewViewController.identifier) as! OverviewViewController
         overview.viewModel = OverviewViewModel()
         overview.viewModel?.register()
         let overviewTabItem = NSTabViewItem(viewController: overview)
         
         
-        let requestHeaders = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as! KeyValueListViewController
-        requestHeaders.viewModel = RequestHeadersViewModel()
-        requestHeaders.viewModel?.register()
-        let requestHeadersTabItem = NSTabViewItem(viewController: requestHeaders)
+        self.requestHeaders = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as? KeyValueListViewController
+        self.requestHeaders?.viewModel = RequestHeadersViewModel()
+        self.requestHeaders?.viewModel?.register()
+        let requestHeadersTabItem = NSTabViewItem(viewController: self.requestHeaders!)
         
         
-        let requestParameters = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as! KeyValueListViewController
-        requestParameters.viewModel = RequestParametersViewModel()
-        requestParameters.viewModel?.register()
-        let requestParametersTabItem = NSTabViewItem(viewController: requestParameters)
+        self.requestParameters = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as? KeyValueListViewController
+        self.requestParameters?.viewModel = RequestParametersViewModel()
+        self.requestParameters?.viewModel?.register()
+        let requestParametersTabItem = NSTabViewItem(viewController: self.requestParameters!)
         
         
-        let requestBody = self.storyboard?.instantiateController(withIdentifier: DataViewController.identifier) as! DataViewController
-        requestBody.viewModel = RequestBodyViewModel()
-        requestBody.viewModel?.register()
-        let requestBodyTabItem = NSTabViewItem(viewController: requestBody)
+        self.requestBody = self.storyboard?.instantiateController(withIdentifier: DataViewController.identifier) as? DataViewController
+        self.requestBody?.viewModel = RequestBodyViewModel()
+        self.requestBody?.viewModel?.register()
+        let requestBodyTabItem = NSTabViewItem(viewController: self.requestBody!)
         
         
-        let responseHeaders = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as! KeyValueListViewController
-        responseHeaders.viewModel = ResponseHeadersViewModel()
-        responseHeaders.viewModel?.register()
-        let responseHeadersTabItem = NSTabViewItem(viewController: responseHeaders)
+        self.responseHeaders = self.storyboard?.instantiateController(withIdentifier: KeyValueListViewController.identifier) as? KeyValueListViewController
+        self.responseHeaders?.viewModel = ResponseHeadersViewModel()
+        self.responseHeaders?.viewModel?.register()
+        let responseHeadersTabItem = NSTabViewItem(viewController: self.responseHeaders!)
         
         
-        let responseData = self.storyboard?.instantiateController(withIdentifier: DataViewController.identifier) as! DataViewController
-        responseData.viewModel = ResponseDataViewModel()
-        responseData.viewModel?.register()
-        let responseDataTabItem = NSTabViewItem(viewController: responseData)
+        self.responseData = self.storyboard?.instantiateController(withIdentifier: DataViewController.identifier) as? DataViewController
+        self.responseData?.viewModel = ResponseDataViewModel()
+        self.responseData?.viewModel?.register()
+        let responseDataTabItem = NSTabViewItem(viewController: self.responseData!)
         
         
         self.tabView.addTabViewItem(overviewTabItem)
         self.tabView.addTabViewItem(requestHeadersTabItem)
         self.tabView.addTabViewItem(requestParametersTabItem)
         self.tabView.addTabViewItem(requestBodyTabItem)
-        
         self.tabView.addTabViewItem(responseHeadersTabItem)
         self.tabView.addTabViewItem(responseDataTabItem)
-        
     }
     
     @IBAction func selectDetailButtonAction(_ sender: NSButton) {
@@ -118,6 +122,10 @@ class DetailViewController: BaseViewController {
         self.tabView.selectTabViewItem(at: self.currentDetailType.rawValue)
         self.urlTextField.stringValue = self.viewModel?.packet?.requestInfo?.url ?? ""
         self.httpMethodTextField.stringValue = self.viewModel?.packet?.requestInfo?.requestMethod?.rawValue ?? ""
+    
+        if let detailSection = self.tabView.selectedTabViewItem?.viewController as? DetailSectionProtocol {
+            detailSection.refreshViewModel()
+        }
     }
     
     func refreshTypeButtons() {

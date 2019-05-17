@@ -59,6 +59,10 @@ extension DarkTheme {
         return NSColor(hexString: "#232323")
     }
     
+    @objc var projectTextColor: NSColor {
+        return NSColor(hexString: "#ffffff")
+    }
+    
     @objc var deviceListBackgroundColor: NSColor {
         return NSColor(hexString: "#262626")
     }
