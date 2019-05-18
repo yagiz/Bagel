@@ -241,8 +241,8 @@
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nh8-PV-Qe4">
                                                                     <rect key="frame" x="3" y="0.0" width="194" height="20"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="URL..." id="OhO-md-Jfb">
-                                                                        <font key="font" metaFont="system" size="11"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" placeholderString="URL" id="OhO-md-Jfb" customClass="VerticallyCenteredTextFieldCell" customModule="Bagel" customModuleProvider="target">
+                                                                        <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -268,8 +268,8 @@
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K4O-j7-3QY">
                                                                     <rect key="frame" x="3" y="0.0" width="66" height="20"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Status..." id="phe-Xy-3Ds">
-                                                                        <font key="font" metaFont="system"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Status" id="phe-Xy-3Ds" customClass="VerticallyCenteredTextFieldCell" customModule="Bagel" customModuleProvider="target">
+                                                                        <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -295,8 +295,8 @@
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-d7-YFE">
                                                                     <rect key="frame" x="3" y="0.0" width="66" height="20"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Method..." id="OPB-NY-4Xr">
-                                                                        <font key="font" metaFont="system"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Method" id="OPB-NY-4Xr" customClass="VerticallyCenteredTextFieldCell" customModule="Bagel" customModuleProvider="target">
+                                                                        <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>

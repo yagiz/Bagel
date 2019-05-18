@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1191142A21F8B9CB00BFCA48 /* CURLRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */; };
 		8A814D05228ECCED0049A64E /* DetailSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */; };
+		8A814D07229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A814D06229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift */; };
 		9AAA3A9C54B46F8D2C8DD674 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
 		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
@@ -118,6 +119,7 @@
 		00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLRepresentation.swift; sourceTree = "<group>"; };
 		8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionProtocol.swift; sourceTree = "<group>"; };
+		8A814D06229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextFieldCell.swift; sourceTree = "<group>"; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -596,6 +598,7 @@
 				BCB6FD6821627D5400D6F03C /* TransparentSplitView.swift */,
 				BCDF0EC321662CA10030710C /* FlatTableRowView.swift */,
 				BC911A462168EB0A00B755D4 /* ContentBar.swift */,
+				8A814D06229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				BCFC855021384981001EC6D7 /* BagelPacket.swift in Sources */,
 				BCE21E3E2162C15900A65B29 /* KeyValueListViewController.swift in Sources */,
 				BCA60B4E2162439E00B9DCAD /* URLPacketTableCellView.swift in Sources */,
+				8A814D07229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift in Sources */,
 				BCFC853B21384239001EC6D7 /* ProjectTableCellView.swift in Sources */,
 				BCFC853E21384443001EC6D7 /* BaseTableView.swift in Sources */,
 				BCBD86E62159172B009CBEA7 /* BagelDeviceController.swift in Sources */,
