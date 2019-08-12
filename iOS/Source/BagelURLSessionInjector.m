@@ -109,7 +109,7 @@
 
     - (void)swizzleSessionDidReceiveResponse : (Class) class
 {
-    SEL selector = NSSelectorFromString(@"_didReceiveResponse:sniff:");
+    SEL selector = NSSelectorFromString(@"_didReceiveResponse:sniff:rewrite:");
     Method m = class_getInstanceMethod(class, selector);
 
     if (m && [class instancesRespondToSelector:selector]) {
