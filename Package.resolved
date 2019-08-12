@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/ricobeck/CocoaAsyncSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "9b2cfedabfa421523e5edd9f2409999ba567a427",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

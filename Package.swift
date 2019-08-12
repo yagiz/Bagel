@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "Bagel", targets: ["Bagel"])
     ],
     dependencies: [
-        .package(url: "https://github.com/AccioSupport/CocoaAsyncSocket.git", .branch("master")),
+        .package(url: "https://github.com/ricobeck/CocoaAsyncSocket.git", .revision("9b2cfedabfa421523e5edd9f2409999ba567a427")),
     ],
     targets: [
         .target(
