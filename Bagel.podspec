@@ -14,6 +14,7 @@ Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't ha
   s.source           = { :git => 'https://github.com/yagiz/Bagel.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '11.0'
   s.source_files = 'iOS/Source/*.{h,m}'
   
   s.dependency 'CocoaAsyncSocket'
