@@ -36,7 +36,7 @@ class DataRepresentationParser {
                 if let jsonString = String(data: jsonData, encoding: .utf8) {
                     
                     let jsonData = DataJSONRepresentation(data: data)
-                    jsonData.rawString = jsonString
+                    jsonData.rawString = jsonString.replacingOccurrences(of: "\\/", with: "/")
                     return jsonData
                 }
             }
