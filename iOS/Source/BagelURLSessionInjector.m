@@ -82,7 +82,7 @@
     }
 
     if (taskClass) {
-        [self swizzleSessionTaskResume:taskClass];
+//        [self swizzleSessionTaskResume:taskClass];
     }
 }
 
