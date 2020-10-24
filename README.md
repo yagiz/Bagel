@@ -23,15 +23,15 @@ Bagel is a little native iOS network debugger. It's not a proxy debugger so you 
 #### Install iOS Client
 #### CocoaPods
 ```shhttps://img.shields.io/badge/version-1.3.1-blue.svg?style=flat
-pod 'Bagel', '~>  1.3.2'
+pod 'Bagel', '~>  1.4.0'
 ```
 ##### Carthage
 ```sh
-github "yagiz/Bagel" "1.3.2"
+github "yagiz/Bagel" "1.4.0"
 ```
 ##### Accio
 ```swift
-.package(url: "https://github.com/yagiz/Bagel.git", .upToNextMajor(from: "1.3.2")),
+.package(url: "https://github.com/yagiz/Bagel.git", .upToNextMajor(from: "1.4.0")),
 ```
 
 ### Usage
