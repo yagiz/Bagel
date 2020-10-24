@@ -22,7 +22,7 @@ Bagel is a little native iOS network debugger. It's not a proxy debugger so you 
 - Build and archive the project.
 #### Install iOS Client
 #### CocoaPods
-```shhttps://img.shields.io/badge/version-1.3.1-blue.svg?style=flat
+```ruby
 pod 'Bagel', '~>  1.3.2'
 ```
 ##### Carthage
@@ -75,4 +75,4 @@ If you change Netservice parameters in your app, you should also change them on 
 
 License
 ----
-Apache
+Apache License. Check `LICENSE` file for details.
