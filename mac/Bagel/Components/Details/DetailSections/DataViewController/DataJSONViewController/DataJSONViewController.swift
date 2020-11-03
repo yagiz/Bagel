@@ -45,7 +45,7 @@ class DataJSONViewController: BaseViewController {
         if ThemeManager.shared.effectiveTheme === ThemeManager.lightTheme {
             codeMirrorView.setDarkTheme(false)
         } else if ThemeManager.shared.effectiveTheme === ThemeManager.darkTheme {
-            codeMirrorView.setDarkTheme(false)
+            codeMirrorView.setDarkTheme(true)
         }
     }
     

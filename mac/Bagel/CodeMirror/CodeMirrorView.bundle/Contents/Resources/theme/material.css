@@ -38,7 +38,7 @@
 .cm-s-material .cm-def { color: rgba(233, 237, 237, 1); }
 .cm-s-material .cm-string { color: #e3aa6c; }
 .cm-s-material .cm-string-2 { color: #80CBC4; }
-.cm-s-material .cm-comment { color: #546E7A; }
+.cm-s-material .cm-comment { color: #969696; }
 .cm-s-material .cm-variable { color: #82B1FF; }
 .cm-s-material .cm-tag { color: #80CBC4; }
 .cm-s-material .cm-meta { color: #80CBC4; }
@@ -51,22 +51,47 @@
   color: rgba(255, 255, 255, 1.0);
   background-color: #EC5F67;
 }
-.cm-s-material .CodeMirror-matchingbracket {
-  text-decoration: underline;
-  color: white !important;
-}
 
-.cm-s-material ::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgba(1,1,1,0.1);
-}
+/*Scroll Bar*/
 
-.cm-s-material ::-webkit-scrollbar-thumb {
-    width: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 0 12px rgb(59, 59, 59) inset;
+.cm-s-material .CodeMirror-vscrollbar {
+  right: 3px;
 }
 
 .cm-s-material .CodeMirror-hscrollbar {
-    height: 10px;
+  bottom: 3px;
+}
+
+.cm-s-material .CodeMirror-scrollbar-filler {
+  display: none !important;
+}
+
+.cm-s-material ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+}
+
+.cm-s-material ::-webkit-scrollbar-thumb {
+    background: #767778;
+    -webkit-border-radius: 100px;
+}
+
+.cm-s-material ::-webkit-scrollbar-thumb:active {
+    background: #9d9e9e; / Some darker color when you click it */
+    -webkit-border-radius: 100px;
+}
+
+.cm-s-material ::-webkit-scrollbar-thumb:hover {
+    background: #9d9e9e; / Some darker color when you click it */
+    -webkit-border-radius: 100px;
+}
+
+/* add vertical min-height & horizontal min-width */
+.cm-s-material ::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+}
+.cm-s-material ::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
 }
