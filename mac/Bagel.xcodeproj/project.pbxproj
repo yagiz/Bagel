@@ -11,6 +11,8 @@
 		8A814D05228ECCED0049A64E /* DetailSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */; };
 		8A814D07229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A814D06229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift */; };
 		9AAA3A9C54B46F8D2C8DD674 /* Pods_Bagel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E3BE2EECB0984D92EFCA30 /* Pods_Bagel.framework */; };
+		BA9D63CF2551155600F4F0DE /* CodeMirrorWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D63CD2551155600F4F0DE /* CodeMirrorWebView.swift */; };
+		BA9D63D02551155600F4F0DE /* CodeMirrorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA9D63CE2551155600F4F0DE /* CodeMirrorView.bundle */; };
 		BC1F5B37216746D30045C871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F5B36216746D30045C871 /* FontManager.swift */; };
 		BC32643621738AF0006452FE /* KeyValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32643521738AF0006452FE /* KeyValueRepresentation.swift */; };
 		BC5E76C9216A64DB000F658D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E76C8216A64DB000F658D /* Theme.swift */; };
@@ -120,6 +122,8 @@
 		1191142921F8B9CB00BFCA48 /* CURLRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLRepresentation.swift; sourceTree = "<group>"; };
 		8A814D04228ECCED0049A64E /* DetailSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionProtocol.swift; sourceTree = "<group>"; };
 		8A814D06229025FF0049A64E /* VerticallyCenteredTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextFieldCell.swift; sourceTree = "<group>"; };
+		BA9D63CD2551155600F4F0DE /* CodeMirrorWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeMirrorWebView.swift; sourceTree = "<group>"; };
+		BA9D63CE2551155600F4F0DE /* CodeMirrorView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeMirrorView.bundle; sourceTree = "<group>"; };
 		BC1F5B36216746D30045C871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BC32643521738AF0006452FE /* KeyValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRepresentation.swift; sourceTree = "<group>"; };
 		BC5E76C8216A64DB000F658D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 				BCEB9AB6217DD546008BBF3C /* DatePacketTableCellView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BA9D63CC2551154900F4F0DE /* CodeMirror */ = {
+			isa = PBXGroup;
+			children = (
+				BA9D63CE2551155600F4F0DE /* CodeMirrorView.bundle */,
+				BA9D63CD2551155600F4F0DE /* CodeMirrorWebView.swift */,
+			);
+			path = CodeMirror;
 			sourceTree = "<group>";
 		};
 		BC1F5B35216746CA0045C871 /* Fonts */ = {
@@ -470,6 +483,7 @@
 		BCD0E025210F5E0D00CE5C7B /* Bagel */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D63CC2551154900F4F0DE /* CodeMirror */,
 				BC911A3F2168BC7F00B755D4 /* Themes */,
 				BC1F5B35216746CA0045C871 /* Fonts */,
 				BC75A80921737A7300A2A5B3 /* jsonViewer */,
@@ -774,6 +788,7 @@
 				BCFC852A21383171001EC6D7 /* Packets.storyboard in Resources */,
 				BCEB9AB1217CD264008BBF3C /* Effra_Std_BdIt.ttf in Resources */,
 				BCD0E02E210F5E0D00CE5C7B /* Main.storyboard in Resources */,
+				BA9D63D02551155600F4F0DE /* CodeMirrorView.bundle in Resources */,
 				BCEB9AB5217CD269008BBF3C /* DroidSansMono.ttf in Resources */,
 				BC75A80F21737A7300A2A5B3 /* json-viewer-dark-theme.css in Resources */,
 				BCEB9AB2217CD264008BBF3C /* Effra_Std_Lt.ttf in Resources */,
@@ -827,13 +842,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bagel/Pods-Bagel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
 				"${BUILT_PRODUCTS_DIR}/macOSThemeKit/macOSThemeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/macOSThemeKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -893,6 +906,7 @@
 				BC9C779F2163528E00E8ADE8 /* RequestHeadersViewModel.swift in Sources */,
 				BC911A492168F27700B755D4 /* DarkTheme.swift in Sources */,
 				BC911A442168E10F00B755D4 /* LightTheme.swift in Sources */,
+				BA9D63CF2551155600F4F0DE /* CodeMirrorWebView.swift in Sources */,
 				BCD0E029210F5E0D00CE5C7B /* ViewController.swift in Sources */,
 				BC1F5B37216746D30045C871 /* FontManager.swift in Sources */,
 				BCA60B522162655000B9DCAD /* FlatTableHeaderCell.swift in Sources */,
@@ -1081,7 +1095,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D54Y88Y9CY;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1100,7 +1114,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bagel/Bagel.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D54Y88Y9CY;
 				INFOPLIST_FILE = Bagel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

@@ -1,0 +1,53 @@
+.cm-s-espresso-tutti {
+	font-size: 12px;
+	line-height: 1.1em;
+	font-family: inconsolata, monospace;
+	letter-spacing: 0.2px;
+	word-spacing: 0.5px;
+	background: #FFFFFF;
+	color: #000000;
+}
+.cm-s-espresso-tutti .CodeMirror-lines {
+	padding: 0px 0;
+}
+.cm-s-espresso-tutti .CodeMirror-gutters {
+	background-color: #FFFFFF;
+	padding-right: 4px;
+	z-index: 3;
+	border: none;
+}
+.cm-s-espresso-tutti div.CodeMirror-cursor {
+	border-left: 2px solid #000000;
+}
+.cm-s-espresso-tutti .CodeMirror-activeline-background {
+	background: #C1E2F8;
+}
+.cm-s-espresso-tutti .CodeMirror-selected {
+	background: #80C7FF;
+}
+.cm-s-espresso-tutti .cm-comment {
+	color: #AAAAAA;
+}
+.cm-s-espresso-tutti .cm-number {
+	color: #D71707;
+}
+.cm-s-espresso-tutti .cm-atom {
+	color: #D71707;
+	background: #F3F2FF;
+}
+.cm-s-espresso-tutti .cm-string {
+	color: #73B00A;
+	background: #FFFFFF;
+}
+.cm-s-espresso-tutti .cm-property {
+	color: #D71707;
+}
+.cm-s-espresso-tutti .cm-keyword {
+	color: null;
+}
+.cm-s-espresso-tutti .cm-operator {
+	color: null;
+}
+.cm-s-espresso-tutti .CodeMirror-linenumber {
+	color: #AAAAAA;
+}

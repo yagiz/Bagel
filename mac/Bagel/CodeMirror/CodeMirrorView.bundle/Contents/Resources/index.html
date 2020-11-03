@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="codemirror.css">
+    <script src="codemirror.js"></script>
+
+    <link rel="stylesheet" href="addons/dialog/dialog.css">
+    <script src="addons/dialog/dialog.js"></script>
+    <script src="addons/search/jump-to-line.js"></script>
+    <script src="addons/search/match-highlighter.js"></script>
+    <script src="addons/search/search.js"></script>
+    <script src="addons/search/searchcursor.js"></script>
+    <script src="addons/fold/foldcode.js"></script>
+    <script src="addons/fold/foldgutter.js"></script>
+    <script src="addons/fold/brace-fold.js"></script>
+    <script src="addons/fold/xml-fold.js"></script>
+    <script src="addons/fold/indent-fold.js"></script>
+    <script src="addons/fold/comment-fold.js"></script>
+    <script src="addons/selection/active-line.js"></script>
+    <script src="addons/edit/closebrackets.js"></script>
+    <script src="addons/comment/comment.js"></script>
+
+    <link rel="stylesheet" href="addons/fold/foldgutter.css" />
+    <link rel="stylesheet" href="theme/base16-light.css">
+    <link rel="stylesheet" href="theme/material.css">
+
+    <script src="modes/apl.js"></script><script src="modes/asciiarmor.js"></script><script src="modes/asn.1.js"></script><script src="modes/asterisk.js"></script><script src="modes/brainfuck.js"></script><script src="modes/clike.js"></script><script src="modes/clojure.js"></script><script src="modes/cmake.js"></script><script src="modes/cobol.js"></script><script src="modes/coffeescript.js"></script><script src="modes/commonlisp.js"></script><script src="modes/crystal.js"></script><script src="modes/css.js"></script><script src="modes/cypher.js"></script><script src="modes/d.js"></script><script src="modes/dart.js"></script><script src="modes/diff.js"></script><script src="modes/django.js"></script><script src="modes/dockerfile.js"></script><script src="modes/dtd.js"></script><script src="modes/dylan.js"></script><script src="modes/ebnf.js"></script><script src="modes/ecl.js"></script><script src="modes/eiffel.js"></script><script src="modes/elm.js"></script><script src="modes/erlang.js"></script><script src="modes/factor.js"></script><script src="modes/fcl.js"></script><script src="modes/forth.js"></script><script src="modes/fortran.js"></script><script src="modes/gas.js"></script><script src="modes/gfm.js"></script><script src="modes/gherkin.js"></script><script src="modes/go.js"></script><script src="modes/groovy.js"></script><script src="modes/haml.js"></script><script src="modes/handlebars.js"></script><script src="modes/haskell.js"></script><script src="modes/haskell-literate.js"></script><script src="modes/haxe.js"></script><script src="modes/htmlembedded.js"></script><script src="modes/htmlmixed.js"></script><script src="modes/http.js"></script><script src="modes/idl.js"></script><script src="modes/javascript.js"></script><script src="modes/jinja2.js"></script><script src="modes/jsx.js"></script><script src="modes/julia.js"></script><script src="modes/livescript.js"></script><script src="modes/lua.js"></script><script src="modes/markdown.js"></script><script src="modes/mathematica.js"></script><script src="modes/mbox.js"></script><script src="modes/mirc.js"></script><script src="modes/mllike.js"></script><script src="modes/modelica.js"></script><script src="modes/mscgen.js"></script><script src="modes/mumps.js"></script><script src="modes/nginx.js"></script><script src="modes/nsis.js"></script><script src="modes/ntriples.js"></script><script src="modes/octave.js"></script><script src="modes/oz.js"></script><script src="modes/pascal.js"></script><script src="modes/pegjs.js"></script><script src="modes/perl.js"></script><script src="modes/php.js"></script><script src="modes/pig.js"></script><script src="modes/powershell.js"></script><script src="modes/properties.js"></script><script src="modes/protobuf.js"></script><script src="modes/pug.js"></script><script src="modes/puppet.js"></script><script src="modes/python.js"></script><script src="modes/q.js"></script><script src="modes/r.js"></script><script src="modes/rpm.js"></script><script src="modes/rst.js"></script><script src="modes/ruby.js"></script><script src="modes/rust.js"></script><script src="modes/sas.js"></script><script src="modes/sass.js"></script><script src="modes/scheme.js"></script><script src="modes/shell.js"></script><script src="modes/sieve.js"></script><script src="modes/slim.js"></script><script src="modes/smalltalk.js"></script><script src="modes/smarty.js"></script><script src="modes/solr.js"></script><script src="modes/soy.js"></script><script src="modes/sparql.js"></script><script src="modes/spreadsheet.js"></script><script src="modes/sql.js"></script><script src="modes/stex.js"></script><script src="modes/stylus.js"></script><script src="modes/swift.js"></script><script src="modes/tcl.js"></script><script src="modes/textile.js"></script><script src="modes/tiddlywiki.js"></script><script src="modes/tiki.js"></script><script src="modes/toml.js"></script><script src="modes/tornado.js"></script><script src="modes/troff.js"></script><script src="modes/ttcn.js"></script><script src="modes/ttcn-cfg.js"></script><script src="modes/turtle.js"></script><script src="modes/twig.js"></script><script src="modes/vb.js"></script><script src="modes/vbscript.js"></script><script src="modes/velocity.js"></script><script src="modes/verilog.js"></script><script src="modes/vhdl.js"></script><script src="modes/vue.js"></script><script src="modes/webidl.js"></script><script src="modes/xml.js"></script><script src="modes/xquery.js"></script><script src="modes/yacas.js"></script><script src="modes/yaml.js"></script><script src="modes/yaml-frontmatter.js"></script><script src="modes/z80.js"></script>
+  </head>
+  <style>
+
+    html,body {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .CodeMirror {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+  <body>
+    <script>
+
+<!--        https://www.npmjs.com/package/codemirror-minified-->
+<!--        CodeMirror Build 5.52.2-->
+
+      CodeMirror.keyMap["default"]["Cmd-/"] = "toggleComment";  // Add-on
+
+      var editor = CodeMirror(document.body, {
+        lineNumbers: true,
+        autofocus: true,
+        mode: "text/html",
+        theme: "material",
+        foldGutter: true,
+        tabSize: 2,
+        indentUnit: 2,
+        lineWrapping: true,
+        readOnly: false,
+        autoCloseBrackets: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        extraKeys: {"Cmd-F": "findPersistent"},
+        styleActiveLine: true
+      });
+      editor.on("change", function(instance, change) {
+          var content = GetContent();
+          window.webkit.messageHandlers.codeMirrorTextContentDidChange.postMessage(content);
+      });
+
+      function SupportedMimeTypes() {
+        return Object.keys(CodeMirror.mimeModes).join(",");
+      }
+
+      function SetMimeType(type) {
+        editor.setOption("mode", type);
+      }
+
+      function GetMimeType(type) {
+        return editor.getOption("mode");
+      }
+
+      function SetLineWrapping(wrapping) {
+        editor.setOption("lineWrapping", wrapping);
+      }
+
+      function SetReadOnly(readOnly) {
+          editor.setOption("readOnly", readOnly);
+      }
+
+      function GetLineWrapping() {
+        return editor.getOption("lineWrapping");
+      }
+
+      function SetIndentUnit(unit) {
+        editor.setOption("indentUnit", unit);
+      }
+
+      function SetTheme(text) {
+        editor.setOption("theme", text);
+      }
+
+      function GetIndentUnit() {
+        return editor.getOption("indentUnit");
+      }
+
+      function GetReadOnly() {
+          return editor.getOption("readOnly");
+      }
+
+      function SetTabSize(size) {
+        editor.setOption("tabSize", size);
+      }
+
+      function GetTabSize() {
+        return editor.getOption("tabSize");
+      }
+
+      function SetTabInsertSpaces(flag) {
+        // See http://codemirror.net/doc/manual.html#keymaps
+        if (flag) {
+          CodeMirror.keyMap["basic"]["Tab"] = function(cm) {
+            var spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
+            cm.replaceSelection(spaces, "end", "+input");
+          };
+        } else {
+          CodeMirror.keyMap["basic"]["Tab"] = "defaultTab";
+        }
+      }
+
+      function GetTabInsertSpaces() {
+        return CodeMirror.keyMap["basic"]["Tab"] == "defaultTab";
+      }
+
+      function getStringFromHex(content) {
+          return decodeURIComponent(content.replace(/\s+/g, '').replace(/[0-9a-f]{2}/g, '%$&'));
+      }
+
+      function SetContent(content) {
+          // Convert hex utf8 -> utf8 string
+          var text = getStringFromHex(content);
+          editor.doc.setValue(text);
+      }
+
+      function GetContent() {
+        return editor.doc.getValue();
+      }
+
+      function ClearHistory() {
+        editor.doc.clearHistory();
+        editor.doc.markClean();
+      }
+
+      function IsClean() {
+        return editor.doc.isClean();
+      }
+
+      function GetTextSelection() {
+        return editor.getSelection();
+      }
+
+      function SetFontSize(size) {
+        editor.getWrapperElement().style["font-size"] = size+"px";
+        editor.refresh();
+      }
+
+      window.webkit.messageHandlers.codeMirrorDidReady.postMessage(null); // Need at lead 1 arg
+
+    </script>
+  </body>
+</html>
