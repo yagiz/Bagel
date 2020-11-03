@@ -7,6 +7,5 @@ target 'Bagel' do
 
   pod 'CocoaAsyncSocket'
   pod 'macOSThemeKit', '~> 1.2.0'
-  pod 'Highlightr'
   
 end
