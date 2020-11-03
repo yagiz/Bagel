@@ -126,6 +126,11 @@ final class CodeMirrorWebView: View {
         callJavascript(javascriptString: "SetFontSize(\(value));")
     }
 
+    func setDarkTheme(_ isDark: Bool) {
+        let themeName = isDark ? "material" : "base16-light"
+        callJavascript(javascriptString: "SetTheme(\"\(themeName)\");")
+    }
+
     func setDefaultTheme() {
         setMimeType("application/json")
     }

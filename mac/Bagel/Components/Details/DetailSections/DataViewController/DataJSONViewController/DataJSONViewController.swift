@@ -9,22 +9,18 @@
 import Cocoa
 import WebKit
 import macOSThemeKit
-import Highlightr
 
 class DataJSONViewController: BaseViewController {
     
     var viewModel: DataJSONViewModel?
-    
-    let highlightr = Highlightr()
 
-    @IBOutlet var rawTextView: NSTextView!
-    
-    @IBOutlet weak var rawTextScrollView: NSScrollView!
     @IBOutlet weak var copyToClipboardButton: NSButton!
-    @IBOutlet weak var progressIndicator: NSProgressIndicator!
-    
+    @IBOutlet weak var codeMirrorContainerView: NSView!
+    private lazy var codeMirrorView = CodeMirrorWebView()
+
     override func setup() {
-        
+        setupCodeMirror()
+
         self.copyToClipboardButton.image = ThemeImage.copyToClipboardIcon
         
         NotificationCenter.default.addObserver(self, selector: #selector(changedTheme(_:)), name: .didChangeTheme, object: nil)
@@ -38,27 +34,18 @@ class DataJSONViewController: BaseViewController {
     }
 
     func refresh() {
-        self.rawTextView.string = ""
-        if let jsonString = self.viewModel?.dataRepresentation?.rawString {
-            self.progressIndicator.isHidden = false
-            self.progressIndicator.startAnimation(nil)
-            DispatchQueue.global(qos: .background).async {
-                if let highlightedCode = self.highlightr?.highlight(jsonString, as: "json") {
-                    DispatchQueue.main.async {
-                        self.rawTextView.textStorage?.setAttributedString(highlightedCode)
-                        self.progressIndicator.isHidden = true
-                        self.progressIndicator.stopAnimation(nil)
-                    }
-                }
-            }
+        codeMirrorView.setContent("")
+        guard let jsonString = self.viewModel?.dataRepresentation?.rawString else {
+            return
         }
+        codeMirrorView.setContent(jsonString)
     }
     
     func refreshHighlightrTheme() {
         if ThemeManager.shared.effectiveTheme === ThemeManager.lightTheme {
-            self.highlightr?.setTheme(to: "github")
-        }else if ThemeManager.shared.effectiveTheme === ThemeManager.darkTheme {
-            self.highlightr?.setTheme(to: "paraiso-dark")
+            codeMirrorView.setDarkTheme(false)
+        } else if ThemeManager.shared.effectiveTheme === ThemeManager.darkTheme {
+            codeMirrorView.setDarkTheme(false)
         }
     }
     
@@ -68,5 +55,20 @@ class DataJSONViewController: BaseViewController {
 
     @IBAction func copyButtonAction(_ sender: Any) {
         self.viewModel?.copyToClipboard()
+    }
+}
+
+// MARK: - Private
+
+extension DataJSONViewController {
+
+    private func setupCodeMirror() {
+        codeMirrorView.setDefaultTheme()
+        codeMirrorView.translatesAutoresizingMaskIntoConstraints = false
+        codeMirrorContainerView.addSubview(codeMirrorView)
+        codeMirrorView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        codeMirrorView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        codeMirrorView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        codeMirrorView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
