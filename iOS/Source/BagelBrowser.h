@@ -23,7 +23,11 @@
 #import "BagelConfiguration.h"
 #import "BagelRequestPacket.h"
 
+#if __has_feature(modules)
 @import CocoaAsyncSocket;
+#else
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+#endif
 
 @interface BagelBrowser : NSObject <GCDAsyncSocketDelegate, NSNetServiceDelegate, NSNetServiceBrowserDelegate>
 

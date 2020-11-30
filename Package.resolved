@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/AccioSupport/CocoaAsyncSocket.git",
+        "state": {
+          "branch": "master",
+          "revision": "7bde69b671f8bc6ce9ab066fcfccd4a19fcdaab1",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

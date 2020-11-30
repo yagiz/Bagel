@@ -71,6 +71,20 @@ bagelConfig.netserviceName = ""
 
 Bagel.start(bagelConfig)
 ```
+
+
+In order to fit iOS14,you need add some key-values to info.plist,such as:
+`NSBonjourServices`
+
+```
+<key>NSBonjourServices</key>
+<array>
+    <string>_Bagel._tcp</string>
+</array>
+```
+NSLocalNetworkUsageDescription
+Network access required
+
 If you change Netservice parameters in your app, you should also change them on desktop client.
 
 License
