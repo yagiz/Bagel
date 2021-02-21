@@ -19,9 +19,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "BagelBaseModel.h"
+@import Foundation;
 
-@interface BagelDeviceModel : NSObject <BagelBaseModelProtocol>
+@interface BagelDeviceModel : NSObject
 
 @property (nonatomic, strong) NSString* deviceId;
 @property (nonatomic, strong) NSString* deviceName;
