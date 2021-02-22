@@ -20,6 +20,7 @@
 // THE SOFTWARE.
 
 #import "BagelController.h"
+#import "BagelCarrierDelegate.h"
 
 static NSString* queueId = @"com.yagiz.bagel.injectController";
 

@@ -19,11 +19,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "BagelCarrierDelegate.h"
-#import "BagelProjectModel.h"
-#import "BagelDeviceModel.h"
-#import "BagelUtility.h"
+@import Foundation;
+
+@class BagelProjectModel;
+@class BagelDeviceModel;
+@protocol BagelCarrierDelegate;
 
 @interface BagelConfiguration : NSObject
 
