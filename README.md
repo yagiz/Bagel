@@ -48,6 +48,18 @@ Bagel.start()
 #endif
 ```
 
+#### Required configuration for iOS14+
+To run Bagel from iOS14, it's necessary to add the keys `NSLocalNetworkUsageDescription` and `NSBonjourServices` to your `Info.plist` file.
+- Open your Info.plist and add the following keys and values:
+```xml
+<key>NSLocalNetworkUsageDescription</key>
+<string>Bagel requires local network access to connect to the macOS app.</string>
+<key>NSBonjourServices</key>
+<array>
+    <string>_Bagel._tcp</string>
+</array>
+```
+
 ###  Configuring Bagel
 By default, Bagel gets your project name and device information. Desktop client uses these informations to separate projects and devices. You can configure these if you wish:
 ```swift
