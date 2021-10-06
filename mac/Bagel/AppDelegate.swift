@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         
-        for window in sender.windows {
+        for window in sender.windows where window.isVisible {
             
             window.orderFront(self)
         }
