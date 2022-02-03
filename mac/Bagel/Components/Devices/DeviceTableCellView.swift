@@ -10,7 +10,7 @@ import Cocoa
 import macOSThemeKit
 
 class DeviceTableCellView: NSTableCellView {
-
+    
     @IBOutlet weak var backgroundBox: NSBox!
     @IBOutlet weak var deviceNameTextField: NSTextField!
     @IBOutlet weak var deviceDescriptionTextField: NSTextField!
@@ -39,5 +39,36 @@ class DeviceTableCellView: NSTableCellView {
             self.deviceNameTextField.textColor = ThemeColor.secondaryLabelColor
         }
     }
+    @IBAction func newLogFile(_ sender: NSButton) {
+        guard let packets = BagelController.shared.selectedProjectController?.selectedDeviceController?.packets else {return}
+        var exportString = ""
+        var fileName = "project.log"
+        for packet in packets {
+            if let requestInfo = packet.requestInfo,
+               let rawString = OverviewRepresentation(requestInfo: requestInfo, showResponseHeaders: true).rawString {
+                exportString = exportString + rawString + "\n\n"
+            }
+            if let projectName = BagelController.shared.selectedProjectController?.projectName,
+               let devicename = BagelController.shared.selectedProjectController?.selectedDeviceController?.deviceName {
+                fileName = "\(projectName)-\(devicename)-\(Date().readableLog).log"
+            }
+        }
+        
+        let fileManager = FileManager.default
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+            try Data(exportString.utf8).write(to: documentDirectory.appendingPathComponent(fileName))
+            showAlert(style: .informational, title: "Log file exported!", message:"Log file exported to your documents directory")
+        } catch {
+            showAlert(style: .warning, title: "Error", message:"An error occurred while trying to save the log file to your documents directory")
+        }
+    }
     
+    private func showAlert(style: NSAlert.Style, title: String, message: String){
+        let alert = NSAlert()
+        alert.messageText = title
+        alert.informativeText = message
+        alert.alertStyle = style
+        alert.runModal()
+    }
 }

@@ -11,8 +11,12 @@ import Cocoa
 extension Date {
 
     private static let readableFormat = "dd/MM/yyyy HH:mm:ss"
+    private static let readableLogFormat = "yyyyMMdd-HHmmss"
     var readable: String {
         return self.format(dateFormat: Date.readableFormat)
+    }
+    var readableLog: String {
+        return self.format(dateFormat: Date.readableLogFormat)
     }
     
     func format(dateFormat: String) -> String {
