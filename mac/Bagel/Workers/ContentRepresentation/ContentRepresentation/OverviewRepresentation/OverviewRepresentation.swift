@@ -10,7 +10,7 @@ import Cocoa
 
 class OverviewRepresentation: ContentRepresentation  {
 
-    init(requestInfo: BagelRequestInfo?) {
+    init(requestInfo: BagelRequestInfo?, showResponseHeaders: Bool = false) {
         
         super.init()
 
@@ -18,6 +18,8 @@ class OverviewRepresentation: ContentRepresentation  {
             
             var overviewString = ""
             
+            overviewString = overviewString + (requestInfo.startDate?.readable ?? "")
+            overviewString = overviewString + " "
             overviewString = overviewString + (requestInfo.requestMethod?.rawValue ?? "")
             overviewString = overviewString + " "
             overviewString = overviewString + (requestInfo.url ?? "")
@@ -51,6 +53,18 @@ class OverviewRepresentation: ContentRepresentation  {
                 }
             }
             
+            
+            if showResponseHeaders, let responseHeaders = requestInfo.responseHeaders {
+                
+                let contentRawString = ContentRepresentationParser.keyValueRepresentation(dictionary: responseHeaders).rawString ?? ""
+                
+                if contentRawString.count > 0 {
+                    
+                    overviewString = overviewString + "\n\n"
+                    overviewString = overviewString + "Response Headers:\n"
+                    overviewString = overviewString + contentRawString
+                }
+            }
             if let requestBodyData = requestInfo.requestBody?.base64Data {
                 
                 let contentRawString = ContentRepresentationParser.dataRepresentation(data: requestBodyData)?.rawString ?? ""
