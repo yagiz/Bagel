@@ -21,6 +21,10 @@
 
 #import "BagelUtility.h"
 
+#if TARGET_OS_IPHONE
+@import UIKit;
+#endif
+
 @implementation BagelUtility
 
 + (NSString*)UUID
@@ -40,20 +44,21 @@
 
 + (NSString*)deviceName
 {
-    return [UIDevice currentDevice].name;
+    #if TARGET_OS_IPHONE
+    return [[UIDevice currentDevice] name];
+    #elif TARGET_OS_MAC
+    return [[NSHost currentHost] localizedName];
+    #endif
 }
 
 + (NSString*)deviceDescription
 {
-    NSString* information = @"";
-
-    information = [UIDevice currentDevice].model;
-    information = [NSString stringWithFormat:@"%@ %@", information, [UIDevice currentDevice].systemName];
-    information = [NSString stringWithFormat:@"%@ %@", information, [UIDevice currentDevice].systemVersion];
-
-    return information;
+    #if TARGET_OS_IPHONE
+    return [NSString stringWithFormat: @"%@ %@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion];
+    #elif TARGET_OS_MAC
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return [NSString stringWithFormat: @"%@ %ld.%ld.%ld", [[NSHost currentHost] localizedName], version.majorVersion, version.minorVersion, version.patchVersion];
+    #endif
 }
 
 @end
-
-
