@@ -11,16 +11,16 @@
         <img src="https://img.shields.io/github/release/yagiz/Bagel.svg" /></a>
 </p>
 
-Bagel is a little native iOS network debugger. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices or simulators.
+Bagel is a little native iOS/Android network debugger. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS/Android devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices or simulators.
 
 ## Preview
 ![Bagel](https://github.com/yagiz/Bagel/blob/develop/assets/screenshot.png?raw=true)
-## Installation
-#### Install Mac App
+## Install Mac App
 - Clone the repo.
 - Install pods.
 - Build and archive the project.
-#### Install iOS Client
+
+## Install iOS Client
 #### CocoaPods
 ```shhttps://img.shields.io/badge/version-1.3.1-blue.svg?style=flat
 pod 'Bagel', '~>  1.4.0'
@@ -71,7 +71,72 @@ bagelConfig.netserviceName = ""
 
 Bagel.start(bagelConfig)
 ```
-If you change Netservice parameters in your app, you should also change them on desktop client.
+
+## Install Android client
+#### Dependency
+* Add the below dependency in your preferred build system
+    ```groovy 
+    implementation 'com.simform:bagel:1.0.1'
+    ```
+
+### Usage
+In order to start Bagel we need to start the client and add a interceptor to intercept [OkHttp](https://square.github.io/okhttp/) API calls.
+
+* You can start client in any one of the way you like from below
+  1. Start client when `Application` class starts
+        ```kotlin
+        class App : Application() {
+            override fun onCreate() {
+                super.onCreate()
+                if (BuildConfig.DEBUG) { // Only expose in debug
+                    Bagel.start(context)
+                }
+            }
+        }
+        ```
+  2. Start client using [AppStartup](https://developer.android.com/topic/libraries/app-startup)
+        ```kotlin
+        class BagelInitializer : Initializer<Unit> {
+            override fun create(context: Context) {
+                if (BuildConfig.DEBUG) { // Only expose in debug
+                    Bagel.start(context)
+                }
+            }
+
+            override fun dependencies(): MutableList<Class<out Initializer<*>>> =
+                mutableListOf()
+        }
+        ```
+
+* Add [OkHttp](https://square.github.io/okhttp/) interceptor (**This is required to route API call details**)
+  * While building your `OkHttp` client create interceptor instance as below
+    ```kotlin
+    OkHttpClient.Builder()
+        .apply {
+            if (BuildConfig.DEBUG) { // Only expose in debug
+                val bagelInterceptor = BagelInterceptor.getInstance()
+                addInterceptor(bagelInterceptor)
+            }
+        }
+        . // Add all other interceptor and configurations
+        .build()
+    ```
+    
+###  Configuring Bagel
+By default, Bagel gets your project name and device information. Desktop client uses these informations to separate projects and devices. You can configure `projectName` and `netServiceType` if you wish:
+
+```kotlin
+val bagelConfiguration = BagelConfiguration
+    .getDefault(context)
+    .copy(projectName = "Bagel")
+
+Bagel.start(
+    context,
+    bagelConfiguration
+)
+```
+
+#### Note : If you change `netServiceType` parameter in your app, you should also change them on desktop client.
 
 License
 ----
