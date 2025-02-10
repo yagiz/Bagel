@@ -19,22 +19,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-//! Project version number for Bagel.
-FOUNDATION_EXPORT double BagelVersionNumber;
-
-//! Project version string for Bagel.
-FOUNDATION_EXPORT const unsigned char BagelVersionString[];
-
 #import <Foundation/Foundation.h>
 
-#import <Bagel/BagelBaseModel.h>
-#import <Bagel/BagelCarrierDelegate.h>
-#import <Bagel/BagelConfiguration.h>
-#import <Bagel/BagelDeviceModel.h>
-#import <Bagel/BagelProjectModel.h>
-#import <Bagel/BagelUtility.h>
+#import "BagelBaseModel.h"
+#import "BagelCarrierDelegate.h"
+#import "BagelConfiguration.h"
+#import "BagelDeviceModel.h"
+#import "BagelProjectModel.h"
+#import "BagelUtility.h"
 
 @interface Bagel : NSObject
 
