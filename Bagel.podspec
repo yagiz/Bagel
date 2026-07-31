@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Bagel is a little native iOS network sniffer.'
 
   s.description      = <<-DESC
-Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps seperated by the devices.
+Bagel is a native iOS network sniffer. It's not a proxy debugger so you don't have to mess around with certificates, proxy settings etc. As long as your iOS devices and your Mac are in the same network, you can view the network traffic of your apps separated by the devices.
                        DESC
 
   s.homepage         = 'https://github.com/yagiz/Bagel'
